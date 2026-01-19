@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "technology": "Technologie",
+    "solutions": "Lösungen",
+    "local": "Lokal",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Luxus-Unterflurbewässerung für toskanische Gärten",
+    "subtitle": "Innovatives unterirdisches Bewässerungssystem, das das ganze Jahr über einen perfekten Garten garantiert, mit bis zu 60% Wassereinsparung und minimalem Wartungsaufwand",
+    "cta": "Lösung Entdecken"
+  },
+  "footer": {
+    "description": "SUBGarden - Professionelles Unterflurbewässerungssystem für den toskanischen Markt",
+    "links": {
+      "about": "Über Uns",
+      "technology": "Technologie",
+      "solutions": "Lösungen",
+      "contact": "Kontakt"
+    },
+    "legal": {
+      "privacy": "Datenschutz",
+      "terms": "Nutzungsbedingungen"
+    },
+    "copyright": "© {year} SUBGarden. Alle Rechte vorbehalten."
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "name": "Name",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "message": "Nachricht",
+    "submit": "Senden",
+    "sending": "Wird gesendet...",
+    "success": "Nachricht erfolgreich gesendet!",
+    "error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "home": "Home",
+    "technology": "Tecnologia",
+    "solutions": "Soluzioni",
+    "local": "Local",
+    "contact": "Contatti"
+  },
+  "hero": {
+    "title": "Subirrigazione di Lusso per Giardini Toscani",
+    "subtitle": "Sistema innovativo di irrigazione sotterranea che garantisce un giardino perfetto tutto l'anno, con risparmio idrico fino al 60% e manutenzione minima",
+    "cta": "Scopri la Soluzione"
+  },
+  "footer": {
+    "description": "SUBGarden - Sistema di subirrigazione professionale per il mercato toscano",
+    "links": {
+      "about": "Chi Siamo",
+      "technology": "Tecnologia",
+      "solutions": "Soluzioni",
+      "contact": "Contatti"
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Termini di Servizio"
+    },
+    "copyright": "© {year} SUBGarden. Tutti i diritti riservati."
+  },
+  "contact": {
+    "title": "Contattaci",
+    "name": "Nome",
+    "email": "Email",
+    "phone": "Telefono",
+    "message": "Messaggio",
+    "submit": "Invia",
+    "sending": "Invio in corso...",
+    "success": "Messaggio inviato con successo!",
+    "error": "Errore nell'invio del messaggio. Riprova."
+  }
+}
