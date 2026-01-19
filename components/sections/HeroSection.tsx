@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 export function HeroSection() {
-  const t = useTranslations('hero');
+  const t = (useTranslations as any)('hero');
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">

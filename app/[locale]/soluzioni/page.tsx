@@ -74,7 +74,7 @@ export default async function SoluzioniIndexPage({
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Link href={`/soluzioni/${solution.slug}`}>
+                  <Link href={{ pathname: '/soluzioni/[slug]', params: { slug: solution.slug } }}>
                     <Card className="h-full overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group">
                       <div className="relative h-64 w-full overflow-hidden">
                         <Image

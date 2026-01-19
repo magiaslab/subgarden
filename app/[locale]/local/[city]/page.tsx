@@ -37,6 +37,7 @@ const cities = {
         'Installation on sandy soils',
         'Support for local vegetation',
       ],
+      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80',
     },
     de: {
       name: 'Elba-Insel',
@@ -51,6 +52,7 @@ const cities = {
         'Installation auf sandigen Böden',
         'Unterstützung für lokale Vegetation',
       ],
+      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80',
     },
   },
   maremma: {
@@ -163,7 +165,7 @@ export async function generateMetadata({
     return {};
   }
 
-  const content = cityData[locale as keyof typeof cityData] || cityData.it;
+  const content = (cityData as any)[locale] || cityData.it;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
 
   return {
@@ -192,7 +194,7 @@ export default async function LocalPage({
     notFound();
   }
 
-  const content = cityData[locale as keyof typeof cityData] || cityData.it;
+  const content = (cityData as any)[locale] || cityData.it;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
 
   const localBusinessSchema = {
@@ -274,7 +276,7 @@ export default async function LocalPage({
               Vantaggi per {content.name}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {content.features.map((feature, index) => (
+              {content.features.map((feature: string, index: number) => (
                 <MotionDiv
                   key={feature}
                   initial={{ opacity: 0, y: 20 }}

@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle, XCircle, Loader2 } from 'lucide-react';
 
 export function ContactForm() {
-  const t = useTranslations('contact');
+  const t = (useTranslations as any)('contact');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     type: 'success' | 'error' | null;

@@ -48,7 +48,7 @@ export function PainPoints() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-deep-teal mb-4">
-            Problemi dell'Irrigazione Tradizionale
+            Problemi dell&apos;Irrigazione Tradizionale
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Scopri come la subirrigazione risolve i problemi comuni dei sistemi di irrigazione tradizionali

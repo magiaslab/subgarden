@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils/cn';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export function Navbar() {
-  const t = useTranslations('nav');
+  const t = (useTranslations as any)('nav');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -27,7 +27,7 @@ export function Navbar() {
     { href: '/tecnologia', label: t('technology') },
     { href: '/soluzioni', label: t('solutions') },
     { href: '/local', label: t('local') },
-    { href: '/#contact', label: t('contact') },
+    { href: '/#contact' as any, label: t('contact') },
   ];
 
   return (

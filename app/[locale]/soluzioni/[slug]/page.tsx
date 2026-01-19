@@ -142,7 +142,7 @@ export async function generateMetadata({
     return {};
   }
 
-  const content = solution[locale as keyof typeof solution] || solution.it;
+  const content = (solution as any)[locale] || solution.it;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
 
   return {
@@ -171,7 +171,7 @@ export default async function SoluzionePage({
     notFound();
   }
 
-  const content = solution[locale as keyof typeof solution] || solution.it;
+  const content = (solution as any)[locale] || solution.it;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
 
   const serviceSchema = {
@@ -235,7 +235,7 @@ export default async function SoluzionePage({
               Caratteristiche Principali
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {content.features.map((feature, index) => (
+              {content.features.map((feature: string, index: number) => (
                 <MotionDiv
                   key={feature}
                   initial={{ opacity: 0, y: 20 }}

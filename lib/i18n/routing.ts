@@ -32,6 +32,16 @@ export const routing = defineRouting({
       en: '/local/[city]',
       de: '/lokal/[city]',
     },
+    '/privacy': {
+      it: '/privacy',
+      en: '/privacy',
+      de: '/datenschutz',
+    },
+    '/terms': {
+      it: '/terms',
+      en: '/terms',
+      de: '/nutzungsbedingungen',
+    },
   },
 });
 

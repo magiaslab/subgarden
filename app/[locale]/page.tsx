@@ -14,7 +14,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'hero' });
+  const t = await (getTranslations as any)('hero');
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
 

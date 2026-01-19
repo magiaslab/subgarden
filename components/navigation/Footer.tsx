@@ -3,7 +3,7 @@ import { Link } from '@/lib/i18n/routing';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function Footer() {
-  const t = useTranslations('footer');
+  const t = (useTranslations as any)('footer');
   const currentYear = new Date().getFullYear();
 
   return (
@@ -29,7 +29,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/#about"
+                  href={"/#about" as any}
                   className="text-gray-600 hover:text-deep-teal transition-colors"
                 >
                   {t('links.about')}
@@ -53,7 +53,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/#contact"
+                  href={"/#contact" as any}
                   className="text-gray-600 hover:text-deep-teal transition-colors"
                 >
                   {t('links.contact')}

@@ -58,7 +58,7 @@ export default async function LocalIndexPage({
               SUBGarden in Toscana
             </h1>
             <p className="text-xl md:text-2xl opacity-90">
-              Eccellenza nell'irrigazione per il territorio toscano
+              Eccellenza nell&apos;irrigazione per il territorio toscano
             </p>
           </div>
         </section>
@@ -74,7 +74,7 @@ export default async function LocalIndexPage({
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Link href={`/local/${city.slug}`}>
+                  <Link href={{ pathname: '/local/[city]', params: { city: city.slug } }}>
                     <Card className="h-full overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group">
                       <div className="relative h-64 w-full overflow-hidden">
                         <Image

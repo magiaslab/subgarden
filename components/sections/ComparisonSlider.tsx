@@ -37,7 +37,7 @@ export function ComparisonSlider() {
             Prima e Dopo
           </h2>
           <p className="text-xl text-gray-600">
-            Confronta l'efficacia della subirrigazione rispetto all'irrigazione tradizionale
+            Confronta l&apos;efficacia della subirrigazione rispetto all&apos;irrigazione tradizionale
           </p>
         </motion.div>
 
@@ -60,7 +60,7 @@ export function ComparisonSlider() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-white px-4">
                   <h3 className="text-3xl md:text-4xl font-serif font-bold mb-2">Irrigazione Tradizionale</h3>
-                  <p className="text-lg md:text-xl">Spreco d'acqua, crescita irregolare, zone secche</p>
+                  <p className="text-lg md:text-xl">Spreco d&apos;acqua, crescita irregolare, zone secche</p>
                 </div>
               </div>
             </div>
