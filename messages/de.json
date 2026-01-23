@@ -7,13 +7,13 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "title": "Luxus-Unterflurbewässerung: Eine neue Art zu bewässern",
-    "subtitle": "Sparen Sie bis zu 70% Wasser und Energie. Genießen Sie Ihren Garten ohne Mücken, Lärm o. Staunässe, und schützen Sie die Gesundheit Ihres Rasens mit Rain Bird Technologie.",
+    "title": "SUBGarden: Eine neue Art zu bewässern. Luxus-Unterflurbewässerung",
+    "subtitle": "Sparen Sie bis zu 70% Wasser und Energie. Patentiertes, nicht-invasives System für bestehende Gärten: schnelle Installation ohne zerstörerische Ausgrabungen, Schutz der Gesundheit Ihres Rasens mit Rain Bird Technologie.",
     "cta": "Lösung Entdecken"
   },
   "painPoints": {
     "title": "Warum Unterflurbewässerung wählen?",
-    "description": "Traditionelle Sprinklersysteme sind veraltet. Entdecken Sie die konkreten Vorteile des SUBGarden-Systems.",
+    "description": "Traditionelle Sprinklersysteme sind veraltet. Entdecken Sie die Effizienz des patentierten SUBGarden-Systems.",
     "water": {
       "title": "Wasser- und Energieeinsparung",
       "description": "Sparen Sie 50% bis 70% Wasser und Energie dank gezielter Verteilung an die Wurzeln."
@@ -34,9 +34,9 @@
       "title": "Keine Staunässe mehr",
       "description": "Eliminieren Sie Wasseransammlungen auf Wegen und im Rasen. Betreten Sie den Rasen direkt nach dem Gießen."
     },
-    "weeds": {
-      "title": "Auf Wiedersehen Unkraut",
-      "description": "Eliminieren Sie Unkraut ohne chemische Herbizide, indem Sie nur dort bewässern, wo es nötig ist."
+    "installation": {
+      "title": "Nicht-invasive Installation",
+      "description": "Unser patentiertes System ermöglicht die Installation in bestehenden Gärten, ohne diese zu zerstören. Schnell, sauber und unsichtbar."
     }
   },
   "process": {
@@ -44,8 +44,8 @@
     "step1": "Besichtigung und Prüfung des bestehenden Systems",
     "step2": "Studie, Entwurf und Kostenanalyse",
     "step3": "Angebot und Vertragsformalisierung",
-    "step4": "Fachgerechte Ausführung der Arbeiten",
-    "step5": "Unterstützung und unbegrenzte Garantie"
+    "step4": "Patentierte, nicht-invasive und schnelle Installation",
+    "step5": "Übergabe und unbegrenzte SUBGarden-Garantie"
   },
   "footer": {
     "description": "SUBGarden - Professionelles Unterflurbewässerungssystem für den toskanischen Markt",

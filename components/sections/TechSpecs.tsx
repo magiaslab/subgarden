@@ -7,6 +7,16 @@ import Image from 'next/image';
 
 const specifications = [
   {
+    category: 'Installazione Brevettata',
+    items: [
+      'Sistema unico per giardini esistenti senza scavi invasivi',
+      'Metodo non distruttivo che preserva il manto erboso',
+      'Installazione rapida e pulita, invisibile dopo il montaggio',
+      'Garanzia di integrità per radici e arredi fissi preesistenti',
+    ],
+    image: '/grassland-landscape-greening-environment-park-background.jpg',
+  },
+  {
     category: 'Tecnologia Rain Bird XSF®',
     items: [
       'Ala gocciolante auto-compensante da 0.4 a 3.6 atm',
@@ -14,7 +24,7 @@ const specifications = [
       'Protezione antintrusione radicale certificata',
       'Emettitori interrati con passo preciso di 330 mm',
     ],
-    image: '/grassland-landscape-greening-environment-park-background.jpg',
+    image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
   },
   {
     category: 'Efficienza e Risparmio',
@@ -33,16 +43,6 @@ const specifications = [
       'Valvole di spurgo aria su ogni zona irrigua',
       'Sistema di filtraggio e riduzione pressione post-valvola',
       'Lavaggio tubazioni semplificato senza attivazione gocciolatori',
-    ],
-    image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
-  },
-  {
-    category: 'Applicazioni Versatili',
-    items: [
-      'Ideale per manti erbosi, arbusti e tappezzanti',
-      'Perfetto per paesaggi curvi e aree strette o confinate',
-      'Riconversione facile di impianti a pioggia esistenti',
-      'Nessun ristagno su vialetti o superfici pavimentate',
     ],
     image: '/stunning-spring-collage.jpg',
   },

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Droplet, Sun, DollarSign, Clock, VolumeX, Sofa, Wind } from 'lucide-react';
+import { Droplet, Zap, DollarSign, Clock, VolumeX, Sofa, Wind } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
@@ -38,8 +38,8 @@ const painPoints = [
     image: '/green-park-view.jpg',
   },
   {
-    icon: Sun,
-    key: 'weeds',
+    icon: Zap,
+    key: 'installation',
     color: 'text-orange-500',
     image: '/stunning-spring-collage.jpg',
   },

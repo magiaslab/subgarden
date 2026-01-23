@@ -7,13 +7,13 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Luxury Sub-Irrigation: A New Way to Water",
-    "subtitle": "Save up to 70% on water and energy. Enjoy your garden without mosquitoes, noise, or puddles, protecting your lawn's health with Rain Bird technology.",
+    "title": "SUBGarden: A New Way to Water. Luxury Sub-Irrigation",
+    "subtitle": "Save up to 70% on water and energy. Patented non-invasive system for existing gardens: rapid installation without destructive excavations, ensuring your lawn's health with Rain Bird technology.",
     "cta": "Discover the Solution"
   },
   "painPoints": {
     "title": "Why Choose Sub-Irrigation?",
-    "description": "Traditional sprinkler systems are outdated. Discover the concrete advantages of the SUBGarden system.",
+    "description": "Traditional sprinkler systems are outdated. Discover the efficiency of the patented SUBGarden system.",
     "water": {
       "title": "Water and Energy Savings",
       "description": "Save 50% to 70% on water and energy thanks to targeted distribution to the roots."
@@ -34,9 +34,9 @@
       "title": "No More Puddles",
       "description": "Eliminate water stagnation on paths and lawn depressions. Walk on the lawn immediately after watering."
     },
-    "weeds": {
-      "title": "Goodbye Weeds",
-      "description": "Eliminate weeds without using chemical herbicides, targeting only where needed."
+    "installation": {
+      "title": "Non-Invasive Installation",
+      "description": "Our patented system allows installation in existing gardens without destroying them. Fast, clean, and invisible."
     }
   },
   "process": {
@@ -44,8 +44,8 @@
     "step1": "Site visit and existing system verification",
     "step2": "Study, design, and cost analysis",
     "step3": "Quote and contract formalization",
-    "step4": "Execution of work to the highest standards",
-    "step5": "Assistance and unlimited warranty"
+    "step4": "Patented non-invasive and fast installation",
+    "step5": "Handover and SUBGarden unlimited warranty"
   },
   "footer": {
     "description": "SUBGarden - Professional sub-irrigation system for the Tuscan market",

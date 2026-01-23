@@ -7,13 +7,13 @@
     "contact": "Contatti"
   },
   "hero": {
-    "title": "Subirrigazione di Lusso: Un Nuovo Modo di Irrigare",
-    "subtitle": "Risparmia fino al 70% di acqua ed energia. Goditi il tuo giardino senza zanzare, rumore o ristagni, proteggendo la salute del tuo prato con la tecnologia Rain Bird.",
+    "title": "SUBGarden: Un nuovo modo di irrigare. Subirrigazione di Lusso",
+    "subtitle": "Risparmia fino al 70% di acqua ed energia. Sistema brevettato non invasivo per giardini esistenti: installazione rapida senza scavi distruttivi, garantendo la salute del tuo prato con tecnologia Rain Bird.",
     "cta": "Scopri la Soluzione"
   },
   "painPoints": {
     "title": "Perché scegliere la subirrigazione?",
-    "description": "I sistemi tradizionali a pioggia sono superati. Scopri i vantaggi concreti del sistema SUBGarden.",
+    "description": "I sistemi tradizionali a pioggia sono superati. Scopri l'efficienza del sistema brevettato SUBGarden.",
     "water": {
       "title": "Risparmio Idrico ed Energetico",
       "description": "Risparmia dal 50% al 70% di acqua ed energia grazie alla distribuzione mirata alle radici."
@@ -34,9 +34,9 @@
       "title": "Mai più Ristagni",
       "description": "Elimina i ristagni d'acqua su vialetti e avvallamenti. Cammina sul prato subito dopo l'irrigazione."
     },
-    "weeds": {
-      "title": "Addio Erbacce",
-      "description": "Elimina le infestanti senza l'uso di diserbanti chimici, colpendo solo dove serve."
+    "installation": {
+      "title": "Installazione Non Invasiva",
+      "description": "Il nostro sistema brevettato permette l'installazione in giardini esistenti senza distruggerli. Veloce, pulito e invisibile."
     }
   },
   "process": {
@@ -44,8 +44,8 @@
     "step1": "Sopralluogo e verifica impianto esistente",
     "step2": "Studio, progetto e analisi dei costi",
     "step3": "Preventivo e formalizzazione contratto",
-    "step4": "Esecuzione lavori a regola d'arte",
-    "step5": "Assistenza e garanzia illimitata"
+    "step4": "Installazione brevettata non invasiva e veloce",
+    "step5": "Consegna e garanzia illimitata SUBGarden"
   },
   "footer": {
     "description": "SUBGarden - Sistema di subirrigazione professionale per il mercato toscano",

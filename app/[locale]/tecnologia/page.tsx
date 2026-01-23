@@ -54,27 +54,27 @@ export default async function TecnologiaPage({
       subtitle: 'L\'ingegneria Rain Bird® al servizio del paesaggio',
       sections: [
         {
+          title: 'Sistema di Installazione Brevettato',
+          description:
+            'Il nostro metodo di installazione è unico e brevettato: progettato per giardini esistenti, permette di inserire il sistema senza scavi invasivi o distruttivi. L\'installazione è veloce, pulita e preserva immediatamente l\'estetica del tuo spazio verde.',
+          image: '/grassland-landscape-greening-environment-park-background.jpg',
+        },
+        {
           title: 'Ala Gocciolante Rain Bird XSF®',
           description:
             'Il cuore di SUBGarden è l\'ala gocciolante Rain Bird XSF, l\'unica sul mercato auto-compensante da 0.4 a 3.6 atm, auto-pulente e dotata di protezione brevettata antintrusione delle radici. Garantisce prestazioni costanti e durature nel tempo.',
-          image: '/grassland-landscape-greening-environment-park-background.jpg',
+          image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
         },
         {
           title: 'Progettazione a Griglia di Precisione',
           description:
             'Per un\'irrigazione uniforme, seguiamo uno schema rigoroso: spaziatura tra le linee di 300 mm e passo dei gocciolatori di 330 mm. Questa densità assicura che ogni centimetro del prato riceva l\'acqua necessaria senza zone d\'ombra.',
-          image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
-        },
-        {
-          title: 'Manutenzione Semplificata',
-          description:
-            'Ogni zona è dotata di valvole di spurgo aria e flush dell\'acqua. Questo permette di lavare periodicamente le tubazioni senza bagnare il giardino, garantendo la massima igiene del sistema.',
           image: '/stunning-spring-collage.jpg',
         },
         {
-          title: 'Zero Zanzare e Ristagni',
+          title: 'Manutenzione e Zero Impatto',
           description:
-            'Agendo in profondità e mantenendo la superficie asciutta, SUBGarden riduce del 90% la proliferazione delle zanzare ed elimina i ristagni d\'acqua sui vialetti, preservando la salute e la pulizia degli spazi esterni.',
+            'Il sistema è completamente invisibile e silenzioso. Ogni zona è dotata di valvole di spurgo aria e flush dell\'acqua, permettendo una manutenzione semplice senza bagnare la superficie o disturbare la quiete del giardino.',
           image: '/green-park-view.jpg',
         },
       ],
@@ -84,28 +84,28 @@ export default async function TecnologiaPage({
       subtitle: 'Rain Bird® engineering at the service of the landscape',
       sections: [
         {
+          title: 'Patented Installation System',
+          description:
+            'Our installation method is unique and patented: designed for existing gardens, it allows the system to be inserted without invasive or destructive excavations. Installation is fast, clean, and immediately preserves the aesthetics of your green space.',
+          image: '/grassland-landscape-greening-environment-park-background.jpg',
+        },
+        {
           title: 'Rain Bird XSF® Drip Line',
           description:
             'The heart of SUBGarden is the Rain Bird XSF drip line, the only one on the market that is self-compensating from 0.4 to 3.6 atm, self-cleaning, and equipped with patented root intrusion protection.',
-          image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80',
+          image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
         },
         {
           title: 'Precision Grid Design',
           description:
             'For uniform irrigation, we follow a rigorous pattern: 300mm line spacing and 330mm emitter spacing. This ensures every inch of the lawn receives the necessary water.',
-          image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+          image: '/stunning-spring-collage.jpg',
         },
         {
-          title: 'Simplified Maintenance',
+          title: 'Zero Impact Maintenance',
           description:
-            'Each zone is equipped with air bleed and water flush valves. This allows for periodic cleaning of the pipes without wetting the garden.',
-          image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
-        },
-        {
-          title: 'Zero Mosquitoes and Puddles',
-          description:
-            'By acting in depth and keeping the surface dry, SUBGarden reduces mosquito proliferation by 90% and eliminates puddles on walkways.',
-          image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80',
+            'The system is completely invisible and silent. Each zone is equipped with air bleed and water flush valves, allowing for simple maintenance without wetting the surface or disturbing the garden\'s peace.',
+          image: '/green-park-view.jpg',
         },
       ],
     },
@@ -114,28 +114,28 @@ export default async function TecnologiaPage({
       subtitle: 'Rain Bird® Technik im Dienste der Landschaft',
       sections: [
         {
+          title: 'Patentiertes Installationssystem',
+          description:
+            'Unsere Installationsmethode ist einzigartig und patentiert: Sie wurde für bestehende Gärten entwickelt und ermöglicht die Installation des Systems ohne invasive oder zerstörerische Ausgrabungen. Die Installation ist schnell, sauber und bewahrt sofort die Ästhetik Ihrer Grünfläche.',
+          image: '/grassland-landscape-greening-environment-park-background.jpg',
+        },
+        {
           title: 'Rain Bird XSF® Tropfleitung',
           description:
             'Das Herzstück von SUBGarden ist die Rain Bird XSF Tropfleitung, die einzige auf dem Markt, die von 0,4 bis 3,6 atm selbstkompensierend, selbstreinigend und mit patentiertem Wurzeindringschutz ausgestattet ist.',
-          image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80',
+          image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
         },
         {
           title: 'Präzisionsgitter-Design',
           description:
             'Für eine gleichmäßige Bewässerung folgen wir einem strengen Schema: 300 mm Leitungsabstand und 330 mm Tropferabstand.',
-          image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+          image: '/stunning-spring-collage.jpg',
         },
         {
-          title: 'Vereinfachte Wartung',
+          title: 'Wartung ohne Beeinträchtigung',
           description:
-            'Jede Zone ist mit Entlüftungs- und Spülventilen ausgestattet. Dies ermöglicht eine regelmäßige Reinigung der Rohre, ohne den Garten zu benetzen.',
-          image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
-        },
-        {
-          title: 'Null Mücken und Staunässe',
-          description:
-            'Durch die Tiefenwirkung und das Trockenhalten der Oberfläche reduziert SUBGarden die Mückenvermehrung um 90% und verhindert Pfützen auf Gehwegen.',
-          image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80',
+            'Das System ist völlig unsichtbar und leise. Jede Zone ist mit Entlüftungs- und Spülventilen ausgestattet, was eine einfache Wartung ermöglicht, ohne die Oberfläche zu benetzen oder die Ruhe im Garten zu stören.',
+          image: '/green-park-view.jpg',
         },
       ],
     },
