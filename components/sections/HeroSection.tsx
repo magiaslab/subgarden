@@ -18,10 +18,9 @@ export function HeroSection() {
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
-          poster="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1920&q=80"
         >
           <source
-            src="https://videos.pexels.com/video-files/3045163/3045163-hd_1920_1080_30fps.mp4"
+            src="/hero-bg.mp4"
             type="video/mp4"
           />
         </video>
