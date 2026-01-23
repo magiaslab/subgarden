@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/lib/i18n/routing';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import Image from 'next/image';
 
 export function Footer() {
   const t = (useTranslations as any)('footer');
@@ -12,12 +13,28 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-serif font-bold text-deep-teal mb-4">
-              SUBGarden
-            </h3>
-            <p className="text-gray-600 mb-4 max-w-md">
+            <div className="relative w-48 h-16 mb-4">
+              <Image
+                src="/logo-subgarden.png"
+                alt="SUBGarden Logo"
+                fill
+                className="object-contain object-left"
+              />
+            </div>
+            <p className="text-gray-600 mb-6 max-w-md">
               {t('description')}
             </p>
+            <div className="flex items-center gap-4 mb-6">
+              <span className="text-sm font-medium text-gray-400 uppercase tracking-wider">Official Partner</span>
+              <div className="relative w-32 h-10">
+                <Image
+                  src="/RainBirdLogo_330x100.png"
+                  alt="Rain Bird Partner"
+                  fill
+                  className="object-contain object-left grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"
+                />
+              </div>
+            </div>
             <div className="hidden md:block">
               <LanguageSwitcher />
             </div>

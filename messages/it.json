@@ -7,9 +7,45 @@
     "contact": "Contatti"
   },
   "hero": {
-    "title": "Subirrigazione di Lusso per Giardini Toscani",
-    "subtitle": "Sistema innovativo di irrigazione sotterranea che garantisce un giardino perfetto tutto l'anno, con risparmio idrico fino al 60% e manutenzione minima",
+    "title": "Subirrigazione di Lusso: Un Nuovo Modo di Irrigare",
+    "subtitle": "Risparmia fino al 70% di acqua ed energia. Goditi il tuo giardino senza zanzare, rumore o ristagni, proteggendo la salute del tuo prato con la tecnologia Rain Bird.",
     "cta": "Scopri la Soluzione"
+  },
+  "painPoints": {
+    "title": "Perché scegliere la subirrigazione?",
+    "description": "I sistemi tradizionali a pioggia sono superati. Scopri i vantaggi concreti del sistema SUBGarden.",
+    "water": {
+      "title": "Risparmio Idrico ed Energetico",
+      "description": "Risparmia dal 50% al 70% di acqua ed energia grazie alla distribuzione mirata alle radici."
+    },
+    "mosquitoes": {
+      "title": "Zero Zanzare",
+      "description": "Riduci del 90% i trattamenti anti-zanzare mantenendo la superficie del prato sempre asciutta."
+    },
+    "furniture": {
+      "title": "Arredi Sempre Protetti",
+      "description": "Lascia pure poltrone, lettini e cuscini sul prato. Non dovrai più spostarli per irrigare."
+    },
+    "noise": {
+      "title": "Silenzio Totale",
+      "description": "Elimina il fastidioso rumore notturno degli spruzzatori. L'irrigazione è interrata e silenziosa."
+    },
+    "puddles": {
+      "title": "Mai più Ristagni",
+      "description": "Elimina i ristagni d'acqua su vialetti e avvallamenti. Cammina sul prato subito dopo l'irrigazione."
+    },
+    "weeds": {
+      "title": "Addio Erbacce",
+      "description": "Elimina le infestanti senza l'uso di diserbanti chimici, colpendo solo dove serve."
+    }
+  },
+  "process": {
+    "title": "Il Nostro Metodo Operativo",
+    "step1": "Sopralluogo e verifica impianto esistente",
+    "step2": "Studio, progetto e analisi dei costi",
+    "step3": "Preventivo e formalizzazione contratto",
+    "step4": "Esecuzione lavori a regola d'arte",
+    "step5": "Assistenza e garanzia illimitata"
   },
   "footer": {
     "description": "SUBGarden - Sistema di subirrigazione professionale per il mercato toscano",

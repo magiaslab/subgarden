@@ -12,7 +12,7 @@ const locales = [
   { code: 'de', label: 'Deutsch' },
 ];
 
-export function LanguageSwitcher() {
+export function LanguageSwitcher({ isTransparent }: { isTransparent?: boolean }) {
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
@@ -44,11 +44,20 @@ export function LanguageSwitcher() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors"
+        className={cn(
+          "flex items-center gap-2 px-3 py-2 rounded-lg transition-colors",
+          isTransparent && !isOpen ? "hover:bg-white/10" : "hover:bg-gray-100"
+        )}
         aria-label="Cambia lingua"
       >
-        <Globe className="w-4 h-4 text-deep-teal" />
-        <span className="text-sm font-medium text-gray-700">
+        <Globe className={cn(
+          "w-4 h-4 transition-colors",
+          isTransparent && !isOpen ? "text-white" : "text-deep-teal"
+        )} />
+        <span className={cn(
+          "text-sm font-medium transition-colors",
+          isTransparent && !isOpen ? "text-white" : "text-gray-700"
+        )}>
           {currentLocale?.code.toUpperCase()}
         </span>
       </button>

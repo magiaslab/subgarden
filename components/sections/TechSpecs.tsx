@@ -7,42 +7,42 @@ import Image from 'next/image';
 
 const specifications = [
   {
-    category: 'Efficienza Idrica',
+    category: 'Tecnologia Rain Bird XSF®',
     items: [
-      'Risparmio idrico fino al 60% rispetto all\'irrigazione tradizionale a pioggia',
-      'Distribuzione uniforme dell\'acqua direttamente alle radici, eliminando sprechi',
-      'Riduzione dell\'evaporazione del 90% e zero ruscellamento',
-      'Ottimizzazione automatica basata su umidità del terreno e condizioni meteo',
+      'Ala gocciolante auto-compensante da 0.4 a 3.6 atm',
+      'Sistema brevettato auto-pulente ad ogni ciclo',
+      'Protezione antintrusione radicale certificata',
+      'Emettitori interrati con passo preciso di 330 mm',
     ],
     image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80',
   },
   {
-    category: 'Installazione Professionale',
+    category: 'Efficienza e Risparmio',
     items: [
-      'Sistema modulare adattabile a qualsiasi tipo di giardino o terreno',
-      'Installazione non invasiva, compatibile con giardini esistenti',
-      'Team di esperti certificati per installazione su misura',
-      'Progettazione personalizzata in base alle esigenze specifiche',
-    ],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
-  },
-  {
-    category: 'Controllo Intelligente',
-    items: [
-      'Sistema automatizzato con sensori IoT per monitoraggio in tempo reale',
-      'Manutenzione minima richiesta: controlli automatici e allarmi preventivi',
-      'App mobile per controllo remoto e programmazione personalizzata',
-      'Integrazione con sistemi domotici e assistenti vocali',
+      'Risparmio idrico certificato dal 50% al 70%',
+      'Eliminazione totale dell\'evaporazione superficiale',
+      'Riduzione del 90% delle malattie del prato e delle piante',
+      'Distribuzione minerali ottimale senza cristallizzazione',
     ],
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
   },
   {
-    category: 'Sostenibilità Ambientale',
+    category: 'Ingegneria di Griglia',
     items: [
-      'Riduzione dell\'impatto ambientale e dell\'impronta idrica',
-      'Supporto per fertilizzanti liquidi a rilascio controllato',
-      'Compatibile con sistemi di riciclo dell\'acqua e raccolta pioggia',
-      'Certificazioni ambientali e conformità alle normative regionali',
+      'Schema interrato con spaziatura tra linee di 300 mm',
+      'Valvole di spurgo aria su ogni zona irrigua',
+      'Sistema di filtraggio e riduzione pressione post-valvola',
+      'Lavaggio tubazioni semplificato senza attivazione gocciolatori',
+    ],
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
+  },
+  {
+    category: 'Applicazioni Versatili',
+    items: [
+      'Ideale per manti erbosi, arbusti e tappezzanti',
+      'Perfetto per paesaggi curvi e aree strette o confinate',
+      'Riconversione facile di impianti a pioggia esistenti',
+      'Nessun ristagno su vialetti o superfici pavimentate',
     ],
     image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80',
   },

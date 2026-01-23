@@ -9,6 +9,7 @@ import Image from 'next/image';
 // Dati statici per le città (in futuro verranno dal CMS)
 const cities = {
   elba: {
+    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80',
     it: {
       name: 'Isola d\'Elba',
       title: 'Subirrigazione SUBGarden all\'Isola d\'Elba',
@@ -23,7 +24,6 @@ const cities = {
         'Resistenza alla salsedine e alle condizioni costiere',
         'Team locale specializzato con conoscenza del territorio',
       ],
-      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80',
     },
     en: {
       name: 'Elba Island',
@@ -32,12 +32,13 @@ const cities = {
         'Professional sub-irrigation solutions for gardens and green spaces on Elba Island',
       ordinances: 'Local ordinances for water saving make sub-irrigation particularly advantageous.',
       features: [
-        'Adaptation to Mediterranean climate',
-        'Reduced water consumption',
-        'Installation on sandy soils',
-        'Support for local vegetation',
+        'Optimal adaptation to the Mediterranean climate with hot and dry summers',
+        'Water consumption reduction up to 65% compared to spray irrigation',
+        'Specialized installation on sandy soils typical of the island',
+        'Support for local Mediterranean vegetation and native species',
+        'Resistance to salt spray and coastal conditions',
+        'Specialized local team with local knowledge',
       ],
-      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80',
     },
     de: {
       name: 'Elba-Insel',
@@ -47,15 +48,17 @@ const cities = {
       ordinances:
         'Lokale Verordnungen zum Wassersparen machen die Unterflurbewässerung besonders vorteilhaft.',
       features: [
-        'Anpassung an mediterranes Klima',
-        'Reduzierter Wasserverbrauch',
-        'Installation auf sandigen Böden',
-        'Unterstützung für lokale Vegetation',
+        'Optimale Anpassung an das mediterrane Klima mit heißen und trockenen Sommern',
+        'Reduzierung del Wasserverbrauchs um bis zu 65 % im Vergleich alla Sprühbewässerung',
+        'Spezialisierte Installation auf inseltypischen Sandböden',
+        'Unterstützung für lokale mediterrane Vegetation und einheimische Arten',
+        'Beständigkeit gegen Salzsprühnebel und Küstenbedingungen',
+        'Spezialisiertes lokales Team mit Ortskenntnissen',
       ],
-      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80',
     },
   },
   maremma: {
+    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=80',
     it: {
       name: 'Maremma',
       title: 'Subirrigazione SUBGarden in Maremma',
@@ -70,7 +73,6 @@ const cities = {
         'Riduzione dell\'erosione del suolo e miglioramento della struttura del terreno',
         'Team locale con esperienza decennale nel territorio maremmano',
       ],
-      image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=80',
     },
     en: {
       name: 'Maremma',
@@ -79,10 +81,12 @@ const cities = {
         'Sub-irrigation systems for the Tuscan Maremma, between nature and tradition',
       ordinances: 'The Maremma requires efficient irrigation systems for the hot and dry climate.',
       features: [
-        'Resistance to high temperatures',
-        'Efficiency in clay soils',
-        'Support for olive groves and vineyards',
-        'Integration with existing systems',
+        'Resistance to high summer temperatures and prolonged drought periods',
+        'Optimal efficiency in clay soils typical of Maremma',
+        'Specialized support for olive groves, vineyards, and extensive crops',
+        'Seamless integration with existing irrigation systems',
+        'Reduction of soil erosion and improvement of soil structure',
+        'Local team with ten years of experience in the Maremma territory',
       ],
     },
     de: {
@@ -93,14 +97,17 @@ const cities = {
       ordinances:
         'Die Maremma erfordert effiziente Bewässerungssysteme für das heiße und trockene Klima.',
       features: [
-        'Beständigkeit gegen hohe Temperaturen',
-        'Effizienz in Lehmböden',
-        'Unterstützung für Olivenhaine und Weinberge',
-        'Integration mit bestehenden Systemen',
+        'Beständigkeit gegen hohe Sommertemperaturen und längere Dürreperioden',
+        'Optimale Effizienz in maremmatypischen Lehmböden',
+        'Spezialisierte Unterstützung für Olivenhaine, Weinberge und extensiven Ackerbau',
+        'Nahtlose Integration in bestehende Bewässerungssysteme',
+        'Reduzierung der Bodenerosion und Verbesserung der Bodenstruktur',
+        'Lokales Team mit zehnjähriger Erfahrung im Maremma-Gebiet',
       ],
     },
   },
   livorno: {
+    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80',
     it: {
       name: 'Livorno',
       title: 'Subirrigazione SUBGarden a Livorno',
@@ -115,7 +122,6 @@ const cities = {
         'Conformità alle normative comunali per il risparmio idrico',
         'Supporto tecnico locale con interventi rapidi in caso di necessità',
       ],
-      image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80',
     },
     en: {
       name: 'Livorno',
@@ -124,10 +130,12 @@ const cities = {
         'Sub-irrigation solutions for gardens and urban parks in Livorno',
       ordinances: 'Urban sustainability policies favor efficient irrigation systems.',
       features: [
-        'Adaptation to urban spaces',
-        'Reduced visual impact',
-        'Simplified maintenance',
-        'Smart city integration',
+        'Optimal adaptation to urban spaces and condominium gardens',
+        'Reduced visual impact: completely buried and invisible system',
+        'Simplified and reduced maintenance compared to traditional systems',
+        'Integration with smart city systems and urban home automation',
+        'Compliance with municipal regulations for water saving',
+        'Local technical support with quick interventions when needed',
       ],
     },
     de: {
@@ -138,10 +146,12 @@ const cities = {
       ordinances:
         'Städtische Nachhaltigkeitspolitik begünstigt effiziente Bewässerungssysteme.',
       features: [
-        'Anpassung an städtische Räume',
-        'Reduzierte visuelle Auswirkungen',
-        'Vereinfachte Wartung',
-        'Smart-City-Integration',
+        'Optimale Anpassung an städtische Räume und Eigentumswohnungen',
+        'Reduzierte visuelle Auswirkungen: vollständig vergrabenes und unsichtbares System',
+        'Vereinfachte und reduzierte Wartung im Vergleich zu herkömmlichen Systemen',
+        'Integration in Smart-City-Systeme und urbane Gebäudeautomation',
+        'Einhaltung der städtischen Vorschriften zum Wassersparen',
+        'Lokaler technischer Support mit schnellen Einsätzen bei Bedarf',
       ],
     },
   },
@@ -159,13 +169,13 @@ export async function generateMetadata({
   params: Promise<{ locale: string; city: string }>;
 }): Promise<Metadata> {
   const { locale, city } = await params;
-  const cityData = cities[city as keyof typeof cities];
+  const cityData = (cities as any)[city];
 
   if (!cityData) {
     return {};
   }
 
-  const content = (cityData as any)[locale] || cityData.it;
+  const content = cityData[locale] || cityData.it;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
 
   return {
@@ -176,7 +186,7 @@ export async function generateMetadata({
       languages: {
         it: `${siteUrl}/it/local/${city}`,
         en: `${siteUrl}/en/local/${city}`,
-        de: `${siteUrl}/de/local/${city}`,
+        de: `${siteUrl}/de/lokal/${city}`,
       },
     },
   };
@@ -188,13 +198,14 @@ export default async function LocalPage({
   params: Promise<{ locale: string; city: string }>;
 }) {
   const { locale, city } = await params;
-  const cityData = cities[city as keyof typeof cities];
+  const cityData = (cities as any)[city];
 
   if (!cityData) {
     notFound();
   }
 
-  const content = (cityData as any)[locale] || cityData.it;
+  const content = cityData[locale] || cityData.it;
+  const image = cityData.image;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
 
   const localBusinessSchema = {
@@ -237,7 +248,7 @@ export default async function LocalPage({
 
         <section className="py-20 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            {content.image && (
+            {image && (
               <MotionDiv
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -246,7 +257,7 @@ export default async function LocalPage({
                 className="mb-12 rounded-xl overflow-hidden shadow-2xl relative h-[400px] w-full"
               >
                 <Image
-                  src={content.image}
+                  src={image}
                   alt={content.name}
                   fill
                   className="object-cover"

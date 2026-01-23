@@ -17,7 +17,7 @@ const solutions = {
         'Sistema di subirrigazione di lusso perfetto per giardini privati e residenziali. Trasforma il tuo spazio verde in un\'oasi rigogliosa con il minimo sforzo e massima efficienza.',
       features: [
         'Installazione discreta e non invasiva che preserva l\'estetica del giardino',
-        'Risparmio idrico fino al 60% rispetto all\'irrigazione tradizionale',
+        'Risparmio idrico fino al 70% rispetto all\'irrigazione tradizionale',
         'Manutenzione minima: sistema automatizzato con allarmi preventivi',
         'Controllo completo tramite app mobile iOS e Android',
         'Adattabile a qualsiasi tipo di terreno e vegetazione',
@@ -28,24 +28,30 @@ const solutions = {
     en: {
       title: 'Residential Gardens',
       description:
-        'Perfect sub-irrigation system for private and residential gardens',
+        'Perfect sub-irrigation system for private and residential gardens. Transform your green space into a lush oasis with minimal effort and maximum efficiency.',
       features: [
-        'Discrete and non-invasive installation',
-        'Water savings up to 60%',
-        'Minimal maintenance',
-        'Control via mobile app',
+        'Discrete and non-invasive installation preserving garden aesthetics',
+        'Water savings up to 70% compared to traditional irrigation',
+        'Minimal maintenance: automated system with preventive alerts',
+        'Complete control via iOS and Android mobile app',
+        'Adaptable to any type of soil and vegetation',
+        'Extended warranty and dedicated technical support',
       ],
+      image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=80',
     },
     de: {
       title: 'Wohngebiete',
       description:
-        'Perfektes Unterflurbewässerungssystem für private und Wohngebiete',
+        'Perfektes Unterflurbewässerungssystem für private Gärten und Wohngebiete. Verwandeln Sie Ihre Grünfläche in eine üppige Oase mit minimalem Aufwand und maximaler Effizienz.',
       features: [
-        'Diskrete und nicht-invasive Installation',
-        'Wassereinsparung bis zu 60%',
-        'Minimaler Wartungsaufwand',
-        'Steuerung über mobile App',
+        'Diskrete und nicht-invasive Installation, die die Ästhetik des Gartens bewahrt',
+        'Wassereinsparung bis zu 70% gegenüber herkömmlicher Bewässerung',
+        'Minimaler Wartungsaufwand: automatisiertes System mit präventiven Warnungen',
+        'Vollständige Steuerung über mobile App (iOS und Android)',
+        'Anpassbar an jede Art von Boden und Vegetation',
+        'Erweiterte Garantie und dedizierter technischer Support',
       ],
+      image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=80',
     },
   },
   'parchi-pubblici': {
@@ -63,25 +69,30 @@ const solutions = {
       image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80',
     },
     en: {
-      title: 'Public Parks',
-      description: 'Professional solution for public green spaces and parks',
+      title: 'Public Parks and Green Spaces',
+      description: 'Professional and scalable solution for public green spaces, urban parks, and recreational areas. Maximum efficiency for large surfaces with centralized control.',
       features: [
-        'Scalability for large areas',
-        'Centralized monitoring',
-        'Reduced operating costs',
-        'Environmental sustainability',
+        'Scalability for large areas: from 500sqm to 50+ hectares',
+        'Centralized monitoring with a dedicated dashboard',
+        'Operational cost reduction of 40-50% annually',
+        'Certified environmental sustainability and regulatory compliance',
+        'Resistance to foot traffic and extreme weather conditions',
+        'Integration with existing municipal management systems',
       ],
+      image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80',
     },
     de: {
-      title: 'Öffentliche Parks',
-      description:
-        'Professionelle Lösung für öffentliche Grünflächen und Parks',
+      title: 'Öffentliche Parks und Grünflächen',
+      description: 'Professionelle und skalierbare Lösung für öffentliche Grünflächen, Stadtparks und Erholungsgebiete. Maximale Effizienz für große Flächen mit zentraler Steuerung.',
       features: [
-        'Skalierbarkeit für große Flächen',
-        'Zentralisierte Überwachung',
-        'Reduzierte Betriebskosten',
-        'Umweltnachhaltigkeit',
+        'Skalierbarkeit für große Flächen: von 500 qm bis 50+ Hektar',
+        'Zentrale Überwachung mit dediziertem Dashboard',
+        'Senkung der Betriebskosten um 40-50% pro Jahr',
+        'Zertifizierte Umweltnachhaltigkeit und Einhaltung gesetzlicher Vorschriften',
+        'Widerstandsfähigkeit gegen Trittbelastung und extreme Wetterbedingungen',
+        'Integration in bestehende kommunale Managementsysteme',
       ],
+      image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80',
     },
   },
   'campi-sportivi': {
@@ -100,26 +111,30 @@ const solutions = {
       image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&q=80',
     },
     en: {
-      title: 'Sports Fields',
-      description:
-        'Optimized system for football fields, golf courses and other sports facilities',
+      title: 'Sports Fields and Recreational Facilities',
+      description: 'Optimized system for football fields, golf courses, tennis courts, and other sports facilities. Guarantees a perfect and uniform turf year-round.',
       features: [
-        'Uniform irrigation over large surfaces',
-        'Resistance to trampling',
-        'Precise zone control',
-        'Reduced maintenance time',
+        'Uniform irrigation over large surfaces without dry or flooded areas',
+        'Resistance to intensive traffic and mechanical stress',
+        'Precise zone control with differentiated programming',
+        'Maintenance time reduction of 70% compared to traditional systems',
+        'Compatibility with existing drainage and aeration systems',
+        'Certifications for professional sports facilities',
       ],
+      image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&q=80',
     },
     de: {
-      title: 'Sportplätze',
-      description:
-        'Optimiertes System für Fußballplätze, Golfplätze und andere Sportanlagen',
+      title: 'Sportplätze und Freizeiteinrichtungen',
+      description: 'Optimiertes System für Fußballplätze, Golfplätze, Tennisplätze und andere Sportanlagen. Garantiert ganzjährig einen perfekten und gleichmäßigen Rasen.',
       features: [
-        'Gleichmäßige Bewässerung auf großen Flächen',
-        'Trittfestigkeit',
-        'Präzise Zonensteuerung',
-        'Reduzierte Wartungszeit',
+        'Gleichmäßige Bewässerung auf großen Flächen ohne trockene oder überflutete Bereiche',
+        'Widerstandsfähigkeit gegen intensive Trittbelastung und mechanische Beanspruchung',
+        'Präzise Zonensteuerung mit differenzierter Programmierung',
+        'Wartungszeitreduzierung um 70% im Vergleich zu herkömmlichen Systemen',
+        'Kompatibilität mit bestehenden Entwässerungs- und Belüftungssystemen',
+        'Zertifizierungen für professionelle Sportanlagen',
       ],
+      image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&q=80',
     },
   },
 };
@@ -136,13 +151,13 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const solution = solutions[slug as keyof typeof solutions];
+  const solution = (solutions as any)[slug];
 
   if (!solution) {
     return {};
   }
 
-  const content = (solution as any)[locale] || solution.it;
+  const content = solution[locale] || solution.it;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
 
   return {
@@ -152,8 +167,8 @@ export async function generateMetadata({
       canonical: `${siteUrl}/${locale}/soluzioni/${slug}`,
       languages: {
         it: `${siteUrl}/it/soluzioni/${slug}`,
-        en: `${siteUrl}/en/soluzioni/${slug}`,
-        de: `${siteUrl}/de/soluzioni/${slug}`,
+        en: `${siteUrl}/en/solutions/${slug}`,
+        de: `${siteUrl}/de/loesungen/${slug}`,
       },
     },
   };
@@ -165,13 +180,13 @@ export default async function SoluzionePage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const solution = solutions[slug as keyof typeof solutions];
+  const solution = (solutions as any)[slug];
 
   if (!solution) {
     notFound();
   }
 
-  const content = (solution as any)[locale] || solution.it;
+  const content = solution[locale] || solution.it;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
 
   const serviceSchema = {

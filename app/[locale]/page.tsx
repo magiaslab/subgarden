@@ -7,6 +7,7 @@ import { TechSpecs } from '@/components/sections/TechSpecs';
 import { ContactForm } from '@/components/sections/ContactForm';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
+import { PartnerBanner } from '@/components/sections/PartnerBanner';
 
 export async function generateMetadata({
   params,
@@ -73,6 +74,7 @@ export default async function HomePage({
       <Navbar />
       <main>
         <HeroSection />
+        <PartnerBanner />
         <PainPoints />
         <ComparisonSlider />
         <TechSpecs />

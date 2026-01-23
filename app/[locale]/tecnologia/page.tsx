@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MotionDiv } from '@/components/ui/Motion';
 import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({
   params,
@@ -15,15 +15,15 @@ export async function generateMetadata({
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
 
   const titles: Record<string, string> = {
-    it: 'Tecnologia SUBGarden - Sistema di Subirrigazione Innovativo',
-    en: 'SUBGarden Technology - Innovative Sub-Irrigation System',
-    de: 'SUBGarden Technologie - Innovatives Unterflurbewässerungssystem',
+    it: 'Tecnologia SUBGarden - Ingegneria Rain Bird® XSF',
+    en: 'SUBGarden Technology - Rain Bird® XSF Engineering',
+    de: 'SUBGarden Technologie - Rain Bird® XSF Technik',
   };
 
   const descriptions: Record<string, string> = {
-    it: 'Scopri la tecnologia avanzata alla base del sistema di subirrigazione SUBGarden. Efficienza, sostenibilità e precisione per il tuo giardino.',
-    en: 'Discover the advanced technology behind the SUBGarden sub-irrigation system. Efficiency, sustainability and precision for your garden.',
-    de: 'Entdecken Sie die fortschrittliche Technologie hinter dem SUBGarden Unterflurbewässerungssystem. Effizienz, Nachhaltigkeit und Präzision für Ihren Garten.',
+    it: 'Scopri l\'ingegneria avanzata Rain Bird® alla base di SUBGarden. Ala gocciolante XSF, schema a griglia 300x330mm e zero sprechi idrici.',
+    en: 'Discover the advanced Rain Bird® engineering behind SUBGarden. XSF drip line, 300x330mm grid pattern, and zero water waste.',
+    de: 'Entdecken Sie die fortschrittliche Rain Bird®-Technik hinter SUBGarden. XSF-Tropfleitung, 300x330mm Gittermuster und keine Wasserverschwendung.',
   };
 
   return {
@@ -46,93 +46,102 @@ export default async function TecnologiaPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  const t = await (getTranslations as any)('process');
 
   const content = {
     it: {
       title: 'Tecnologia SUBGarden',
-      subtitle: 'Innovazione al servizio del tuo giardino',
+      subtitle: 'L\'ingegneria Rain Bird® al servizio del paesaggio',
       sections: [
         {
-          title: 'Sistema Modulare Avanzato',
+          title: 'Ala Gocciolante Rain Bird XSF®',
           description:
-            'Il sistema SUBGarden utilizza un approccio modulare che si adatta perfettamente a qualsiasi tipo di giardino, dal piccolo spazio urbano al grande parco. Componenti standardizzati garantiscono facilità di installazione e manutenzione, mentre la flessibilità del sistema permette personalizzazioni su misura.',
-          image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
-        },
-        {
-          title: 'Controllo Intelligente IoT',
-          description:
-            'Grazie all\'integrazione con sensori avanzati di umidità, temperatura e pH, il sistema monitora costantemente le condizioni del terreno e regola l\'irrigazione in modo automatico. L\'app mobile ti permette di controllare e programmare l\'irrigazione da remoto, con notifiche in tempo reale.',
-          image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
-        },
-        {
-          title: 'Efficienza Idrica Massima',
-          description:
-            'La distribuzione diretta alle radici elimina sprechi per evaporazione e ruscellamento, garantendo un utilizzo ottimale dell\'acqua con risparmi fino al 60% rispetto all\'irrigazione tradizionale. Il sistema è progettato per massimizzare l\'assorbimento radicale.',
+            'Il cuore di SUBGarden è l\'ala gocciolante Rain Bird XSF, l\'unica sul mercato auto-compensante da 0.4 a 3.6 atm, auto-pulente e dotata di protezione brevettata antintrusione delle radici. Garantisce prestazioni costanti e durature nel tempo.',
           image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80',
         },
         {
-          title: 'Installazione Professionale Certificata',
+          title: 'Progettazione a Griglia di Precisione',
           description:
-            'Il nostro team di esperti certificati garantisce un\'installazione precisa e personalizzata, rispettando le caratteristiche uniche del tuo spazio verde. Offriamo consulenza progettuale, installazione chiavi in mano e formazione per la gestione del sistema.',
+            'Per un\'irrigazione uniforme, seguiamo uno schema rigoroso: spaziatura tra le linee di 300 mm e passo dei gocciolatori di 330 mm. Questa densità assicura che ogni centimetro del prato riceva l\'acqua necessaria senza zone d\'ombra.',
+          image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+        },
+        {
+          title: 'Manutenzione Semplificata',
+          description:
+            'Ogni zona è dotata di valvole di spurgo aria e flush dell\'acqua. Questo permette di lavare periodicamente le tubazioni senza bagnare il giardino, garantendo la massima igiene del sistema.',
+          image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
+        },
+        {
+          title: 'Zero Zanzare e Ristagni',
+          description:
+            'Agendo in profondità e mantenendo la superficie asciutta, SUBGarden riduce del 90% la proliferazione delle zanzare ed elimina i ristagni d\'acqua sui vialetti, preservando la salute e la pulizia degli spazi esterni.',
           image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80',
         },
       ],
     },
     en: {
       title: 'SUBGarden Technology',
-      subtitle: 'Innovation at the service of your garden',
+      subtitle: 'Rain Bird® engineering at the service of the landscape',
       sections: [
         {
-          title: 'Modular System',
+          title: 'Rain Bird XSF® Drip Line',
           description:
-            'The SUBGarden system uses a modular approach that adapts perfectly to any type of garden, from small urban spaces to large parks.',
+            'The heart of SUBGarden is the Rain Bird XSF drip line, the only one on the market that is self-compensating from 0.4 to 3.6 atm, self-cleaning, and equipped with patented root intrusion protection.',
+          image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80',
         },
         {
-          title: 'Smart Control',
+          title: 'Precision Grid Design',
           description:
-            'Thanks to integration with advanced sensors, the system constantly monitors soil conditions and automatically adjusts irrigation.',
+            'For uniform irrigation, we follow a rigorous pattern: 300mm line spacing and 330mm emitter spacing. This ensures every inch of the lawn receives the necessary water.',
+          image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
         },
         {
-          title: 'Water Efficiency',
+          title: 'Simplified Maintenance',
           description:
-            'Direct distribution to roots eliminates waste and ensures optimal water use, with savings of up to 60%.',
+            'Each zone is equipped with air bleed and water flush valves. This allows for periodic cleaning of the pipes without wetting the garden.',
+          image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
         },
         {
-          title: 'Professional Installation',
+          title: 'Zero Mosquitoes and Puddles',
           description:
-            'Our team of experts ensures precise and customized installation, respecting the unique characteristics of your green space.',
+            'By acting in depth and keeping the surface dry, SUBGarden reduces mosquito proliferation by 90% and eliminates puddles on walkways.',
+          image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80',
         },
       ],
     },
     de: {
       title: 'SUBGarden Technologie',
-      subtitle: 'Innovation im Dienste Ihres Gartens',
+      subtitle: 'Rain Bird® Technik im Dienste der Landschaft',
       sections: [
         {
-          title: 'Modulares System',
+          title: 'Rain Bird XSF® Tropfleitung',
           description:
-            'Das SUBGarden-System verwendet einen modularen Ansatz, der sich perfekt an jeden Gartentyp anpasst, von kleinen urbanen Räumen bis hin zu großen Parks.',
+            'Das Herzstück von SUBGarden ist die Rain Bird XSF Tropfleitung, die einzige auf dem Markt, die von 0,4 bis 3,6 atm selbstkompensierend, selbstreinigend und mit patentiertem Wurzeindringschutz ausgestattet ist.',
+          image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80',
         },
         {
-          title: 'Intelligente Steuerung',
+          title: 'Präzisionsgitter-Design',
           description:
-            'Dank der Integration fortschrittlicher Sensoren überwacht das System ständig die Bodenbedingungen und passt die Bewässerung automatisch an.',
+            'Für eine gleichmäßige Bewässerung folgen wir einem strengen Schema: 300 mm Leitungsabstand und 330 mm Tropferabstand.',
+          image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
         },
         {
-          title: 'Wassereffizienz',
+          title: 'Vereinfachte Wartung',
           description:
-            'Die direkte Verteilung an die Wurzeln eliminiert Verschwendung und gewährleistet eine optimale Wassernutzung mit Einsparungen von bis zu 60%.',
+            'Jede Zone ist mit Entlüftungs- und Spülventilen ausgestattet. Dies ermöglicht eine regelmäßige Reinigung der Rohre, ohne den Garten zu benetzen.',
+          image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
         },
         {
-          title: 'Professionelle Installation',
+          title: 'Null Mücken und Staunässe',
           description:
-            'Unser Expertenteam gewährleistet eine präzise und maßgeschneiderte Installation unter Berücksichtigung der einzigartigen Eigenschaften Ihres Grüns.',
+            'Durch die Tiefenwirkung und das Trockenhalten der Oberfläche reduziert SUBGarden die Mückenvermehrung um 90% und verhindert Pfützen auf Gehwegen.',
+          image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80',
         },
       ],
     },
   };
 
-  const pageContent = content[locale as keyof typeof content] || content.it;
+  const pageContent = (content as any)[locale] || content.it;
 
   return (
     <>
@@ -182,6 +191,38 @@ export default async function TecnologiaPage({
                       <p className="text-gray-700 leading-relaxed">{section.description}</p>
                     </CardContent>
                   </Card>
+                </MotionDiv>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Operational Method Section */}
+        <section className="py-20 bg-gray-50 border-t border-gray-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-serif font-bold text-deep-teal mb-4">{t('title')}</h2>
+              <div className="w-24 h-1 bg-copper mx-auto"></div>
+            </div>
+            
+            <div className="space-y-8">
+              {[1, 2, 3, 4, 5].map((step) => (
+                <MotionDiv 
+                  key={step}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: step * 0.1 }}
+                  className="flex items-start gap-6 bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+                >
+                  <div className="flex-shrink-0 w-12 h-12 bg-deep-teal text-white rounded-full flex items-center justify-center font-serif font-bold text-xl">
+                    {step}
+                  </div>
+                  <div>
+                    <p className="text-xl text-gray-800 font-medium">
+                      {t(`step${step}`)}
+                    </p>
+                  </div>
                 </MotionDiv>
               ))}
             </div>

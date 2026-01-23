@@ -7,9 +7,45 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Luxury Sub-Irrigation for Tuscan Gardens",
-    "subtitle": "Innovative underground irrigation system that guarantees a perfect garden all year round, with up to 60% water savings and minimal maintenance",
+    "title": "Luxury Sub-Irrigation: A New Way to Water",
+    "subtitle": "Save up to 70% on water and energy. Enjoy your garden without mosquitoes, noise, or puddles, protecting your lawn's health with Rain Bird technology.",
     "cta": "Discover the Solution"
+  },
+  "painPoints": {
+    "title": "Why Choose Sub-Irrigation?",
+    "description": "Traditional sprinkler systems are outdated. Discover the concrete advantages of the SUBGarden system.",
+    "water": {
+      "title": "Water and Energy Savings",
+      "description": "Save 50% to 70% on water and energy thanks to targeted distribution to the roots."
+    },
+    "mosquitoes": {
+      "title": "Zero Mosquitoes",
+      "description": "Reduce mosquito treatments by 90% by keeping the lawn surface dry at all times."
+    },
+    "furniture": {
+      "title": "Furniture Always Protected",
+      "description": "Leave your armchairs, sunbeds, and cushions on the lawn. No more moving them to water."
+    },
+    "noise": {
+      "title": "Total Silence",
+      "description": "Eliminate the annoying night noise of sprinklers. Irrigation is underground and silent."
+    },
+    "puddles": {
+      "title": "No More Puddles",
+      "description": "Eliminate water stagnation on paths and lawn depressions. Walk on the lawn immediately after watering."
+    },
+    "weeds": {
+      "title": "Goodbye Weeds",
+      "description": "Eliminate weeds without using chemical herbicides, targeting only where needed."
+    }
+  },
+  "process": {
+    "title": "Our Operational Method",
+    "step1": "Site visit and existing system verification",
+    "step2": "Study, design, and cost analysis",
+    "step3": "Quote and contract formalization",
+    "step4": "Execution of work to the highest standards",
+    "step5": "Assistance and unlimited warranty"
   },
   "footer": {
     "description": "SUBGarden - Professional sub-irrigation system for the Tuscan market",
