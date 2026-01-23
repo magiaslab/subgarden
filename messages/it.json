@@ -48,28 +48,29 @@
     "step5": "Consegna e garanzia illimitata SUBGarden"
   },
   "footer": {
+    "copyright": "© {year} SUBGarden. Tutti i diritti riservati.",
     "description": "SUBGarden - Sistema di subirrigazione professionale per il mercato toscano",
-    "links": {
-      "about": "Chi Siamo",
-      "technology": "Tecnologia",
-      "solutions": "Soluzioni",
-      "contact": "Contatti"
-    },
     "legal": {
       "privacy": "Privacy Policy",
       "terms": "Termini di Servizio"
     },
-    "copyright": "© {year} SUBGarden. Tutti i diritti riservati."
+    "links": {
+      "about": "Chi Siamo",
+      "contact": "Contatti",
+      "local": "Local SEO",
+      "solutions": "Soluzioni",
+      "technology": "Tecnologia"
+    }
   },
   "contact": {
-    "title": "Contattaci",
-    "name": "Nome",
     "email": "Email",
-    "phone": "Telefono",
+    "error": "Errore nell'invio del messaggio. Riprova.",
     "message": "Messaggio",
-    "submit": "Invia",
+    "name": "Nome",
+    "phone": "Telefono",
     "sending": "Invio in corso...",
+    "submit": "Invia",
     "success": "Messaggio inviato con successo!",
-    "error": "Errore nell'invio del messaggio. Riprova."
+    "title": "Contattaci"
   }
 }

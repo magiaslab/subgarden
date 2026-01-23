@@ -53,6 +53,7 @@
       "about": "About Us",
       "technology": "Technology",
       "solutions": "Solutions",
+      "local": "Local SEO",
       "contact": "Contact"
     },
     "legal": {
@@ -62,14 +63,14 @@
     "copyright": "© {year} SUBGarden. All rights reserved."
   },
   "contact": {
-    "title": "Contact Us",
-    "name": "Name",
     "email": "Email",
-    "phone": "Phone",
+    "error": "Error sending message. Please try again.",
     "message": "Message",
-    "submit": "Send",
+    "name": "Name",
+    "phone": "Phone",
     "sending": "Sending...",
+    "submit": "Send",
     "success": "Message sent successfully!",
-    "error": "Error sending message. Please try again."
+    "title": "Contact Us"
   }
 }
