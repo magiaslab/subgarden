@@ -57,25 +57,25 @@ export default async function TecnologiaPage({
           title: 'Ala Gocciolante Rain Bird XSF®',
           description:
             'Il cuore di SUBGarden è l\'ala gocciolante Rain Bird XSF, l\'unica sul mercato auto-compensante da 0.4 a 3.6 atm, auto-pulente e dotata di protezione brevettata antintrusione delle radici. Garantisce prestazioni costanti e durature nel tempo.',
-          image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80',
+          image: '/grassland-landscape-greening-environment-park-background.jpg',
         },
         {
           title: 'Progettazione a Griglia di Precisione',
           description:
             'Per un\'irrigazione uniforme, seguiamo uno schema rigoroso: spaziatura tra le linee di 300 mm e passo dei gocciolatori di 330 mm. Questa densità assicura che ogni centimetro del prato riceva l\'acqua necessaria senza zone d\'ombra.',
-          image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+          image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
         },
         {
           title: 'Manutenzione Semplificata',
           description:
             'Ogni zona è dotata di valvole di spurgo aria e flush dell\'acqua. Questo permette di lavare periodicamente le tubazioni senza bagnare il giardino, garantendo la massima igiene del sistema.',
-          image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
+          image: '/stunning-spring-collage.jpg',
         },
         {
           title: 'Zero Zanzare e Ristagni',
           description:
             'Agendo in profondità e mantenendo la superficie asciutta, SUBGarden riduce del 90% la proliferazione delle zanzare ed elimina i ristagni d\'acqua sui vialetti, preservando la salute e la pulizia degli spazi esterni.',
-          image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80',
+          image: '/green-park-view.jpg',
         },
       ],
     },

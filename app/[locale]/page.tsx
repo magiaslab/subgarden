@@ -35,6 +35,14 @@ export async function generateMetadata({
       description: t('subtitle'),
       url: `${siteUrl}/${locale}`,
       siteName: 'SUBGarden',
+      images: [
+        {
+          url: `${siteUrl}/rustic-patio-with-deck-furniture-vegetation.jpg`,
+          width: 1200,
+          height: 630,
+          alt: 'SUBGarden - Sistema di Subirrigazione di Lusso',
+        },
+      ],
       locale: locale,
       type: 'website',
     },

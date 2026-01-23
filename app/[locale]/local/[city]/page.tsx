@@ -9,7 +9,7 @@ import Image from 'next/image';
 // Dati statici per le città (in futuro verranno dal CMS)
 const cities = {
   elba: {
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80',
+    image: '/stunning-spring-collage.jpg',
     it: {
       name: 'Isola d\'Elba',
       title: 'Subirrigazione SUBGarden all\'Isola d\'Elba',
@@ -58,7 +58,7 @@ const cities = {
     },
   },
   maremma: {
-    image: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=80',
+    image: '/grassland-landscape-greening-environment-park-background.jpg',
     it: {
       name: 'Maremma',
       title: 'Subirrigazione SUBGarden in Maremma',
@@ -107,7 +107,7 @@ const cities = {
     },
   },
   livorno: {
-    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80',
+    image: '/green-park-view.jpg',
     it: {
       name: 'Livorno',
       title: 'Subirrigazione SUBGarden a Livorno',

@@ -14,7 +14,7 @@ const specifications = [
       'Protezione antintrusione radicale certificata',
       'Emettitori interrati con passo preciso di 330 mm',
     ],
-    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80',
+    image: '/grassland-landscape-greening-environment-park-background.jpg',
   },
   {
     category: 'Efficienza e Risparmio',
@@ -24,7 +24,7 @@ const specifications = [
       'Riduzione del 90% delle malattie del prato e delle piante',
       'Distribuzione minerali ottimale senza cristallizzazione',
     ],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+    image: '/green-park-view.jpg',
   },
   {
     category: 'Ingegneria di Griglia',
@@ -34,7 +34,7 @@ const specifications = [
       'Sistema di filtraggio e riduzione pressione post-valvola',
       'Lavaggio tubazioni semplificato senza attivazione gocciolatori',
     ],
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
+    image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
   },
   {
     category: 'Applicazioni Versatili',
@@ -44,7 +44,7 @@ const specifications = [
       'Riconversione facile di impianti a pioggia esistenti',
       'Nessun ristagno su vialetti o superfici pavimentate',
     ],
-    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80',
+    image: '/stunning-spring-collage.jpg',
   },
 ];
 

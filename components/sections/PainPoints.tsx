@@ -11,37 +11,37 @@ const painPoints = [
     icon: Droplet,
     key: 'water',
     color: 'text-blue-500',
-    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80',
+    image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
   },
   {
     icon: Wind,
     key: 'mosquitoes',
     color: 'text-yellow-500',
-    image: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80',
+    image: '/grassland-landscape-greening-environment-park-background.jpg',
   },
   {
     icon: Sofa,
     key: 'furniture',
     color: 'text-green-500',
-    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80',
+    image: '/rustic-patio-with-deck-furniture-vegetation.jpg',
   },
   {
     icon: VolumeX,
     key: 'noise',
     color: 'text-purple-500',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
+    image: '/stunning-spring-collage.jpg',
   },
   {
     icon: Droplet,
     key: 'puddles',
     color: 'text-cyan-500',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+    image: '/green-park-view.jpg',
   },
   {
     icon: Sun,
     key: 'weeds',
     color: 'text-orange-500',
-    image: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&q=80',
+    image: '/stunning-spring-collage.jpg',
   },
 ];
 

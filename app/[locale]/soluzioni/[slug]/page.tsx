@@ -23,7 +23,7 @@ const solutions = {
         'Adattabile a qualsiasi tipo di terreno e vegetazione',
         'Garanzia estesa e supporto tecnico dedicato',
       ],
-      image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=80',
+      image: '/rustic-patio-with-deck-furniture-vegetation.jpg',
     },
     en: {
       title: 'Residential Gardens',
@@ -37,7 +37,7 @@ const solutions = {
         'Adaptable to any type of soil and vegetation',
         'Extended warranty and dedicated technical support',
       ],
-      image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=80',
+      image: '/rustic-patio-with-deck-furniture-vegetation.jpg',
     },
     de: {
       title: 'Wohngebiete',
@@ -51,7 +51,7 @@ const solutions = {
         'Anpassbar an jede Art von Boden und Vegetation',
         'Erweiterte Garantie und dedizierter technischer Support',
       ],
-      image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=80',
+      image: '/rustic-patio-with-deck-furniture-vegetation.jpg',
     },
   },
   'parchi-pubblici': {
@@ -66,7 +66,7 @@ const solutions = {
         'Resistenza al calpestio e alle condizioni atmosferiche estreme',
         'Integrazione con sistemi di gestione comunali esistenti',
       ],
-      image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80',
+      image: '/green-park-view.jpg',
     },
     en: {
       title: 'Public Parks and Green Spaces',
@@ -79,7 +79,7 @@ const solutions = {
         'Resistance to foot traffic and extreme weather conditions',
         'Integration with existing municipal management systems',
       ],
-      image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80',
+      image: '/green-park-view.jpg',
     },
     de: {
       title: 'Öffentliche Parks und Grünflächen',
@@ -92,7 +92,7 @@ const solutions = {
         'Widerstandsfähigkeit gegen Trittbelastung und extreme Wetterbedingungen',
         'Integration in bestehende kommunale Managementsysteme',
       ],
-      image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80',
+      image: '/green-park-view.jpg',
     },
   },
   'campi-sportivi': {
@@ -108,7 +108,7 @@ const solutions = {
         'Compatibilità con sistemi di drenaggio e aerazione esistenti',
         'Certificazioni per impianti sportivi professionistici',
       ],
-      image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&q=80',
+      image: '/grassland-landscape-greening-environment-park-background.jpg',
     },
     en: {
       title: 'Sports Fields and Recreational Facilities',
@@ -121,7 +121,7 @@ const solutions = {
         'Compatibility with existing drainage and aeration systems',
         'Certifications for professional sports facilities',
       ],
-      image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&q=80',
+      image: '/grassland-landscape-greening-environment-park-background.jpg',
     },
     de: {
       title: 'Sportplätze und Freizeiteinrichtungen',
@@ -134,7 +134,7 @@ const solutions = {
         'Kompatibilität mit bestehenden Entwässerungs- und Belüftungssystemen',
         'Zertifizierungen für professionelle Sportanlagen',
       ],
-      image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&q=80',
+      image: '/grassland-landscape-greening-environment-park-background.jpg',
     },
   },
 };

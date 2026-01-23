@@ -50,7 +50,7 @@ export function ComparisonSlider() {
             {/* Before Image */}
             <div className="absolute inset-0">
               <Image
-                src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=1200&q=80"
+                src="/grassland-landscape-greening-environment-park-background.jpg"
                 alt="Irrigazione tradizionale - giardino con zone secche"
                 fill
                 className="object-cover"
@@ -71,7 +71,7 @@ export function ComparisonSlider() {
               style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=80"
+                src="/rustic-patio-with-deck-furniture-vegetation.jpg"
                 alt="Subirrigazione SUBGarden - giardino rigoglioso"
                 fill
                 className="object-cover"
