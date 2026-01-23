@@ -45,9 +45,18 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto"
+          className="text-xl md:text-2xl text-white/90 mb-2 max-w-2xl mx-auto"
         >
           {t('subtitle')}
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="text-lg md:text-xl text-white/70 mb-8 max-w-3xl mx-auto italic"
+        >
+          {t('description')}
         </motion.p>
 
         <motion.div
@@ -59,15 +68,15 @@ export function HeroSection() {
             size="lg"
             variant="secondary"
             className="group"
-              onClick={() => {
-                document
-                  .getElementById('about')
-                  ?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              {t('cta')}
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            onClick={() => {
+              document
+                .getElementById('about')
+                ?.scrollIntoView({ behavior: 'smooth' });
+            }}
+          >
+            {t('cta')}
+            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Button>
         </motion.div>
       </div>
 
