@@ -62,13 +62,10 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-2">
             <div className="relative w-40 h-12">
               <Image
-                src="/logo-subgarden.png"
+                src={shouldBeOpaque ? "/SUBGARDEN - LOGO COLORI.png" : "/SUBGARDEN - LOGO BIANCO.png"}
                 alt="SUBGarden Logo"
                 fill
-                className={cn(
-                  "object-contain transition-all duration-300",
-                  shouldBeOpaque ? "" : "brightness-0 invert"
-                )}
+                className="object-contain transition-all duration-300"
                 priority
               />
             </div>

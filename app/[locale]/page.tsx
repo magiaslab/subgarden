@@ -62,7 +62,7 @@ export default async function HomePage({
     '@type': 'Organization',
     name: 'SUBGarden',
     url: siteUrl,
-    logo: `${siteUrl}/logo.png`,
+    logo: `${siteUrl}/SUBGARDEN - LOGO COLORI.png`,
     description:
       'Sistema di subirrigazione professionale per il mercato toscano',
     address: {

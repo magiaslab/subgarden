@@ -13,12 +13,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <div className="relative w-48 h-16 mb-6">
+            <div className="relative w-64 h-20 mb-6">
               <Image
-                src="/logo-subgarden.png"
+                src="/SUBGARDEN - LOGO BINCO PAYOOFF.png"
                 alt="SUBGarden Logo"
                 fill
-                className="object-contain object-left brightness-0 invert"
+                className="object-contain object-left"
               />
             </div>
             <p className="text-white/70 mb-8 max-w-md leading-relaxed">
