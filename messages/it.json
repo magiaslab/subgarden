@@ -4,6 +4,7 @@
     "about": "Chi Siamo",
     "technology": "Tecnologia",
     "solutions": "Soluzioni",
+    "portfolio": "Portfolio",
     "local": "Territorio",
     "contact": "Contatti"
   },
@@ -127,8 +128,21 @@
       "about": "Chi Siamo",
       "contact": "Contatti",
       "local": "Territorio",
+      "portfolio": "Portfolio",
       "solutions": "Soluzioni",
       "technology": "Tecnologia"
     }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "I nostri lavori d'eccellenza",
+    "description": "Esplora una selezione dei nostri progetti di subirrigazione e landscape design realizzati in tutta la Toscana.",
+    "categories": {
+      "all": "Tutti",
+      "residential": "Residenziale",
+      "commercial": "Commerciale",
+      "historical": "Storico"
+    },
+    "view_project": "Vedi Progetto"
   }
 }
