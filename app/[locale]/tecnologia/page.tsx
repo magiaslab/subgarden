@@ -3,6 +3,7 @@ import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MotionDiv } from '@/components/ui/Motion';
+import { InfographicSection } from '@/components/sections/InfographicSection';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Search, PencilRuler, FileText, Zap, ShieldCheck } from 'lucide-react';
@@ -159,6 +160,8 @@ export default async function TecnologiaPage({
             </p>
           </div>
         </section>
+
+        <InfographicSection />
 
         <section className="py-20 bg-[#F2F4F7]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

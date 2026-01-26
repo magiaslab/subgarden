@@ -8,6 +8,7 @@ import { ContactForm } from '@/components/sections/ContactForm';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
 import { PartnerBanner } from '@/components/sections/PartnerBanner';
+import { InfographicSection } from '@/components/sections/InfographicSection';
 
 import { AboutUs } from '@/components/sections/AboutUs';
 
@@ -89,6 +90,7 @@ export default async function HomePage({
         <PainPoints />
         <ComparisonSlider />
         <TechSpecs />
+        <InfographicSection />
         <ContactForm />
       </main>
       <Footer />

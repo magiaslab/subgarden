@@ -50,13 +50,13 @@ export function ComparisonSlider() {
             {/* Before Image (Background) */}
             <div className="absolute inset-0">
               <Image
-                src="/Gemini_Generated_Image_ljy601ljy601ljy6.png"
-                alt="Disagio con irrigazione tradizionale a pioggia"
+                src="/Gemini_Generated_Image_ydrfelydrfelydrf.png"
+                alt="Comfort con subirrigazione SUBGarden"
                 fill
                 className="object-cover"
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-black/30" />
+              <div className="absolute inset-0 bg-black/10" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-white px-4">
                   <h3 className="text-3xl md:text-4xl font-serif font-bold mb-2">Irrigazione Tradizionale</h3>
@@ -71,13 +71,13 @@ export function ComparisonSlider() {
               style={{ clipPath: `inset(0 0 0 ${sliderPosition}%)` }}
             >
               <Image
-                src="/Gemini_Generated_Image_ydrfelydrfelydrf.png"
-                alt="Comfort con subirrigazione SUBGarden"
+                src="/Gemini_Generated_Image_ljy601ljy601ljy6.png"
+                alt="Disagio con irrigazione tradizionale a pioggia"
                 fill
                 className="object-cover"
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-black/10" />
+              <div className="absolute inset-0 bg-black/30" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-white px-4">
                   <h3 className="text-3xl md:text-4xl font-serif font-bold mb-2">Subirrigazione SUBGarden</h3>
