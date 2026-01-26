@@ -27,15 +27,15 @@ export const routing = defineRouting({
       en: '/solutions/[slug]',
       de: '/loesungen/[slug]',
     },
-    '/local': {
-      it: '/local',
-      en: '/local',
-      de: '/lokal',
+    '/territorio': {
+      it: '/territorio',
+      en: '/territory',
+      de: '/gebiet',
     },
-    '/local/[city]': {
-      it: '/local/[city]',
-      en: '/local/[city]',
-      de: '/lokal/[city]',
+    '/territorio/[city]': {
+      it: '/territorio/[city]',
+      en: '/territory/[city]',
+      de: '/gebiet/[city]',
     },
     '/privacy': {
       it: '/privacy',

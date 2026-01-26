@@ -73,7 +73,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/local"
+                  href="/territorio"
                   className="text-white/70 hover:text-white transition-colors flex items-center gap-2 group"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-copper scale-0 group-hover:scale-100 transition-transform" />

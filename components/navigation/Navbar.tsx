@@ -20,7 +20,7 @@ export function Navbar() {
     { href: '/chi-siamo', label: t('about') },
     { href: '/tecnologia', label: t('technology') },
     { href: '/soluzioni', label: t('solutions') },
-    { href: '/local', label: t('local') },
+    { href: '/territorio', label: t('local') },
     { href: '/#contact' as any, label: t('contact') },
   ];
 

@@ -4,7 +4,7 @@
     "about": "Über Uns",
     "technology": "Technologie",
     "solutions": "Lösungen",
-    "local": "Lokal",
+    "local": "Gebiet",
     "contact": "Kontakt"
   },
   "hero": {
@@ -87,7 +87,7 @@
       "about": "Über Uns",
       "technology": "Technologie",
       "solutions": "Lösungen",
-      "local": "Lokal SEO",
+      "local": "Gebiet",
       "contact": "Kontakt"
     },
     "legal": {

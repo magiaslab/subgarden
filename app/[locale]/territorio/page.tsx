@@ -37,11 +37,11 @@ const cities = [
 ];
 
 export const metadata: Metadata = {
-  title: 'SUBGarden in Toscana | Presenza Locale',
+  title: 'SUBGarden in Toscana | Territorio',
   description: 'Scopri dove operiamo in Toscana: Isola d\'Elba, Maremma, Livorno e altre località.',
 };
 
-export default async function LocalIndexPage({
+export default async function TerritorioIndexPage({
   params,
 }: {
   params: Promise<{ locale: string }>;
@@ -74,7 +74,7 @@ export default async function LocalIndexPage({
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Link href={{ pathname: '/local/[city]', params: { city: city.slug } }}>
+                  <Link href={{ pathname: '/territorio/[city]', params: { city: city.slug } }}>
                     <Card className="h-full overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group">
                       <div className="relative h-64 w-full overflow-hidden">
                         <Image

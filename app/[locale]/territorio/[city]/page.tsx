@@ -182,17 +182,17 @@ export async function generateMetadata({
     title: `${content.title} - SUBGarden`,
     description: content.description,
     alternates: {
-      canonical: `${siteUrl}/${locale}/local/${city}`,
+      canonical: `${siteUrl}/${locale}/territorio/${city}`,
       languages: {
-        it: `${siteUrl}/it/local/${city}`,
-        en: `${siteUrl}/en/local/${city}`,
-        de: `${siteUrl}/de/lokal/${city}`,
+        it: `${siteUrl}/it/territorio/${city}`,
+        en: `${siteUrl}/en/territory/${city}`,
+        de: `${siteUrl}/de/gebiet/${city}`,
       },
     },
   };
 }
 
-export default async function LocalPage({
+export default async function TerritorioPage({
   params,
 }: {
   params: Promise<{ locale: string; city: string }>;
@@ -213,7 +213,7 @@ export default async function LocalPage({
     '@type': 'LocalBusiness',
     name: `SUBGarden - ${content.name}`,
     description: content.description,
-    url: `${siteUrl}/${locale}/local/${city}`,
+    url: `${siteUrl}/${locale}/territorio/${city}`,
     address: {
       '@type': 'PostalAddress',
       addressLocality: content.name,
