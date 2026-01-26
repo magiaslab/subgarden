@@ -1,10 +1,11 @@
 import { Metadata } from 'next';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Card } from '@/components/ui/Card';
 import { Link } from '@/lib/i18n/routing';
 import { MotionDiv } from '@/components/ui/Motion';
 import Image from 'next/image';
+import { ArrowRight } from 'lucide-react';
 
 const solutions = [
   {
@@ -14,7 +15,12 @@ const solutions = [
       en: 'Residential Gardens',
       de: 'Wohngebiete',
     },
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    description: {
+      it: 'Soluzioni di subirrigazione di lusso per ville e residenze private.',
+      en: 'Luxury sub-irrigation solutions for villas and private residences.',
+      de: 'Luxus-Unterflurbewässerungslösungen für Villen und Privatresidenzen.',
+    },
+    image: '/rustic-patio-with-deck-furniture-vegetation.jpg',
   },
   {
     slug: 'parchi-pubblici',
@@ -23,7 +29,12 @@ const solutions = [
       en: 'Public Parks',
       de: 'Öffentliche Parks',
     },
-    image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',
+    description: {
+      it: 'Sistemi efficienti per la gestione di grandi aree verdi urbane.',
+      en: 'Efficient systems for managing large urban green areas.',
+      de: 'Effiziente Systeme für die Verwaltung großer städtischer Grünflächen.',
+    },
+    image: '/green-park-view.jpg',
   },
   {
     slug: 'campi-sportivi',
@@ -32,7 +43,12 @@ const solutions = [
       en: 'Sports Fields',
       de: 'Sportplätze',
     },
-    image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80',
+    description: {
+      it: 'Manti erbosi perfetti e performanti per ogni disciplina sportiva.',
+      en: 'Perfect and high-performance turf for every sporting discipline.',
+      de: 'Perfekter und leistungsstarker Rasen für jede Sportdisziplin.',
+    },
+    image: '/grassland-landscape-greening-environment-park-background.jpg',
   },
 ];
 
@@ -52,45 +68,57 @@ export default async function SoluzioniIndexPage({
     <>
       <Navbar />
       <main className="pt-20">
-        <section className="py-20 bg-gradient-to-br from-deep-teal to-stone-grey text-white">
+        <section className="py-24 bg-gradient-to-br from-deep-teal to-stone-grey text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
               Le Nostre Soluzioni
             </h1>
-            <p className="text-xl md:text-2xl opacity-90">
+            <p className="text-xl md:text-2xl opacity-90 font-light italic">
               Sistemi di subirrigazione progettati per ogni esigenza
             </p>
           </div>
         </section>
 
-        <section className="py-20 bg-[#F2F4F7]">
+        <section className="py-24 bg-[#F2F4F7]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               {solutions.map((solution, index) => (
                 <MotionDiv
                   key={solution.slug}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <Link href={{ pathname: '/soluzioni/[slug]', params: { slug: solution.slug } }}>
-                    <Card className="h-full overflow-hidden cursor-pointer group p-0">
-                      <div className="relative h-64 w-full overflow-hidden">
-                        <Image
-                          src={solution.image}
-                          alt={solution.title[locale as keyof typeof solution.title] || solution.title.it}
-                          fill
-                          className="object-cover group-hover:scale-105 transition-transform duration-500"
-                          sizes="(max-width: 768px) 100vw, 33vw"
-                        />
-                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
-                      </div>
-                      <CardHeader>
-                        <CardTitle className="text-2xl text-deep-teal group-hover:text-copper transition-colors">
+                    <Card className="h-[500px] overflow-hidden cursor-pointer group p-0 relative border-none shadow-2xl">
+                      {/* Full Background Image */}
+                      <Image
+                        src={solution.image}
+                        alt={solution.title[locale as keyof typeof solution.title] || solution.title.it}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                      
+                      {/* Gradient Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent group-hover:from-deep-teal/90 transition-colors duration-500" />
+
+                      {/* Content Overlay */}
+                      <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
+                        <h3 className="text-3xl font-serif font-bold mb-3 group-hover:text-copper transition-colors duration-300">
                           {solution.title[locale as keyof typeof solution.title] || solution.title.it}
-                        </CardTitle>
-                      </CardHeader>
+                        </h3>
+                        
+                        <p className="text-white/80 text-lg leading-relaxed mb-6 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                          {solution.description[locale as keyof typeof solution.description] || solution.description.it}
+                        </p>
+
+                        <div className="flex items-center gap-2 text-copper font-bold uppercase tracking-widest text-sm">
+                          Scopri di più
+                          <ArrowRight className="w-5 h-5 transform group-hover:translate-x-2 transition-transform" />
+                        </div>
+                      </div>
                     </Card>
                   </Link>
                 </MotionDiv>
