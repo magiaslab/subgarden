@@ -9,6 +9,8 @@ import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
 import { PartnerBanner } from '@/components/sections/PartnerBanner';
 
+import { AboutUs } from '@/components/sections/AboutUs';
+
 export async function generateMetadata({
   params,
 }: {
@@ -83,6 +85,7 @@ export default async function HomePage({
       <main>
         <HeroSection />
         <PartnerBanner />
+        <AboutUs />
         <PainPoints />
         <ComparisonSlider />
         <TechSpecs />

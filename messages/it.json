@@ -12,6 +12,19 @@
     "description": "Sistema innovativo di irrigazione sotterranea che garantisce un giardino perfetto tutto l'anno, con risparmio idrico fino al 60% e manutenzione minima",
     "cta": "Scopri la Soluzione"
   },
+  "about": {
+    "title": "Chi Siamo",
+    "subtitle": "Trent'anni di dialogo con la natura",
+    "story_title": "Le Nostre Radici",
+    "story_text": "Nel 1990, il viaggio di Fausto Favilli nel mondo vegetale è iniziato quasi in silenzio, spinto da una necessità familiare. Ma ciò che era nato come un dovere si è trasformato, giorno dopo giorno, in una rivelazione. Innamorato della purezza delle piante e della loro resiliente capacità di esistere, semplicemente, Fausto ha trovato nella terra un senso di appartenenza profondo.",
+    "philosophy_title": "Il Giardino Empatico",
+    "philosophy_text": "Non disegniamo solo spazi, stabiliamo connessioni. Il nostro obiettivo è accompagnare la natura nel suo ritorno alla semplicità, affinché chi vive il giardino possa percepirsi parte dell'orizzonte che lo circonda, con la fantasia emotiva dell'anima.",
+    "founder": "Fausto Favilli",
+    "founder_role": "Fondatore & Visionario",
+    "milestone_1990": "L'inizio di una passione trentennale",
+    "milestone_villa": "Restauro storico di parchi monumentali",
+    "milestone_patent": "Innovazione e brevetto SUBGarden"
+  },
   "painPoints": {
     "title": "Perché scegliere la subirrigazione?",
     "description": "I sistemi tradizionali a pioggia sono superati. Scopri l'efficienza del sistema brevettato SUBGarden.",

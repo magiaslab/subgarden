@@ -12,6 +12,19 @@
     "description": "Innovative underground irrigation system that guarantees a perfect garden all year round, with up to 60% water savings and minimal maintenance",
     "cta": "Discover the Solution"
   },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Thirty years of dialogue with nature",
+    "story_title": "Our Roots",
+    "story_text": "In 1990, Fausto Favilli's journey into the plant world began almost in silence, driven by family necessity. But what was born as a duty turned, day after day, into a revelation. Enamored by the purity of plants and their resilient ability to exist, simply, Fausto found a deep sense of belonging in the earth.",
+    "philosophy_title": "The Empathetic Garden",
+    "philosophy_text": "We don't just design spaces, we establish connections. Our goal is to accompany nature in its return to simplicity, so that those who live in the garden can perceive themselves as part of the surrounding horizon, with the emotional fantasy of the soul.",
+    "founder": "Fausto Favilli",
+    "founder_role": "Founder & Visionary",
+    "milestone_1990": "The beginning of a thirty-year passion",
+    "milestone_villa": "Historical restoration of monumental parks",
+    "milestone_patent": "Innovation and SUBGarden patent"
+  },
   "painPoints": {
     "title": "Why Choose Sub-Irrigation?",
     "description": "Traditional sprinkler systems are outdated. Discover the efficiency of the patented SUBGarden system.",
