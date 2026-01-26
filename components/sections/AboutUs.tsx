@@ -31,7 +31,7 @@ export function AboutUs() {
   ];
 
   return (
-    <section id="about" className="py-24 bg-white overflow-hidden">
+    <section id="about" className="py-24 bg-[#F2F4F7] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -146,7 +146,7 @@ export function AboutUs() {
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {milestones.map((milestone, index) => (
-                <Card key={index} className="border-none shadow-sm bg-gray-50">
+                <Card key={index} className="border-white/50">
                   <CardContent className="p-6 text-center">
                     <milestone.icon className="w-8 h-8 text-copper mx-auto mb-3" />
                     <p className="text-xs font-bold text-deep-teal/40 uppercase tracking-tighter mb-1">

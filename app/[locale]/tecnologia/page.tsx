@@ -160,7 +160,7 @@ export default async function TecnologiaPage({
           </div>
         </section>
 
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-[#F2F4F7]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {pageContent.sections.map((section: any, index: number) => (
@@ -200,7 +200,7 @@ export default async function TecnologiaPage({
         </section>
 
         {/* Operational Method Section */}
-        <section className="py-24 bg-gray-50 border-t border-gray-100">
+        <section className="py-24 bg-[#F2F4F7] border-t border-gray-200/50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-deep-teal mb-4">{t('title')}</h2>
@@ -223,7 +223,7 @@ export default async function TecnologiaPage({
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.7, delay: index * 0.1 }}
-                    className="flex flex-col md:flex-row items-center md:items-start gap-8 bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-gray-100 relative overflow-hidden group hover:shadow-xl transition-all duration-500"
+                    className="flex flex-col md:flex-row items-center md:items-start gap-8 bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-white relative overflow-hidden group hover:shadow-2xl transition-all duration-500"
                   >
                     {/* Step Number Background Decor */}
                     <div className="absolute -right-4 -bottom-4 text-9xl font-serif font-bold text-gray-50 group-hover:text-gray-100 transition-colors duration-500 select-none -z-0">
@@ -238,8 +238,8 @@ export default async function TecnologiaPage({
                     </div>
 
                     <div className="relative z-10 text-center md:text-left">
-                      <div className="flex flex-col md:flex-row md:items-center gap-2 mb-4">
-                        <span className="text-copper font-bold uppercase tracking-widest text-sm">Fase {item.step}</span>
+                      <div className="flex flex-col items-center md:items-start mb-4">
+                        <span className="text-copper font-bold uppercase tracking-widest text-sm mb-1">Fase {item.step}</span>
                         <h3 className="text-2xl md:text-3xl font-serif font-bold text-deep-teal">
                           {t(`step${item.step}`)}
                         </h3>

@@ -63,7 +63,7 @@ export default async function SoluzioniIndexPage({
           </div>
         </section>
 
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-[#F2F4F7]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {solutions.map((solution, index) => (
@@ -75,7 +75,7 @@ export default async function SoluzioniIndexPage({
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <Link href={{ pathname: '/soluzioni/[slug]', params: { slug: solution.slug } }}>
-                    <Card className="h-full overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group">
+                    <Card className="h-full overflow-hidden cursor-pointer group p-0">
                       <div className="relative h-64 w-full overflow-hidden">
                         <Image
                           src={solution.image}

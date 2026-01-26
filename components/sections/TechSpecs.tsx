@@ -50,7 +50,7 @@ const specifications = [
 
 export function TechSpecs() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-[#F2F4F7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -76,7 +76,7 @@ export function TechSpecs() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="h-full overflow-hidden">
+              <Card className="h-full">
                 <div className="relative h-56 w-full overflow-hidden rounded-2xl">
                   <Image
                     src={spec.image}

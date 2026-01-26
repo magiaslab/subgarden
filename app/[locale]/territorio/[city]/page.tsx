@@ -246,7 +246,7 @@ export default async function TerritorioPage({
           </div>
         </section>
 
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-[#F2F4F7]">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             {image && (
               <MotionDiv
