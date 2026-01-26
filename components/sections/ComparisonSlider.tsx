@@ -50,17 +50,17 @@ export function ComparisonSlider() {
             {/* Before Image */}
             <div className="absolute inset-0">
               <Image
-                src="/grassland-landscape-greening-environment-park-background.jpg"
-                alt="Irrigazione tradizionale - giardino con zone secche"
+                src="/Gemini_Generated_Image_ljy601ljy601ljy6.png"
+                alt="Disagio con irrigazione tradizionale a pioggia"
                 fill
                 className="object-cover"
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-red-900/60 to-red-800/40" />
+              <div className="absolute inset-0 bg-black/30" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-white px-4">
                   <h3 className="text-3xl md:text-4xl font-serif font-bold mb-2">Irrigazione Tradizionale</h3>
-                  <p className="text-lg md:text-xl">Spreco d&apos;acqua, crescita irregolare, zone secche</p>
+                  <p className="text-lg md:text-xl">Superfici bagnate, arredi inutilizzabili, disturbo costante</p>
                 </div>
               </div>
             </div>
@@ -71,17 +71,17 @@ export function ComparisonSlider() {
               style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
             >
               <Image
-                src="/rustic-patio-with-deck-furniture-vegetation.jpg"
-                alt="Subirrigazione SUBGarden - giardino rigoglioso"
+                src="/Gemini_Generated_Image_ydrfelydrfelydrf.png"
+                alt="Comfort con subirrigazione SUBGarden"
                 fill
                 className="object-cover"
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-green-900/60 to-green-800/40" />
+              <div className="absolute inset-0 bg-black/10" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-white px-4">
                   <h3 className="text-3xl md:text-4xl font-serif font-bold mb-2">Subirrigazione SUBGarden</h3>
-                  <p className="text-lg md:text-xl">Risparmio idrico 60%, crescita uniforme e rigogliosa</p>
+                  <p className="text-lg md:text-xl">Superficie asciutta, comfort totale, acqua solo dove serve</p>
                 </div>
               </div>
             </div>
