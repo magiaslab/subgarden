@@ -4,6 +4,8 @@ import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
 import { ContactCTA } from '@/components/sections/ContactCTA';
 import { PortfolioGallery } from '@/components/sections/PortfolioGallery';
+import { MotionDiv } from '@/components/ui/Motion';
+import Image from 'next/image';
 
 export async function generateMetadata({
   params,
@@ -51,18 +53,29 @@ export default async function PortfolioPage({
     <>
       <Navbar />
       <main className="pt-20">
-        <section className="py-24 bg-gradient-to-br from-deep-teal to-stone-grey text-white overflow-hidden relative">
-          {/* Background decor */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48 blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-copper/10 rounded-full -ml-48 -mb-48 blur-3xl"></div>
-
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight">
-              {t('title')}
-            </h1>
-            <p className="text-xl md:text-2xl opacity-90 font-light leading-relaxed">
-              {t('description')}
-            </p>
+        {/* Hero Section */}
+        <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+          <Image
+            src="/green-park-view.jpg"
+            alt="Portfolio SUBGarden"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="relative z-10 text-center text-white px-4 max-w-4xl">
+            <MotionDiv
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6">
+                {t('title')}
+              </h1>
+              <p className="text-xl md:text-2xl opacity-90 font-light italic">
+                {t('description')}
+              </p>
+            </MotionDiv>
           </div>
         </section>
 

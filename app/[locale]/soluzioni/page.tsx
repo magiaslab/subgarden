@@ -69,14 +69,29 @@ export default async function SoluzioniIndexPage({
     <>
       <Navbar />
       <main className="pt-20">
-        <section className="py-24 bg-gradient-to-br from-deep-teal to-stone-grey text-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
-              Le Nostre Soluzioni
-            </h1>
-            <p className="text-xl md:text-2xl opacity-90 font-light italic">
-              Sistemi di subirrigazione progettati per ogni esigenza
-            </p>
+        {/* Hero Section */}
+        <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+          <Image
+            src="/rustic-patio-with-deck-furniture-vegetation.jpg"
+            alt="SUBGarden Solutions"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="relative z-10 text-center text-white px-4 max-w-4xl">
+            <MotionDiv
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6">
+                Le Nostre Soluzioni
+              </h1>
+              <p className="text-xl md:text-2xl opacity-90 font-light italic">
+                Sistemi di subirrigazione progettati per ogni esigenza
+              </p>
+            </MotionDiv>
           </div>
         </section>
 

@@ -6,6 +6,7 @@ import { Card, CardContent } from '@/components/ui/Card';
 import { MotionDiv } from '@/components/ui/Motion';
 import { getTranslations } from 'next-intl/server';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import Image from 'next/image';
 
 export async function generateMetadata({
   params,
@@ -73,15 +74,23 @@ export default async function ContactPage({
     <>
       <Navbar />
       <main className="pt-20">
-        {/* Header Section */}
-        <section className="py-24 bg-gradient-to-br from-deep-teal to-stone-grey text-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Hero Section */}
+        <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+          <Image
+            src="/spring-nature-outdoors-backgrounds-fresh.jpg"
+            alt="Contatti SUBGarden"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="relative z-10 text-center text-white px-4 max-w-4xl">
             <MotionDiv
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
+              <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6">
                 {t('title')}
               </h1>
               <p className="text-xl md:text-2xl opacity-90 font-light italic">

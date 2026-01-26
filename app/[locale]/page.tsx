@@ -4,7 +4,7 @@ import { HeroSection } from '@/components/sections/HeroSection';
 import { PainPoints } from '@/components/sections/PainPoints';
 import { ComparisonSlider } from '@/components/sections/LazyComparisonSlider';
 import { TechSpecs } from '@/components/sections/TechSpecs';
-import { ContactForm } from '@/components/sections/ContactForm';
+import { ContactCTA } from '@/components/sections/ContactCTA';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
 import { PartnerBanner } from '@/components/sections/PartnerBanner';
@@ -91,7 +91,7 @@ export default async function HomePage({
         <ComparisonSlider />
         <TechSpecs />
         <InfographicSection />
-        <ContactForm />
+        <ContactCTA />
       </main>
       <Footer />
     </>
