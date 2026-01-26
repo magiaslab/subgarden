@@ -1,110 +1,137 @@
 {
-  "nav": {
-    "home": "Home",
-    "about": "Chi Siamo",
-    "technology": "Tecnologia",
-    "solutions": "Soluzioni",
-    "portfolio": "Portfolio",
-    "local": "Territorio",
-    "contact": "Contatti"
-  },
-  "hero": {
-    "title": "SUBGarden",
-    "subtitle": "L'acqua solo dove serve",
-    "description": "Sistema innovativo di irrigazione sotterranea che garantisce un giardino perfetto tutto l'anno, con risparmio idrico fino al 60% e manutenzione minima",
-    "cta": "Scopri la Soluzione"
-  },
   "about": {
-    "title": "Chi Siamo",
-    "subtitle": "Trent'anni di dialogo con la natura",
-    "story_title": "Le Nostre Radici",
-    "story_text": "Nel 1990, il viaggio di Fausto Favilli nel mondo vegetale è iniziato quasi in silenzio, spinto da una necessità familiare. Ma ciò che era nato come un dovere si è trasformato, giorno dopo giorno, in una rivelazione. Innamorato della purezza delle piante e della loro resiliente capacità di esistere, semplicemente, Fausto ha trovato nella terra un senso di appartenenza profondo.",
-    "philosophy_title": "Il Giardino Empatico",
-    "philosophy_text": "Non disegniamo solo spazi, stabiliamo connessioni. Il nostro obiettivo è accompagnare la natura nel suo ritorno alla semplicità, affinché chi vive il giardino possa percepirsi parte dell'orizzonte che lo circonda, con la fantasia emotiva dell'anima.",
+    "discover_more": "Scopri la nostra storia",
     "founder": "Fausto Favilli",
     "founder_role": "Fondatore & Visionario",
     "milestone_1990": "L'inizio di una passione trentennale",
-    "milestone_villa": "Restauro storico di parchi monumentali",
     "milestone_patent": "Innovazione e brevetto SUBGarden",
-    "discover_more": "Scopri la nostra storia"
+    "milestone_villa": "Restauro storico di parchi monumentali",
+    "philosophy_text": "Non disegniamo solo spazi, stabiliamo connessioni. Il nostro obiettivo è accompagnare la natura nel suo ritorno alla semplicità, affinché chi vive il giardino possa percepirsi parte dell'orizzonte che lo circonda, con la fantasia emotiva dell'anima.",
+    "philosophy_title": "Il Giardino Empatico",
+    "story_text": "Nel 1990, il viaggio di Fausto Favilli nel mondo vegetale è iniziato quasi in silenzio, spinto da una necessità familiare. Ma ciò che era nato come un dovere si è trasformato, giorno dopo giorno, in una rivelazione. Innamorato della purezza delle piante e della loro resiliente capacità di esistere, semplicemente, Fausto ha trovato nella terra un senso di appartenenza profondo.",
+    "story_title": "Le Nostre Radici",
+    "subtitle": "Trent'anni di dialogo con la natura",
+    "title": "Chi Siamo"
+  },
+  "aboutPage": {
+    "case_history_text": "Uno dei nostri progetti più significativi è stato il recupero del parco di una villa del 1700 in semi-abbandono. Abbiamo ascoltato ciò che il parco voleva tornare a essere, ripristinando le simmetrie storiche e le essenze secolari, trasformandolo in una cornice d'eccellenza per eventi VIP e relax assoluto, senza mai spezzare il dialogo con il paesaggio circostante.",
+    "case_history_title": "Il Restauro dell'Anima: Villa del XVIII Secolo",
+    "hero_subtitle": "La storia di Fausto Favilli e la visione di SUBGarden",
+    "hero_title": "L'Arte di Ascoltare la Terra",
+    "innovation_text": "La nostra storia di amore per la natura ci ha portato a creare SUBGarden: un sistema brevettato di subirrigazione non invasivo. Proteggiamo il valore dei giardini storici e moderni con una tecnologia che non si vede, non distrugge il prato esistente durante l'installazione e garantisce una bellezza eterna, sostenuta dalla precisione digitale e dal rispetto assoluto della risorsa idrica.",
+    "innovation_title": "L'Invisibile Rivoluzione Sostenibile",
+    "philosophy_expanded_text1": "Un giardino non finisce dove termina la proprietà. La nostra tecnica si ispira al concetto del 'Borrowed Scenery': liberare lo sguardo anziché delimitarlo. Utilizziamo quinte naturali e cannocchiali prospettici per fondere il giardino privato con l'orizzonte infinito della Toscana.",
+    "philosophy_expanded_text2": "Definiamo il nostro approccio 'Giardino Empatico' perché entra in risonanza con chi lo abita e con il luogo stesso. Non imponiamo una forma, ma assecondiamo la voce della terra, utilizzando la tecnologia più avanzata per servire la massima semplicità.",
+    "philosophy_expanded_title": "Il Paesaggio Prestato e il Giardino Empatico",
+    "roots_text": "Nel 1990 non cercavo una carriera, ma risposte. Quello che era iniziato come un supporto all'attività familiare è diventato rapidamente un dialogo intimo con il mondo vegetale. Mi ha conquistato la capacità delle piante di 'esistere semplicemente', la loro resilienza silenziosa ma invincibile. Da allora, ogni giardino che curiamo è un tributo a questa forza.",
+    "roots_title": "Radici: Dal Dovere allo Stupore"
+  },
+  "contact": {
+    "address_label": "Sede",
+    "address_value": "Corso Italia, 45 - 57027 San Vincenzo (LI)",
+    "email": "Email",
+    "email_label": "Email",
+    "email_value": "info@subgarden.it",
+    "error": "Errore nell'invio del messaggio. Riprova.",
+    "form_title": "Inviaci un messaggio",
+    "hours_label": "Orari",
+    "hours_value": "Lun - Ven: 09:00 - 18:00",
+    "info_title": "Recapiti",
+    "message": "Messaggio",
+    "name": "Nome",
+    "phone": "Telefono",
+    "phone_label": "Telefono",
+    "phone_value": "+39 371 4379979",
+    "sending": "Invio in corso...",
+    "submit": "Invia Messaggio",
+    "subtitle": "Siamo pronti a trasformare il tuo spazio verde",
+    "success": "Messaggio inviato con successo!",
+    "title": "Contattaci"
   },
   "cta": {
     "badge": "Richiedi Informazioni",
-    "title": "Pronto a trasformare il tuo giardino?",
-    "description": "Contattaci oggi stesso per un sopralluogo tecnico gratuito e scopri come il sistema SUBGarden può valorizzare la tua proprietà.",
     "button": "Parla con un esperto",
-    "call_us": "Oppure chiamaci:"
+    "call_us": "Oppure chiamaci:",
+    "description": "Contattaci oggi stesso per un sopralluogo tecnico gratuito e scopri come il sistema SUBGarden può valorizzare la tua proprietà.",
+    "title": "Pronto a trasformare il tuo giardino?"
   },
-  "aboutPage": {
-    "hero_title": "L'Arte di Ascoltare la Terra",
-    "hero_subtitle": "La storia di Fausto Favilli e la visione di SUBGarden",
-    "roots_title": "Radici: Dal Dovere allo Stupore",
-    "roots_text": "Nel 1990 non cercavo una carriera, ma risposte. Quello che era iniziato come un supporto all'attività familiare è diventato rapidamente un dialogo intimo con il mondo vegetale. Mi ha conquistato la capacità delle piante di 'esistere semplicemente', la loro resilienza silenziosa ma invincibile. Da allora, ogni giardino che curiamo è un tributo a questa forza.",
-    "philosophy_expanded_title": "Il Paesaggio Prestato e il Giardino Empatico",
-    "philosophy_expanded_text1": "Un giardino non finisce dove termina la proprietà. La nostra tecnica si ispira al concetto del 'Borrowed Scenery': liberare lo sguardo anziché delimitarlo. Utilizziamo quinte naturali e cannocchiali prospettici per fondere il giardino privato con l'orizzonte infinito della Toscana.",
-    "philosophy_expanded_text2": "Definiamo il nostro approccio 'Giardino Empatico' perché entra in risonanza con chi lo abita e con il luogo stesso. Non imponiamo una forma, ma assecondiamo la voce della terra, utilizzando la tecnologia più avanzata per servire la massima semplicità.",
-    "case_history_title": "Il Restauro dell'Anima: Villa del XVIII Secolo",
-    "case_history_text": "Uno dei nostri progetti più significativi è stato il recupero del parco di una villa del 1700 in semi-abbandono. Abbiamo ascoltato ciò che il parco voleva tornare a essere, ripristinando le simmetrie storiche e le essenze secolari, trasformandolo in una cornice d'eccellenza per eventi VIP e relax assoluto, senza mai spezzare il dialogo con il paesaggio circostante.",
-    "innovation_title": "L'Invisibile Rivoluzione Sostenibile",
-    "innovation_text": "La nostra storia di amore per la natura ci ha portato a creare SUBGarden: un sistema brevettato di subirrigazione non invasivo. Proteggiamo il valore dei giardini storici e moderni con una tecnologia che non si vede, non distrugge il prato esistente durante l'installazione e garantisce una bellezza eterna, sostenuta dalla precisione digitale e dal rispetto assoluto della risorsa idrica."
-  },
-  "contact": {
-    "title": "Contattaci",
-    "subtitle": "Siamo pronti a trasformare il tuo spazio verde",
-    "form_title": "Inviaci un messaggio",
-    "info_title": "Recapiti",
-    "address_label": "Sede",
-    "address_value": "Corso Italia, 45 - 57027 San Vincenzo (LI)",
-    "phone_label": "Telefono",
-    "phone_value": "+39 371 4379979",
-    "email_label": "Email",
-    "email_value": "info@subgarden.it",
-    "hours_label": "Orari",
-    "hours_value": "Lun - Ven: 09:00 - 18:00",
-    "name": "Nome",
-    "email": "Email",
-    "phone": "Telefono",
-    "message": "Messaggio",
-    "submit": "Invia Messaggio",
-    "sending": "Invio in corso...",
-    "success": "Messaggio inviato con successo!",
-    "error": "Errore nell'invio del messaggio. Riprova."
-  },
-  "infographic": {
-    "title": "Il Sistema SUBGarden in Sintesi",
-    "subtitle": "Visione d'Insieme",
-    "caption": "L'ingegneria del benessere outdoor: dalla tecnologia invisibile al metodo operativo."
-  },
-  "painPoints": {
-    "title": "Perché scegliere la subirrigazione?",
-    "description": "I sistemi tradizionali a pioggia sono superati. Scopri l'efficienza del sistema brevettato SUBGarden.",
-    "water": {
-      "title": "Risparmio Idrico ed Energetico",
-      "description": "Risparmia dal 50% al 70% di acqua ed energia grazie alla distribuzione mirata alle radici."
+  "footer": {
+    "copyright": "© {year} SUBGarden. Tutti i diritti riservati.",
+    "description": "SUBGarden - Sistema di subirrigazione professionale per il mercato toscano",
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Termini di Servizio"
     },
-    "mosquitoes": {
-      "title": "Zero Zanzare",
-      "description": "Riduci del 90% i trattamenti anti-zanzare mantenendo la superficie del prato sempre asciutta."
-    },
-    "furniture": {
-      "title": "Arredi Sempre Protetti",
-      "description": "Lascia pure poltrone, lettini e cuscini sul prato. Non dovrai più spostarli per irrigare."
-    },
-    "noise": {
-      "title": "Silenzio Totale",
-      "description": "Elimina il fastidioso rumore notturno degli spruzzatori. L'irrigazione è interrata e silenziosa."
-    },
-    "puddles": {
-      "title": "Mai più Ristagni",
-      "description": "Elimina i ristagni d'acqua su vialetti e avvallamenti. Cammina sul prato subito dopo l'irrigazione."
-    },
-    "installation": {
-      "title": "Installazione Non Invasiva",
-      "description": "Il nostro sistema brevettato permette l'installazione in giardini esistenti senza distruggerli. Veloce, pulito e invisibile."
+    "links": {
+      "about": "Chi Siamo",
+      "contact": "Contatti",
+      "local": "Territorio",
+      "portfolio": "Portfolio",
+      "solutions": "Soluzioni",
+      "technology": "Tecnologia"
     }
   },
+  "hero": {
+    "cta": "Scopri la Soluzione",
+    "description": "Sistema innovativo di irrigazione sotterranea che garantisce un giardino perfetto tutto l'anno, con risparmio idrico fino al 60% e manutenzione minima",
+    "subtitle": "L'acqua solo dove serve",
+    "title": "SUBGarden"
+  },
+  "infographic": {
+    "caption": "L'ingegneria del benessere outdoor: dalla tecnologia invisibile al metodo operativo.",
+    "subtitle": "Visione d'Insieme",
+    "title": "Il Sistema SUBGarden in Sintesi"
+  },
+  "nav": {
+    "about": "Chi Siamo",
+    "contact": "Contatti",
+    "home": "Home",
+    "local": "Territorio",
+    "portfolio": "Portfolio",
+    "solutions": "Soluzioni",
+    "technology": "Tecnologia"
+  },
+  "painPoints": {
+    "description": "I sistemi tradizionali a pioggia sono superati. Scopri l'efficienza del sistema brevettato SUBGarden.",
+    "furniture": {
+      "description": "Lascia pure poltrone, lettini e cuscini sul prato. Non dovrai più spostarli per irrigare.",
+      "title": "Arredi Sempre Protetti"
+    },
+    "installation": {
+      "description": "Il nostro sistema brevettato permette l'installazione in giardini esistenti senza distruggerli. Veloce, pulito e invisibile.",
+      "title": "Installazione Non Invasiva"
+    },
+    "mosquitoes": {
+      "description": "Riduci del 90% i trattamenti anti-zanzare mantenendo la superficie del prato sempre asciutta.",
+      "title": "Zero Zanzare"
+    },
+    "noise": {
+      "description": "Elimina il fastidioso rumore notturno degli spruzzatori. L'irrigazione è interrata e silenziosa.",
+      "title": "Silenzio Totale"
+    },
+    "puddles": {
+      "description": "Elimina i ristagni d'acqua su vialetti e avvallamenti. Cammina sul prato subito dopo l'irrigazione.",
+      "title": "Mai più Ristagni"
+    },
+    "title": "Perché scegliere la subirrigazione?",
+    "water": {
+      "description": "Risparmia dal 50% al 70% di acqua ed energia grazie alla distribuzione mirata alle radici.",
+      "title": "Risparmio Idrico ed Energetico"
+    }
+  },
+  "portfolio": {
+    "categories": {
+      "all": "Tutti",
+      "commercial": "Commerciale",
+      "historical": "Storico",
+      "residential": "Residenziale"
+    },
+    "description": "Esplora una selezione dei nostri progetti di subirrigazione e landscape design realizzati in tutta la Toscana.",
+    "subtitle": "I nostri lavori d'eccellenza",
+    "title": "Portfolio",
+    "view_project": "Vedi Progetto"
+  },
   "process": {
-    "title": "Il Nostro Metodo Operativo",
     "step1": "Sopralluogo Tecnico",
     "step1_desc": "Analisi accurata dello stato del giardino e dell'eventuale impianto esistente per identificare le migliori opportunità di riconversione.",
     "step2": "Progettazione su Misura",
@@ -114,34 +141,17 @@
     "step4": "Installazione Brevettata",
     "step4_desc": "Esecuzione rapida, pulita e assolutamente non invasiva. Il prato e le radici non subiscono danni, l'impianto è invisibile dal primo giorno.",
     "step5": "Assistenza & Garanzia",
-    "step5_desc": "Consegna certificata con un anno di assistenza gratuita e possibilità di garanzia illimitata tramite manutenzione stagionale."
+    "step5_desc": "Consegna certificata con un anno di assistenza gratuita e possibilità di garanzia illimitata tramite manutenzione stagionale.",
+    "title": "Il Nostro Metodo Operativo"
   },
-  "portfolio": {
-    "title": "Portfolio",
-    "subtitle": "I nostri lavori d'eccellenza",
-    "description": "Esplora una selezione dei nostri progetti di subirrigazione e landscape design realizzati in tutta la Toscana.",
-    "categories": {
-      "all": "Tutti",
-      "residential": "Residenziale",
-      "commercial": "Commerciale",
-      "historical": "Storico"
-    },
-    "view_project": "Vedi Progetto"
+  "whatsapp": {
+    "aria_label": "Chatta su WhatsApp"
   },
-  "footer": {
-    "description": "SUBGarden - Sistema di subirrigazione professionale per il mercato toscano",
-    "links": {
-      "about": "Chi Siamo",
-      "contact": "Contatti",
-      "local": "Territorio",
-      "portfolio": "Portfolio",
-      "solutions": "Soluzioni",
-      "technology": "Tecnologia"
-    },
-    "legal": {
-      "privacy": "Privacy Policy",
-      "terms": "Termini di Servizio"
-    },
-    "copyright": "© {year} SUBGarden. Tutti i diritti riservati."
+  "cookie": {
+    "title": "Cookie & Privacy",
+    "description": "Utilizziamo i cookie per assicurarti la migliore esperienza sul nostro sito. Continuando la navigazione acconsenti al loro utilizzo.",
+    "accept": "Accetta tutto",
+    "decline": "Solo necessari",
+    "privacy_link": "Leggi la Privacy Policy"
   }
 }

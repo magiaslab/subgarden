@@ -1,147 +1,157 @@
 {
-  "nav": {
-    "home": "Startseite",
-    "about": "Über Uns",
-    "technology": "Technologie",
-    "solutions": "Lösungen",
-    "portfolio": "Portfolio",
-    "local": "Gebiet",
-    "contact": "Kontakt"
-  },
-  "hero": {
-    "title": "SUBGarden",
-    "subtitle": "Wasser nur dort, wo es nötig ist",
-    "description": "Innovatives Unterflurbewässerungssystem, das das ganze Jahr über einen perfekten Garten garantiert, mit bis zu 60% Wassereinsparung und minimalem Wartungsaufwand",
-    "cta": "Lösung Entdecken"
-  },
   "about": {
-    "title": "Über Uns",
-    "subtitle": "Dreißig Jahre Dialog mit der Natur",
-    "story_title": "Unsere Wurzeln",
-    "story_text": "Im Jahr 1990 begann Fausto Favillis Reise in die Pflanzenwelt fast lautlos, getrieben von familiärer Notwendigkeit. Doch what als Pflicht begann, verwandelte sich Tag für Tag in eine Offenbarung. Verliebt in die Reinheit der Pflanzen und ihre resiliente Fähigkeit, einfach zu existieren, fand Fausto in der Erde ein tiefes Gefühl der Zugehörigkeit.",
-    "philosophy_title": "Der Empathische Garten",
-    "philosophy_text": "Wir gestalten nicht nur Räume, wir stellen Verbindungen her. Unser Ziel ist es, die Natur bei ihrer Rückkehr alla Einfachheit zu begleiten, damit diejenigen, die im Garten leben, sich als Teil des umgebenden Horizonts wahrnehmen können, con la fantasia emotiva dell'anima.",
+    "discover_more": "Entdecken Sie unsere Geschichte",
     "founder": "Fausto Favilli",
     "founder_role": "Gründer & Visionär",
     "milestone_1990": "Der Beginn einer dreißigjährigen Leidenschaft",
-    "milestone_villa": "Historische Restaurierung monumentaler Parks",
     "milestone_patent": "Innovation und SUBGarden-Patent",
-    "discover_more": "Entdecken Sie unsere Geschichte"
+    "milestone_villa": "Historische Restaurierung monumentaler Parks",
+    "philosophy_text": "Wir gestalten nicht nur Räume, wir stellen Verbindungen her. Unser Ziel ist es, die Natur bei ihrer Rückkehr zur Einfachheit zu begleiten, damit diejenigen, die im Garten leben, sich als Teil des umgebenden Horizonts wahrnehmen können, mit della emotiven Fantasie der Seele.",
+    "philosophy_title": "Der Empathische Garten",
+    "story_text": "Im Jahr 1990 begann Fausto Favillis Reise in die Pflanzenwelt fast lautlos, getrieben von familiärer Notwendigkeit. Doch was als Pflicht begann, verwandelte sich Tag für Tag in eine Offenbarung. Verliebt in die Reinheit der Pflanzen und ihre resiliente Fähigkeit, einfach zu existieren, fand Fausto in der Erde ein tiefes Gefühl der Zugehörigkeit.",
+    "story_title": "Unsere Wurzeln",
+    "subtitle": "Dreißig Jahre Dialog mit der Natur",
+    "title": "Über Uns"
+  },
+  "aboutPage": {
+    "case_history_text": "Eines unserer bedeutendsten Projekte war die Wiederherstellung des Parks einer Villa aus dem 1700er Jahren, der sich in einem halbverfallenen Zustand befand. Wir hörten darauf, was der Park wieder werden wollte, stellten historische Symmetrien und säkulare Essenzen wieder her und verwandelten ihn in einen exzellenten Rahmen für VIP-Events und absolute Entspannung, ohne jemals den Dialog mit der umgebenden Landschaft zu unterbrechen.",
+    "case_history_title": "Restaurierung der Seele: Villa aus dem 18. Jahrhundert",
+    "hero_subtitle": "Die Geschichte von Fausto Favilli und die Vision von SUBGarden",
+    "hero_title": "Die Kunst, der Erde zuzuhören",
+    "innovation_text": "Unsere Liebe zur Natur hat uns dazu bewogen, SUBGarden zu entwickeln: ein patentiertes, nicht-invasives Unterflurbewässerungssystem. Wir schützen den Wert historischer und moderner Gärten mit einer Technologie, die man nicht sieht, die den vorhandenen Rasen während der Installation nicht zerstört und eine ewige Schönheit garantiert, unterstützt durch digitale Präzision und absoluten Respekt vor der Wasserressource.",
+    "innovation_title": "Die unsichtbare nachhaltige Revolution",
+    "philosophy_expanded_text1": "Ein Garten endet nicht dort, wo die Grundstücksgrenze aufhört. Unsere Technik ist vom Konzept der 'Borrowed Scenery' inspiriert: den Blick befreien, anstatt ihn zu begrenzen. Wir nutzen natürliche Kulissen und Perspektivteleskope, um den privaten Garten mit dem unendlichen Horizont der Toskana verschmelzen zu lassen.",
+    "philosophy_expanded_text2": "Wir bezeichnen unseren Ansatz als 'Empathischen Garten', weil er mit den Bewohnern und dem Ort selbst in Resonanz tritt. Wir erzwingen keine Form, sondern folgen der Stimme der Erde und nutzen modernste Technologie, um höchste Einfachheit zu erreichen.",
+    "philosophy_expanded_title": "Geliehene Kulisse und der empathische Garten",
+    "roots_text": "1990 suchte ich keine Karriere, sondern Antworten. Was als Unterstützung für das Familienunternehmen begann, entwickelte sich schnell zu einem intimen Dialog mit der Pflanzenwelt. Die Fähigkeit der Pflanzen, 'einfach zu existieren', ihre stille, aber unbesiegbare Widerstandsfähigkeit, hat mich überzeugt. Seitdem ist jeder Garten, den wir pflegen, ein Tribut an diese Kraft.",
+    "roots_title": "Wurzeln: Von der Pflicht zum Staunen"
+  },
+  "contact": {
+    "address_label": "Büro",
+    "address_value": "Corso Italia, 45 - 57027 San Vincenzo (LI)",
+    "email": "Email",
+    "email_label": "Email",
+    "email_value": "info@subgarden.it",
+    "error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut.",
+    "form_title": "Schreiben Sie uns",
+    "hours_label": "Öffnungszeiten",
+    "hours_value": "Mo - Fr: 09:00 - 18:00",
+    "info_title": "Kontaktdaten",
+    "message": "Nachricht",
+    "name": "Name",
+    "phone": "Telefon",
+    "phone_label": "Telefon",
+    "phone_value": "+39 371 4379979",
+    "sending": "Wird gesendet...",
+    "submit": "Nachricht Senden",
+    "subtitle": "Wir sind bereit, Ihre Grünfläche zu transformieren",
+    "success": "Nachricht erfolgreich gesendet!",
+    "title": "Kontakt"
   },
   "cta": {
     "badge": "Informationen anfordern",
-    "title": "Bereit, Ihren Garten zu verwandeln?",
-    "description": "Kontaktieren Sie uns noch heute für eine kostenlose technische Besichtigung und entdecken Sie, wie das SUBGarden-System la tua proprietà aufwerten kann.",
     "button": "Mit einem Experten sprechen",
-    "call_us": "Oder rufen Sie uns an:"
+    "call_us": "Oder rufen Sie uns an:",
+    "description": "Kontaktieren Sie uns noch heute für eine kostenlose technische Besichtigung und entdecken Sie, wie das SUBGarden-System Ihre Immobilie aufwerten kann.",
+    "title": "Bereit, Ihren Garten zu verwandeln?"
   },
-  "aboutPage": {
-    "hero_title": "Die Kunst, der Erde zuzuhören",
-    "hero_subtitle": "Die Geschichte von Fausto Favilli und die Vision von SUBGarden",
-    "roots_title": "Wurzeln: Von der Pflicht zum Staunen",
-    "roots_text": "1990 suchte ich keine Karriere, sondern Antworten. Was als Unterstützung für das Familienunternehmen begann, entwickelte sich schnell zu einem intimen Dialog mit der Pflanzenwelt. Die Fähigkeit der Pflanzen, 'einfach zu existieren', ihre stille, aber unbesiegbare Widerstandsfähigkeit, hat mich überzeugt. Seitdem ist jeder Garten, den wir pflegen, ein Tribut an diese Kraft.",
-    "philosophy_expanded_title": "Geliehene Kulisse und der empathische Garten",
-    "philosophy_expanded_text1": "Ein Garten endet nicht dort, wo die Grundstücksgrenze aufhört. Unsere Technik ist vom Konzept der 'Borrowed Scenery' inspiriert: den Blick befreien, anstatt ihn zu begrenzen. Wir nutzen natürliche Kulissen und Perspektivteleskope, um den privaten Garten mit dem unendlichen Horizont der Toskana verschmelzen zu lassen.",
-    "philosophy_expanded_text2": "Wir bezeichnen unseren Ansatz als 'Empathischen Garten', weil er mit den Bewohnern und dem Ort selbst in Resonanz tritt. Wir erzwingen keine Form, sondern folgen der Stimme der Erde und nutzen modernste Technologie, um höchste Einfachheit zu erreichen.",
-    "case_history_title": "Restaurierung der Seele: Villa aus dem 18. Jahrhundert",
-    "case_history_text": "Eines unserer bedeutendsten Projekte war die Wiederherstellung des Parks einer Villa aus dem 1700er Jahren, der sich in einem halbverfallenen Zustand befand. Wir hörten darauf, was der Park wieder werden wollte, stellten historische Symmetrien und säkulare Essenzen wieder her und verwandelten ihn in einen exzellenten Rahmen für VIP-Events und absolute Entspannung, ohne jemals den Dialog mit der umgebenden Landschaft zu unterbrechen.",
-    "innovation_title": "Die unsichtbare nachhaltige Revolution",
-    "innovation_text": "Unsere Liebe alla Natur hat uns dazu bewogen, SUBGarden zu entwickeln: ein patentiertes, nicht-invasives Unterflurbewässerungssystem. Wir schützen den Wert historischer und moderner Gärten mit einer Technologie, die man non si vede, non distrugge il prato esistente durante l'installazione e garantisce eine bellezza eterna, sostenuta dalla precisione digitale e dal rispetto assoluto della risorsa idrica."
-  },
-  "contact": {
-    "title": "Kontakt",
-    "subtitle": "Wir sind bereit, Ihre Grünfläche zu transformieren",
-    "form_title": "Schreiben Sie uns",
-    "info_title": "Kontaktdaten",
-    "address_label": "Büro",
-    "address_value": "Corso Italia, 45 - 57027 San Vincenzo (LI)",
-    "phone_label": "Telefon",
-    "phone_value": "+39 371 4379979",
-    "email_label": "Email",
-    "email_value": "info@subgarden.it",
-    "hours_label": "Öffnungszeiten",
-    "hours_value": "Mo - Fr: 09:00 - 18:00",
-    "name": "Name",
-    "email": "Email",
-    "phone": "Telefon",
-    "message": "Nachricht",
-    "submit": "Nachricht Senden",
-    "sending": "Wird gesendet...",
-    "success": "Nachricht erfolgreich gesendet!",
-    "error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut."
-  },
-  "infographic": {
-    "title": "Das SUBGarden-System auf einen Blick",
-    "subtitle": "Überblick",
-    "caption": "Das Engineering für Outdoor-Wohlbefinden: von unsichtbarer Technologie bis hin zum Betriebsverfahren."
-  },
-  "painPoints": {
-    "title": "Warum Unterflurbewässerung wählen?",
-    "description": "Traditionelle Sprinklersysteme sind veraltet. Entdecken Sie die Effizienz des patentierten SUBGarden-Systems.",
-    "water": {
-      "title": "Wasser- und Energieeinsparung",
-      "description": "Sparen Sie 50% bis 70% Wasser und Energie dank gezielter Verteilung an die Wurzeln."
+  "footer": {
+    "copyright": "© {year} SUBGarden. Alle Rechte vorbehalten.",
+    "description": "SUBGarden - Professionelles Unterflurbewässerungssystem für den toskanischen Markt",
+    "legal": {
+      "privacy": "Datenschutz",
+      "terms": "Nutzungsbedingungen"
     },
-    "mosquitoes": {
-      "title": "Null Mücken",
-      "description": "Reduzieren Sie Mückenbehandlungen um 90%, indem Sie die Rasenoberfläche jederzeit trocken halten."
-    },
-    "furniture": {
-      "title": "Möbel immer geschützt",
-      "description": "Lassen Sie Sessel, Liegen und Kissen auf dem Rasen. Kein lästiges Umräumen zum Bewässern mehr."
-    },
-    "noise": {
-      "title": "Absolute Stille",
-      "description": "Eliminieren Sie das störende nächtliche Geräusch von Sprinklern. Die Bewässerung ist unterirdisch und leise."
-    },
-    "puddles": {
-      "title": "Keine Staunässe mehr",
-      "description": "Eliminieren Sie Wasseransammlungen auf Wegen und im Rasen. Betreten Sie den Rasen direkt nach dem Gießen."
-    },
-    "installation": {
-      "title": "Nicht-invasive Installation",
-      "description": "Unser patentiertes System ermöglicht die Installation in bestehenden Gärten, ohne diese zu zerstören. Schnell, sauber und unsichtbar."
+    "links": {
+      "about": "Über Uns",
+      "contact": "Kontakt",
+      "local": "Territorio",
+      "portfolio": "Portfolio",
+      "solutions": "Lösungen",
+      "technology": "Technologie"
     }
   },
+  "hero": {
+    "cta": "Lösung Entdecken",
+    "description": "Innovatives Unterflurbewässerungssystem, das das ganze Jahr über einen perfekten Garten garantiert, mit bis zu 60% Wassereinsparung und minimalem Wartungsaufwand",
+    "subtitle": "Wasser nur dort, wo es nötig ist",
+    "title": "SUBGarden"
+  },
+  "infographic": {
+    "caption": "Das Engineering für Outdoor-Wohlbefinden: von unsichtbarer Technologie bis hin zum Betriebsverfahren.",
+    "subtitle": "Überblick",
+    "title": "Das SUBGarden-System auf einen Blick"
+  },
+  "nav": {
+    "about": "Über Uns",
+    "contact": "Kontakt",
+    "home": "Startseite",
+    "local": "Territorio",
+    "portfolio": "Portfolio",
+    "solutions": "Lösungen",
+    "technology": "Technologie"
+  },
+  "painPoints": {
+    "description": "Traditionelle Sprinklersysteme sind veraltet. Entdecken Sie die Effizienz des patentierten SUBGarden-Systems.",
+    "furniture": {
+      "description": "Lassen Sie Sessel, Liegen und Kissen auf dem Rasen. Kein lästiges Umräumen zum Bewässern mehr.",
+      "title": "Möbel immer geschützt"
+    },
+    "installation": {
+      "description": "Unser patentiertes System ermöglicht die installation in bestehenden Gärten, ohne diese zu zerstören. Schnell, sauber und unsichtbar.",
+      "title": "Nicht-invasive Installation"
+    },
+    "mosquitoes": {
+      "description": "Reduzieren Sie Mückenbehandlungen um 90%, indem Sie die Rasenoberfläche jederzeit trocken halten.",
+      "title": "Null Mücken"
+    },
+    "noise": {
+      "description": "Eliminieren Sie das störende nächtliche Geräusch von Sprinklern. Die Bewässerung ist unterirdisch und leise.",
+      "title": "Absolute Stille"
+    },
+    "puddles": {
+      "description": "Eliminieren Sie Wasseransammlungen auf Wegen und im Rasen. Betreten Sie den Rasen direkt nach dem Gießen.",
+      "title": "Keine Staunässe mehr"
+    },
+    "title": "Warum Unterflurbewässerung wählen?",
+    "water": {
+      "description": "Sparen Sie 50% bis 70% Wasser und Energie dank gezielter Verteilung an die Wurzeln.",
+      "title": "Wasser- und Energieeinsparung"
+    }
+  },
+  "portfolio": {
+    "categories": {
+      "all": "Alle",
+      "commercial": "Gewerbe",
+      "historical": "Historisch",
+      "residential": "Wohngebäude"
+    },
+    "description": "Entdecken Sie eine Auswahl unserer Projekte für Unterflurbewässerung und Landschaftsgestaltung in der ganzen Toskana.",
+    "subtitle": "Unsere exzellenten Arbeiten",
+    "title": "Portfolio",
+    "view_project": "Projekt ansehen"
+  },
   "process": {
-    "title": "Unser Betriebsverfahren",
     "step1": "Technische Besichtigung",
     "step1_desc": "Genaue Analyse des Zustands des Gartens und eines eventuell vorhandenen Systems, um die besten Umstellungsmöglichkeiten zu identifizieren.",
     "step2": "Individuelles Design",
     "step2_desc": "Entwicklung eines Präzisionsgittermusters und detaillierte Kostenanalyse zur Optimierung jeder Versorgungsleitung.",
     "step3": "Transparente Formalisierung",
-    "step3_desc": "Präsentation des technischen Projekts, klares Angebot und Festlegung des Zeitplans für le Arbeiten.",
+    "step3_desc": "Präsentation des technischen Projekts, klares Angebot und Festlegung des Zeitplans für alle Arbeiten.",
     "step4": "Patentierte Installation",
     "step4_desc": "Schnelle, saubere und absolut nicht-invasive Ausführung. Rasen und Wurzeln nehmen keinen Schaden, das System ist vom ersten Tag an unsichtbar.",
     "step5": "Support & Garantie",
-    "step5_desc": "Zertifizierte Übergabe mit einem Jahr kostenlosem Support und Möglichkeit einer unbegrenzten Garantie durch saisonale Wartung."
+    "step5_desc": "Zertifizierte Übergabe mit einem Jahr kostenlosem Support und Möglichkeit einer unbegrenzten Garantie durch saisonale Wartung.",
+    "title": "Unser Betriebsverfahren"
   },
-  "portfolio": {
-    "title": "Portfolio",
-    "subtitle": "Unsere exzellenten Arbeiten",
-    "description": "Entdecken Sie eine Auswahl unserer Projekte für Unterflurbewässerung und Landschaftsgestaltung in der ganzen Toskana.",
-    "categories": {
-      "all": "Alle",
-      "residential": "Wohngebäude",
-      "commercial": "Gewerbe",
-      "historical": "Historisch"
-    },
-    "view_project": "Projekt ansehen"
+  "whatsapp": {
+    "aria_label": "Chat auf WhatsApp"
   },
-  "footer": {
-    "description": "SUBGarden - Professionelles Unterflurbewässerungssystem für den toskanischen Markt",
-    "links": {
-      "about": "Über Uns",
-      "contact": "Kontakt",
-      "local": "Gebiet",
-      "portfolio": "Portfolio",
-      "solutions": "Lösungen",
-      "technology": "Technologie"
-    },
-    "legal": {
-      "privacy": "Datenschutz",
-      "terms": "Nutzungsbedingungen"
-    },
-    "copyright": "© {year} SUBGarden. Alle Rechte vorbehalten."
+  "cookie": {
+    "title": "Cookie & Datenschutz",
+    "description": "Wir verwenden Cookies, um sicherzustellen, dass Sie das beste Erlebnis auf unserer Website haben. Durch die weitere Nutzung der Website stimmen Sie deren Verwendung zu.",
+    "accept": "Alle akzeptieren",
+    "decline": "Nur notwendige",
+    "privacy_link": "Datenschutzerklärung lesen"
   }
 }

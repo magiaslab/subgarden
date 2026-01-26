@@ -3,6 +3,8 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/lib/i18n/routing';
 import type { Metadata } from 'next';
+import { WhatsAppWidget } from '@/components/ui/WhatsAppWidget';
+import { CookieBanner } from '@/components/ui/CookieBanner';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -88,6 +90,8 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider messages={messages}>
       {children}
+      <WhatsAppWidget />
+      <CookieBanner />
     </NextIntlClientProvider>
   );
 }

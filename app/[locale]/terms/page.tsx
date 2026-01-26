@@ -33,9 +33,46 @@ export default function TermsPage() {
 
         <div className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="prose max-w-none text-gray-700">
-              <p className="mb-4">Questi sono i termini di servizio di SUBGarden. Utilizzando il nostro sito, accetti questi termini.</p>
-              {/* Add more content as needed */}
+            <div className="prose max-w-none text-gray-700 space-y-8">
+              <section>
+                <h2 className="text-2xl font-bold text-deep-teal mb-4">1. Accettazione dei Termini</h2>
+                <p>
+                  L&apos;accesso e l&apos;utilizzo del sito SUBGarden sono soggetti ai seguenti termini e condizioni. 
+                  Utilizzando il sito, l&apos;utente accetta integralmente tali termini.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-deep-teal mb-4">2. Propriet&agrave; Intellettuale</h2>
+                <p>
+                  Tutti i contenuti presenti sul sito (testi, immagini, loghi, video) sono di propriet&agrave; esclusiva di SUBGarden 
+                  o dei suoi licenziatari e sono protetti dalle leggi sul diritto d&apos;autore. 
+                  &Egrave; vietata la riproduzione senza autorizzazione scritta.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-deep-teal mb-4">3. Limitazione di Responsabilit&agrave;</h2>
+                <p>
+                  SUBGarden si impegna a fornire informazioni accurate e aggiornate, tuttavia non garantisce l&apos;assenza di errori 
+                  o omissioni. SUBGarden non sar&agrave; responsabile per eventuali danni derivanti dall&apos;uso o dall&apos;impossibilit&agrave; di usare il sito.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-deep-teal mb-4">4. Servizi e Preventivi</h2>
+                <p>
+                  Le informazioni presenti sul sito hanno scopo puramente informativo. I preventivi forniti tramite sopralluogo 
+                  sono soggetti a termini contrattuali specifici che verranno definiti in fase di formalizzazione del progetto.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-deep-teal mb-4">5. Legge Applicabile</h2>
+                <p>
+                  Questi termini sono regolati dalla legge italiana. Per qualsiasi controversia sar&agrave; competente il Foro di Livorno.
+                </p>
+              </section>
             </div>
           </div>
         </div>
