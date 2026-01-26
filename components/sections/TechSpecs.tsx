@@ -76,26 +76,33 @@ export function TechSpecs() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="h-full">
-                <div className="relative h-56 w-full overflow-hidden rounded-2xl">
+              <Card className="h-full p-0 overflow-hidden group">
+                <div className="relative h-64 w-full overflow-hidden">
                   <Image
                     src={spec.image}
                     alt={spec.category}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-deep-teal/80 to-transparent" />
-                  <CardTitle className="absolute bottom-4 left-4 right-4 text-2xl text-white">
-                    {spec.category}
-                  </CardTitle>
+                  <div className="absolute inset-0 bg-gradient-to-t from-deep-teal/90 via-deep-teal/20 to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <h3 className="text-2xl font-serif font-bold text-white mb-1 group-hover:text-copper transition-colors duration-300">
+                      {spec.category}
+                    </h3>
+                    <div className="w-12 h-1 bg-copper rounded-full transform origin-left group-hover:scale-x-150 transition-transform duration-500" />
+                  </div>
                 </div>
-                <CardContent className="pt-6">
-                  <ul className="space-y-3">
+                <CardContent className="p-8">
+                  <ul className="space-y-4">
                     {spec.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-copper mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700 leading-relaxed">{item}</span>
+                      <li key={itemIndex} className="flex items-start gap-4 group/item">
+                        <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-copper/10 flex items-center justify-center group-hover/item:bg-copper transition-colors duration-300">
+                          <CheckCircle2 className="w-3 h-3 text-copper group-hover/item:text-white transition-colors duration-300" />
+                        </div>
+                        <span className="text-gray-700 leading-relaxed font-medium group-hover/item:text-deep-teal transition-colors duration-300">
+                          {item}
+                        </span>
                       </li>
                     ))}
                   </ul>

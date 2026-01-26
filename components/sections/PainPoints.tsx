@@ -77,26 +77,28 @@ export function PainPoints() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="h-full">
-                  <div className="relative h-48 w-full overflow-hidden rounded-2xl">
+                <Card className="h-full p-0 overflow-hidden group">
+                  <div className="relative h-64 w-full overflow-hidden">
                     <Image
                       src={point.image}
                       alt={t(`${point.key}.title`)}
                       fill
-                      className="object-cover"
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className={`absolute top-4 right-4 w-12 h-12 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center ${point.color}`}>
+                    <div className="absolute inset-0 bg-gradient-to-t from-deep-teal/80 via-transparent to-transparent opacity-60" />
+                    <div className={`absolute top-6 right-6 w-12 h-12 rounded-2xl bg-white shadow-lg flex items-center justify-center ${point.color} transform -rotate-3 group-hover:rotate-0 transition-transform duration-500`}>
                       <Icon className="w-6 h-6" />
                     </div>
                   </div>
-                  <CardHeader>
-                    <CardTitle className="text-xl">{t(`${point.key}.title`)}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-600 leading-relaxed">{t(`${point.key}.description`)}</p>
-                  </CardContent>
+                  <div className="p-8">
+                    <h3 className="text-2xl font-serif font-bold text-deep-teal mb-3 group-hover:text-copper transition-colors duration-300">
+                      {t(`${point.key}.title`)}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {t(`${point.key}.description`)}
+                    </p>
+                  </div>
                 </Card>
               </motion.div>
             );

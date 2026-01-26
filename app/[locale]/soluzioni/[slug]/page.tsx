@@ -284,12 +284,12 @@ export default async function SoluzionePage({
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
-                    <Card className="group hover:border-copper/50 transition-all duration-300 shadow-xl hover:shadow-2xl h-full border-white/50">
-                      <CardContent className="pt-8 p-6 flex flex-col items-center md:items-start text-center md:text-left h-full">
-                        <div className="mb-6 p-4 rounded-2xl bg-[#F2F4F7] group-hover:bg-copper group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-inner">
+                    <Card className="group hover:border-copper/50 transition-all duration-300 shadow-xl hover:shadow-2xl h-full border-white/50 p-0 overflow-hidden">
+                      <CardContent className="p-8 flex flex-col items-center md:items-start text-center md:text-left h-full">
+                        <div className="mb-8 p-4 rounded-2xl bg-[#F2F4F7] group-hover:bg-copper group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-inner">
                           <Icon className="w-8 h-8 text-deep-teal group-hover:text-white" />
                         </div>
-                        <p className="text-gray-700 leading-relaxed font-medium">{feature}</p>
+                        <p className="text-lg text-gray-700 leading-relaxed font-medium group-hover:text-deep-teal transition-colors duration-300">{feature}</p>
                       </CardContent>
                     </Card>
                   </MotionDiv>
