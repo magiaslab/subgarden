@@ -6,6 +6,7 @@ import { Footer } from '@/components/navigation/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { MotionDiv } from '@/components/ui/Motion';
+import { ContactCTA } from '@/components/sections/ContactCTA';
 import Image from 'next/image';
 
 // Dati statici per le soluzioni (in futuro verranno dal CMS)
@@ -268,6 +269,8 @@ export default async function SoluzionePage({
             </div>
           </div>
         </section>
+
+        <ContactCTA />
       </main>
       <Footer />
     </>

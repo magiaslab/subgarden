@@ -4,6 +4,7 @@ import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MotionDiv } from '@/components/ui/Motion';
+import { ContactCTA } from '@/components/sections/ContactCTA';
 import Image from 'next/image';
 
 // Dati statici per le città (in futuro verranno dal CMS)
@@ -305,6 +306,8 @@ export default async function TerritorioPage({
             </div>
           </div>
         </section>
+
+        <ContactCTA />
       </main>
       <Footer />
     </>

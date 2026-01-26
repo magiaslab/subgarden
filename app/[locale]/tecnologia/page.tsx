@@ -4,6 +4,7 @@ import { Footer } from '@/components/navigation/Footer';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MotionDiv } from '@/components/ui/Motion';
 import { InfographicSection } from '@/components/sections/InfographicSection';
+import { ContactCTA } from '@/components/sections/ContactCTA';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Search, PencilRuler, FileText, Zap, ShieldCheck } from 'lucide-react';
@@ -257,6 +258,8 @@ export default async function TecnologiaPage({
             </div>
           </div>
         </section>
+
+        <ContactCTA />
       </main>
       <Footer />
     </>

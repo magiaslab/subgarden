@@ -4,6 +4,7 @@ import { Footer } from '@/components/navigation/Footer';
 import { Card } from '@/components/ui/Card';
 import { Link } from '@/lib/i18n/routing';
 import { MotionDiv } from '@/components/ui/Motion';
+import { ContactCTA } from '@/components/sections/ContactCTA';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 
@@ -126,6 +127,8 @@ export default async function SoluzioniIndexPage({
             </div>
           </div>
         </section>
+
+        <ContactCTA />
       </main>
       <Footer />
     </>

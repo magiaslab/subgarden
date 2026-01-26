@@ -27,6 +27,13 @@
     "milestone_patent": "Innovation and SUBGarden patent",
     "discover_more": "Discover our story"
   },
+  "cta": {
+    "badge": "Request Information",
+    "title": "Ready to transform your garden?",
+    "description": "Contact us today for a free technical site visit and discover how the SUBGarden system can enhance your property.",
+    "button": "Talk to an expert",
+    "call_us": "Or call us:"
+  },
   "aboutPage": {
     "hero_title": "The Art of Listening to the Earth",
     "hero_subtitle": "The story of Fausto Favilli and the vision of SUBGarden",
