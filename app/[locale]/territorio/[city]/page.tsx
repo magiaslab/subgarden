@@ -6,11 +6,33 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MotionDiv } from '@/components/ui/Motion';
 import { ContactCTA } from '@/components/sections/ContactCTA';
 import Image from 'next/image';
+import { 
+  Sun, 
+  Droplet, 
+  Waves, 
+  Palmtree, 
+  Wind, 
+  Users,
+  ThermometerSun,
+  Mountain,
+  Grape,
+  Combine,
+  Shovel,
+  History,
+  Building2,
+  EyeOff,
+  Wrench,
+  Lightbulb,
+  FileCheck,
+  Headphones,
+  CheckCircle2
+} from 'lucide-react';
 
 // Dati statici per le città (in futuro verranno dal CMS)
 const cities = {
   elba: {
     image: '/stunning-spring-collage.jpg',
+    icons: [Sun, Droplet, Waves, Palmtree, Wind, Users],
     it: {
       name: 'Isola d\'Elba',
       title: 'Subirrigazione SUBGarden all\'Isola d\'Elba',
@@ -60,6 +82,7 @@ const cities = {
   },
   maremma: {
     image: '/grassland-landscape-greening-environment-park-background.jpg',
+    icons: [ThermometerSun, Mountain, Grape, Combine, Shovel, History],
     it: {
       name: 'Maremma',
       title: 'Subirrigazione SUBGarden in Maremma',
@@ -109,6 +132,7 @@ const cities = {
   },
   livorno: {
     image: '/green-park-view.jpg',
+    icons: [Building2, EyeOff, Wrench, Lightbulb, FileCheck, Headphones],
     it: {
       name: 'Livorno',
       title: 'Subirrigazione SUBGarden a Livorno',
@@ -207,6 +231,7 @@ export default async function TerritorioPage({
 
   const content = cityData[locale] || cityData.it;
   const image = cityData.image;
+  const icons = cityData.icons;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
 
   const localBusinessSchema = {
@@ -272,37 +297,51 @@ export default async function TerritorioPage({
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Card className="mb-8">
+              <Card className="mb-16 bg-white/50 backdrop-blur-sm border-white">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-deep-teal">
+                  <CardTitle className="text-3xl font-serif font-bold text-deep-teal">
                     Contesto Locale e Normative
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-700 leading-relaxed">{content.ordinances}</p>
+                  <p className="text-xl text-gray-700 leading-relaxed italic border-l-4 border-copper pl-6 py-2">
+                    {content.ordinances}
+                  </p>
                 </CardContent>
               </Card>
             </MotionDiv>
 
-            <h2 className="text-3xl font-serif font-bold text-deep-teal mb-8">
-              Vantaggi per {content.name}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {content.features.map((feature: string, index: number) => (
-                <MotionDiv
-                  key={feature}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <Card>
-                    <CardContent className="pt-6">
-                      <p className="text-gray-700">{feature}</p>
-                    </CardContent>
-                  </Card>
-                </MotionDiv>
-              ))}
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-deep-teal mb-4">
+                Vantaggi per {content.name}
+              </h2>
+              <div className="w-24 h-1.5 bg-copper mx-auto rounded-full"></div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {content.features.map((feature: string, index: number) => {
+                const Icon = icons[index] || CheckCircle2;
+                return (
+                  <MotionDiv
+                    key={feature}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <Card className="group hover:border-copper/50 transition-all duration-300 shadow-xl hover:shadow-2xl h-full border-white/50 bg-white">
+                      <CardContent className="pt-8 p-6 flex flex-col items-center md:items-start text-center md:text-left h-full">
+                        <div className="mb-6 p-4 rounded-2xl bg-[#F2F4F7] group-hover:bg-copper group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-inner">
+                          <Icon className="w-8 h-8 text-deep-teal group-hover:text-white" />
+                        </div>
+                        <p className="text-lg text-gray-700 leading-relaxed font-medium">
+                          {feature}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </MotionDiv>
+                );
+              })}
             </div>
           </div>
         </section>

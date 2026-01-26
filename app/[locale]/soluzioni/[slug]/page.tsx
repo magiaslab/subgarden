@@ -8,10 +8,30 @@ import { Badge } from '@/components/ui/Badge';
 import { MotionDiv } from '@/components/ui/Motion';
 import { ContactCTA } from '@/components/sections/ContactCTA';
 import Image from 'next/image';
+import { 
+  EyeOff, 
+  Droplets, 
+  Zap, 
+  Smartphone, 
+  Layers, 
+  BadgeCheck,
+  Maximize,
+  LayoutDashboard,
+  TrendingDown,
+  Leaf,
+  Footprints,
+  Cpu,
+  Grid,
+  Target,
+  Clock,
+  Settings2,
+  Award
+} from 'lucide-react';
 
 // Dati statici per le soluzioni (in futuro verranno dal CMS)
 const solutions = {
   'giardini-residenziali': {
+    icons: [EyeOff, Droplets, Zap, Smartphone, Layers, BadgeCheck],
     it: {
       title: 'Giardini Residenziali',
       description:
@@ -56,6 +76,7 @@ const solutions = {
     },
   },
   'parchi-pubblici': {
+    icons: [Maximize, LayoutDashboard, TrendingDown, Leaf, Footprints, Cpu],
     it: {
       title: 'Parchi Pubblici e Spazi Verdi',
       description: 'Soluzione professionale e scalabile per spazi verdi pubblici, parchi urbani e aree ricreative. Massima efficienza per grandi superfici con controllo centralizzato.',
@@ -97,6 +118,7 @@ const solutions = {
     },
   },
   'campi-sportivi': {
+    icons: [Grid, Footprints, Target, Clock, Settings2, Award],
     it: {
       title: 'Campi Sportivi e Strutture Ricreative',
       description:
@@ -132,7 +154,7 @@ const solutions = {
         'Widerstandsfähigkeit gegen intensive Trittbelastung und mechanische Beanspruchung',
         'Präzise Zonensteuerung mit differenzierter Programmierung',
         'Wartungszeitreduzierung um 70% im Vergleich zu herkömmlichen Systemen',
-        'Kompatibilität mit bestehenden Entwässerungs- und Belüftungssystemen',
+        'Kompatibilità mit bestehenden Entwässerungs- und Belüftungssystemen',
         'Zertifizierungen für professionelle Sportanlagen',
       ],
       image: '/grassland-landscape-greening-environment-park-background.jpg',
@@ -188,6 +210,7 @@ export default async function SoluzionePage({
   }
 
   const content = solution[locale] || solution.it;
+  const icons = solution.icons;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
 
   const serviceSchema = {
@@ -250,22 +273,28 @@ export default async function SoluzionePage({
             <h2 className="text-3xl font-serif font-bold text-deep-teal mb-8">
               Caratteristiche Principali
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {content.features.map((feature: string, index: number) => (
-                <MotionDiv
-                  key={feature}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <Card>
-                    <CardContent className="pt-6">
-                      <p className="text-gray-700 leading-relaxed">{feature}</p>
-                    </CardContent>
-                  </Card>
-                </MotionDiv>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {content.features.map((feature: string, index: number) => {
+                const Icon = icons[index] || BadgeCheck;
+                return (
+                  <MotionDiv
+                    key={feature}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <Card className="group hover:border-copper/50 transition-all duration-300 shadow-xl hover:shadow-2xl h-full border-white/50">
+                      <CardContent className="pt-8 p-6 flex flex-col items-center md:items-start text-center md:text-left h-full">
+                        <div className="mb-6 p-4 rounded-2xl bg-[#F2F4F7] group-hover:bg-copper group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-inner">
+                          <Icon className="w-8 h-8 text-deep-teal group-hover:text-white" />
+                        </div>
+                        <p className="text-gray-700 leading-relaxed font-medium">{feature}</p>
+                      </CardContent>
+                    </Card>
+                  </MotionDiv>
+                );
+              })}
             </div>
           </div>
         </section>
