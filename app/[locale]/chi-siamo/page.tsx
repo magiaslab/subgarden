@@ -3,6 +3,7 @@ import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
 import { Card, CardContent } from '@/components/ui/Card';
 import { MotionDiv } from '@/components/ui/Motion';
+import { BrandName } from '@/components/ui/BrandName';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
@@ -217,7 +218,7 @@ export default async function AboutPage({
                 <div className="w-px h-12 bg-gray-200 hidden md:block"></div>
                 <div className="flex flex-col items-center">
                   <span className="text-4xl font-serif font-bold text-copper">Brevettato</span>
-                  <span className="text-gray-500 uppercase tracking-widest text-sm">Sistema SUBGarden</span>
+                  <span className="text-gray-500 uppercase tracking-widest text-sm flex items-center gap-1">Sistema <BrandName /></span>
                 </div>
               </div>
             </MotionDiv>

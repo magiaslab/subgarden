@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MotionDiv } from '@/components/ui/Motion';
 import { InfographicSection } from '@/components/sections/InfographicSection';
 import { ContactCTA } from '@/components/sections/ContactCTA';
+import { BrandName } from '@/components/ui/BrandName';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Search, PencilRuler, FileText, Zap, ShieldCheck } from 'lucide-react';
@@ -66,19 +67,19 @@ export default async function TecnologiaPage({
         {
           title: 'Ala Gocciolante Rain Bird XSF®',
           description:
-            'Il cuore di SUBGarden è l\'ala gocciolante Rain Bird XSF, l\'unica sul mercato auto-compensante da 0.4 a 3.6 atm, auto-pulente e dotata di protezione brevettata antintrusione delle radici. Garantisce prestazioni costanti e durature nel tempo.',
+            'Il cuore di ogni impianto è l\'ala gocciolante Rain Bird XSF, l\'unica auto-compensante da 0.4 a 3.6 atm. Grazie alla bassa portata (1,6 l/h per gocciolatore), il sistema lavora a bassa pressione, eliminando la necessità di grandi e costosi sistemi di pompaggio o accumulo.',
           image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
         },
         {
-          title: 'Progettazione a Griglia di Precisione',
+          title: 'Distribuzione per Capillarità',
           description:
-            'Per un\'irrigazione uniforme, seguiamo uno schema rigoroso: spaziatura tra le linee di 300 mm e passo dei gocciolatori di 330 mm. Questa densità assicura che ogni centimetro del prato riceva l\'acqua necessaria senza zone d\'ombra.',
+            'L\'acqua si distribuisce nel terreno lentamente e uniformemente per capillarità. Questo processo naturale garantisce che ogni radice riceva la giusta quantità di umidità senza sprechi, evitando il ruscellamento e l\'evaporazione tipica dei sistemi a pioggia.',
           image: '/stunning-spring-collage.jpg',
         },
         {
-          title: 'Manutenzione e Zero Impatto',
+          title: 'Fertirrigazione e Zero Impatto',
           description:
-            'Il sistema è completamente invisibile e silenzioso. Ogni zona è dotata di valvole di spurgo aria e flush dell\'acqua, permettendo una manutenzione semplice senza bagnare la superficie o disturbare la quiete del giardino.',
+            'Il sistema permette di effettuare la fertirrigazione direttamente alle radici, evitando il contatto con prodotti di sintesi chimica in superficie. Ogni zona è dotata di valvole di spurgo aria e flush dell\'acqua per una manutenzione semplice e invisibile.',
           image: '/green-park-view.jpg',
         },
       ],
@@ -96,19 +97,19 @@ export default async function TecnologiaPage({
         {
           title: 'Rain Bird XSF® Drip Line',
           description:
-            'The heart of SUBGarden is the Rain Bird XSF drip line, the only one on the market that is self-compensating from 0.4 to 3.6 atm, self-cleaning, and equipped with patented root intrusion protection.',
+            'The heart of every system is the Rain Bird XSF drip line, the only one self-compensating from 0.4 to 3.6 atm. Thanks to the low flow (1.6 l/h per emitter), the system works at low pressure, eliminating the need for large pumping or storage systems.',
           image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
         },
         {
-          title: 'Precision Grid Design',
+          title: 'Capillary Distribution',
           description:
-            'For uniform irrigation, we follow a rigorous pattern: 300mm line spacing and 330mm emitter spacing. This ensures every inch of the lawn receives the necessary water.',
+            'Water distributes in the soil slowly and uniformly by capillary action. This natural process ensures every root receives the right amount of moisture without waste, avoiding the runoff and evaporation typical of spray systems.',
           image: '/stunning-spring-collage.jpg',
         },
         {
-          title: 'Zero Impact Maintenance',
+          title: 'Fertigation and Zero Impact',
           description:
-            'The system is completely invisible and silent. Each zone is equipped with air bleed and water flush valves, allowing for simple maintenance without wetting the surface or disturbing the garden\'s peace.',
+            'The system allows for fertigation directly to the roots, avoiding contact with chemical synthesis products on the surface. Each zone is equipped with air bleed and water flush valves for simple and invisible maintenance.',
           image: '/green-park-view.jpg',
         },
       ],
@@ -126,19 +127,19 @@ export default async function TecnologiaPage({
         {
           title: 'Rain Bird XSF® Tropfleitung',
           description:
-            'Das Herzstück von SUBGarden ist die Rain Bird XSF Tropfleitung, die einzige auf dem Markt, die von 0,4 bis 3,6 atm selbstkompensierend, selbstreinigend und mit patentiertem Wurzeindringschutz ausgestattet ist.',
+            'Das Herzstück jedes Systems ist die Rain Bird XSF Tropfleitung, die einzige selbstkompensierende von 0,4 bis 3,6 atm. Dank der geringen Durchflussmenge (1,6 l/h pro Tropfer) arbeitet das System mit niedrigem Druck, was große Pump- oder Speichersysteme überflüssig macht.',
           image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
         },
         {
-          title: 'Präzisionsgitter-Design',
+          title: 'Kapillare Verteilung',
           description:
-            'Für eine gleichmäßige Bewässerung folgen wir einem strengen Schema: 300 mm Leitungsabstand und 330 mm Tropferabstand.',
+            'Das Wasser verteilt sich im Boden langsam und gleichmäßig durch Kapillarwirkung. Dieser natürliche Prozess stellt sicher, dass jede Wurzel die richtige Menge an Feuchtigkeit ohne Verschwendung erhält, wodurch Abfluss und Verdunstung vermieden werden.',
           image: '/stunning-spring-collage.jpg',
         },
         {
-          title: 'Wartung ohne Beeinträchtigung',
+          title: 'Fertigation und Zero Impact',
           description:
-            'Das System ist völlig unsichtbar und leise. Jede Zone ist mit Entlüftungs- und Spülventilen ausgestattet, was eine einfache Wartung ermöglicht, ohne die Oberfläche zu benetzen oder die Ruhe im Garten zu stören.',
+            'Das System ermöglicht die Fertigation direkt an den Wurzeln, wodurch der Kontakt mit chemischen Syntheseprodukten an der Oberfläche vermieden wird. Jede Zone ist mit Entlüftungs- und Spülventilen für eine einfache und unsichtbare Wartung ausgestattet.',
           image: '/green-park-view.jpg',
         },
       ],

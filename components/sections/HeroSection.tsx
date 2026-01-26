@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/Button';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 export function HeroSection() {
   const t = (useTranslations as any)('hero');
@@ -32,20 +33,28 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.h1
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight"
+          className="mb-6 flex justify-center"
         >
-          {t('title')}
-        </motion.h1>
+          <div className="relative w-72 h-20 md:w-[500px] md:h-32">
+            <Image
+              src="/SUBGARDEN - LOGO BIANCO PAYOOFF.png"
+              alt="SUBGarden"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-xl md:text-2xl text-white/90 mb-2 max-w-2xl mx-auto"
+          className="text-2xl md:text-3xl text-white font-serif font-bold mb-4"
         >
           {t('subtitle')}
         </motion.p>
@@ -54,7 +63,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-lg md:text-xl text-white/70 mb-8 max-w-3xl mx-auto italic"
+          className="text-lg md:text-xl text-white/80 mb-10 max-w-3xl mx-auto italic leading-relaxed"
         >
           {t('description')}
         </motion.p>
@@ -67,7 +76,7 @@ export function HeroSection() {
           <Button
             size="lg"
             variant="secondary"
-            className="group"
+            className="group px-10 py-6 text-lg"
             onClick={() => {
               document
                 .getElementById('about')

@@ -1,10 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Droplet, Zap, DollarSign, Clock, VolumeX, Sofa, Wind } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Droplet, Zap, Sofa, Wind, VolumeX } from 'lucide-react';
+import { Card } from '@/components/ui/Card';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { BrandName } from '@/components/ui/BrandName';
 
 const painPoints = [
   {
@@ -61,8 +62,8 @@ export function PainPoints() {
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-deep-teal mb-4">
             {t('title')}
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            {t('description')}
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto flex items-center justify-center gap-2 flex-wrap">
+            {t('description_before')}<BrandName />{t('description_after')}
           </p>
         </motion.div>
 

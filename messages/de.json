@@ -1,122 +1,106 @@
 {
+  "nav": {
+    "home": "Startseite",
+    "about": "Über Uns",
+    "technology": "Technologie",
+    "solutions": "Lösungen",
+    "portfolio": "Portfolio",
+    "local": "Gebiet",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "subtitle": "Wasser nur dort, wo es nötig ist",
+    "description": "Innovatives Unterflurbewässerungssystem, das das ganze Jahr über einen perfekten Garten garantiert, mit bis zu 60% Wassereinsparung und minimalem Wartungsaufwand",
+    "cta": "Lösung Entdecken"
+  },
   "about": {
-    "discover_more": "Entdecken Sie unsere Geschichte",
+    "title": "Über Uns",
+    "subtitle": "Dreißig Jahre Dialog mit der Natur",
+    "story_title": "Unsere Wurzeln",
+    "story_text": "Im Jahr 1990 begann Fausto Favillis Reise in die Pflanzenwelt fast lautlos, getrieben von familiärer Notwendigkeit. Doch what als Pflicht begann, verwandelte sich Tag für Tag in eine Offenbarung. Verliebt in die Reinheit der Pflanzen und ihre resiliente Fähigkeit, einfach zu existieren, fand Fausto in der Erde ein tiefes Gefühl der Zugehörigkeit.",
+    "philosophy_title": "Der Empathische Garten",
+    "philosophy_text": "Wir gestalten nicht nur Räume, wir stellen Verbindungen her. Unser Ziel ist es, die Natur bei ihrer Rückkehr alla Einfachheit zu begleiten, damit diejenigen, die im Garten leben, sich als Teil des umgebenden Horizonts wahrnehmen können, con la fantasia emotiva dell'anima.",
     "founder": "Fausto Favilli",
     "founder_role": "Gründer & Visionär",
     "milestone_1990": "Der Beginn einer dreißigjährigen Leidenschaft",
-    "milestone_patent": "Innovation und SUBGarden-Patent",
     "milestone_villa": "Historische Restaurierung monumentaler Parks",
-    "philosophy_text": "Wir gestalten nicht nur Räume, wir stellen Verbindungen her. Unser Ziel ist es, die Natur bei ihrer Rückkehr alla Einfachheit zu begleiten, damit diejenigen, die im Garten leben, sich als Teil des umgebenden Horizonts wahrnehmen können, con la fantasia emotiva dell'anima.",
-    "philosophy_title": "Der Empathische Garten",
-    "story_text": "Im Jahr 1990 begann Fausto Favillis Reise in die Pflanzenwelt fast lautlos, getrieben von familiärer Notwendigkeit. Doch what als Pflicht begann, verwandelte sich Tag für Tag in eine Offenbarung. Verliebt in die Reinheit der Pflanzen und ihre resiliente Fähigkeit, einfach zu existieren, fand Fausto in der Erde ein tiefes Gefühl der Zugehörigkeit.",
-    "story_title": "Unsere Wurzeln",
-    "subtitle": "Dreißig Jahre Dialog mit der Natur",
-    "title": "Über Uns"
-  },
-  "aboutPage": {
-    "case_history_text": "Eines unserer bedeutendsten Projekte war die Wiederherstellung des Parks einer Villa aus dem 1700er Jahren, der sich in einem halbverfallenen Zustand befand. Wir hörten darauf, was der Park wieder werden wollte, stellten historische Symmetrien und säkulare Essenzen wieder her und verwandelten ihn in einen exzellenten Rahmen für VIP-Events und absolute Entspannung, ohne jemals den Dialog mit der umgebenden Landschaft zu unterbrechen.",
-    "case_history_title": "Restaurierung der Seele: Villa aus dem 18. Jahrhundert",
-    "hero_subtitle": "Die Geschichte von Fausto Favilli und die Vision von SUBGarden",
-    "hero_title": "Die Kunst, der Erde zuzuhören",
-    "innovation_text": "Unsere Liebe alla Natur hat uns dazu bewogen, SUBGarden zu entwickeln: ein patentiertes, nicht-invasives Unterflurbewässerungssystem. Wir schützen den Wert historischer und moderner Gärten mit einer Technologie, die man non si vede, non distrugge il prato esistente durante l'installazione e garantisce una bellezza eterna, sostenuta dalla precisione digitale e dal rispetto assoluto della risorsa idrica.",
-    "innovation_title": "Die unsichtbare nachhaltige Revolution",
-    "philosophy_expanded_text1": "Ein Garten endet nicht dort, wo die Grundstücksgrenze aufhört. Unsere Technik ist vom Konzept der 'Borrowed Scenery' inspiriert: den Blick befreien, anstatt ihn zu begrenzen. Wir nutzen natürliche Kulissen und Perspektivteleskope, um den privaten Garten mit dem unendlichen Horizont der Toskana verschmelzen zu lassen.",
-    "philosophy_expanded_text2": "Wir bezeichnen unseren Ansatz als 'Empathischen Garten', weil er mit den Bewohnern und dem Ort selbst in Resonanz tritt. Wir erzwingen keine Form, sondern folgen der Stimme der Erde und nutzen modernste Technologie, um höchste Einfachheit zu erreichen.",
-    "philosophy_expanded_title": "Geliehene Kulisse und der empathische Garten",
-    "roots_text": "1990 suchte ich keine Karriere, sondern Antworten. Was als Unterstützung für das Familienunternehmen begann, entwickelte sich schnell zu einem intimen Dialog mit der Pflanzenwelt. Die Fähigkeit der Pflanzen, 'einfach zu existieren', ihre stille, aber unwiderstehliche Widerstandsfähigkeit, hat mich überzeugt. Seitdem ist jeder Garten, den wir pflegen, ein Tribut an diese Kraft.",
-    "roots_title": "Wurzeln: Von der Pflicht zum Staunen"
-  },
-  "contact": {
-    "address_label": "Büro",
-    "address_value": "Corso Italia, 45 - 57027 San Vincenzo (LI)",
-    "email": "Email",
-    "email_label": "Email",
-    "email_value": "info@subgarden.it",
-    "error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut.",
-    "form_title": "Schreiben Sie uns",
-    "hours_label": "Öffnungszeiten",
-    "hours_value": "Mo - Fr: 09:00 - 18:00",
-    "info_title": "Kontaktdaten",
-    "message": "Nachricht",
-    "name": "Name",
-    "phone": "Telefon",
-    "phone_label": "Telefon",
-    "phone_value": "+39 371 4379979",
-    "sending": "Wird gesendet...",
-    "submit": "Nachricht Senden",
-    "subtitle": "Wir sind bereit, Ihre Grünfläche zu transformieren",
-    "success": "Nachricht erfolgreich gesendet!",
-    "title": "Kontakt"
+    "milestone_patent": "Innovation und SUBGarden-Patent",
+    "discover_more": "Entdecken Sie unsere Geschichte"
   },
   "cta": {
     "badge": "Informationen anfordern",
-    "button": "Mit einem Experten sprechen",
-    "call_us": "Oder rufen Sie uns an:",
+    "title": "Bereit, Ihren Garten zu verwandeln?",
     "description": "Kontaktieren Sie uns noch heute für eine kostenlose technische Besichtigung und entdecken Sie, wie das SUBGarden-System la tua proprietà aufwerten kann.",
-    "title": "Bereit, Ihren Garten zu verwandeln?"
+    "button": "Mit einem Experten sprechen",
+    "call_us": "Oder rufen Sie uns an:"
   },
-  "footer": {
-    "copyright": "© {year} SUBGarden. Alle Rechte vorbehalten.",
-    "description": "SUBGarden - Professionelles Unterflurbewässerungssystem für den toskanischen Markt",
-    "legal": {
-      "privacy": "Datenschutz",
-      "terms": "Nutzungsbedingungen"
-    },
-    "links": {
-      "about": "Über Uns",
-      "contact": "Kontakt",
-      "local": "Gebiet",
-      "portfolio": "Portfolio",
-      "solutions": "Lösungen",
-      "technology": "Technologie"
-    }
+  "aboutPage": {
+    "hero_title": "Die Kunst, der Erde zuzuhören",
+    "hero_subtitle": "Die Geschichte von Fausto Favilli und die Vision von SUBGarden",
+    "roots_title": "Wurzeln: Von der Pflicht zum Staunen",
+    "roots_text": "1990 suchte ich keine Karriere, sondern Antworten. Was als Unterstützung für das Familienunternehmen begann, entwickelte sich schnell zu einem intimen Dialog mit der Pflanzenwelt. Die Fähigkeit der Pflanzen, 'einfach zu existieren', ihre stille, aber unbesiegbare Widerstandsfähigkeit, hat mich überzeugt. Seitdem ist jeder Garten, den wir pflegen, ein Tribut an diese Kraft.",
+    "philosophy_expanded_title": "Geliehene Kulisse und der empathische Garten",
+    "philosophy_expanded_text1": "Ein Garten endet nicht dort, wo die Grundstücksgrenze aufhört. Unsere Technik ist vom Konzept der 'Borrowed Scenery' inspiriert: den Blick befreien, anstatt ihn zu begrenzen. Wir nutzen natürliche Kulissen und Perspektivteleskope, um den privaten Garten mit dem unendlichen Horizont der Toskana verschmelzen zu lassen.",
+    "philosophy_expanded_text2": "Wir bezeichnen unseren Ansatz als 'Empathischen Garten', weil er mit den Bewohnern und dem Ort selbst in Resonanz tritt. Wir erzwingen keine Form, sondern folgen der Stimme der Erde und nutzen modernste Technologie, um höchste Einfachheit zu erreichen.",
+    "case_history_title": "Restaurierung der Seele: Villa aus dem 18. Jahrhundert",
+    "case_history_text": "Eines unserer bedeutendsten Projekte war die Wiederherstellung des Parks einer Villa aus dem 1700er Jahren, der sich in einem halbverfallenen Zustand befand. Wir hörten darauf, was der Park wieder werden wollte, stellten historische Symmetrien und säkulare Essenzen wieder her und verwandelten ihn in einen exzellenten Rahmen für VIP-Events und absolute Entspannung, ohne jemals den Dialog mit der umgebenden Landschaft zu unterbrechen.",
+    "innovation_title": "Die unsichtbare nachhaltige Revolution",
+    "innovation_text": "Unsere Liebe alla Natur hat uns dazu bewogen, SUBGarden zu entwickeln: ein patentiertes, nicht-invasives Unterflurbewässerungssystem. Wir schützen den Wert historischer und moderner Gärten mit einer Technologie, die man non si vede, non distrugge il prato esistente durante l'installazione e garantisce eine bellezza eterna, sostenuta dalla precisione digitale e dal rispetto assoluto della risorsa idrica."
   },
-  "hero": {
-    "cta": "Lösung Entdecken",
-    "description": "Innovatives Unterflurbewässerungssystem, das das ganze Jahr über einen perfekten Garten garantiert, mit bis zu 60% Wassereinsparung und minimalem Wartungsaufwand",
-    "subtitle": "Wasser nur dort, wo es nötig ist",
-    "title": "Subgarden"
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Wir sind bereit, Ihre Grünfläche zu transformieren",
+    "form_title": "Schreiben Sie uns",
+    "info_title": "Kontaktdaten",
+    "address_label": "Büro",
+    "address_value": "Corso Italia, 45 - 57027 San Vincenzo (LI)",
+    "phone_label": "Telefon",
+    "phone_value": "+39 371 4379979",
+    "email_label": "Email",
+    "email_value": "info@subgarden.it",
+    "hours_label": "Öffnungszeiten",
+    "hours_value": "Mo - Fr: 09:00 - 18:00",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Telefon",
+    "message": "Nachricht",
+    "submit": "Nachricht Senden",
+    "sending": "Wird gesendet...",
+    "success": "Nachricht erfolgreich gesendet!",
+    "error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut."
   },
   "infographic": {
-    "caption": "Das Engineering für Outdoor-Wohlbefinden: von unsichtbarer Technologie bis hin zum Betriebsverfahren.",
+    "title": "Das SUBGarden-System auf einen Blick",
     "subtitle": "Überblick",
-    "title": "Das SUBGarden-System auf einen Blick"
-  },
-  "nav": {
-    "about": "Über Uns",
-    "contact": "Kontakt",
-    "home": "Startseite",
-    "local": "Gebiet",
-    "portfolio": "Portfolio",
-    "solutions": "Lösungen",
-    "technology": "Technologie"
+    "caption": "Das Engineering für Outdoor-Wohlbefinden: von unsichtbarer Technologie bis hin zum Betriebsverfahren."
   },
   "painPoints": {
-    "description": "Traditionelle Sprinklersysteme sind veraltet. Entdecken Sie die Effizienz des patentierten SUBGarden-Systems.",
-    "furniture": {
-      "description": "Lassen Sie Sessel, Liegen und Kissen auf dem Rasen. Kein lästiges Umräumen zum Bewässern mehr.",
-      "title": "Möbel immer geschützt"
-    },
-    "installation": {
-      "description": "Unser patentiertes System ermöglicht die Installation in bestehenden Gärten, ohne diese zu zerstören. Schnell, sauber und unsichtbar.",
-      "title": "Nicht-invasive Installation"
+    "title": "Warum Unterflurbewässerung wählen?",
+    "description_before": "Traditionelle Sprinklersysteme sind veraltet. Entdecken Sie die Effizienz des patentierten Systems ",
+    "description_after": ".",
+    "water": {
+      "title": "Wasser- und Energieeinsparung",
+      "description": "Sparen Sie 50% bis 70% Wasser und Energie dank gezielter Verteilung an die Wurzeln."
     },
     "mosquitoes": {
-      "description": "Reduzieren Sie Mückenbehandlungen um 90%, indem Sie die Rasenoberfläche jederzeit trocken halten.",
-      "title": "Null Mücken"
+      "title": "Null Mücken",
+      "description": "Reduzieren Sie Mückenbehandlungen um 90%, indem Sie die Rasenoberfläche jederzeit trocken halten."
+    },
+    "furniture": {
+      "title": "Möbel immer geschützt",
+      "description": "Lassen Sie Sessel, Liegen und Kissen auf dem Rasen. Kein lästiges Umräumen zum Bewässern mehr."
     },
     "noise": {
-      "description": "Eliminieren Sie das störende nächtliche Geräusch von Sprinklern. Die Bewässerung ist unterirdisch und leise.",
-      "title": "Absolute Stille"
+      "title": "Absolute Stille",
+      "description": "Eliminieren Sie das störende nächtliche Geräusch von Sprinklern. Die Bewässerung ist unterirdisch und leise."
     },
     "puddles": {
-      "description": "Eliminieren Sie Wasseransammlungen auf Wegen und im Rasen. Betreten Sie den Rasen direkt nach dem Gießen.",
-      "title": "Keine Staunässe mehr"
+      "title": "Keine Staunässe mehr",
+      "description": "Eliminieren Sie Wasseransammlungen auf Wegen und im Rasen. Betreten Sie den Rasen direkt nach dem Gießen."
     },
-    "title": "Warum Unterflurbewässerung wählen?",
-    "water": {
-      "description": "Sparen Sie 50% bis 70% Wasser und Energie dank gezielter Verteilung an die Wurzeln.",
-      "title": "Wasser- und Energieeinsparung"
+    "installation": {
+      "title": "Nicht-invasive Installation",
+      "description": "Unser patentiertes System ermöglicht die Installation in bestehenden Gärten, ohne diese zu zerstören. Schnell, sauber und unsichtbar."
     }
   },
   "process": {
@@ -143,5 +127,21 @@
       "historical": "Historisch"
     },
     "view_project": "Projekt ansehen"
+  },
+  "footer": {
+    "description": "SUBGarden - Professionelles Unterflurbewässerungssystem für den toskanischen Markt",
+    "links": {
+      "about": "Über Uns",
+      "contact": "Kontakt",
+      "local": "Gebiet",
+      "portfolio": "Portfolio",
+      "solutions": "Lösungen",
+      "technology": "Technologie"
+    },
+    "legal": {
+      "privacy": "Datenschutz",
+      "terms": "Nutzungsbedingungen"
+    },
+    "copyright": "© {year} SUBGarden. Alle Rechte vorbehalten."
   }
 }

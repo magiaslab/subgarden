@@ -2,7 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Card, CardContent } from '@/components/ui/Card';
+import { BrandName } from '@/components/ui/BrandName';
 import Image from 'next/image';
 
 const specifications = [
@@ -22,7 +23,7 @@ const specifications = [
       'Ala gocciolante auto-compensante da 0.4 a 3.6 atm',
       'Sistema brevettato auto-pulente ad ogni ciclo',
       'Protezione antintrusione radicale certificata',
-      'Emettitori interrati con passo preciso di 330 mm',
+      'Bassa pressione e portata (1,6 l/h): nessun sistema di pompaggio invasivo',
     ],
     image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
   },
@@ -30,9 +31,9 @@ const specifications = [
     category: 'Efficienza e Risparmio',
     items: [
       'Risparmio idrico certificato dal 50% al 70%',
-      'Eliminazione totale dell\'evaporazione superficiale',
+      'Distribuzione per capillarità: lenta, uniforme e senza sprechi',
+      'Possibilità di fertirrigazione senza contatto con prodotti chimici',
       'Riduzione del 90% delle malattie del prato e delle piante',
-      'Distribuzione minerali ottimale senza cristallizzazione',
     ],
     image: '/green-park-view.jpg',
   },
@@ -62,8 +63,8 @@ export function TechSpecs() {
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-deep-teal mb-4">
             Specifiche Tecniche
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Caratteristiche e vantaggi del sistema SUBGarden
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto flex items-center justify-center gap-2 flex-wrap">
+            Caratteristiche e vantaggi del sistema <BrandName />
           </p>
         </motion.div>
 

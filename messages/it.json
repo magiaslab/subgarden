@@ -9,7 +9,6 @@
     "contact": "Contatti"
   },
   "hero": {
-    "title": "Subgarden",
     "subtitle": "L'acqua solo dove serve",
     "description": "Sistema innovativo di irrigazione sotterranea che garantisce un giardino perfetto tutto l'anno, con risparmio idrico fino al 60% e manutenzione minima",
     "cta": "Scopri la Soluzione"
@@ -77,7 +76,8 @@
   },
   "painPoints": {
     "title": "Perché scegliere la subirrigazione?",
-    "description": "I sistemi tradizionali a pioggia sono superati. Scopri l'efficienza del sistema brevettato SUBGarden.",
+    "description_before": "I sistemi tradizionali a pioggia sono superati. Scopri l'efficienza del sistema brevettato ",
+    "description_after": ".",
     "water": {
       "title": "Risparmio Idrico ed Energetico",
       "description": "Risparmia dal 50% al 70% di acqua ed energia grazie alla distribuzione mirata alle radici."
@@ -114,24 +114,7 @@
     "step4": "Installazione Brevettata",
     "step4_desc": "Esecuzione rapida, pulita e assolutamente non invasiva. Il prato e le radici non subiscono danni, l'impianto è invisibile dal primo giorno.",
     "step5": "Assistenza & Garanzia",
-    "step5_desc": "Consegna certificata con un anno di assistenza gratuita e possibilità di garanzia illimitata tramite manutenzione stagionale.",
-    "title": "Il Nostro Metodo Operativo"
-  },
-  "footer": {
-    "copyright": "© {year} SUBGarden. Tutti i diritti riservati.",
-    "description": "SUBGarden - Sistema di subirrigazione professionale per il mercato toscano",
-    "legal": {
-      "privacy": "Privacy Policy",
-      "terms": "Termini di Servizio"
-    },
-    "links": {
-      "about": "Chi Siamo",
-      "contact": "Contatti",
-      "local": "Territorio",
-      "portfolio": "Portfolio",
-      "solutions": "Soluzioni",
-      "technology": "Tecnologia"
-    }
+    "step5_desc": "Consegna certificata con un anno di assistenza gratuita e possibilità di garanzia illimitata tramite manutenzione stagionale."
   },
   "portfolio": {
     "title": "Portfolio",
@@ -144,5 +127,21 @@
       "historical": "Storico"
     },
     "view_project": "Vedi Progetto"
+  },
+  "footer": {
+    "description": "SUBGarden - Sistema di subirrigazione professionale per il mercato toscano",
+    "links": {
+      "about": "Chi Siamo",
+      "contact": "Contatti",
+      "local": "Territorio",
+      "portfolio": "Portfolio",
+      "solutions": "Soluzioni",
+      "technology": "Tecnologia"
+    },
+    "legal": {
+      "privacy": "Privacy Policy",
+      "terms": "Termini di Servizio"
+    },
+    "copyright": "© {year} SUBGarden. Tutti i diritti riservati."
   }
 }
