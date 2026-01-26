@@ -23,7 +23,21 @@
     "founder_role": "Founder & Visionary",
     "milestone_1990": "The beginning of a thirty-year passion",
     "milestone_villa": "Historical restoration of monumental parks",
-    "milestone_patent": "Innovation and SUBGarden patent"
+    "milestone_patent": "Innovation and SUBGarden patent",
+    "discover_more": "Discover our story"
+  },
+  "aboutPage": {
+    "hero_title": "The Art of Listening to the Earth",
+    "hero_subtitle": "The story of Fausto Favilli and the vision of SUBGarden",
+    "roots_title": "Roots: From Duty to Wonder",
+    "roots_text": "In 1990 I wasn't looking for a career, but for answers. What started as support for the family business quickly became an intimate dialogue with the plant world. I was won over by the ability of plants to 'simply exist', their silent but invincible resilience. Since then, every garden we care for is a tribute to this strength.",
+    "philosophy_expanded_title": "Borrowed Scenery and the Empathetic Garden",
+    "philosophy_expanded_text1": "A garden doesn't end where the property line stops. Our technique is inspired by the concept of 'Borrowed Scenery': freeing the gaze rather than delimiting it. We use natural wings and perspective telescopes to merge the private garden with the infinite horizon of Tuscany.",
+    "philosophy_expanded_text2": "We define our approach as 'Empathetic Garden' because it resonates with the inhabitants and the place itself. We don't impose a form, but follow the voice of the earth, using the most advanced technology to serve the greatest simplicity.",
+    "case_history_title": "Restoration of the Soul: 18th Century Villa",
+    "case_history_text": "One of our most significant projects was the recovery of the park of a villa from the 1700s in semi-abandonment. We listened to what the park wanted to become again, restoring historical symmetries and secular essences, transforming it into an excellent setting for VIP events and absolute relaxation, without ever breaking the dialogue with the surrounding landscape.",
+    "innovation_title": "The Invisible Sustainable Revolution",
+    "innovation_text": "Our story of love for nature led us to create SUBGarden: a patented non-invasive sub-irrigation system. We protect the value of historical and modern gardens with a technology that is not seen, does not destroy the existing lawn during installation, and guarantees eternal beauty, supported by digital precision and absolute respect for the water resource."
   },
   "painPoints": {
     "title": "Why Choose Sub-Irrigation?",

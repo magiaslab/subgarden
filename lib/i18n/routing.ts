@@ -12,6 +12,11 @@ export const routing = defineRouting({
       en: '/technology',
       de: '/technologie',
     },
+    '/chi-siamo': {
+      it: '/chi-siamo',
+      en: '/about-us',
+      de: '/ueber-uns',
+    },
     '/soluzioni': {
       it: '/soluzioni',
       en: '/solutions',

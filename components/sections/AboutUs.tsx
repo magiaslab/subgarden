@@ -4,10 +4,13 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/Card';
-import { History, Heart, Lightbulb } from 'lucide-react';
+import { Button } from '@/components/ui/Button';
+import { Link } from '@/lib/i18n/routing';
+import { History, Heart, Lightbulb, ArrowRight } from 'lucide-react';
 
 export function AboutUs() {
   const t = (useTranslations as any)('about');
+  const tHero = (useTranslations as any)('hero');
 
   const milestones = [
     {
@@ -90,6 +93,15 @@ export function AboutUs() {
                 <p className="font-serif font-bold text-deep-teal italic">
                   &quot;Accompagnare la natura nel suo ritorno alla semplicità.&quot;
                 </p>
+              </div>
+              <div className="pt-4">
+                <Link 
+                  href="/chi-siamo"
+                  className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 border-2 border-deep-teal text-deep-teal hover:bg-deep-teal hover:text-white px-8 py-4 text-lg shadow-sm hover:shadow-md"
+                >
+                  {t('discover_more')}
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
               </div>
             </div>
           </motion.div>

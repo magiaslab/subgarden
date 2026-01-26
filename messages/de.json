@@ -18,12 +18,26 @@
     "story_title": "Unsere Wurzeln",
     "story_text": "Im Jahr 1990 begann Fausto Favillis Reise in die Pflanzenwelt fast lautlos, getrieben von familiärer Notwendigkeit. Doch was als Pflicht begann, verwandelte sich Tag für Tag in eine Offenbarung. Verliebt in die Reinheit der Pflanzen und ihre resiliente Fähigkeit, einfach zu existieren, fand Fausto in der Erde ein tiefes Gefühl der Zugehörigkeit.",
     "philosophy_title": "Der Empathische Garten",
-    "philosophy_text": "Wir gestalten nicht nur Räume, wir stellen Verbindungen her. Unser Ziel ist es, die Natur bei ihrer Rückkehr zur Einfachheit zu begleiten, damit diejenigen, die im Garten leben, sich als Teil des umgebenden Horizonts wahrnehmen können, mit der emotionalen Fantasie der Seele.",
+    "philosophy_text": "Wir gestalten nicht nur Räume, wir stellen Verbindungen her. Unser Ziel ist es, die Natur bei ihrer Rückkehr alla Einfachheit zu begleiten, damit diejenigen, die im Garten leben, sich als Teil des umgebenden Horizonts wahrnehmen können, mit der emotionalen Fantasie der Seele.",
     "founder": "Fausto Favilli",
     "founder_role": "Gründer & Visionär",
     "milestone_1990": "Der Beginn einer dreißigjährigen Leidenschaft",
     "milestone_villa": "Historische Restaurierung monumentaler Parks",
-    "milestone_patent": "Innovation und SUBGarden-Patent"
+    "milestone_patent": "Innovation und SUBGarden-Patent",
+    "discover_more": "Entdecken Sie unsere Geschichte"
+  },
+  "aboutPage": {
+    "hero_title": "Die Kunst, der Erde zuzuhören",
+    "hero_subtitle": "Die Geschichte von Fausto Favilli und die Vision von SUBGarden",
+    "roots_title": "Wurzeln: Von der Pflicht zum Staunen",
+    "roots_text": "1990 suchte ich keine Karriere, sondern Antworten. Was als Unterstützung für das Familienunternehmen begann, entwickelte sich schnell zu einem intimen Dialog mit der Pflanzenwelt. Die Fähigkeit der Pflanzen, 'einfach zu existieren', ihre stille, aber unbesiegbare Widerstandsfähigkeit, hat mich überzeugt. Seitdem ist jeder Garten, den wir pflegen, ein Tribut an diese Kraft.",
+    "philosophy_expanded_title": "Geliehene Kulisse und der empathische Garten",
+    "philosophy_expanded_text1": "Ein Garten endet nicht dort, wo die Grundstücksgrenze aufhört. Unsere Technik ist vom Konzept der 'Borrowed Scenery' inspiriert: den Blick befreien, anstatt ihn zu begrenzen. Wir nutzen natürliche Kulissen und Perspektivteleskope, um den privaten Garten mit dem unendlichen Horizont der Toskana verschmelzen zu lassen.",
+    "philosophy_expanded_text2": "Wir bezeichnen unseren Ansatz als 'Empathischen Garten', weil er mit den Bewohnern und dem Ort selbst in Resonanz tritt. Wir erzwingen keine Form, sondern folgen der Stimme der Erde und nutzen modernste Technologie, um höchste Einfachheit zu erreichen.",
+    "case_history_title": "Restaurierung der Seele: Villa aus dem 18. Jahrhundert",
+    "case_history_text": "Eines unserer bedeutendsten Projekte war die Wiederherstellung des Parks einer Villa aus dem 1700er Jahren, der sich in einem halbverfallenen Zustand befand. Wir hörten darauf, was der Park wieder werden wollte, stellten historische Symmetrien und säkulare Essenzen wieder her und verwandelten ihn in einen exzellenten Rahmen für VIP-Events und absolute Entspannung, ohne jemals den Dialog mit der umgebenden Landschaft zu unterbrechen.",
+    "innovation_title": "Die unsichtbare nachhaltige Revolution",
+    "innovation_text": "Unsere Liebe zur Natur hat uns dazu bewogen, SUBGarden zu entwickeln: ein patentiertes, nicht-invasives Unterflurbewässerungssystem. Wir schützen den Wert historischer und moderner Gärten mit einer Technologie, die man nicht sieht, die den vorhandenen Rasen während der Installation nicht zerstört und eine ewige Schönheit garantiert, unterstützt durch digitale Präzision und absolute Schonung der Wasserressourcen."
   },
   "painPoints": {
     "title": "Warum Unterflurbewässerung wählen?",

@@ -23,7 +23,21 @@
     "founder_role": "Fondatore & Visionario",
     "milestone_1990": "L'inizio di una passione trentennale",
     "milestone_villa": "Restauro storico di parchi monumentali",
-    "milestone_patent": "Innovazione e brevetto SUBGarden"
+    "milestone_patent": "Innovazione e brevetto SUBGarden",
+    "discover_more": "Scopri la nostra storia"
+  },
+  "aboutPage": {
+    "hero_title": "L'Arte di Ascoltare la Terra",
+    "hero_subtitle": "La storia di Fausto Favilli e la visione di SUBGarden",
+    "roots_title": "Radici: Dal Dovere allo Stupore",
+    "roots_text": "Nel 1990 non cercavo una carriera, ma risposte. Quello che era iniziato come un supporto all'attività familiare è diventato rapidamente un dialogo intimo con il mondo vegetale. Mi ha conquistato la capacità delle piante di 'esistere semplicemente', la loro resilienza silenziosa ma invincibile. Da allora, ogni giardino che curiamo è un tributo a questa forza.",
+    "philosophy_expanded_title": "Il Paesaggio Prestato e il Giardino Empatico",
+    "philosophy_expanded_text1": "Un giardino non finisce dove termina la proprietà. La nostra tecnica si ispira al concetto del 'Borrowed Scenery': liberare lo sguardo anziché delimitarlo. Utilizziamo quinte naturali e cannocchiali prospettici per fondere il giardino privato con l'orizzonte infinito della Toscana.",
+    "philosophy_expanded_text2": "Definiamo il nostro approccio 'Giardino Empatico' perché entra in risonanza con chi lo abita e con il luogo stesso. Non imponiamo una forma, ma assecondiamo la voce della terra, utilizzando la tecnologia più avanzata per servire la massima semplicità.",
+    "case_history_title": "Il Restauro dell'Anima: Villa del XVIII Secolo",
+    "case_history_text": "Uno dei nostri progetti più significativi è stato il recupero del parco di una villa del 1700 in semi-abbandono. Abbiamo ascoltato ciò che il parco voleva tornare a essere, ripristinando le simmetrie storiche e le essenze secolari, trasformandolo in una cornice d'eccellenza per eventi VIP e relax assoluto, senza mai spezzare il dialogo con il paesaggio circostante.",
+    "innovation_title": "L'Invisibile Rivoluzione Sostenibile",
+    "innovation_text": "La nostra storia di amore per la natura ci ha portato a creare SUBGarden: un sistema brevettato di subirrigazione non invasivo. Proteggiamo il valore dei giardini storici e moderni con una tecnologia che non si vede, non distrugge il prato esistente durante l'installazione e garantisce una bellezza eterna, sostenuta dalla precisione digitale e dal rispetto assoluto della risorsa idrica."
   },
   "painPoints": {
     "title": "Perché scegliere la subirrigazione?",
@@ -59,7 +73,8 @@
     "step2": "Studio, progetto e analisi dei costi",
     "step3": "Preventivo e formalizzazione contratto",
     "step4": "Installazione brevettata non invasiva e veloce",
-    "step5": "Consegna e garanzia illimitata SUBGarden"
+    "step5": "Consegna e garanzia illimitata SUBGarden",
+    "title": "Il Nostro Metodo Operativo"
   },
   "footer": {
     "copyright": "© {year} SUBGarden. Tutti i diritti riservati.",

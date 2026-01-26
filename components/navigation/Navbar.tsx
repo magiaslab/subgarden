@@ -17,6 +17,7 @@ export function Navbar() {
 
   const navLinks = [
     { href: '/', label: t('home') },
+    { href: '/chi-siamo', label: t('about') },
     { href: '/tecnologia', label: t('technology') },
     { href: '/soluzioni', label: t('solutions') },
     { href: '/local', label: t('local') },

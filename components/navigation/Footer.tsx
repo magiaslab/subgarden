@@ -46,7 +46,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href={"/#about" as any}
+                  href="/chi-siamo"
                   className="text-white/70 hover:text-white transition-colors flex items-center gap-2 group"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-copper scale-0 group-hover:scale-100 transition-transform" />
