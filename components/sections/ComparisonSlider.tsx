@@ -47,7 +47,7 @@ export function ComparisonSlider() {
             onMouseMove={handleMouseMove}
             onTouchMove={handleTouchMove}
           >
-            {/* Before Image */}
+            {/* Before Image (Background) */}
             <div className="absolute inset-0">
               <Image
                 src="/Gemini_Generated_Image_ljy601ljy601ljy6.png"
@@ -65,10 +65,10 @@ export function ComparisonSlider() {
               </div>
             </div>
 
-            {/* After Image */}
+            {/* After Image (Overlay) */}
             <div
               className="absolute inset-0 overflow-hidden"
-              style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
+              style={{ clipPath: `inset(0 0 0 ${sliderPosition}%)` }}
             >
               <Image
                 src="/Gemini_Generated_Image_ydrfelydrfelydrf.png"
