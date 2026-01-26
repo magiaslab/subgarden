@@ -40,6 +40,28 @@
     "innovation_title": "L'Invisibile Rivoluzione Sostenibile",
     "innovation_text": "La nostra storia di amore per la natura ci ha portato a creare SUBGarden: un sistema brevettato di subirrigazione non invasivo. Proteggiamo il valore dei giardini storici e moderni con una tecnologia che non si vede, non distrugge il prato esistente durante l'installazione e garantisce una bellezza eterna, sostenuta dalla precisione digitale e dal rispetto assoluto della risorsa idrica."
   },
+  "contact": {
+    "title": "Contattaci",
+    "subtitle": "Siamo pronti a trasformare il tuo spazio verde",
+    "form_title": "Inviaci un messaggio",
+    "info_title": "Recapiti",
+    "address_label": "Sede",
+    "address_value": "Corso Italia, 45 - 57027 San Vincenzo (LI)",
+    "phone_label": "Telefono",
+    "phone_value": "+39 371 4379979",
+    "email_label": "Email",
+    "email_value": "info@subgarden.it",
+    "hours_label": "Orari",
+    "hours_value": "Lun - Ven: 09:00 - 18:00",
+    "name": "Nome",
+    "email": "Email",
+    "phone": "Telefono",
+    "message": "Messaggio",
+    "submit": "Invia Messaggio",
+    "sending": "Invio in corso...",
+    "success": "Messaggio inviato con successo!",
+    "error": "Errore nell'invio del messaggio. Riprova."
+  },
   "infographic": {
     "title": "Il Sistema SUBGarden in Sintesi",
     "subtitle": "Visione d'Insieme",
@@ -84,7 +106,8 @@
     "step4": "Installazione Brevettata",
     "step4_desc": "Esecuzione rapida, pulita e assolutamente non invasiva. Il prato e le radici non subiscono danni, l'impianto è invisibile dal primo giorno.",
     "step5": "Assistenza & Garanzia",
-    "step5_desc": "Consegna certificata con un anno di assistenza gratuita e possibilità di garanzia illimitata tramite manutenzione stagionale."
+    "step5_desc": "Consegna certificata con un anno di assistenza gratuita e possibilità di garanzia illimitata tramite manutenzione stagionale.",
+    "title": "Il Nostro Metodo Operativo"
   },
   "footer": {
     "copyright": "© {year} SUBGarden. Tutti i diritti riservati.",
@@ -100,16 +123,5 @@
       "solutions": "Soluzioni",
       "technology": "Tecnologia"
     }
-  },
-  "contact": {
-    "email": "Email",
-    "error": "Errore nell'invio del messaggio. Riprova.",
-    "message": "Messaggio",
-    "name": "Nome",
-    "phone": "Telefono",
-    "sending": "Invio in corso... ",
-    "submit": "Invia",
-    "success": "Messaggio inviato con successo!",
-    "title": "Contattaci"
   }
 }

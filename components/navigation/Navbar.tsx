@@ -21,7 +21,7 @@ export function Navbar() {
     { href: '/tecnologia', label: t('technology') },
     { href: '/soluzioni', label: t('solutions') },
     { href: '/territorio', label: t('local') },
-    { href: '/#contact' as any, label: t('contact') },
+    { href: '/contatti', label: t('contact') },
   ];
 
   const isActive = (href: string) => {
@@ -79,7 +79,7 @@ export function Navbar() {
               return (
                 <Link
                   key={link.href}
-                  href={link.href}
+                  href={link.href as any}
                   className={cn(
                     "relative transition-colors duration-300 font-medium py-2 group",
                     shouldBeOpaque
@@ -137,7 +137,7 @@ export function Navbar() {
                 return (
                   <Link
                     key={link.href}
-                    href={link.href}
+                    href={link.href as any}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={cn(
                       "block transition-colors font-medium py-3 px-4 rounded-lg",

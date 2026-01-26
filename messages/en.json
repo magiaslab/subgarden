@@ -36,9 +36,31 @@
     "philosophy_expanded_text1": "A garden doesn't end where the property line stops. Our technique is inspired by the concept of 'Borrowed Scenery': freeing the gaze rather than delimiting it. We use natural wings and perspective telescopes to merge the private garden with the infinite horizon of Tuscany.",
     "philosophy_expanded_text2": "We define our approach as 'Empathetic Garden' because it resonates with the inhabitants and the place itself. We don't impose a form, but follow the voice of the earth, using the most advanced technology to serve the greatest simplicity.",
     "case_history_title": "Restoration of the Soul: 18th Century Villa",
-    "case_history_text": "One of our most significant projects was the recovery of the park of a villa from the 1700s in semi-abbandonment. We listened to what the park wanted to become again, restoring historical symmetries and secular essences, transforming it into an excellent setting for VIP events and absolute relaxation, without ever breaking the dialogue with the surrounding landscape.",
+    "case_history_text": "One of our most significant projects was the recovery of the park of a villa from the 1700s in semi-abandonment. We listened to what the park wanted to become again, restoring historical symmetries and secular essences, transforming it into an excellent setting for VIP events and absolute relaxation, without ever breaking the dialogue with the surrounding landscape.",
     "innovation_title": "The Invisible Sustainable Revolution",
     "innovation_text": "Our story of love for nature led us to create SUBGarden: a patented non-invasive sub-irrigation system. We protect the value of historical and modern gardens with a technology that is not seen, does not destroy the existing lawn during installation, and guarantees eternal beauty, supported by digital precision and absolute respect for the water resource."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We are ready to transform your green space",
+    "form_title": "Send us a message",
+    "info_title": "Contact Info",
+    "address_label": "Office",
+    "address_value": "Corso Italia, 45 - 57027 San Vincenzo (LI)",
+    "phone_label": "Phone",
+    "phone_value": "+39 371 4379979",
+    "email_label": "Email",
+    "email_value": "info@subgarden.it",
+    "hours_label": "Hours",
+    "hours_value": "Mon - Fri: 09:00 - 18:00",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "submit": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Error sending message. Please try again."
   },
   "infographic": {
     "title": "The SUBGarden System at a Glance",
@@ -84,7 +106,8 @@
     "step4": "Patented Installation",
     "step4_desc": "Fast, clean, and absolutely non-invasive execution. The lawn and roots suffer no damage, the system is invisible from day one.",
     "step5": "Support & Warranty",
-    "step5_desc": "Certified handover with one year of free support and possibility of unlimited warranty through seasonal maintenance."
+    "step5_desc": "Certified handover with one year of free support and possibility of unlimited warranty through seasonal maintenance.",
+    "title": "Our Operational Method"
   },
   "footer": {
     "description": "SUBGarden - Professional sub-irrigation system for the Tuscan market",
@@ -100,16 +123,5 @@
       "terms": "Terms of Service"
     },
     "copyright": "© {year} SUBGarden. All rights reserved."
-  },
-  "contact": {
-    "email": "Email",
-    "error": "Error sending message. Please try again.",
-    "message": "Message",
-    "name": "Name",
-    "phone": "Phone",
-    "sending": "Sending...",
-    "submit": "Send",
-    "success": "Message sent successfully!",
-    "title": "Contact Us"
   }
 }

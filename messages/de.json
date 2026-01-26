@@ -17,7 +17,7 @@
     "title": "Über Uns",
     "subtitle": "Dreißig Jahre Dialog mit der Natur",
     "story_title": "Unsere Wurzeln",
-    "story_text": "Im Jahr 1990 begann Fausto Favillis Reise in die Pflanzenwelt fast lautlos, getrieben von familiärer Notwendigkeit. Doch was als Pflicht begann, verwandelte sich Tag für Tag in eine Offenbarung. Verliebt in die Reinheit der Pflanzen und ihre resiliente Fähigkeit, einfach zu existieren, fand Fausto in der Erde ein tiefes Gefühl der Zugehörigkeit.",
+    "story_text": "Im Jahr 1990 begann Fausto Favillis Reise in die Pflanzenwelt fast lautlos, getrieben von familiärer Notwendigkeit. Doch what als Pflicht begann, verwandelte sich Tag für Tag in eine Offenbarung. Verliebt in die Reinheit der Pflanzen und ihre resiliente Fähigkeit, einfach zu existieren, fand Fausto in der Erde ein tiefes Gefühl der Zugehörigkeit.",
     "philosophy_title": "Der Empathische Garten",
     "philosophy_text": "Wir gestalten nicht nur Räume, wir stellen Verbindungen her. Unser Ziel ist es, die Natur bei ihrer Rückkehr alla Einfachheit zu begleiten, damit diejenigen, die im Garten leben, sich als Teil des umgebenden Horizonts wahrnehmen können, con la fantasia emotiva dell'anima.",
     "founder": "Fausto Favilli",
@@ -39,6 +39,28 @@
     "case_history_text": "Eines unserer bedeutendsten Projekte war die Wiederherstellung des Parks einer Villa aus dem 1700er Jahren, der sich in einem halbverfallenen Zustand befand. Wir hörten darauf, was der Park wieder werden wollte, stellten historische Symmetrien und säkulare Essenzen wieder her und verwandelten ihn in einen exzellenten Rahmen für VIP-Events und absolute Entspannung, ohne jemals den Dialog mit der umgebenden Landschaft zu unterbrechen.",
     "innovation_title": "Die unsichtbare nachhaltige Revolution",
     "innovation_text": "Unsere Liebe alla Natur hat uns dazu bewogen, SUBGarden zu entwickeln: ein patentiertes, nicht-invasives Unterflurbewässerungssystem. Wir schützen den Wert historischer und moderner Gärten mit einer Technologie, die man non si vede, non distrugge il prato esistente durante l'installazione e garantisce una bellezza eterna, sostenuta dalla precisione digitale e dal rispetto assoluto della risorsa idrica."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Wir sind bereit, Ihre Grünfläche zu transformieren",
+    "form_title": "Schreiben Sie uns",
+    "info_title": "Kontaktdaten",
+    "address_label": "Büro",
+    "address_value": "Corso Italia, 45 - 57027 San Vincenzo (LI)",
+    "phone_label": "Telefon",
+    "phone_value": "+39 371 4379979",
+    "email_label": "Email",
+    "email_value": "info@subgarden.it",
+    "hours_label": "Öffnungszeiten",
+    "hours_value": "Mo - Fr: 09:00 - 18:00",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Telefon",
+    "message": "Nachricht",
+    "submit": "Nachricht Senden",
+    "sending": "Wird gesendet...",
+    "success": "Nachricht erfolgreich gesendet!",
+    "error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut."
   },
   "infographic": {
     "title": "Das SUBGarden-System auf einen Blick",
@@ -84,7 +106,8 @@
     "step4": "Patentierte Installation",
     "step4_desc": "Schnelle, saubere und absolut nicht-invasive Ausführung. Rasen und Wurzeln nehmen keinen Schaden, das System ist vom ersten Tag an unsichtbar.",
     "step5": "Support & Garantie",
-    "step5_desc": "Zertifizierte Übergabe mit einem Jahr kostenlosem Support und Möglichkeit einer unbegrenzten Garantie durch saisonale Wartung."
+    "step5_desc": "Zertifizierte Übergabe mit einem Jahr kostenlosem Support und Möglichkeit einer unbegrenzten Garantie durch saisonale Wartung.",
+    "title": "Unser Betriebsverfahren"
   },
   "footer": {
     "description": "SUBGarden - Professionelles Unterflurbewässerungssystem für den toskanischen Markt",
@@ -100,16 +123,5 @@
       "terms": "Nutzungsbedingungen"
     },
     "copyright": "© {year} SUBGarden. Alle Rechte vorbehalten."
-  },
-  "contact": {
-    "email": "E-Mail",
-    "error": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut.",
-    "message": "Nachricht",
-    "name": "Name",
-    "phone": "Telefon",
-    "sending": "Wird gesendet...",
-    "submit": "Senden",
-    "success": "Nachricht erfolgreich gesendet!",
-    "title": "Kontaktieren Sie uns"
   }
 }
