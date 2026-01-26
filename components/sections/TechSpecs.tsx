@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/Card';
-import { BrandName } from '@/components/ui/BrandName';
 import Image from 'next/image';
 
 const specifications = [
@@ -63,8 +62,8 @@ export function TechSpecs() {
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-deep-teal mb-4">
             Specifiche Tecniche
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto flex items-center justify-center gap-2 flex-wrap">
-            Caratteristiche e vantaggi del sistema <BrandName />
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Caratteristiche e vantaggi del sistema SUBGarden
           </p>
         </motion.div>
 

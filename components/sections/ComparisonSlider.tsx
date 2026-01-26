@@ -59,7 +59,7 @@ export function ComparisonSlider() {
               <div className="absolute inset-0 bg-black/30" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-white px-4">
-                  <h3 className="text-3xl md:text-4xl font-serif font-bold mb-2 text-red-100">Irrigazione Tradizionale</h3>
+                  <h3 className="text-3xl md:text-4xl font-serif font-bold mb-2 text-red-100 uppercase tracking-wider">Irrigazione Tradizionale</h3>
                   <p className="text-lg md:text-xl opacity-90 font-medium">Superfici bagnate, spreco idrico, arredi bagnati</p>
                 </div>
               </div>
@@ -79,15 +79,8 @@ export function ComparisonSlider() {
               />
               <div className="absolute inset-0 bg-black/20" />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-white px-4 flex flex-col items-center">
-                  <div className="relative w-64 h-16 md:w-80 md:h-20 mb-4">
-                    <Image
-                      src="/SUBGARDEN - LOGO BIANCO.png"
-                      alt="SUBGarden"
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
+                <div className="text-center text-white px-4">
+                  <h3 className="text-3xl md:text-5xl font-serif font-bold mb-4 uppercase tracking-tighter">Subirrigazione SUBGarden</h3>
                   <p className="text-lg md:text-xl font-bold tracking-wide text-green-50 shadow-sm">Superficie sempre asciutta, comfort totale, 70% risparmio idrico</p>
                 </div>
               </div>

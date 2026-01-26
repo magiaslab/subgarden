@@ -5,7 +5,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MotionDiv } from '@/components/ui/Motion';
 import { InfographicSection } from '@/components/sections/InfographicSection';
 import { ContactCTA } from '@/components/sections/ContactCTA';
-import { BrandName } from '@/components/ui/BrandName';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Search, PencilRuler, FileText, Zap, ShieldCheck } from 'lucide-react';

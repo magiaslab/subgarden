@@ -6,7 +6,6 @@ import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/Card';
 import { Link } from '@/lib/i18n/routing';
 import { History, Heart, Lightbulb, ArrowRight } from 'lucide-react';
-import { BrandName } from '@/components/ui/BrandName';
 
 export function AboutUs() {
   const t = (useTranslations as any)('about');
@@ -80,8 +79,8 @@ export function AboutUs() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h4 className="text-3xl font-serif font-bold text-deep-teal mb-6 flex items-center gap-2 flex-wrap">
-              Le Radici di <BrandName />
+            <h4 className="text-3xl font-serif font-bold text-deep-teal mb-6">
+              Le Radici di SUBGarden
             </h4>
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
               <p>{t('story_text')}</p>

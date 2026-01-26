@@ -4,7 +4,6 @@ import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/Button';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import Image from 'next/image';
 
 export function HeroSection() {
   const t = (useTranslations as any)('hero');
@@ -33,22 +32,14 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
+        <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-6 flex justify-center"
+          className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 leading-tight tracking-tight"
         >
-          <div className="relative w-72 h-20 md:w-[500px] md:h-32">
-            <Image
-              src="/SUBGARDEN - LOGO BIANCO PAYOOFF.png"
-              alt="SUBGarden"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-        </motion.div>
+          {t('title')}
+        </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
