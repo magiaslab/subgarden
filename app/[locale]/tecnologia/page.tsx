@@ -175,26 +175,29 @@ export default async function TecnologiaPage({
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
-                  <Card className="h-full overflow-hidden">
+                  <Card className="h-full p-0 overflow-hidden group">
                     {section.image && (
-                      <div className="relative h-64 w-full overflow-hidden rounded-2xl">
+                      <div className="relative h-64 w-full overflow-hidden">
                         <Image
                           src={section.image}
                           alt={section.title}
                           fill
-                          className="object-cover"
+                          className="object-cover transition-transform duration-700 group-hover:scale-110"
                           sizes="(max-width: 768px) 100vw, 50vw"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-deep-teal/60 to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-deep-teal/90 via-deep-teal/20 to-transparent" />
+                        <div className="absolute bottom-6 left-6 right-6">
+                          <h3 className="text-2xl font-serif font-bold text-white mb-1 group-hover:text-copper transition-colors duration-300">
+                            {section.title}
+                          </h3>
+                          <div className="w-12 h-1 bg-copper rounded-full transform origin-left group-hover:scale-x-150 transition-transform duration-500" />
+                        </div>
                       </div>
                     )}
-                    <CardHeader>
-                      <CardTitle className="text-2xl text-deep-teal">
-                        {section.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-700 leading-relaxed">{section.description}</p>
+                    <CardContent className="p-8">
+                      <p className="text-lg text-gray-700 leading-relaxed font-medium group-hover:text-deep-teal transition-colors duration-300">
+                        {section.description}
+                      </p>
                     </CardContent>
                   </Card>
                 </MotionDiv>
