@@ -78,7 +78,7 @@ export function PainPoints() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <Card className="h-full">
-                  <div className="relative h-48 w-full overflow-hidden rounded-t-xl">
+                  <div className="relative h-48 w-full overflow-hidden rounded-2xl">
                     <Image
                       src={point.image}
                       alt={t(`${point.key}.title`)}

@@ -132,15 +132,15 @@ export default async function AboutPage({
             </div>
 
             <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="relative h-80 rounded-xl overflow-hidden group">
+              <div className="relative h-80 rounded-2xl overflow-hidden group">
                 <Image src="/green-park-view.jpg" alt="Philosophy 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
               </div>
-              <div className="relative h-80 rounded-xl overflow-hidden group">
+              <div className="relative h-80 rounded-2xl overflow-hidden group">
                 <Image src="/spring-nature-outdoors-backgrounds-fresh.jpg" alt="Philosophy 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
               </div>
-              <div className="relative h-80 rounded-xl overflow-hidden group">
+              <div className="relative h-80 rounded-2xl overflow-hidden group">
                 <Image src="/grassland-landscape-greening-environment-park-background.jpg" alt="Philosophy 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
               </div>

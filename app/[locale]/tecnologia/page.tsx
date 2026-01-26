@@ -5,6 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MotionDiv } from '@/components/ui/Motion';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+import { Search, PencilRuler, FileText, Zap, ShieldCheck } from 'lucide-react';
+import { cn } from '@/lib/utils/cn';
 
 export async function generateMetadata({
   params,
@@ -171,7 +173,7 @@ export default async function TecnologiaPage({
                 >
                   <Card className="h-full overflow-hidden">
                     {section.image && (
-                      <div className="relative h-64 w-full overflow-hidden">
+                      <div className="relative h-64 w-full overflow-hidden rounded-2xl">
                         <Image
                           src={section.image}
                           alt={section.title}
@@ -198,33 +200,57 @@ export default async function TecnologiaPage({
         </section>
 
         {/* Operational Method Section */}
-        <section className="py-20 bg-gray-50 border-t border-gray-100">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-serif font-bold text-deep-teal mb-4">{t('title')}</h2>
-              <div className="w-24 h-1 bg-copper mx-auto"></div>
+        <section className="py-24 bg-gray-50 border-t border-gray-100">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-20">
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-deep-teal mb-4">{t('title')}</h2>
+              <div className="w-24 h-1.5 bg-copper mx-auto"></div>
             </div>
             
-            <div className="space-y-8">
-              {[1, 2, 3, 4, 5].map((step) => (
-                <MotionDiv 
-                  key={step}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: step * 0.1 }}
-                  className="flex items-start gap-6 bg-white p-6 rounded-xl shadow-sm border border-gray-100"
-                >
-                  <div className="flex-shrink-0 w-12 h-12 bg-deep-teal text-white rounded-full flex items-center justify-center font-serif font-bold text-xl">
-                    {step}
-                  </div>
-                  <div>
-                    <p className="text-xl text-gray-800 font-medium">
-                      {t(`step${step}`)}
-                    </p>
-                  </div>
-                </MotionDiv>
-              ))}
+            <div className="space-y-12">
+              {[
+                { step: 1, icon: Search, color: "text-blue-600", bgColor: "bg-blue-50" },
+                { step: 2, icon: PencilRuler, color: "text-purple-600", bgColor: "bg-purple-50" },
+                { step: 3, icon: FileText, color: "text-amber-600", bgColor: "bg-amber-50" },
+                { step: 4, icon: Zap, color: "text-orange-600", bgColor: "bg-orange-50" },
+                { step: 5, icon: ShieldCheck, color: "text-green-600", bgColor: "bg-green-50" }
+              ].map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <MotionDiv 
+                    key={item.step}
+                    initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7, delay: index * 0.1 }}
+                    className="flex flex-col md:flex-row items-center md:items-start gap-8 bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-gray-100 relative overflow-hidden group hover:shadow-xl transition-all duration-500"
+                  >
+                    {/* Step Number Background Decor */}
+                    <div className="absolute -right-4 -bottom-4 text-9xl font-serif font-bold text-gray-50 group-hover:text-gray-100 transition-colors duration-500 select-none -z-0">
+                      {item.step}
+                    </div>
+
+                    <div className={cn(
+                      "flex-shrink-0 w-20 h-20 rounded-2xl flex items-center justify-center transition-transform duration-500 group-hover:scale-110 relative z-10 shadow-sm",
+                      item.bgColor
+                    )}>
+                      <Icon className={cn("w-10 h-10", item.color)} />
+                    </div>
+
+                    <div className="relative z-10 text-center md:text-left">
+                      <div className="flex flex-col md:flex-row md:items-center gap-2 mb-4">
+                        <span className="text-copper font-bold uppercase tracking-widest text-sm">Fase {item.step}</span>
+                        <h3 className="text-2xl md:text-3xl font-serif font-bold text-deep-teal">
+                          {t(`step${item.step}`)}
+                        </h3>
+                      </div>
+                      <p className="text-xl text-gray-600 leading-relaxed max-w-3xl">
+                        {t(`step${item.step}_desc`)}
+                      </p>
+                    </div>
+                  </MotionDiv>
+                );
+              })}
             </div>
           </div>
         </section>

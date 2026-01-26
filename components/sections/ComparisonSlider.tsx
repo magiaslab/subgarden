@@ -41,7 +41,7 @@ export function ComparisonSlider() {
           </p>
         </motion.div>
 
-        <div className="relative rounded-xl overflow-hidden shadow-2xl">
+        <div className="relative rounded-2xl overflow-hidden shadow-2xl">
           <div
             className="relative h-[500px] cursor-col-resize"
             onMouseMove={handleMouseMove}

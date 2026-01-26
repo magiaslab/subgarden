@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Home",
+    "about": "About Us",
     "technology": "Technology",
     "solutions": "Solutions",
     "local": "Local",
@@ -35,7 +36,7 @@
     "philosophy_expanded_text1": "A garden doesn't end where the property line stops. Our technique is inspired by the concept of 'Borrowed Scenery': freeing the gaze rather than delimiting it. We use natural wings and perspective telescopes to merge the private garden with the infinite horizon of Tuscany.",
     "philosophy_expanded_text2": "We define our approach as 'Empathetic Garden' because it resonates with the inhabitants and the place itself. We don't impose a form, but follow the voice of the earth, using the most advanced technology to serve the greatest simplicity.",
     "case_history_title": "Restoration of the Soul: 18th Century Villa",
-    "case_history_text": "One of our most significant projects was the recovery of the park of a villa from the 1700s in semi-abandonment. We listened to what the park wanted to become again, restoring historical symmetries and secular essences, transforming it into an excellent setting for VIP events and absolute relaxation, without ever breaking the dialogue with the surrounding landscape.",
+    "case_history_text": "One of our most significant projects was the recovery of the park of a villa from the 1700s in semi-abbandonment. We listened to what the park wanted to become again, restoring historical symmetries and secular essences, transforming it into an excellent setting for VIP events and absolute relaxation, without ever breaking the dialogue with the surrounding landscape.",
     "innovation_title": "The Invisible Sustainable Revolution",
     "innovation_text": "Our story of love for nature led us to create SUBGarden: a patented non-invasive sub-irrigation system. We protect the value of historical and modern gardens with a technology that is not seen, does not destroy the existing lawn during installation, and guarantees eternal beauty, supported by digital precision and absolute respect for the water resource."
   },
@@ -69,11 +70,16 @@
   },
   "process": {
     "title": "Our Operational Method",
-    "step1": "Site visit and existing system verification",
-    "step2": "Study, design, and cost analysis",
-    "step3": "Quote and contract formalization",
-    "step4": "Patented non-invasive and fast installation",
-    "step5": "Handover and SUBGarden unlimited warranty"
+    "step1": "Technical Site Visit",
+    "step1_desc": "Accurate analysis of the garden's status and any existing system to identify the best conversion opportunities.",
+    "step2": "Custom Design",
+    "step2_desc": "Development of a precision grid pattern and detailed cost analysis, optimizing every supply line.",
+    "step3": "Transparent Formalization",
+    "step3_desc": "Presentation of the technical project, clear quote, and definition of the works schedule.",
+    "step4": "Patented Installation",
+    "step4_desc": "Fast, clean, and absolutely non-invasive execution. The lawn and roots suffer no damage, the system is invisible from day one.",
+    "step5": "Support & Warranty",
+    "step5_desc": "Certified handover with one year of free support and possibility of unlimited warranty through seasonal maintenance."
   },
   "footer": {
     "description": "SUBGarden - Professional sub-irrigation system for the Tuscan market",

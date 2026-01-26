@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Home",
+    "about": "Chi Siamo",
     "technology": "Tecnologia",
     "solutions": "Soluzioni",
     "local": "Local",
@@ -69,12 +70,16 @@
   },
   "process": {
     "title": "Il Nostro Metodo Operativo",
-    "step1": "Sopralluogo e verifica impianto esistente",
-    "step2": "Studio, progetto e analisi dei costi",
-    "step3": "Preventivo e formalizzazione contratto",
-    "step4": "Installazione brevettata non invasiva e veloce",
-    "step5": "Consegna e garanzia illimitata SUBGarden",
-    "title": "Il Nostro Metodo Operativo"
+    "step1": "Sopralluogo Tecnico",
+    "step1_desc": "Analisi accurata dello stato del giardino e dell'eventuale impianto esistente per identificare le migliori opportunità di riconversione.",
+    "step2": "Progettazione su Misura",
+    "step2_desc": "Sviluppo di uno schema a griglia di precisione e analisi dei costi dettagliata, ottimizzando ogni linea di adduzione.",
+    "step3": "Formalizzazione Trasparente",
+    "step3_desc": "Presentazione del progetto tecnico, preventivo chiaro e definizione del cronoprogramma dei lavori.",
+    "step4": "Installazione Brevettata",
+    "step4_desc": "Esecuzione rapida, pulita e assolutamente non invasiva. Il prato e le radici non subiscono danni, l'impianto è invisibile dal primo giorno.",
+    "step5": "Assistenza & Garanzia",
+    "step5_desc": "Consegna certificata con un anno di assistenza gratuita e possibilità di garanzia illimitata tramite manutenzione stagionale."
   },
   "footer": {
     "copyright": "© {year} SUBGarden. Tutti i diritti riservati.",
@@ -97,7 +102,7 @@
     "message": "Messaggio",
     "name": "Nome",
     "phone": "Telefono",
-    "sending": "Invio in corso...",
+    "sending": "Invio in corso... ",
     "submit": "Invia",
     "success": "Messaggio inviato con successo!",
     "title": "Contattaci"

@@ -77,7 +77,7 @@ export function TechSpecs() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <Card className="h-full overflow-hidden">
-                <div className="relative h-56 w-full overflow-hidden">
+                <div className="relative h-56 w-full overflow-hidden rounded-2xl">
                   <Image
                     src={spec.image}
                     alt={spec.category}
