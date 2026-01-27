@@ -14,9 +14,9 @@ export async function generateMetadata({
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
 
   const titles: Record<string, string> = {
-    it: 'Chi Siamo - La Storia di Fausto Favilli | SUBGarden',
-    en: 'About Us - Fausto Favilli\'s Story | SUBGarden',
-    de: 'Über Uns - Die Geschichte von Fausto Favilli | SUBGarden',
+    it: 'Chi Siamo - La Mia Storia e la Visione SUBGarden | Fausto Favilli',
+    en: 'About Us - My Story and the SUBGarden Vision | Fausto Favilli',
+    de: 'Über Uns - Meine Geschichte und die SUBGarden Vision | Fausto Favilli',
   };
 
   return {

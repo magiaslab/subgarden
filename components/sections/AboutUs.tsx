@@ -80,7 +80,7 @@ export function AboutUs() {
             transition={{ duration: 0.8 }}
           >
             <h4 className="text-3xl font-serif font-bold text-deep-teal mb-6">
-              Le Radici di SUBGarden
+              Le Mie Radici e la Visione SUBGarden
             </h4>
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
               <p>{t('story_text')}</p>
