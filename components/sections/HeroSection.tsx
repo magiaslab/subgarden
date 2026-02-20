@@ -20,7 +20,7 @@ export function HeroSection() {
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source
-            src="/hero-bg.mp4"
+            src={process.env.NEXT_PUBLIC_HERO_VIDEO_URL || '/hero-bg.mp4'}
             type="video/mp4"
           />
         </video>

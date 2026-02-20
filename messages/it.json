@@ -26,6 +26,58 @@
     "roots_text": "Nel 1990 non cercavo una carriera, ma risposte. Quello che era iniziato come un supporto all'attività familiare è diventato rapidamente un dialogo intimo con il mondo vegetale. Mi ha conquistato la capacità delle piante di 'esistere semplicemente', la loro resilienza silenziosa ma invincibile. Da allora, ogni giardino che creo è un tributo a questa forza.",
     "roots_title": "Radici: Dal Dovere allo Stupore"
   },
+  "benefits": {
+    "title": "Risparmio idrico e installazione senza stress",
+    "subtitle": "Due pilastri del sistema SUBGarden: meno sprechi, massima semplicità di posa anche in giardini già esistenti.",
+    "water_title": "Risparmio idrico ed efficienza",
+    "water_lead": "L'acqua arriva solo dove serve, in profondità. Niente evaporazione, niente ruscellamento: fino al 60-70% di risparmio rispetto all'irrigazione a pioggia.",
+    "water_1": "Distribuzione per capillarità nel terreno: uniforme e lenta, a beneficio delle radici.",
+    "water_2": "Bassa pressione e bassa portata (1,6 l/min per gocciolatore): niente pompaggi pesanti, massima efficienza.",
+    "water_3": "Fertirrigazione possibile senza contatto con prodotti di sintesi chimica in superficie.",
+    "water_4": "Uniformità di distribuzione >90%: nessuna zona secca o ristagno (ala gocciolante Rain Bird XSF, Copper Shield™).",
+    "install_title": "Montaggio semplice e non invasivo",
+    "install_lead": "Il nostro sistema brevettato si installa in giardini già realizzati senza sventrare il prato: intervento rapido, pulito e rispettoso del verde esistente.",
+    "install_1": "Installazione brevettata: nessuno scavo invasivo, il manto erboso resta intatto.",
+    "install_2": "Tempi ridotti e cantiere ordinato: il giardino è subito utilizzabile.",
+    "install_3": "Nessuna demolizione del verde: adatto anche a prati storici e contesti di pregio.",
+    "install_4": "Riconversione smart di impianti esistenti: riuso delle linee, protezione totale anti-vandalismo.",
+    "install_cta": "Scopri il metodo operativo",
+    "view_infographic": "Vedi infografica risparmio idrico"
+  },
+  "explanatoryVideo": {
+    "title": "Scopri SUBGarden in un minuto"
+  },
+  "comparison": {
+    "title": "Confronto rapido",
+    "feature": "Caratteristica",
+    "rain": "Irrigazione a pioggia",
+    "subgarden": "SUBGarden",
+    "water_eff_label": "Efficienza idrica",
+    "rain_water_eff": "60-75% (bassa)",
+    "subgarden_water_eff": ">95% (massima)",
+    "mosquito_label": "Presenza zanzare",
+    "rain_mosquito": "Alta (superficie umida)",
+    "subgarden_mosquito": "Nulla (superficie asciutta)",
+    "furniture_label": "Uso arredi",
+    "rain_furniture": "Impossibile durante l'irrigazione",
+    "subgarden_furniture": "Sempre possibile",
+    "aesthetic_label": "Impatto estetico",
+    "rain_aesthetic": "Visibile (irrigatori e schizzi)",
+    "subgarden_aesthetic": "Invisibile (tutto interrato)",
+    "maintenance_label": "Manutenzione",
+    "rain_maintenance": "Alta (testine rotte/ostruite)",
+    "subgarden_maintenance": "Minima (sistema autopulente)"
+  },
+  "operationalStrip": {
+    "title": "Il nostro metodo operativo",
+    "step1_title": "Sopralluogo e analisi",
+    "step1_desc": "Verifica impianto esistente, riutilizzo linee.",
+    "step2_title": "Progettazione e preventivo",
+    "step2_desc": "Studio personalizzato, analisi costi, consulenza incentivi (Agricoltura 4.0).",
+    "step3_title": "Esecuzione e consegna",
+    "step3_desc": "Installazione rapida, ripristino immediato. 1 anno assistenza gratuita, garanzia illimitata.",
+    "cta": "Scopri la tecnologia"
+  },
   "contact": {
     "address_label": "Sede",
     "address_value": "Corso Italia, 45 - 57027 San Vincenzo (LI)",
@@ -73,14 +125,18 @@
   },
   "hero": {
     "cta": "Scopri la Soluzione",
-    "description": "Sistema innovativo di irrigazione sotterranea che garantisce un giardino perfetto tutto l'anno, con risparmio idrico fino al 60% e manutenzione minima",
+    "description": "Sistema innovativo di irrigazione sotterranea che garantisce un giardino perfetto tutto l'anno, con risparmio idrico fino al 70% e manutenzione minima",
     "subtitle": "L'acqua solo dove serve",
     "title": "SUBGarden"
   },
   "infographic": {
     "caption": "L'ingegneria del benessere outdoor: dalla tecnologia invisibile al metodo operativo.",
     "subtitle": "Visione d'Insieme",
-    "title": "Il Sistema SUBGarden in Sintesi"
+    "title": "Il Sistema SUBGarden in Sintesi",
+    "click_to_enlarge": "Clicca sull'immagine per ingrandirla e leggerla correttamente.",
+    "alt_1": "SUBGarden: innovazione nella subirrigazione sostenibile - Problema vs Soluzione e tecnologia",
+    "alt_2": "SUBGarden: innovazione invisibile per un giardino perfetto - Benefici e metodo operativo",
+    "alt_3": "SUBGarden: l'irrigazione intelligente che rivoluziona il tuo outdoor - Risparmio idrico e comfort"
   },
   "nav": {
     "about": "Chi Siamo",
@@ -118,6 +174,12 @@
       "description": "Risparmia dal 50% al 70% di acqua ed energia grazie alla distribuzione mirata alle radici.",
       "title": "Risparmio Idrico ed Energetico"
     }
+  },
+  "solutionsPreview": {
+    "title": "Le nostre soluzioni",
+    "subtitle": "Sistemi di subirrigazione progettati per ogni esigenza: dall'abitazione al parco, fino al campo sportivo.",
+    "discover": "Scopri di più",
+    "view_all": "Vedi tutte le soluzioni"
   },
   "portfolio": {
     "categories": {

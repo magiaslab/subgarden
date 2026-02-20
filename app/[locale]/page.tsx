@@ -9,8 +9,11 @@ import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
 import { PartnerBanner } from '@/components/sections/PartnerBanner';
 import { InfographicSection } from '@/components/sections/InfographicSection';
-
-import { AboutUs } from '@/components/sections/AboutUs';
+import { BenefitsSection } from '@/components/sections/BenefitsSection';
+import { SolutionsPreviewSection } from '@/components/sections/SolutionsPreviewSection';
+import { ExplanatoryVideoSection } from '@/components/sections/ExplanatoryVideoSection';
+import { ComparisonTableSection } from '@/components/sections/ComparisonTableSection';
+import { OperationalMethodStrip } from '@/components/sections/OperationalMethodStrip';
 
 export async function generateMetadata({
   params,
@@ -86,11 +89,15 @@ export default async function HomePage({
       <main>
         <HeroSection />
         <PartnerBanner />
-        <AboutUs />
+        <BenefitsSection />
         <PainPoints />
         <ComparisonSlider />
+        <ComparisonTableSection />
         <TechSpecs />
+        <OperationalMethodStrip />
+        <ExplanatoryVideoSection />
         <InfographicSection />
+        <SolutionsPreviewSection />
         <ContactCTA />
       </main>
       <Footer />

@@ -26,6 +26,58 @@
     "roots_text": "1990 suchte ich keine Karriere, sondern Antworten. Was als Unterstützung für das Familienunternehmen begann, entwickelte sich schnell zu einem intimen Dialog mit der Pflanzenwelt. Die Fähigkeit der Pflanzen, 'einfach zu existieren', ihre stille, aber unbesiegbare Widerstandsfähigkeit, hat mich überzeugt. Seitdem ist jeder Garten, den ich erschaffe, ein Tribut an diese Kraft.",
     "roots_title": "Wurzeln: Von der Pflicht zum Staunen"
   },
+  "benefits": {
+    "title": "Wassereinsparung und stressfreie Installation",
+    "subtitle": "Zwei Säulen des SUBGarden-Systems: weniger Verschwendung, maximale Einfachheit der Verlegung auch in bestehenden Gärten.",
+    "water_title": "Wassereinsparung und Effizienz",
+    "water_lead": "Wasser kommt nur dorthin, wo es gebraucht wird – in die Tiefe. Keine Verdunstung, kein Oberflächenabfluss: bis zu 60–70 % Ersparnis gegenüber Sprinklerbewässerung.",
+    "water_1": "Verteilung durch Kapillarität im Boden: gleichmäßig und langsam, zum Wohl der Wurzeln.",
+    "water_2": "Niederdruck und geringer Durchfluss (1,6 l/min pro Tropfer): keine schweren Pumpen, maximale Effizienz.",
+    "water_3": "Fertigation möglich ohne Kontakt mit chemischen Syntheseprodukten an der Oberfläche.",
+    "water_4": "Verteilungsgleichmäßigkeit >90 %: keine trockenen oder Staunässe-Bereiche (Rain Bird XSF Tropfleitung, Copper Shield™).",
+    "install_title": "Einfache, nicht-invasive Installation",
+    "install_lead": "Unser patentiertes System wird in bestehenden Gärten verlegt, ohne den Rasen aufzureißen: schneller, sauberer Eingriff, der die bestehende Begrünung respektiert.",
+    "install_1": "Patentierte Installation: kein invasives Graben, der Rasen bleibt intakt.",
+    "install_2": "Kurze Zeiten und ordentliche Baustelle: der Garten ist sofort nutzbar.",
+    "install_3": "Keine Zerstörung des Grüns: auch für historische Rasen und anspruchsvolle Lagen geeignet.",
+    "install_4": "Smarte Umstellung bestehender Anlagen: Wiedernutzung der Leitungen, vollständiger Vandalismusschutz.",
+    "install_cta": "Das Betriebsverfahren entdecken",
+    "view_infographic": "Infografik Wassereinsparung ansehen"
+  },
+  "explanatoryVideo": {
+    "title": "SUBGarden in einer Minute entdecken"
+  },
+  "comparison": {
+    "title": "Schneller Vergleich",
+    "feature": "Merkmal",
+    "rain": "Sprinklerbewässerung",
+    "subgarden": "SUBGarden",
+    "water_eff_label": "Wassereffizienz",
+    "rain_water_eff": "60–75 % (niedrig)",
+    "subgarden_water_eff": ">95 % (maximal)",
+    "mosquito_label": "Mückenpräsenz",
+    "rain_mosquito": "Hoch (nasse Oberfläche)",
+    "subgarden_mosquito": "Keine (trockene Oberfläche)",
+    "furniture_label": "Nutzung von Möbeln",
+    "rain_furniture": "Während der Bewässerung unmöglich",
+    "subgarden_furniture": "Immer möglich",
+    "aesthetic_label": "Ästhetische Wirkung",
+    "rain_aesthetic": "Sichtbar (Sprinkler und Spritzer)",
+    "subgarden_aesthetic": "Unsichtbar (alles unterirdisch)",
+    "maintenance_label": "Wartung",
+    "rain_maintenance": "Hoch (kaputte/verstopfte Köpfe)",
+    "subgarden_maintenance": "Minimal (selbstreinigendes System)"
+  },
+  "operationalStrip": {
+    "title": "Unser Betriebsverfahren",
+    "step1_title": "Besichtigung und Analyse",
+    "step1_desc": "Prüfung bestehender Anlage, Wiedernutzung der Leitungen.",
+    "step2_title": "Planung und Angebot",
+    "step2_desc": "Individuelle Studie, Kostenanalyse, Fördermittelberatung (Landwirtschaft 4.0).",
+    "step3_title": "Ausführung und Übergabe",
+    "step3_desc": "Schnelle Installation, sofortige Wiederherstellung. 1 Jahr kostenlose Assistenz, unbegrenzte Garantie.",
+    "cta": "Die Technologie entdecken"
+  },
   "contact": {
     "address_label": "Büro",
     "address_value": "Corso Italia, 45 - 57027 San Vincenzo (LI)",
@@ -80,7 +132,11 @@
   "infographic": {
     "caption": "Das Engineering für Outdoor-Wohlbefinden: von unsichtbarer Technologie bis hin zum Betriebsverfahren.",
     "subtitle": "Überblick",
-    "title": "Das SUBGarden-System auf einen Blick"
+    "title": "Das SUBGarden-System auf einen Blick",
+    "click_to_enlarge": "Klicken Sie auf das Bild, um es zu vergrößern und richtig zu lesen.",
+    "alt_1": "SUBGarden: Innovation in nachhaltiger Unterflurbewässerung – Problem vs Lösung und Technologie",
+    "alt_2": "SUBGarden: Unsichtbare Innovation für einen perfekten Garten – Vorteile und Betriebsverfahren",
+    "alt_3": "SUBGarden: Intelligente Bewässerung, die Ihren Außenbereich revolutioniert – Wassereinsparung und Komfort"
   },
   "nav": {
     "about": "Über Uns",
@@ -118,6 +174,12 @@
       "description": "Sparen Sie 50% bis 70% Wasser und Energie dank gezielter Verteilung an die Wurzeln.",
       "title": "Wasser- und Energieeinsparung"
     }
+  },
+  "solutionsPreview": {
+    "title": "Unsere Lösungen",
+    "subtitle": "Unterflurbewässerungssysteme für jeden Bedarf: vom Wohnbereich über den Park bis zum Sportplatz.",
+    "discover": "Mehr erfahren",
+    "view_all": "Alle Lösungen anzeigen"
   },
   "portfolio": {
     "categories": {

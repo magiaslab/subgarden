@@ -26,6 +26,58 @@
     "roots_text": "In 1990 I wasn't looking for a career, but for answers. What started as support for the family business quickly became an intimate dialogue with the plant world. I was won over by the ability of plants to 'simply exist', their silent but invincible resilience. Since then, every garden I create is a tribute to this strength.",
     "roots_title": "Roots: From Duty to Wonder"
   },
+  "benefits": {
+    "title": "Water savings and stress-free installation",
+    "subtitle": "Two pillars of the SUBGarden system: less waste, maximum simplicity of installation even in existing gardens.",
+    "water_title": "Water savings and efficiency",
+    "water_lead": "Water goes only where it's needed, deep down. No evaporation, no runoff: up to 60-70% savings compared to sprinkler irrigation.",
+    "water_1": "Distribution by capillarity in the soil: even and slow, for the benefit of the roots.",
+    "water_2": "Low pressure and low flow (1.6 l/min per emitter): no heavy pumping, maximum efficiency.",
+    "water_3": "Fertigation possible without contact with chemical synthesis products on the surface.",
+    "water_4": "Distribution uniformity >90%: no dry or stagnant areas (Rain Bird XSF drip line, Copper Shield™).",
+    "install_title": "Simple, non-invasive installation",
+    "install_lead": "Our patented system installs in existing gardens without tearing up the lawn: fast, clean intervention that respects existing greenery.",
+    "install_1": "Patented installation: no invasive digging, the turf stays intact.",
+    "install_2": "Short lead times and a tidy site: the garden is ready to use right away.",
+    "install_3": "No destruction of greenery: suitable for historic lawns and high-value settings too.",
+    "install_4": "Smart reconversion of existing systems: reuse of lines, total anti-vandalism protection.",
+    "install_cta": "Discover the operational method",
+    "view_infographic": "View water saving infographic"
+  },
+  "explanatoryVideo": {
+    "title": "Discover SUBGarden in one minute"
+  },
+  "comparison": {
+    "title": "Quick comparison",
+    "feature": "Feature",
+    "rain": "Sprinkler irrigation",
+    "subgarden": "SUBGarden",
+    "water_eff_label": "Water efficiency",
+    "rain_water_eff": "60-75% (low)",
+    "subgarden_water_eff": ">95% (maximum)",
+    "mosquito_label": "Mosquito presence",
+    "rain_mosquito": "High (wet surface)",
+    "subgarden_mosquito": "None (dry surface)",
+    "furniture_label": "Use of furnishings",
+    "rain_furniture": "Impossible during irrigation",
+    "subgarden_furniture": "Always possible",
+    "aesthetic_label": "Aesthetic impact",
+    "rain_aesthetic": "Visible (sprinklers and splashes)",
+    "subgarden_aesthetic": "Invisible (all underground)",
+    "maintenance_label": "Maintenance",
+    "rain_maintenance": "High (broken/clogged heads)",
+    "subgarden_maintenance": "Minimal (self-cleaning system)"
+  },
+  "operationalStrip": {
+    "title": "Our operational method",
+    "step1_title": "Site survey and analysis",
+    "step1_desc": "Check existing system, reuse lines.",
+    "step2_title": "Design and quote",
+    "step2_desc": "Custom study, cost analysis, incentive consultancy (Agriculture 4.0).",
+    "step3_title": "Execution and handover",
+    "step3_desc": "Rapid installation, immediate restoration. 1 year free assistance, unlimited warranty.",
+    "cta": "Discover the technology"
+  },
   "contact": {
     "address_label": "Office",
     "address_value": "Corso Italia, 45 - 57027 San Vincenzo (LI)",
@@ -80,7 +132,11 @@
   "infographic": {
     "caption": "The engineering of outdoor well-being: from invisible technology to the operational method.",
     "subtitle": "Overview",
-    "title": "The SUBGarden System at a Glance"
+    "title": "The SUBGarden System at a Glance",
+    "click_to_enlarge": "Click on the image to enlarge and read it properly.",
+    "alt_1": "SUBGarden: innovation in sustainable sub-irrigation - Problem vs Solution and technology",
+    "alt_2": "SUBGarden: invisible innovation for a perfect garden - Benefits and operational method",
+    "alt_3": "SUBGarden: intelligent irrigation that revolutionizes your outdoor - Water saving and comfort"
   },
   "nav": {
     "about": "About Us",
@@ -118,6 +174,12 @@
       "description": "Save 50% to 70% on water and energy thanks to targeted distribution to the roots.",
       "title": "Water and Energy Savings"
     }
+  },
+  "solutionsPreview": {
+    "title": "Our solutions",
+    "subtitle": "Sub-irrigation systems designed for every need: from home to park, to sports field.",
+    "discover": "Find out more",
+    "view_all": "View all solutions"
   },
   "portfolio": {
     "categories": {
