@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { X, ZoomIn, ZoomOut, Maximize2 } from 'lucide-react';
 
 type ImageLightboxProps = {
@@ -13,13 +13,14 @@ type ImageLightboxProps = {
 export function ImageLightbox({ isOpen, onClose, src, alt }: ImageLightboxProps) {
   const [scale, setScale] = useState(1);
 
-  useEffect(() => {
-    if (!isOpen) setScale(1);
-  }, [isOpen]);
+  const handleClose = useCallback(() => {
+    setScale(1);
+    onClose();
+  }, [onClose]);
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === 'Escape') handleClose();
     };
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -29,14 +30,14 @@ export function ImageLightbox({ isOpen, onClose, src, alt }: ImageLightboxProps)
       document.body.style.overflow = '';
       window.removeEventListener('keydown', handleEscape);
     };
-  }, [isOpen, onClose]);
+  }, [isOpen, handleClose]);
 
   if (!isOpen) return null;
 
   return (
     <div
       className="fixed inset-0 z-[200] flex flex-col items-center justify-center bg-black/95 p-4"
-      onClick={onClose}
+      onClick={handleClose}
       role="dialog"
       aria-modal="true"
       aria-label="Ingrandisci immagine"
@@ -73,7 +74,7 @@ export function ImageLightbox({ isOpen, onClose, src, alt }: ImageLightboxProps)
 
       <button
         type="button"
-        onClick={onClose}
+        onClick={handleClose}
         className="absolute top-4 right-4 rounded-lg p-2 text-white hover:bg-white/20 z-10"
         aria-label="Chiudi"
       >
