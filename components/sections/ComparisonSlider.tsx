@@ -14,7 +14,7 @@ const compactRows = [
 
 export function ComparisonSlider() {
   const [sliderPosition, setSliderPosition] = useState(50);
-  const tComp = useTranslations('comparison');
+  const tComp = (useTranslations as any)('comparison');
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
