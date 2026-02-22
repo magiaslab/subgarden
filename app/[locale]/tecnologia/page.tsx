@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MotionDiv } from '@/components/ui/Motion';
 import { InfographicSection } from '@/components/sections/InfographicSection';
 import { ContactCTA } from '@/components/sections/ContactCTA';
+import { TechnologyVideoSection } from '@/components/sections/TechnologyVideoSection';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Search, PencilRuler, FileText, Zap, ShieldCheck } from 'lucide-react';
@@ -220,6 +221,8 @@ export default async function TecnologiaPage({
             </div>
           </div>
         </section>
+
+        <TechnologyVideoSection />
 
         {/* Operational Method Section */}
         <section className="py-24 bg-[#F2F4F7] border-t border-gray-200/50">

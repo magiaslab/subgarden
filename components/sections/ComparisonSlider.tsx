@@ -4,10 +4,17 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { Check, X } from 'lucide-react';
+
+const compactRows = [
+  { key: 'water_eff' as const },
+  { key: 'mosquito' as const },
+  { key: 'furniture' as const },
+];
 
 export function ComparisonSlider() {
   const [sliderPosition, setSliderPosition] = useState(50);
-  const t = useTranslations();
+  const tComp = useTranslations('comparison');
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -108,6 +115,43 @@ export function ComparisonSlider() {
             </div>
           </div>
         </div>
+
+        {/* Tabella confronto compatta (3 righe) */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-12 max-w-3xl mx-auto overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md"
+        >
+          <table className="w-full text-left text-sm">
+            <thead>
+              <tr className="border-b border-gray-200 bg-gray-50">
+                <th className="p-3 font-semibold text-gray-700">{tComp('feature')}</th>
+                <th className="p-3 font-semibold text-gray-500">{tComp('rain')}</th>
+                <th className="p-3 font-semibold text-deep-teal">{tComp('subgarden')}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {compactRows.map((row) => (
+                <tr key={row.key} className="border-b border-gray-100 last:border-0">
+                  <td className="p-3 text-gray-700 font-medium">{tComp(`${row.key}_label`)}</td>
+                  <td className="p-3 text-gray-500">
+                    <span className="inline-flex items-center gap-1.5">
+                      <X className="w-3.5 h-3.5 text-red-400 flex-shrink-0" />
+                      {tComp(`rain_${row.key}`)}
+                    </span>
+                  </td>
+                  <td className="p-3 text-deep-teal">
+                    <span className="inline-flex items-center gap-1.5">
+                      <Check className="w-4 h-4 text-deep-teal flex-shrink-0" />
+                      {tComp(`subgarden_${row.key}`)}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </motion.div>
       </div>
     </section>
   );

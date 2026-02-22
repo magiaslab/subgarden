@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Droplet, Zap, Sofa, Wind, VolumeX } from 'lucide-react';
+import { Droplet, Zap, Sofa, Wind } from 'lucide-react';
 import { Card } from '@/components/ui/Card';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
@@ -24,18 +24,6 @@ const painPoints = [
     key: 'furniture',
     color: 'text-green-500',
     image: '/rustic-patio-with-deck-furniture-vegetation.jpg',
-  },
-  {
-    icon: VolumeX,
-    key: 'noise',
-    color: 'text-purple-500',
-    image: '/stunning-spring-collage.jpg',
-  },
-  {
-    icon: Droplet,
-    key: 'puddles',
-    color: 'text-cyan-500',
-    image: '/green-park-view.jpg',
   },
   {
     icon: Zap,
@@ -66,7 +54,7 @@ export function PainPoints() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {painPoints.map((point, index) => {
             const Icon = point.icon;
             return (
@@ -84,7 +72,7 @@ export function PainPoints() {
                       alt={t(`${point.key}.title`)}
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-deep-teal/80 via-transparent to-transparent opacity-60" />
                     <div className={`absolute top-6 right-6 w-12 h-12 rounded-2xl bg-white shadow-lg flex items-center justify-center ${point.color} transform -rotate-3 group-hover:rotate-0 transition-transform duration-500`}>

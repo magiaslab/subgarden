@@ -45,18 +45,9 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-2xl md:text-3xl text-white font-serif font-bold mb-4"
+          className="text-lg md:text-xl text-white/90 mb-10 max-w-3xl mx-auto font-light italic leading-relaxed"
         >
           {t('subtitle')}
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-lg md:text-xl text-white/80 mb-10 max-w-3xl mx-auto italic leading-relaxed"
-        >
-          {t('description')}
         </motion.p>
 
         <motion.div
@@ -70,7 +61,7 @@ export function HeroSection() {
             className="group px-10 py-6 text-lg"
             onClick={() => {
               document
-                .getElementById('about')
+                .getElementById('vantaggi')
                 ?.scrollIntoView({ behavior: 'smooth' });
             }}
           >

@@ -57,6 +57,21 @@ export const routing = defineRouting({
       en: '/terms',
       de: '/nutzungsbedingungen',
     },
+    '/faq': {
+      it: '/faq',
+      en: '/faq',
+      de: '/faq',
+    },
+    '/blog': {
+      it: '/blog',
+      en: '/blog',
+      de: '/blog',
+    },
+    '/blog/[slug]': {
+      it: '/blog/[slug]',
+      en: '/blog/[slug]',
+      de: '/blog/[slug]',
+    },
   },
 });
 

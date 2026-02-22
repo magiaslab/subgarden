@@ -51,7 +51,7 @@ export function BenefitsSection() {
                 </div>
               </div>
               <ul className="space-y-4">
-                {['water_1', 'water_2', 'water_3', 'water_4'].map((key) => (
+                {['water_1', 'water_2', 'water_3'].map((key) => (
                   <li key={key} className="flex items-start gap-3">
                     <Leaf className="w-5 h-5 text-deep-teal flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">{t(key)}</span>
@@ -92,7 +92,7 @@ export function BenefitsSection() {
                 </div>
               </div>
               <ul className="space-y-4">
-                {['install_1', 'install_2', 'install_3', 'install_4'].map((key) => (
+                {['install_1', 'install_2', 'install_3'].map((key) => (
                   <li key={key} className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-copper flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">{t(key)}</span>

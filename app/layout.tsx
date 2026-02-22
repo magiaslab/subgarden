@@ -17,9 +17,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'SUBGarden - Sistema di Subirrigazione di Lusso',
+  title: 'SUBGarden - Subirrigazione per Giardini | Risparmio Idrico, Installazione Non Invasiva',
   description:
-    'Sistema innovativo di subirrigazione per giardini toscani. Efficienza, sostenibilità e lusso per il tuo spazio verde.',
+    'Irrigazione sotterranea per giardini esistenti: risparmio idrico fino al 70%, installazione non invasiva che non danneggia il manto erboso. Toscana e Italia.',
 };
 
 export default function RootLayout({

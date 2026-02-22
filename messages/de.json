@@ -89,6 +89,8 @@
     "hours_label": "Öffnungszeiten",
     "hours_value": "Mo - Fr: 09:00 - 18:00",
     "info_title": "Kontaktdaten",
+    "faq_before_form": "Noch Fragen? Schauen Sie in die FAQ, bevor Sie uns schreiben.",
+    "faq_link_text": "Zu den FAQ",
     "message": "Nachricht",
     "name": "Name",
     "phone": "Telefon",
@@ -105,18 +107,29 @@
     "button": "Mit einem Experten sprechen",
     "call_us": "Oder rufen Sie uns an:",
     "description": "Kontaktieren Sie uns noch heute für eine kostenlose technische Besichtigung und entdecken Sie, wie das SUBGarden-System Ihre Immobilie aufwerten kann.",
-    "title": "Bereit, Ihren Garten zu verwandeln?"
+    "title": "Bereit, Ihren Garten zu verwandeln?",
+    "faq_intro": "Fragen zur Unterflurbewässerung?",
+    "faq_link": "Häufige Fragen ansehen"
   },
   "footer": {
     "copyright": "© {year} SUBGarden. Alle Rechte vorbehalten.",
     "description": "SUBGarden - Professionelles Unterflurbewässerungssystem für den toskanischen Markt",
+    "company": {
+      "brand_of": "SUBGarden ist eine Marke der CLOROPHYLLA SRL",
+      "address": "San Vincenzo (LI), Via Pitagora 3, 57027 Italien",
+      "rea": "REA LI - 235557",
+      "vat": "USt-IdNr. / Handelsregisternr. 02088950494",
+      "credits": "Website von"
+    },
     "legal": {
       "privacy": "Datenschutz",
       "terms": "Nutzungsbedingungen"
     },
     "links": {
       "about": "Über Uns",
+      "blog": "Blog",
       "contact": "Kontakt",
+      "faq": "FAQ",
       "local": "Territorio",
       "portfolio": "Portfolio",
       "solutions": "Lösungen",
@@ -125,8 +138,8 @@
   },
   "hero": {
     "cta": "Lösung Entdecken",
-    "description": "Innovatives Unterflurbewässerungssystem, das das ganze Jahr über einen perfekten Garten garantiert, mit bis zu 60% Wassereinsparung und minimalem Wartungsaufwand",
-    "subtitle": "Wasser nur dort, wo es nötig ist",
+    "description": "Innovatives Unterflurbewässerungssystem für einen perfekten Garten bei minimalem Pflegeaufwand und bis zu 70% Wassereinsparung. Besonders geeignet für bestehende Gärten: die Installation schädigt den Rasen nicht.",
+    "subtitle": "Innovatives Unterflurbewässerungssystem für einen perfekten Garten bei minimalem Pflegeaufwand und bis zu 70% Wassereinsparung. Besonders geeignet für bestehende Gärten: die Installation schädigt den Rasen nicht.",
     "title": "SUBGarden"
   },
   "infographic": {
@@ -212,11 +225,35 @@
   "whatsapp": {
     "aria_label": "Chat auf WhatsApp"
   },
+  "faq": {
+    "meta_title": "Häufige Fragen zur Unterflurbewässerung | SUBGarden",
+    "meta_description": "Antworten zu Unterflurbewässerung, bestehenden Gärten, Wassersparen, nicht-invasiver Installation und Kosten. SUBGarden in der Toskana und in Italien.",
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Alles, was Sie über Unterflurbewässerung und das SUBGarden-System wissen müssen.",
+    "q1_q": "Kann Unterflurbewässerung in einem bestehenden Garten installiert werden?",
+    "q1_a": "Ja. Das SUBGarden-System ist für bereits angelegte Gärten konzipiert. Die Installation ist nicht invasiv und erfordert kein Umgraben oder Zerstören des Rasens: Der Rasen bleibt intakt und der Garten kann direkt nach der Arbeit genutzt werden.",
+    "q2_q": "Schädigt die Installation den Rasen oder den Garten?",
+    "q2_a": "Nein. Dank des patentierten Verfahrens werden die Tropfleitungen ohne invasives Graben verlegt. Der Rasen wird weder entfernt noch beschädigt; die Arbeit ist schnell, sauber und respektiert Ihr bestehendes Grün.",
+    "q3_q": "Wie viel Wasser spart man mit Unterflurbewässerung im Vergleich zu Sprinklern?",
+    "q3_a": "Die Wassereinsparung kann bis zu 70 % gegenüber herkömmlicher Bewässerung betragen. Das Wasser gelangt direkt zu den Wurzeln, ohne Oberflächenverdunstung oder Abfluss, mit über 90 % Effizienz.",
+    "q4_q": "Was kostet es und wie erhalte ich ein Angebot?",
+    "q4_a": "Die Kosten hängen von der Fläche, der Gartenform und Ihren Wünschen ab. Wir bieten einen kostenlosen Vor-Ort-Termin an, um Ihre Fläche zu beurteilen und eine maßgeschneiderte Lösung vorzuschlagen. Kontaktieren Sie uns für einen Termin.",
+    "q5_q": "In welchen Gebieten sind Sie tätig?",
+    "q5_a": "Wir sind in der Toskana tätig (Elba, Maremma, Livorno, San Vincenzo und Umgebung) und expandieren in ganz Italien. Die abgedeckten Gebiete finden Sie in der Sektion Territorio.",
+    "q6_q": "Welche Wartung braucht das System?",
+    "q6_a": "Der Wartungsaufwand ist minimal. Das System ist automatisiert mit Programmierung und Alarmen; Sie können es per App vom Smartphone aus steuern. Regelmäßige Kontrollen und technischer Support sind bei Bedarf verfügbar.",
+    "q7_q": "Was ist der Unterschied zwischen Unterflurbewässerung und Sprinklerbewässerung?",
+    "q7_a": "Die Sprinklerbewässerung benetzt die Oberfläche: Ein Teil des Wassers verdunstet oder läuft ab, der Rasen bleibt nass (mit möglichen Nachteilen wie Mücken und eingeschränkter Gartennutzung). Die Unterflurbewässerung bringt das Wasser in die Tiefe zu den Wurzeln: trockene Oberfläche, weniger Verschwendung, Wassersparen und mehr Komfort.",
+    "q8_q": "Wie lange dauert die Installation?",
+    "q8_a": "Das hängt von Größe und Komplexität des Gartens ab. Dank des Verzichts auf invasives Graben bleibt die Baustelle ordentlich und der Garten ist direkt nach der Verlegung nutzbar.",
+    "cta_text": "Keine passende Antwort gefunden?",
+    "cta_button": "Kontaktieren Sie uns für einen kostenlosen Vor-Ort-Termin"
+  },
   "cookie": {
-    "title": "Cookie & Datenschutz",
-    "description": "Wir verwenden Cookies, um sicherzustellen, dass Sie das beste Erlebnis auf unserer Website haben. Durch die weitere Nutzung der Website stimmen Sie deren Verwendung zu.",
+    "title": "Cookies und Datenschutz",
+    "description": "Wir verwenden technisch notwendige Cookies für den Betrieb der Website und mit Ihrer Einwilligung Cookies für Zugriffsstatistiken (Google Analytics). Sie können alle Cookies oder nur die notwendigen akzeptieren.",
     "accept": "Alle akzeptieren",
     "decline": "Nur notwendige",
-    "privacy_link": "Datenschutzerklärung lesen"
+    "privacy_link": "Datenschutzerklärung"
   }
 }

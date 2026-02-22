@@ -5,6 +5,7 @@ import { ContactForm } from '@/components/sections/ContactForm';
 import { Card, CardContent } from '@/components/ui/Card';
 import { MotionDiv } from '@/components/ui/Motion';
 import { getTranslations } from 'next-intl/server';
+import { Link } from '@/lib/i18n/routing';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import Image from 'next/image';
 
@@ -24,7 +25,7 @@ export async function generateMetadata({
 
   return {
     title: titles[locale] || titles.it,
-    description: 'Contatta SUBGarden per un sopralluogo gratuito a San Vincenzo e in tutta la Toscana. Esperti in subirrigazione di lusso.',
+    description: 'Richiedi un sopralluogo gratuito per subirrigazione a San Vincenzo e in tutta la Toscana. Sistema che non danneggia il giardino esistente, con risparmio idrico fino al 70%.',
     alternates: {
       canonical: `${siteUrl}/${locale}/contatti`,
       languages: {
@@ -148,6 +149,15 @@ export default async function ContactPage({
 
               {/* Contact Form */}
               <div className="lg:col-span-2">
+                <p className="mb-6 text-gray-600 text-sm">
+                  {t('faq_before_form')}{' '}
+                  <Link
+                    href="/faq"
+                    className="font-medium text-deep-teal hover:text-copper underline decoration-deep-teal/30 underline-offset-2 transition-colors"
+                  >
+                    {t('faq_link_text')} →
+                  </Link>
+                </p>
                 <ContactForm isSection={false} hideHeader={true} />
               </div>
             </div>

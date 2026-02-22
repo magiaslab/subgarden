@@ -5,6 +5,7 @@ import { routing } from '@/lib/i18n/routing';
 import type { Metadata } from 'next';
 import { WhatsAppWidget } from '@/components/ui/WhatsAppWidget';
 import { CookieBanner } from '@/components/ui/CookieBanner';
+import { AnalyticsScript } from '@/components/analytics/AnalyticsScript';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -21,16 +22,22 @@ export async function generateMetadata({
   return {
     metadataBase: new URL(siteUrl),
     title: {
-      default: 'SUBGarden - Sistema di Subirrigazione di Lusso',
+      default: 'SUBGarden - Subirrigazione per Giardini | Risparmio Idrico, Installazione Non Invasiva',
       template: '%s | SUBGarden',
     },
     description:
-      'Sistema innovativo di subirrigazione per giardini toscani. Efficienza, sostenibilità e lusso per il tuo spazio verde.',
+      'Sistema di irrigazione sotterranea per giardini esistenti: risparmio idrico fino al 70%, manutenzione minima. Installazione non invasiva che non danneggia il manto erboso. Toscana e Italia.',
     keywords: [
       'subirrigazione',
-      'irrigazione giardini',
-      'sistema irrigazione toscana',
-      'irrigazione sostenibile',
+      'irrigazione sotterranea giardino',
+      'irrigazione giardino esistente',
+      'risparmio idrico giardino',
+      'installazione irrigazione non invasiva',
+      'irrigazione senza scavare',
+      'manto erboso intatto',
+      'subirrigazione Toscana',
+      'irrigazione giardino Toscana',
+      'sistema irrigazione sostenibile',
     ],
     authors: [{ name: 'SUBGarden' }],
     creator: 'SUBGarden',
@@ -48,15 +55,15 @@ export async function generateMetadata({
       locale: locale,
       url: `${siteUrl}/${locale}`,
       siteName: 'SUBGarden',
-      title: 'SUBGarden - Sistema di Subirrigazione di Lusso',
+      title: 'SUBGarden - Subirrigazione per Giardini | Risparmio Idrico, Installazione Non Invasiva',
       description:
-        'Sistema innovativo di subirrigazione per giardini toscani. Efficienza, sostenibilità e lusso per il tuo spazio verde.',
+        'Irrigazione sotterranea per giardini esistenti: risparmio idrico fino al 70%, installazione che non danneggia il prato. Toscana e Italia.',
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'SUBGarden - Sistema di Subirrigazione di Lusso',
+      title: 'SUBGarden - Subirrigazione per Giardini | Risparmio Idrico, Installazione Non Invasiva',
       description:
-        'Sistema innovativo di subirrigazione per giardini toscani. Efficienza, sostenibilità e lusso per il tuo spazio verde.',
+        'Irrigazione sotterranea per giardini esistenti: risparmio idrico fino al 70%, installazione che non danneggia il prato. Toscana e Italia.',
     },
     robots: {
       index: true,
@@ -92,6 +99,7 @@ export default async function LocaleLayout({
       {children}
       <WhatsAppWidget />
       <CookieBanner />
+      <AnalyticsScript />
     </NextIntlClientProvider>
   );
 }

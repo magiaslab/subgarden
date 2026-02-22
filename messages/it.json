@@ -89,6 +89,8 @@
     "hours_label": "Orari",
     "hours_value": "Lun - Ven: 09:00 - 18:00",
     "info_title": "Recapiti",
+    "faq_before_form": "Hai dubbi? Consulta le domande frequenti prima di inviare il messaggio.",
+    "faq_link_text": "Vai alle FAQ",
     "message": "Messaggio",
     "name": "Nome",
     "phone": "Telefono",
@@ -105,18 +107,29 @@
     "button": "Parla con un esperto",
     "call_us": "Oppure chiamaci:",
     "description": "Contattaci oggi stesso per un sopralluogo tecnico gratuito e scopri come il sistema SUBGarden può valorizzare la tua proprietà.",
-    "title": "Pronto a trasformare il tuo giardino?"
+    "title": "Pronto a trasformare il tuo giardino?",
+    "faq_intro": "Hai domande sulla subirrigazione?",
+    "faq_link": "Consulta le domande frequenti"
   },
   "footer": {
     "copyright": "© {year} SUBGarden. Tutti i diritti riservati.",
     "description": "SUBGarden - Sistema di subirrigazione professionale per il mercato toscano",
+    "company": {
+      "brand_of": "SUBGarden è un marchio di CLOROPHYLLA SRL",
+      "address": "San Vincenzo (LI), Via Pitagora 3, 57027",
+      "rea": "REA LI - 235557",
+      "vat": "Codice fiscale e n. iscr. al Reg. Impr. 02088950494",
+      "credits": "Sito realizzato da"
+    },
     "legal": {
       "privacy": "Privacy Policy",
       "terms": "Termini di Servizio"
     },
     "links": {
       "about": "Chi Siamo",
+      "blog": "Blog",
       "contact": "Contatti",
+      "faq": "Domande frequenti",
       "local": "Territorio",
       "portfolio": "Portfolio",
       "solutions": "Soluzioni",
@@ -125,8 +138,8 @@
   },
   "hero": {
     "cta": "Scopri la Soluzione",
-    "description": "Sistema innovativo di irrigazione sotterranea che garantisce un giardino perfetto tutto l'anno, con risparmio idrico fino al 70% e manutenzione minima",
-    "subtitle": "L'acqua solo dove serve",
+    "description": "Sistema innovativo di irrigazione sotterranea che garantisce un giardino perfetto tutto l'anno, con risparmio idrico fino al 70% e manutenzione minima. Ideale per giardini già esistenti: l'installazione non danneggia il manto erboso.",
+    "subtitle": "Sistema innovativo di irrigazione sotterranea che garantisce un giardino perfetto tutto l'anno, con risparmio idrico fino al 70% e manutenzione minima. Ideale per giardini già esistenti: l'installazione non danneggia il manto erboso.",
     "title": "SUBGarden"
   },
   "infographic": {
@@ -212,11 +225,35 @@
   "whatsapp": {
     "aria_label": "Chatta su WhatsApp"
   },
+  "faq": {
+    "meta_title": "Domande frequenti sulla subirrigazione | SUBGarden",
+    "meta_description": "Risposte su subirrigazione, giardini esistenti, risparmio idrico, installazione non invasiva e costi. SUBGarden in Toscana e in Italia.",
+    "title": "Domande frequenti",
+    "subtitle": "Tutto quello che vuoi sapere sulla subirrigazione e sul sistema SUBGarden.",
+    "q1_q": "Si può installare la subirrigazione in un giardino già esistente?",
+    "q1_a": "Sì. Il sistema SUBGarden è pensato proprio per giardini già realizzati. L'installazione è non invasiva e non richiede di scavare o distruggere il manto erboso: il prato resta intatto e il giardino è utilizzabile subito dopo l'intervento.",
+    "q2_q": "L'installazione rovina il prato o il giardino?",
+    "q2_a": "No. Grazie al metodo brevettato, le ali gocciolanti vengono posate senza scavi invasivi. Il manto erboso non viene asportato né danneggiato; l'intervento è rapido, pulito e rispettoso del verde che hai già.",
+    "q3_q": "Quanto si risparmia con la subirrigazione rispetto all'irrigazione a pioggia?",
+    "q3_a": "Il risparmio idrico può arrivare fino al 70% rispetto all'irrigazione tradizionale. L'acqua va direttamente alle radici, senza evaporazione né ruscellamento in superficie, con un'efficienza superiore al 90%.",
+    "q4_q": "Quanto costa e come si ottiene un preventivo?",
+    "q4_a": "Il costo dipende dalla superficie, dalla conformazione del giardino e dalle esigenze specifiche. Offriamo un sopralluogo gratuito per valutare il tuo spazio e proporti una soluzione su misura. Contattaci per fissare un appuntamento.",
+    "q5_q": "In quali zone operate?",
+    "q5_a": "Operiamo in Toscana (Isola d'Elba, Maremma, Livorno, San Vincenzo e provincia) e ci stiamo espandendo su tutto il territorio nazionale. Nella sezione Territorio trovi le aree coperte.",
+    "q6_q": "Che manutenzione richiede il sistema?",
+    "q6_a": "La manutenzione è minima. Il sistema è automatizzato con programmazione e allarmi; puoi gestirlo da smartphone con l'app. Controlli periodici e assistenza tecnica sono disponibili secondo le tue esigenze.",
+    "q7_q": "Qual è la differenza tra subirrigazione e irrigazione a pioggia?",
+    "q7_a": "L'irrigazione a pioggia bagna la superficie: parte dell'acqua evapora o scorre via, e il prato resta bagnato (con possibili problemi di zanzare e uso del giardino). La subirrigazione porta l'acqua in profondità alle radici: superficie asciutta, meno sprechi, risparmio idrico e maggiore comfort.",
+    "q8_q": "Quanto tempo richiede l'installazione?",
+    "q8_a": "I tempi variano in base alla grandezza e alla complessità del giardino. Grazie all'assenza di scavi invasivi, il cantiere è ordinato e il giardino è subito utilizzabile dopo la posa.",
+    "cta_text": "Non hai trovato la risposta che cercavi?",
+    "cta_button": "Contattaci per un sopralluogo gratuito"
+  },
   "cookie": {
-    "title": "Cookie & Privacy",
-    "description": "Utilizziamo i cookie per assicurarti la migliore esperienza sul nostro sito. Continuando la navigazione acconsenti al loro utilizzo.",
+    "title": "Cookie e privacy",
+    "description": "Utilizziamo cookie tecnici necessari al funzionamento del sito e, con il tuo consenso, cookie per statistiche di accesso (Google Analytics) per migliorare l'esperienza. Puoi accettare tutti i cookie o solo quelli necessari.",
     "accept": "Accetta tutto",
     "decline": "Solo necessari",
-    "privacy_link": "Leggi la Privacy Policy"
+    "privacy_link": "Privacy Policy"
   }
 }

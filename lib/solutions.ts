@@ -7,9 +7,9 @@ export const solutions = [
       de: 'Wohngebiete',
     },
     description: {
-      it: 'Soluzioni di subirrigazione di lusso per ville e residenze private.',
-      en: 'Luxury sub-irrigation solutions for villas and private residences.',
-      de: 'Luxus-Unterflurbewässerungslösungen für Villen und Privatresidenzen.',
+      it: 'Subirrigazione per ville e residenze: risparmio idrico e installazione non invasiva che mantiene il manto erboso intatto.',
+      en: 'Sub-irrigation for villas and residences: water saving and non-invasive installation that keeps your lawn intact.',
+      de: 'Unterflurbewässerung für Villen und Wohnanlagen: Wassersparen und nicht-invasive Installation mit intaktem Rasen.',
     },
     image: '/rustic-patio-with-deck-furniture-vegetation.jpg',
   },

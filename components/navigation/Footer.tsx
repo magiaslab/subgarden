@@ -64,6 +64,15 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/blog"
+                  className="text-white/70 hover:text-white transition-colors flex items-center gap-2 group"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-copper scale-0 group-hover:scale-100 transition-transform" />
+                  {t('links.blog')}
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/soluzioni"
                   className="text-white/70 hover:text-white transition-colors flex items-center gap-2 group"
                 >
@@ -71,15 +80,11 @@ export function Footer() {
                   {t('links.solutions')}
                 </Link>
               </li>
+              {/* Portfolio nascosto in attesa contenuti
               <li>
-                <Link
-                  href="/portfolio"
-                  className="text-white/70 hover:text-white transition-colors flex items-center gap-2 group"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-copper scale-0 group-hover:scale-100 transition-transform" />
-                  {t('links.portfolio')}
-                </Link>
+                <Link href="/portfolio" ...>{t('links.portfolio')}</Link>
               </li>
+              */}
               <li>
                 <Link
                   href="/territorio"
@@ -87,6 +92,15 @@ export function Footer() {
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-copper scale-0 group-hover:scale-100 transition-transform" />
                   {t('links.local')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/faq"
+                  className="text-white/70 hover:text-white transition-colors flex items-center gap-2 group"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-copper scale-0 group-hover:scale-100 transition-transform" />
+                  {t('links.faq')}
                 </Link>
               </li>
               <li>
@@ -127,8 +141,24 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-16 pt-8 border-t border-white/10">
+        {/* Dati aziendali e crediti */}
+        <div className="mt-16 pt-8 border-t border-white/10 space-y-6">
+          <div className="text-sm text-white/50 text-center max-w-2xl mx-auto space-y-1">
+            <p className="font-medium text-white/70">{t('company.brand_of')}</p>
+            <p>{t('company.address')}</p>
+            <p>{t('company.rea')} · {t('company.vat')}</p>
+          </div>
+          <p className="text-xs text-white/40 text-center">
+            {t('company.credits')}{' '}
+            <a
+              href="https://www.magiaslab.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-copper/90 hover:text-copper underline underline-offset-2 transition-colors"
+            >
+              Magiaslab
+            </a>
+          </p>
           <p className="text-sm text-white/40 text-center">
             {t('copyright', { year: currentYear })}
           </p>

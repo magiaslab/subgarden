@@ -89,6 +89,8 @@
     "hours_label": "Hours",
     "hours_value": "Mon - Fri: 09:00 - 18:00",
     "info_title": "Contact Info",
+    "faq_before_form": "Have doubts? Check our FAQ before sending your message.",
+    "faq_link_text": "Go to FAQ",
     "message": "Message",
     "name": "Name",
     "phone": "Phone",
@@ -105,18 +107,29 @@
     "button": "Talk to an expert",
     "call_us": "Or call us:",
     "description": "Contact us today for a free technical site visit and discover how the SUBGarden system can enhance your property.",
-    "title": "Ready to transform your garden?"
+    "title": "Ready to transform your garden?",
+    "faq_intro": "Questions about sub-irrigation?",
+    "faq_link": "See frequently asked questions"
   },
   "footer": {
     "copyright": "© {year} SUBGarden. All rights reserved.",
     "description": "SUBGarden - Professional sub-irrigation system for the Tuscan market",
+    "company": {
+      "brand_of": "SUBGarden is a brand of CLOROPHYLLA SRL",
+      "address": "San Vincenzo (LI), Via Pitagora 3, 57027 Italy",
+      "rea": "REA LI - 235557",
+      "vat": "VAT / Company reg. no. 02088950494",
+      "credits": "Website by"
+    },
     "legal": {
       "privacy": "Privacy Policy",
       "terms": "Terms of Service"
     },
     "links": {
       "about": "About Us",
+      "blog": "Blog",
       "contact": "Contact",
+      "faq": "FAQ",
       "local": "Territory",
       "portfolio": "Portfolio",
       "solutions": "Solutions",
@@ -125,8 +138,8 @@
   },
   "hero": {
     "cta": "Discover the Solution",
-    "description": "Innovative underground irrigation system that guarantees a perfect garden all year round, with up to 60% water savings and minimal maintenance",
-    "subtitle": "Water only where needed",
+    "description": "Innovative underground irrigation system for a perfect garden all year round, with up to 70% water saving and minimal maintenance. Especially suited to existing gardens: installation does not damage the lawn.",
+    "subtitle": "Innovative underground irrigation system for a perfect garden all year round, with up to 70% water saving and minimal maintenance. Especially suited to existing gardens: installation does not damage the lawn.",
     "title": "SUBGarden"
   },
   "infographic": {
@@ -212,11 +225,35 @@
   "whatsapp": {
     "aria_label": "Chat on WhatsApp"
   },
+  "faq": {
+    "meta_title": "Frequently asked questions about sub-irrigation | SUBGarden",
+    "meta_description": "Answers on sub-irrigation, existing gardens, water saving, non-invasive installation and costs. SUBGarden in Tuscany and Italy.",
+    "title": "Frequently asked questions",
+    "subtitle": "Everything you need to know about sub-irrigation and the SUBGarden system.",
+    "q1_q": "Can sub-irrigation be installed in an existing garden?",
+    "q1_a": "Yes. The SUBGarden system is designed for gardens that are already in place. Installation is non-invasive and does not require digging up or destroying the lawn: the turf stays intact and the garden can be used immediately after the work.",
+    "q2_q": "Does installation damage the lawn or garden?",
+    "q2_a": "No. Thanks to the patented method, drip lines are laid without invasive digging. The turf is not removed or damaged; the work is quick, clean and respectful of the greenery you already have.",
+    "q3_q": "How much water do you save with sub-irrigation compared to sprinklers?",
+    "q3_a": "Water saving can reach up to 70% compared to traditional irrigation. Water goes directly to the roots, with no surface evaporation or runoff, and over 90% efficiency.",
+    "q4_q": "How much does it cost and how do I get a quote?",
+    "q4_a": "The cost depends on the area, the layout of the garden and your specific needs. We offer a free site visit to assess your space and propose a tailored solution. Contact us to book an appointment.",
+    "q5_q": "Which areas do you cover?",
+    "q5_a": "We operate in Tuscany (Elba Island, Maremma, Livorno, San Vincenzo and province) and are expanding across Italy. You can find the areas we cover in the Territory section.",
+    "q6_q": "What maintenance does the system need?",
+    "q6_a": "Maintenance is minimal. The system is automated with scheduling and alerts; you can control it from your smartphone with the app. Periodic checks and technical support are available as needed.",
+    "q7_q": "What is the difference between sub-irrigation and sprinkler irrigation?",
+    "q7_a": "Sprinkler irrigation wets the surface: some water evaporates or runs off, and the lawn stays wet (with possible issues like mosquitoes and limited use of the garden). Sub-irrigation delivers water deep to the roots: dry surface, less waste, water saving and more comfort.",
+    "q8_q": "How long does installation take?",
+    "q8_a": "It varies according to the size and complexity of the garden. Thanks to the absence of invasive digging, the site stays tidy and the garden can be used right after installation.",
+    "cta_text": "Didn't find the answer you were looking for?",
+    "cta_button": "Contact us for a free site visit"
+  },
   "cookie": {
-    "title": "Cookie & Privacy",
-    "description": "We use cookies to ensure you get the best experience on our website. By continuing to use the site, you consent to their use.",
+    "title": "Cookies and privacy",
+    "description": "We use necessary technical cookies for the site to work and, with your consent, cookies for access statistics (Google Analytics) to improve your experience. You can accept all cookies or only necessary ones.",
     "accept": "Accept all",
     "decline": "Necessary only",
-    "privacy_link": "Read Privacy Policy"
+    "privacy_link": "Privacy Policy"
   }
 }

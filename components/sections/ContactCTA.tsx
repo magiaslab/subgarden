@@ -59,6 +59,12 @@ export function ContactCTA() {
                 {t('call_us')} +39 371 4379979
               </a>
             </div>
+            <p className="mt-8 text-white/80 text-sm">
+              {t('faq_intro')}{' '}
+              <Link href="/faq" className="text-copper font-medium hover:text-white underline decoration-copper/50 underline-offset-2 transition-colors">
+                {t('faq_link')} →
+              </Link>
+            </p>
           </div>
         </motion.div>
       </div>

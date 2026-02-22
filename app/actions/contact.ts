@@ -1,19 +1,50 @@
 'use server';
 
 import { contactFormSchema, type ContactFormData } from '@/lib/validations/contact';
+import { Resend } from 'resend';
+
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+const contactEmailTo = process.env.CONTACT_EMAIL_TO ?? '';
 
 export async function submitContactForm(data: ContactFormData) {
   try {
-    // Validazione
     const validatedData = contactFormSchema.parse(data);
 
-    // TODO: Integrare con sistema email (Resend)
-    // Per ora simuliamo l'invio
-    console.log('Contact form submission:', validatedData);
+    if (resend && contactEmailTo) {
+      const from = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
+      const { error } = await resend.emails.send({
+        from: from.includes('<') ? from : `SUBGarden <${from}>`,
+        to: [contactEmailTo],
+        replyTo: validatedData.email,
+        subject: `[SUBGarden Contatti] Richiesta da ${validatedData.name}`,
+        text: [
+          `Nome: ${validatedData.name}`,
+          `Email: ${validatedData.email}`,
+          validatedData.phone ? `Telefono: ${validatedData.phone}` : '',
+          '',
+          'Messaggio:',
+          validatedData.message,
+        ]
+          .filter(Boolean)
+          .join('\n'),
+      });
 
-    // Simulazione delay
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+      if (error) {
+        console.error('Resend error:', error);
+        return {
+          success: false,
+          message: 'Errore nell\'invio del messaggio. Riprova più tardi.',
+        };
+      }
+      return {
+        success: true,
+        message: 'Messaggio inviato con successo!',
+      };
+    }
 
+    // Nessun Resend configurato: simulazione per sviluppo
+    console.log('Contact form (no Resend):', validatedData);
+    await new Promise((resolve) => setTimeout(resolve, 800));
     return {
       success: true,
       message: 'Messaggio inviato con successo!',
