@@ -11,7 +11,7 @@ export const solutions = [
       en: 'Sub-irrigation for villas and residences: water saving and non-invasive installation that keeps your lawn intact.',
       de: 'Unterflurbewässerung für Villen und Wohnanlagen: Wassersparen und nicht-invasive Installation mit intaktem Rasen.',
     },
-    image: '/rustic-patio-with-deck-furniture-vegetation.jpg',
+    image: '/giardini%20residenziali.jpg',
   },
   {
     slug: 'parchi-pubblici',
@@ -25,7 +25,7 @@ export const solutions = [
       en: 'Efficient systems for managing large urban green areas.',
       de: 'Effiziente Systeme für die Verwaltung großer städtischer Grünflächen.',
     },
-    image: '/green-park-view.jpg',
+    image: '/parco%20pubblico.jpg',
   },
   {
     slug: 'campi-sportivi',
@@ -39,7 +39,21 @@ export const solutions = [
       en: 'Perfect and high-performance turf for every sporting discipline.',
       de: 'Perfekter und leistungsstarker Rasen für jede Sportdisziplin.',
     },
-    image: '/grassland-landscape-greening-environment-park-background.jpg',
+    image: '/impianto%20sortivo.jpg',
+  },
+  {
+    slug: 'strutture-turistiche',
+    title: {
+      it: 'Strutture Turistiche',
+      en: 'Tourism & Hospitality',
+      de: 'Tourismus & Beherbergung',
+    },
+    description: {
+      it: 'Subirrigazione per hotel, resort, B&B e agriturismi: giardini curati, risparmio idrico ed energetico e immagine sempre al top.',
+      en: 'Sub-irrigation for hotels, resorts, B&Bs and agritourism: well-kept gardens, water and energy saving, and a premium image.',
+      de: 'Unterflurbewässerung für Hotels, Resorts, B&Bs und Agritourismus: gepflegte Gärten, Wasser- und Energieeinsparung.',
+    },
+    image: '/hotel2.jpeg',
   },
 ] as const;
 

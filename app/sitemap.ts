@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { routing } from '@/lib/i18n/routing';
 import { getAllSlugs } from '@/lib/blog';
 
-const solutions = ['giardini-residenziali', 'parchi-pubblici', 'campi-sportivi'];
+const solutions = ['giardini-residenziali', 'parchi-pubblici', 'campi-sportivi', 'strutture-turistiche'];
 const cities = ['elba', 'maremma', 'livorno'];
 
 // Path per locale (allineati a lib/i18n/routing.ts)

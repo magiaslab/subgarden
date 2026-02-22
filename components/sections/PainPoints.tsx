@@ -11,25 +11,25 @@ const painPoints = [
     icon: Droplet,
     key: 'water',
     color: 'text-blue-500',
-    image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
+    image: '/risparmio%20irdico.jpg',
   },
   {
     icon: Wind,
     key: 'mosquitoes',
     color: 'text-yellow-500',
-    image: '/grassland-landscape-greening-environment-park-background.jpg',
+    image: '/zanzare.jpg',
   },
   {
     icon: Sofa,
     key: 'furniture',
     color: 'text-green-500',
-    image: '/rustic-patio-with-deck-furniture-vegetation.jpg',
+    image: '/arredi.jpg',
   },
   {
     icon: Zap,
     key: 'installation',
     color: 'text-orange-500',
-    image: '/stunning-spring-collage.jpg',
+    image: '/installazione.jpg',
   },
 ];
 

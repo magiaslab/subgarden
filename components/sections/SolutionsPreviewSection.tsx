@@ -38,7 +38,7 @@ export function SolutionsPreviewSection() {
           </Link>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {solutions.map((solution, index) => (
             <motion.div
               key={solution.slug}
@@ -57,7 +57,7 @@ export function SolutionsPreviewSection() {
                       alt={solution.title[locale] || solution.title.it}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, 33vw"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>

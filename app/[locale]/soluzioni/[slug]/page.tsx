@@ -40,7 +40,7 @@ const solutions = {
         'Subirrigazione per giardini privati e residenziali: risparmio idrico fino al 70% e installazione non invasiva che mantiene il manto erboso intatto.',
       heroSubtitle:
         'Subirrigazione per giardini privati e residenziali. Massimo risparmio idrico e installazione non invasiva: il manto erboso resta intatto, senza scavi distruttivi.',
-      image: '/rustic-patio-with-deck-furniture-vegetation.jpg',
+      image: '/giardini%20residenziali.jpg',
       cards: [
         {
           iconIndex: 0,
@@ -75,7 +75,7 @@ const solutions = {
         'Sub-irrigation for private and residential gardens: up to 70% water saving and non-invasive installation that keeps your lawn intact.',
       heroSubtitle:
         'Sub-irrigation for private and residential gardens. Maximum water saving and non-invasive installation: your lawn stays intact, with no destructive digging.',
-      image: '/rustic-patio-with-deck-furniture-vegetation.jpg',
+      image: '/giardini%20residenziali.jpg',
       cards: [
         {
           iconIndex: 0,
@@ -110,7 +110,7 @@ const solutions = {
         'Unterflurbewässerung für private und Wohn-Gärten: bis zu 70% Wassereinsparung und nicht-invasive Installation mit intaktem Rasen.',
       heroSubtitle:
         'Unterflurbewässerung für private Gärten und Wohnanlagen. Maximale Wassereinsparung und nicht-invasive Installation: Der Rasen bleibt intakt, ohne zerstörerische Eingriffe.',
-      image: '/rustic-patio-with-deck-furniture-vegetation.jpg',
+      image: '/giardini%20residenziali.jpg',
       cards: [
         {
           iconIndex: 0,
@@ -147,7 +147,7 @@ const solutions = {
       description: 'Soluzione professionale e scalabile per spazi verdi pubblici, parchi urbani e aree ricreative. Risparmio idrico e riduzione costi con controllo centralizzato.',
       heroSubtitle:
         'Subirrigazione per parchi urbani e aree ricreative. Scalabile da 500 mq a 50+ ettari, con risparmio idrico e riduzione dei costi operativi fino al 50%. Controllo centralizzato e installazione non invasiva.',
-      image: '/green-park-view.jpg',
+      image: '/parco%20pubblico.jpg',
       cards: [
         {
           iconIndex: 0,
@@ -181,7 +181,7 @@ const solutions = {
       description: 'Professional and scalable solution for public green spaces, urban parks, and recreational areas. Water saving and cost reduction with centralized control.',
       heroSubtitle:
         'Sub-irrigation for urban parks and recreational areas. Scalable from 500 sqm to 50+ hectares, with water saving and up to 50% reduction in operational costs. Centralized control and non-invasive installation.',
-      image: '/green-park-view.jpg',
+      image: '/parco%20pubblico.jpg',
       cards: [
         {
           iconIndex: 0,
@@ -215,7 +215,7 @@ const solutions = {
       description: 'Professionelle und skalierbare Lösung für öffentliche Grünflächen, Stadtparks und Erholungsgebiete. Wassersparen und Kostensenkung mit zentraler Steuerung.',
       heroSubtitle:
         'Unterflurbewässerung für Stadtparks und Erholungsflächen. Skalierbar von 500 m² bis 50+ Hektar, mit Wassereinsparung und bis zu 50% geringeren Betriebskosten. Zentrale Steuerung und nicht-invasive Installation.',
-      image: '/green-park-view.jpg',
+      image: '/parco%20pubblico.jpg',
       cards: [
         {
           iconIndex: 0,
@@ -253,7 +253,7 @@ const solutions = {
         'Sistema ottimizzato per campi da calcio, golf, tennis e altre strutture sportive. Manto uniforme tutto l\'anno, risparmio idrico e manutenzione ridotta.',
       heroSubtitle:
         'Subirrigazione per campi da calcio, golf, tennis e strutture sportive. Irrigazione uniforme senza zone secche o allagate, resistenza al calpestio intensivo e riduzione della manutenzione fino al 70%.',
-      image: '/grassland-landscape-greening-environment-park-background.jpg',
+      image: '/impianto%20sortivo.jpg',
       cards: [
         {
           iconIndex: 0,
@@ -287,7 +287,7 @@ const solutions = {
       description: 'Optimized system for football, golf, tennis and other sports facilities. Uniform turf year-round, water saving and reduced maintenance.',
       heroSubtitle:
         'Sub-irrigation for football pitches, golf courses, tennis courts and sports facilities. Uniform irrigation without dry or flooded areas, resistance to intensive use and up to 70% less maintenance.',
-      image: '/grassland-landscape-greening-environment-park-background.jpg',
+      image: '/impianto%20sortivo.jpg',
       cards: [
         {
           iconIndex: 0,
@@ -321,7 +321,7 @@ const solutions = {
       description: 'Optimiertes System für Fußball-, Golf-, Tennis- und andere Sportanlagen. Gleichmäßiger Rasen ganzjährig, Wassereinsparung und weniger Wartung.',
       heroSubtitle:
         'Unterflurbewässerung für Fußballplätze, Golfplätze, Tennisplätze und Sportanlagen. Gleichmäßige Bewässerung ohne trockene oder überflutete Zonen, hohe Belastbarkeit und bis zu 70% weniger Wartung.',
-      image: '/grassland-landscape-greening-environment-park-background.jpg',
+      image: '/impianto%20sortivo.jpg',
       cards: [
         {
           iconIndex: 0,
@@ -347,6 +347,114 @@ const solutions = {
           iconIndex: 4,
           title: 'Kompatibilität und Zertifizierungen',
           body: 'Kompatibel mit bestehenden Drainage- und Belüftungssystemen. Geeignet für professionelle Sportanlagen und konform mit den Anforderungen an Spielflächen.',
+        },
+      ] as CardItem[],
+    },
+  },
+  'strutture-turistiche': {
+    icons: [Leaf, Droplets, Zap, LayoutDashboard, BadgeCheck],
+    it: {
+      title: 'Strutture Turistiche',
+      description:
+        'Subirrigazione per hotel, resort, B&B e agriturismi: giardini sempre curati, risparmio idrico ed energetico e immagine di qualità per gli ospiti.',
+      heroSubtitle:
+        'Migliora i giardini della tua struttura con la subirrigazione SUBGarden: fino al 70% di risparmio idrico, installazione non invasiva e verde impeccabile tutto l\'anno. Ideale per hotel, resort, B&B e agriturismi.',
+      image: '/hotel2.jpeg',
+      cards: [
+        {
+          iconIndex: 0,
+          title: 'Risparmio idrico ed energetico',
+          body: 'Fino al 70% di risparmio idrico rispetto all\'irrigazione a pioggia e riduzione dei consumi energetici grazie alla bassa pressione. Meno costi in bolletta e minore impatto ambientale: un vantaggio concreto per la gestione della struttura.',
+        },
+        {
+          iconIndex: 1,
+          title: 'Giardini sempre curati',
+          body: 'Prato e aree verdi uniformi e in salute tutto l\'anno, senza zone secche o allagate. L\'irrigazione in profondità garantisce un aspetto impeccabile che valorizza l\'immagine della struttura e l\'esperienza degli ospiti.',
+        },
+        {
+          iconIndex: 2,
+          title: 'Installazione non invasiva',
+          body: 'Il sistema si installa in giardini già esistenti senza scavare o danneggiare il manto. Ideale per strutture già operative: intervento rapido, pulito e senza disagi per l\'attività. Il verde resta utilizzabile subito dopo i lavori.',
+        },
+        {
+          iconIndex: 3,
+          title: 'Gestione e automazione',
+          body: 'Programmazione e controllo da remoto con l\'app dedicata. Gestisci l\'irrigazione in base alla stagione e all’occupazione, con allarmi e monitoraggio: meno tempo in manutenzione e massima efficienza.',
+        },
+        {
+          iconIndex: 4,
+          title: 'Sostenibilità e valore',
+          body: 'Riduci l’impronta idrica e valorizza l’offerta della struttura con un sistema sostenibile certificato. Un plus per gli ospiti attenti all’ambiente e per bandi o certificazioni green (es. Ecolabel, Green Key).',
+        },
+      ] as CardItem[],
+    },
+    en: {
+      title: 'Tourism & Hospitality',
+      description:
+        'Sub-irrigation for hotels, resorts, B&Bs and agritourism: well-kept gardens, water and energy saving, and a premium image for guests.',
+      heroSubtitle:
+        'Upgrade your property\'s gardens with SUBGarden sub-irrigation: up to 70% water saving, non-invasive installation and flawless greenery year-round. Ideal for hotels, resorts, B&Bs and agritourism.',
+      image: '/hotel2.jpeg',
+      cards: [
+        {
+          iconIndex: 0,
+          title: 'Water and energy saving',
+          body: 'Up to 70% water saving compared to sprinkler irrigation and lower energy use thanks to low pressure. Lower bills and a smaller environmental footprint: a real advantage for property management.',
+        },
+        {
+          iconIndex: 1,
+          title: 'Gardens always well-kept',
+          body: 'Lawn and green areas even and healthy year-round, with no dry or flooded patches. Deep irrigation ensures a flawless look that enhances the property\'s image and your guests\' experience.',
+        },
+        {
+          iconIndex: 2,
+          title: 'Non-invasive installation',
+          body: 'The system installs in existing gardens without digging or damaging the turf. Ideal for properties already in operation: quick, clean work with minimal disruption. The garden is ready to use right after installation.',
+        },
+        {
+          iconIndex: 3,
+          title: 'Management and automation',
+          body: 'Scheduling and remote control with the dedicated app. Manage irrigation by season and occupancy, with alerts and monitoring: less time on maintenance and maximum efficiency.',
+        },
+        {
+          iconIndex: 4,
+          title: 'Sustainability and value',
+          body: 'Reduce water footprint and strengthen your offering with a certified sustainable system. A plus for eco-conscious guests and for green certifications or tenders (e.g. Ecolabel, Green Key).',
+        },
+      ] as CardItem[],
+    },
+    de: {
+      title: 'Tourismus & Beherbergung',
+      description:
+        'Unterflurbewässerung für Hotels, Resorts, B&Bs und Agritourismus: gepflegte Gärten, Wasser- und Energieeinsparung und ein hochwertiges Image für Gäste.',
+      heroSubtitle:
+        'Verbessern Sie die Gärten Ihrer Unterkunft mit SUBGarden Unterflurbewässerung: bis zu 70% Wassereinsparung, nicht-invasive Installation und makelloses Grün das ganze Jahr. Ideal für Hotels, Resorts, B&Bs und Agritourismus.',
+      image: '/hotel2.jpeg',
+      cards: [
+        {
+          iconIndex: 0,
+          title: 'Wasser- und Energieeinsparung',
+          body: 'Bis zu 70% Wassereinsparung im Vergleich zur Sprinklerbewässerung und geringerer Energieverbrauch durch niedrigen Druck. Geringere Kosten und weniger Umweltauswirkungen: ein klarer Vorteil für das Betriebsmanagement.',
+        },
+        {
+          iconIndex: 1,
+          title: 'Gärten immer gepflegt',
+          body: 'Rasen und Grünflächen ganzjährig gleichmäßig und gesund, ohne trockene oder überflutete Bereiche. Die Tiefenbewässerung sorgt für ein makelloses Erscheinungsbild, das das Image der Unterkunft und das Gästeerlebnis aufwertet.',
+        },
+        {
+          iconIndex: 2,
+          title: 'Nicht-invasive Installation',
+          body: 'Das System wird in bestehenden Gärten ohne Graben oder Schäden am Rasen installiert. Ideal für bereits betriebene Unterkünfte: schnelle, saubere Arbeiten ohne nennenswerte Störungen. Der Garten ist direkt nach der Installation nutzbar.',
+        },
+        {
+          iconIndex: 3,
+          title: 'Steuerung und Automatisierung',
+          body: 'Programmierung und Fernsteuerung mit der dedizierten App. Steuern Sie die Bewässerung nach Saison und Auslastung, mit Alarmen und Überwachung: weniger Zeit für die Wartung und maximale Effizienz.',
+        },
+        {
+          iconIndex: 4,
+          title: 'Nachhaltigkeit und Mehrwert',
+          body: 'Reduzieren Sie den Wasser-Fußabdruck und stärken Sie Ihr Angebot mit einem zertifizierten nachhaltigen System. Ein Plus für umweltbewusste Gäste und für grüne Zertifizierungen oder Ausschreibungen (z. B. Ecolabel, Green Key).',
         },
       ] as CardItem[],
     },

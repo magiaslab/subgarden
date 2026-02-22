@@ -14,7 +14,7 @@ const specifications = [
       'Installazione rapida e pulita, invisibile dopo il montaggio',
       'Garanzia di integrità per radici e arredi fissi preesistenti',
     ],
-    image: '/grassland-landscape-greening-environment-park-background.jpg',
+    image: '/installazione%20brevettata.jpg',
   },
   {
     category: 'Tecnologia Rain Bird XSF®',
@@ -24,7 +24,7 @@ const specifications = [
       'Protezione antintrusione radicale certificata',
       'Bassa pressione e portata (1,6 l/h): nessun sistema di pompaggio invasivo',
     ],
-    image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
+    image: '/tecnologia%20rainabird.jpg',
   },
   {
     category: 'Efficienza e Risparmio',
@@ -34,7 +34,7 @@ const specifications = [
       'Possibilità di fertirrigazione senza contatto con prodotti chimici',
       'Riduzione del 90% delle malattie del prato e delle piante',
     ],
-    image: '/green-park-view.jpg',
+    image: '/efficenza%20e%20risparmio.jpg',
   },
   {
     category: 'Ingegneria di Griglia',
@@ -44,7 +44,7 @@ const specifications = [
       'Sistema di filtraggio e riduzione pressione post-valvola',
       'Lavaggio tubazioni semplificato senza attivazione gocciolatori',
     ],
-    image: '/stunning-spring-collage.jpg',
+    image: '/ingegneria%20di%20griglia.jpg',
   },
 ];
 
