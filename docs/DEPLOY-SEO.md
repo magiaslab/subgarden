@@ -18,6 +18,11 @@
 
 **Nota:** Search Console non richiede una key nel codice: si usa solo la verifica del sito (meta tag o DNS).
 
+**Canonical e hreflang (avviso Lighthouse):** Il tag `rel=canonical` e i link `hreflang` sono generati a partire da `NEXT_PUBLIC_SITE_URL`. Per evitare l’avviso “Il documento non ha un valore rel=canonical valido”:
+
+- Imposta `NEXT_PUBLIC_SITE_URL` **esattamente** come gli utenti vedono il sito: se il sito è raggiungibile con **www** (es. `https://www.subgarden.it`), usa `https://www.subgarden.it`; se è senza www (`https://subgarden.it`), usa quello.
+- In questo modo il canonical e gli hreflang coincidono con l’URL della pagina e Lighthouse non segnala conflitti. Dopo aver cambiato la variabile, esegui un nuovo deploy.
+
 ---
 
 ## Piattaforme da attivare (consigliate)

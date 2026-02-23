@@ -3,8 +3,8 @@
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-51Q3DF96T5';
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-WRFZKGNM';
 
 export function AnalyticsScript() {
   const [consent, setConsent] = useState<'accepted' | 'declined' | null>(null);
@@ -40,7 +40,7 @@ export function AnalyticsScript() {
           </Script>
         </>
       )}
-      {GTM_ID && !GA_ID && (
+      {GTM_ID && (
         <Script id="gtm" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
