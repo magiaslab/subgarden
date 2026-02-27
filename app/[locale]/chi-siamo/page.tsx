@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
 import { MotionDiv } from '@/components/ui/Motion';
+import { VillaMussioGallery } from '@/components/sections/VillaMussioGallery';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
@@ -47,7 +48,7 @@ export default async function AboutPage({
         {/* Hero Section */}
         <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
           <Image
-            src="/stunning-spring-collage.jpg"
+            src="/villa-mussio/DJI_0001.JPG"
             alt="About SUBGarden"
             fill
             className="object-cover"
@@ -80,16 +81,12 @@ export default async function AboutPage({
                 viewport={{ once: true }}
                 className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl"
               >
-                <div className="absolute inset-0 bg-stone-grey/20 flex items-center justify-center z-10">
-                  <p className="text-white font-serif text-2xl italic bg-black/20 p-4 backdrop-blur-sm rounded">
-                    [Immagine Fausto Favilli - Le Radici]
-                  </p>
-                </div>
                 <Image
-                  src="/rustic-patio-with-deck-furniture-vegetation.jpg"
-                  alt="Fausto Favilli Roots"
+                  src="/villa-mussio/20210703_085226.jpg"
+                  alt="Le radici - Fausto Favilli e la natura"
                   fill
-                  className="object-cover opacity-60"
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </MotionDiv>
               <MotionDiv
@@ -131,15 +128,15 @@ export default async function AboutPage({
 
             <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="relative h-80 rounded-2xl overflow-hidden group">
-                <Image src="/green-park-view.jpg" alt="Philosophy 1" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image src="/villa-mussio/20210914_090312.jpg" alt="Paesaggio prestato - Villa Mussio" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
               </div>
               <div className="relative h-80 rounded-2xl overflow-hidden group">
-                <Image src="/spring-nature-outdoors-backgrounds-fresh.jpg" alt="Philosophy 2" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image src="/villa-mussio/20210703_092804.jpg" alt="Giardino empatico" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
               </div>
               <div className="relative h-80 rounded-2xl overflow-hidden group">
-                <Image src="/grassland-landscape-greening-environment-park-background.jpg" alt="Philosophy 3" fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Image src="/villa-mussio/DJI_0203.JPG" alt="Orizzonte Toscana" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
               </div>
             </div>
@@ -156,19 +153,7 @@ export default async function AboutPage({
                 viewport={{ once: true }}
                 className="lg:order-2"
               >
-                <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-                  <div className="absolute inset-0 bg-deep-teal/10 flex items-center justify-center z-10">
-                    <p className="text-deep-teal font-serif text-2xl italic bg-white/80 p-4 rounded shadow">
-                      [Immagine Villa del 1700 - Restauro]
-                    </p>
-                  </div>
-                  <Image
-                    src="/stunning-spring-collage.jpg"
-                    alt="Historical Villa Restoration"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+                <VillaMussioGallery caption={t('gallery_villa_mussio')} />
               </MotionDiv>
               <MotionDiv
                 initial={{ opacity: 0, y: 30 }}
