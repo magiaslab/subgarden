@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 
 export const WhatsAppWidget = () => {
   const t = (useTranslations as any)('whatsapp');
-  const phoneNumber = '393714379979'; // Format: CountryCodePhoneNumber
+  const phoneNumber = '393476299935'; // Format: CountryCodePhoneNumber
   const message = 'Salve, vorrei ricevere informazioni sui sistemi SUBGarden.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

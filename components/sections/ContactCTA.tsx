@@ -53,10 +53,10 @@ export function ContactCTA() {
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <a 
-                href="tel:+393714379979" 
+                href="tel:+393476299935" 
                 className="text-white hover:text-copper transition-colors font-serif font-bold text-xl flex items-center gap-2"
               >
-                {t('call_us')} +39 371 4379979
+                {t('call_us')} +39 347 6299935
               </a>
             </div>
             <p className="mt-8 text-white/80 text-sm">
