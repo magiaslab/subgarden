@@ -25,7 +25,9 @@
     "philosophy_expanded_text2": "I define my approach as 'Empathetic Garden' because it resonates with the inhabitants and the place itself. I don't impose a form, but follow the voice of the earth, using the most advanced technology to serve the greatest simplicity.",
     "philosophy_expanded_title": "Borrowed Scenery and the Empathetic Garden",
     "roots_text": "In 1990 I wasn't looking for a career, but for answers. What started as support for the family business quickly became an intimate dialogue with the plant world. I was won over by the ability of plants to 'simply exist', their silent but invincible resilience. Since then, every garden I create is a tribute to this strength.",
-    "roots_title": "Roots: From Duty to Wonder"
+    "roots_ancient_text": "Our story does not begin thirty years ago, but four thousand. We draw inspiration from the masters of the Nile and the sages of the Han dynasty, who understood before us how water must be a secret dialogue between earth and root. SUBGarden does nothing but give this ancient wisdom the precision of modern engineering.",
+    "roots_title": "Roots: From Duty to Wonder",
+    "case_history_focus": "In residences that have witnessed history, we cannot afford to break the spell with visible modern technology. Our non-invasive installation method is the only one that allows us to preserve secular essences and Renaissance symmetries, bringing water to the roots exactly as the Medici gardeners would have wished."
   },
   "benefits": {
     "title": "Water savings and stress-free installation",
@@ -209,6 +211,31 @@
     "subtitle": "Our works of excellence",
     "title": "Portfolio",
     "view_project": "View Project"
+  },
+  "technologyPage": {
+    "evolution_title": "The Evolution of the Invisible",
+    "evolution_text": "From terracotta to polymer: the principle is the same, the technology has changed. Where the ancient Egyptians used the porosity of clay, we use patented self-compensating emitters to ensure every root receives the right amount of moisture, drop by drop, with no evaporation and no waste.",
+    "comparison_table_title": "Sub-irrigation compared",
+    "method_subgarden": "SUBGarden",
+    "method_ollas": "Ancient ollas",
+    "method_sprinkler": "Sprinkler irrigation",
+    "table_method": "Method",
+    "table_maintenance": "Maintenance",
+    "table_uniformity": "Uniformity",
+    "table_efficiency": "Water efficiency",
+    "table_surface": "Surface impact",
+    "subgarden_maintenance": "Minimal, decades without clogging",
+    "subgarden_uniformity": "Very high (>90%), self-compensating",
+    "subgarden_efficiency": "Very high (>90%)",
+    "subgarden_surface": "Zero, fully buried",
+    "ollas_maintenance": "Replacement every 3-4 seasons (salts/roots)",
+    "ollas_uniformity": "Variable, depends on slope",
+    "ollas_efficiency": "High, but manual refilling",
+    "ollas_surface": "Visible opening at ground level",
+    "sprinkler_maintenance": "High (broken heads, clogging)",
+    "sprinkler_uniformity": "Medium-low (wind, evaporation)",
+    "sprinkler_efficiency": "60-75%",
+    "sprinkler_surface": "Visible sprinklers and pipes"
   },
   "process": {
     "step1": "Technical Site Visit",

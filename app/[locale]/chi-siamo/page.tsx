@@ -103,9 +103,12 @@ export default async function AboutPage({
                 <p className="text-xl text-gray-700 leading-relaxed mb-8">
                   {t('roots_text')}
                 </p>
-                <div className="bg-gray-50 p-8 rounded-xl border-l-4 border-copper italic text-gray-600 text-lg">
+                <div className="bg-gray-50 p-8 rounded-xl border-l-4 border-copper italic text-gray-600 text-lg mb-8">
                   &quot;Mi sono innamorato della purezza delle piante e della loro resiliente capacità di esistere, semplicemente.&quot;
                 </div>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  {t('roots_ancient_text')}
+                </p>
               </MotionDiv>
             </div>
           </div>
@@ -164,8 +167,11 @@ export default async function AboutPage({
                 <h3 className="text-4xl font-serif font-bold text-deep-teal mb-8">
                   {t('case_history_title')}
                 </h3>
-                <p className="text-xl text-gray-700 leading-relaxed">
+                <p className="text-xl text-gray-700 leading-relaxed mb-6">
                   {t('case_history_text')}
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed italic border-l-4 border-copper pl-6">
+                  {t('case_history_focus')}
                 </p>
               </MotionDiv>
             </div>

@@ -3,7 +3,7 @@ title: "Subirrigazione: cos'è e come funziona"
 description: "Guida alla subirrigazione per giardini: come funziona, vantaggi rispetto all'irrigazione a pioggia e perché è ideale per giardini già esistenti."
 date: "2025-02-20"
 slug: "subirrigazione-cose-e-come-funziona"
-image: "/rustic-patio-with-deck-furniture-vegetation.jpg"
+image: "/Gemini_Generated_Image_reiwdqreiwdqreiw.png"
 ---
 
 La **subirrigazione** è una tecnica di irrigazione che porta l'acqua direttamente nella zona delle radici, sotto la superficie del terreno, invece di bagnare la parte aerea delle piante come fa l'irrigazione a pioggia.

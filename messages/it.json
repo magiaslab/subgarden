@@ -25,7 +25,9 @@
     "philosophy_expanded_text2": "Definisco il mio approccio 'Giardino Empatico' perché entra in risonanza con chi lo abita e con il luogo stesso. Non impongo una forma, ma assecondo la voce della terra, utilizzando la tecnologia più avanzata per servire la massima semplicità.",
     "philosophy_expanded_title": "Il Paesaggio Prestato e il Giardino Empatico",
     "roots_text": "Nel 1990 non cercavo una carriera, ma risposte. Quello che era iniziato come un supporto all'attività familiare è diventato rapidamente un dialogo intimo con il mondo vegetale. Mi ha conquistato la capacità delle piante di 'esistere semplicemente', la loro resilienza silenziosa ma invincibile. Da allora, ogni giardino che creo è un tributo a questa forza.",
-    "roots_title": "Radici: Dal Dovere allo Stupore"
+    "roots_ancient_text": "La nostra storia non inizia trent'anni fa, ma quattromila. Ci ispiriamo ai maestri del Nilo e ai saggi della dinastia Han, che compresero prima di noi come l'acqua debba essere un dialogo segreto tra la terra e la radice. SUBGarden non fa altro che dare a questa antica sapienza la precisione dell'ingegneria moderna.",
+    "roots_title": "Radici: Dal Dovere allo Stupore",
+    "case_history_focus": "Nelle dimore che hanno visto passare la storia, non possiamo permetterci di rompere l'incanto con la tecnica moderna visibile. Il nostro metodo di installazione non invasivo è l'unico che permette di preservare essenze secolari e simmetrie rinascimentali, portando l'acqua alle radici esattamente come avrebbero voluto i giardinieri dei Medici."
   },
   "benefits": {
     "title": "Risparmio idrico e installazione senza stress",
@@ -68,6 +70,31 @@
     "maintenance_label": "Manutenzione",
     "rain_maintenance": "Alta (testine rotte/ostruite)",
     "subgarden_maintenance": "Minima (sistema autopulente)"
+  },
+  "technologyPage": {
+    "evolution_title": "L'Evoluzione dell'Invisibile",
+    "evolution_text": "Dalla terracotta al polimero: il principio è lo stesso, la tecnologia è cambiata. Dove gli antichi egizi usavano la porosità dell'argilla, noi utilizziamo emettitori auto-compensanti brevettati per garantire che ogni radice riceva la giusta quantità di umidità, goccia dopo goccia, senza evaporazione e senza sprechi.",
+    "comparison_table_title": "Subirrigazione a confronto",
+    "method_subgarden": "SUBGarden",
+    "method_ollas": "Ollas antiche",
+    "method_sprinkler": "Irrigazione a pioggia",
+    "table_method": "Metodo",
+    "table_maintenance": "Manutenzione",
+    "table_uniformity": "Uniformità",
+    "table_efficiency": "Efficienza idrica",
+    "table_surface": "Impatto superficie",
+    "subgarden_maintenance": "Minima, decenni senza ostruzioni",
+    "subgarden_uniformity": "Molto alta (>90%), auto-compensante",
+    "subgarden_efficiency": "Molto alta (>90%)",
+    "subgarden_surface": "Zero, completamente interrato",
+    "ollas_maintenance": "Sostituzione ogni 3-4 stagioni (sali/radici)",
+    "ollas_uniformity": "Variabile, dipende da pendenza",
+    "ollas_efficiency": "Alta, ma riempimento manuale",
+    "ollas_surface": "Imboccatura visibile a livello suolo",
+    "sprinkler_maintenance": "Alta (testine rotte, ostruzioni)",
+    "sprinkler_uniformity": "Media-bassa (vento, evaporazione)",
+    "sprinkler_efficiency": "60-75%",
+    "sprinkler_surface": "Irrigatori e tubi visibili"
   },
   "operationalStrip": {
     "title": "Il nostro metodo operativo",

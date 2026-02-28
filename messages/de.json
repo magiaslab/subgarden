@@ -25,7 +25,9 @@
     "philosophy_expanded_text2": "Ich bezeichne meinen Ansatz als 'Empathischen Garten', weil er mit den Bewohnern und dem Ort selbst in Resonanz tritt. Ich erzwinge keine Form, sondern folge der Stimme der Erde und nutze modernste Technologie, um höchste Einfachheit zu erreichen.",
     "philosophy_expanded_title": "Geliehene Kulisse und der empathische Garten",
     "roots_text": "1990 suchte ich keine Karriere, sondern Antworten. Was als Unterstützung für das Familienunternehmen begann, entwickelte sich schnell zu einem intimen Dialog mit der Pflanzenwelt. Die Fähigkeit der Pflanzen, 'einfach zu existieren', ihre stille, aber unbesiegbare Widerstandsfähigkeit, hat mich überzeugt. Seitdem ist jeder Garten, den ich erschaffe, ein Tribut an diese Kraft.",
-    "roots_title": "Wurzeln: Von der Pflicht zum Staunen"
+    "roots_ancient_text": "Unsere Geschichte beginnt nicht vor dreißig Jahren, sondern vor viertausend. Wir lassen uns von den Meistern am Nil und den Weisen der Han-Dynastie inspirieren, die vor uns verstanden haben, dass Wasser ein heimlicher Dialog zwischen Erde und Wurzel sein muss. SUBGarden verleiht dieser uralten Weisheit die Präzision der modernen Technik.",
+    "roots_title": "Wurzeln: Von der Pflicht zum Staunen",
+    "case_history_focus": "In Residenzen, die die Geschichte miterlebt haben, dürfen wir den Zauber nicht durch sichtbare moderne Technik brechen. Unsere nicht-invasive Installationsmethode ist die einzige, die es erlaubt, jahrhundertealte Essenzen und Renaissance-Symmetrien zu bewahren und das Wasser zu den Wurzeln zu bringen – genau so, wie es die Gärtner der Medici gewollt hätten."
   },
   "benefits": {
     "title": "Wassereinsparung und stressfreie Installation",
@@ -209,6 +211,31 @@
     "subtitle": "Unsere exzellenten Arbeiten",
     "title": "Portfolio",
     "view_project": "Projekt ansehen"
+  },
+  "technologyPage": {
+    "evolution_title": "Die Evolution des Unsichtbaren",
+    "evolution_text": "Von der Terrakotta zum Polymer: Das Prinzip ist dasselbe, die Technik hat sich geändert. Wo die alten Ägypter die Porosität des Tons nutzten, setzen wir patentierte selbstkompensierende Emitter ein, damit jede Wurzel die richtige Feuchtigkeit erhält – Tropfen für Tropfen, ohne Verdunstung und ohne Verschwendung.",
+    "comparison_table_title": "Subirrigation im Vergleich",
+    "method_subgarden": "SUBGarden",
+    "method_ollas": "Antike Ollas",
+    "method_sprinkler": "Sprinklerbewässerung",
+    "table_method": "Methode",
+    "table_maintenance": "Wartung",
+    "table_uniformity": "Gleichmäßigkeit",
+    "table_efficiency": "Wassereffizienz",
+    "table_surface": "Oberflächenimpact",
+    "subgarden_maintenance": "Minimal, jahrzehntelang ohne Verstopfung",
+    "subgarden_uniformity": "Sehr hoch (>90%), selbstkompensierend",
+    "subgarden_efficiency": "Sehr hoch (>90%)",
+    "subgarden_surface": "Null, vollständig unterirdisch",
+    "ollas_maintenance": "Ersatz alle 3-4 Saisonen (Salze/Wurzeln)",
+    "ollas_uniformity": "Variabel, abhängig von der Hanglage",
+    "ollas_efficiency": "Hoch, aber manuelle Nachfüllung",
+    "ollas_surface": "Sichtbare Öffnung auf Bodenniveau",
+    "sprinkler_maintenance": "Hoch (defekte Köpfe, Verstopfung)",
+    "sprinkler_uniformity": "Mittel-niedrig (Wind, Verdunstung)",
+    "sprinkler_efficiency": "60-75%",
+    "sprinkler_surface": "Sichtbare Sprinkler und Rohre"
   },
   "process": {
     "step1": "Technische Besichtigung",

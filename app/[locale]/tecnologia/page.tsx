@@ -52,6 +52,7 @@ export default async function TecnologiaPage({
 }) {
   const { locale } = await params;
   const t = await (getTranslations as any)('process');
+  const tTech = await (getTranslations as any)('technologyPage');
 
   const content = {
     it: {
@@ -175,6 +176,87 @@ export default async function TecnologiaPage({
                 {pageContent.subtitle}
               </p>
             </MotionDiv>
+          </div>
+        </section>
+
+        {/* Evoluzione dell'Invisibile: ancora storica egizia + testo */}
+        <section className="py-20 bg-white border-b border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <MotionDiv
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+            >
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/Gemini_Generated_Image_reiwdqreiwdqreiw (3).png"
+                  alt="Storie di Acqua e di Terra: dal loto blu e le ollas antiche alle Ville Medicee e Rain Bird XSF®"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto object-contain"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+              <div>
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-deep-teal mb-6">
+                  {tTech('evolution_title')}
+                </h2>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  {tTech('evolution_text')}
+                </p>
+              </div>
+            </MotionDiv>
+
+            {/* Tabella comparativa: SUBGarden vs Ollas vs Irrigazione a pioggia */}
+            <div className="mt-20">
+              <h3 className="text-2xl font-serif font-bold text-deep-teal mb-6 text-center">
+                {tTech('comparison_table_title')}
+              </h3>
+              <MotionDiv
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="overflow-x-auto rounded-2xl border border-gray-200 shadow-lg"
+              >
+                <table className="w-full min-w-[640px] text-left">
+                  <thead>
+                    <tr className="bg-deep-teal text-white">
+                      <th className="px-4 py-4 font-semibold">{tTech('table_method')}</th>
+                      <th className="px-4 py-4 font-semibold text-copper">{tTech('method_subgarden')}</th>
+                      <th className="px-4 py-4 font-semibold">{tTech('method_ollas')}</th>
+                      <th className="px-4 py-4 font-semibold">{tTech('method_sprinkler')}</th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-gray-50/50">
+                    <tr className="border-b border-gray-200">
+                      <td className="px-4 py-3 font-medium text-gray-700">{tTech('table_maintenance')}</td>
+                      <td className="px-4 py-3 text-gray-600">{tTech('subgarden_maintenance')}</td>
+                      <td className="px-4 py-3 text-gray-600">{tTech('ollas_maintenance')}</td>
+                      <td className="px-4 py-3 text-gray-600">{tTech('sprinkler_maintenance')}</td>
+                    </tr>
+                    <tr className="border-b border-gray-200">
+                      <td className="px-4 py-3 font-medium text-gray-700">{tTech('table_uniformity')}</td>
+                      <td className="px-4 py-3 text-gray-600">{tTech('subgarden_uniformity')}</td>
+                      <td className="px-4 py-3 text-gray-600">{tTech('ollas_uniformity')}</td>
+                      <td className="px-4 py-3 text-gray-600">{tTech('sprinkler_uniformity')}</td>
+                    </tr>
+                    <tr className="border-b border-gray-200">
+                      <td className="px-4 py-3 font-medium text-gray-700">{tTech('table_efficiency')}</td>
+                      <td className="px-4 py-3 text-gray-600">{tTech('subgarden_efficiency')}</td>
+                      <td className="px-4 py-3 text-gray-600">{tTech('ollas_efficiency')}</td>
+                      <td className="px-4 py-3 text-gray-600">{tTech('sprinkler_efficiency')}</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-3 font-medium text-gray-700">{tTech('table_surface')}</td>
+                      <td className="px-4 py-3 text-gray-600">{tTech('subgarden_surface')}</td>
+                      <td className="px-4 py-3 text-gray-600">{tTech('ollas_surface')}</td>
+                      <td className="px-4 py-3 text-gray-600">{tTech('sprinkler_surface')}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </MotionDiv>
+            </div>
           </div>
         </section>
 
