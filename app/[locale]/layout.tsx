@@ -18,9 +18,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
+  const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 
   return {
     metadataBase: new URL(siteUrl),
+    ...(googleVerification && { verification: { google: googleVerification } }),
     title: {
       default: 'SUBGarden - Subirrigazione per Giardini | Risparmio Idrico, Installazione Non Invasiva',
       template: '%s | SUBGarden',
@@ -94,8 +96,34 @@ export default async function LocaleLayout({
 
   const messages = await getMessages();
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': `${siteUrl}/#organization`,
+        name: 'SUBGarden',
+        url: siteUrl,
+        description: 'Sistema di subirrigazione per giardini: risparmio idrico, installazione non invasiva. Toscana e Italia.',
+        sameAs: [],
+      },
+      {
+        '@type': 'WebSite',
+        name: 'SUBGarden',
+        url: siteUrl,
+        publisher: { '@id': `${siteUrl}/#organization` },
+        inLanguage: ['it', 'en', 'de'],
+        potentialAction: { '@type': 'SearchAction', target: `${siteUrl}/it/contatti`, 'query-input': 'required name=query' },
+      },
+    ] as const;
+
   return (
     <NextIntlClientProvider messages={messages}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {children}
       <WhatsAppWidget />
       <CookieBanner />

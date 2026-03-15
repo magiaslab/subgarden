@@ -5,9 +5,10 @@
 
 | Variabile                       | Uso                                                               | Obbligatoria                   |
 | ------------------------------- | ----------------------------------------------------------------- | ------------------------------ |
-| `NEXT_PUBLIC_SITE_URL`          | URL canonico (es. `https://subgarden.it`)                         | Sì                             |
+| `NEXT_PUBLIC_SITE_URL`                | URL canonico (es. `https://subgarden.it`)                         | **Sì**                         |
+| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Codice verifica Search Console (meta tag)                        | No (**obbligatoria per GSC**)  |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics 4 (es. `G-XXXXXXXXXX`)                           | No (consigliata)               |
-| `NEXT_PUBLIC_GTM_ID`            | Google Tag Manager (es. `GTM-XXXXXXX`) – alternativo a GA diretto | No                             |
+| `NEXT_PUBLIC_GTM_ID`            | Google Tag Manager (es. `GTM-XXXXXXX`) – se usato, GA si configura in GTM | No              |
 | `RESEND_API_KEY`                | Invio email dal form contatti (Resend)                            | No (form attualmente simulato) |
 | `SUB_READ_WRITE_TOKEN`          | Upload Vercel Blob (opzionale)                                    | No                             |
 | `NEXT_PUBLIC_HOME_VIDEO_URL`    | Video in home (opzionale)                                         | No                             |
@@ -16,7 +17,7 @@
 
 **Video da Vercel Blob:** dopo aver caricato il file nello storage, copia l’**URL pubblico** (es. `https://xxx.public.blob.vercel-storage.com/nome.mp4`) nel valore della variabile. Le variabili `NEXT_PUBLIC_*` vengono incluse nel build: **dopo averle aggiunte o modificate in Vercel → Settings → Environment Variables è necessario un nuovo Deploy** perché il video compaia.
 
-**Nota:** Search Console non richiede una key nel codice: si usa solo la verifica del sito (meta tag o DNS).
+**Search Console:** per verificare la proprietà serve il **meta tag HTML**. Imposta `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` con il valore `content` che Search Console fornisce (es. `abc123xyz`), poi rideploy. In alternativa: verifica via DNS.
 
 **Canonical e hreflang (avviso Lighthouse):** Il tag `rel=canonical` e i link `hreflang` sono generati a partire da `NEXT_PUBLIC_SITE_URL`. Per evitare l’avviso “Il documento non ha un valore rel=canonical valido”:
 
@@ -29,8 +30,7 @@
 
 1. **Google Search Console**
   - A cosa serve: indicizzazione, query di ricerca, errori, sitemap.  
-  - Cosa fare: aggiungi la proprietà per `https://subgarden.it`, verifica con meta tag HTML (o DNS). Invia la sitemap: `https://subgarden.it/sitemap.xml`.  
-  - Nessuna variabile in `.env`.
+  - Cosa fare: aggiungi la proprietà per `https://subgarden.it`, verifica con meta tag HTML (imposta `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` e rideploy) o DNS. Invia la sitemap: `https://subgarden.it/sitemap.xml`.
 2. **Google Analytics 4 (GA4)**
   - A cosa serve: visite, pagine, eventi, conversioni (es. invio form).  
   - Cosa fare: crea una proprietà GA4, copia il Measurement ID (G-…) e impostalo in `NEXT_PUBLIC_GA_MEASUREMENT_ID`.  
@@ -83,3 +83,36 @@ Testi del banner (in `messages/*.json` sotto `cookie`) descrivono l’uso di coo
 - Controllare che tutte le pagine importanti siano in sitemap e che i meta title/description siano coerenti.
 - Testare il banner cookie: “Solo necessari” = nessun script Analytics; “Accetta tutto” = script caricato e cookie impostati.
 
+
+---
+
+## Risultati bassi o non registrati (Search Console / Analytics)
+
+Se in **Google Search Console** vedi poche impressioni, zero click o "Proprietà non verificata", oppure in **Analytics** non arrivano dati, controlla in ordine:
+
+### 1. Search Console – Verifica proprietà
+
+- **Proprietà non verificata:** aggiungi la proprietà in [Search Console](https://search.google.com/search-console) (Prefisso URL: `https://subgarden.it` o l'URL reale). Scegli **Verifica tramite tag HTML**: copia il valore `content` del meta tag e impostalo in `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`. Esegui un **nuovo deploy**, poi clicca "Verifica" in GSC.
+- Se il sito è raggiungibile con **www**, aggiungi una proprietà anche per `https://www.subgarden.it` e verifica entrambe.
+
+### 2. Search Console – Sitemap e URL
+
+- In GSC → Sitemap: invia `https://subgarden.it/sitemap.xml` (o con www se usi quello). Controlla che non ci siano errori.
+- `NEXT_PUBLIC_SITE_URL` deve essere **esattamente** l'URL con cui gli utenti vedono il sito (con o senza www). Se è sbagliato, canonical e sitemap non coincidono e l'indicizzazione ne risente.
+
+### 3. Analytics / Tag Manager – Nessun dato
+
+- GA e GTM si caricano **solo dopo** "Accetta tutto" nel banner. Verifica in DevTools (Network) che, dopo l'accettazione, vengano caricati `gtag/js` o `gtm.js`.
+- **GA4 vs GTM:** se è impostato `NEXT_PUBLIC_GTM_ID`, il codice carica **solo GTM** (non anche gtag GA diretto). Configura GA4 **dentro** il container GTM. Se vuoi solo GA4 senza GTM, non impostare `NEXT_PUBLIC_GTM_ID` e usa solo `NEXT_PUBLIC_GA_MEASUREMENT_ID`.
+- Dopo aver cambiato le variabili in Vercel (o altro host), esegui un **nuovo deploy**.
+
+### 4. Riepilogo checklist
+
+| Cosa | Dove / come |
+|------|-------------|
+| Verifica Search Console | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` impostata + deploy |
+| Sitemap | GSC → Sitemap → `https://[tuodominio]/sitemap.xml` |
+| URL canonico | `NEXT_PUBLIC_SITE_URL` uguale all'URL reale (con/senza www) |
+| GA4 o GTM | Uno: GTM con GA dentro, oppure solo GA (senza GTM) |
+| Test Analytics | Banner → "Accetta tutto" prima di controllare |
+| robots.txt / JSON-LD | Generati dal sito (robots.ts, layout con Organization/WebSite) |

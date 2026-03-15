@@ -3,8 +3,12 @@
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-51Q3DF96T5';
+const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-90W053H7SQ';
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-WRFZKGNM';
+
+// Se usi GTM con GA4 configurato dentro il container, non caricare anche gtag.js diretto
+// per evitare doppio invio dati. Carica GA diretto solo se GTM non è impostato.
+const useGADirect = GA_ID && !GTM_ID;
 
 export function AnalyticsScript() {
   const [consent, setConsent] = useState<'accepted' | 'declined' | null>(null);
@@ -24,7 +28,7 @@ export function AnalyticsScript() {
 
   return (
     <>
-      {GA_ID && (
+      {useGADirect && (
         <>
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
