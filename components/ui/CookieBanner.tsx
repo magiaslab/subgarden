@@ -23,6 +23,12 @@ export const CookieBanner = () => {
 
   const handleAccept = () => {
     localStorage.setItem('cookie-consent', 'accepted');
+    if (typeof (window as any).gtag === 'function') {
+      (window as any).gtag('consent', 'update', {
+        analytics_storage: 'granted',
+        ad_storage: 'granted',
+      });
+    }
     window.dispatchEvent(new CustomEvent('cookie-consent-update', { detail: 'accepted' }));
     setIsVisible(false);
   };

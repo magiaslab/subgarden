@@ -1,30 +1,36 @@
 'use client';
 
 import Script from 'next/script';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-90W053H7SQ';
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-WRFZKGNM';
 
-// Se usi GTM con GA4 configurato dentro il container, non caricare anche gtag.js diretto
-// per evitare doppio invio dati. Carica GA diretto solo se GTM non è impostato.
+// Se usi GTM con GA4 configurato dentro il container, non caricare anche gtag.js diretto.
 const useGADirect = GA_ID && !GTM_ID;
 
+// Il tag è sempre presente in pagina (così Google lo rileva), ma con Consent Mode
+// i dati non vengono inviati finché l'utente non accetta i cookie.
 export function AnalyticsScript() {
-  const [consent, setConsent] = useState<'accepted' | 'declined' | null>(null);
-
   useEffect(() => {
-    const stored = localStorage.getItem('cookie-consent') as 'accepted' | 'declined' | null;
-    const t = setTimeout(() => setConsent(stored), 0);
-    const onUpdate = (e: Event) => setConsent((e as CustomEvent).detail);
-    window.addEventListener('cookie-consent-update', onUpdate);
-    return () => {
-      clearTimeout(t);
-      window.removeEventListener('cookie-consent-update', onUpdate);
+    const grantConsent = () => {
+      const payload = { analytics_storage: 'granted', ad_storage: 'granted' };
+      if (typeof (window as any).gtag === 'function') {
+        (window as any).gtag('consent', 'update', payload);
+      } else {
+        (window as any).dataLayer = (window as any).dataLayer || [];
+        (window as any).dataLayer.push(['consent', 'update', payload]);
+      }
     };
+    const onConsentUpdate = (e: Event) => {
+      if ((e as CustomEvent).detail === 'accepted') grantConsent();
+    };
+    if (localStorage.getItem('cookie-consent') === 'accepted') {
+      grantConsent();
+    }
+    window.addEventListener('cookie-consent-update', onConsentUpdate);
+    return () => window.removeEventListener('cookie-consent-update', onConsentUpdate);
   }, []);
-
-  if (consent !== 'accepted') return null;
 
   return (
     <>
@@ -39,6 +45,11 @@ export function AnalyticsScript() {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
+              gtag('consent', 'default', {
+                analytics_storage: 'denied',
+                ad_storage: 'denied',
+                wait_for_update: 500
+              });
               gtag('config', '${GA_ID}', { anonymize_ip: true });
             `}
           </Script>
