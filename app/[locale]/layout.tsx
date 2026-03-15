@@ -116,7 +116,8 @@ export default async function LocaleLayout({
         inLanguage: ['it', 'en', 'de'],
         potentialAction: { '@type': 'SearchAction', target: `${siteUrl}/it/contatti`, 'query-input': 'required name=query' },
       },
-    ];
+    ],
+  };
 
   return (
     <NextIntlClientProvider messages={messages}>
