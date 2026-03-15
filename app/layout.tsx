@@ -30,16 +30,17 @@ export default function RootLayout({
   return (
     <html lang="it" className={`${inter.variable} ${montserrat.variable}`}>
       <body>
-        {/* Google Tag Manager (noscript) - fallback per utenti senza JavaScript */}
-        <noscript>
-          <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID || 'GTM-WRFZKGNM'}`}
-            height={0}
-            width={0}
-            style={{ display: 'none', visibility: 'hidden' }}
-            title="Google Tag Manager"
-          />
-        </noscript>
+        {process.env.NEXT_PUBLIC_GTM_ID && (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
+              height={0}
+              width={0}
+              style={{ display: 'none', visibility: 'hidden' }}
+              title="Google Tag Manager"
+            />
+          </noscript>
+        )}
         {children}
       </body>
     </html>

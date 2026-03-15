@@ -4,10 +4,11 @@ import Script from 'next/script';
 import { useEffect } from 'react';
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-90W053H7SQ';
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-WRFZKGNM';
+// Solo se impostato: se non c’è GTM, viene caricato il tag GA diretto (così Google lo rileva).
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || '';
 
-// Se usi GTM con GA4 configurato dentro il container, non caricare anche gtag.js diretto.
-const useGADirect = GA_ID && !GTM_ID;
+// Con GTM impostato usi GA dentro GTM; altrimenti carichiamo gtag.js con GA_ID.
+const useGADirect = !!GA_ID && !GTM_ID;
 
 // Il tag è sempre presente in pagina (così Google lo rileva), ma con Consent Mode
 // i dati non vengono inviati finché l'utente non accetta i cookie.
