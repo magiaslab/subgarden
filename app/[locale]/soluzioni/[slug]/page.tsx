@@ -480,7 +480,7 @@ export async function generateMetadata({
   }
 
   const content = solution[locale] || solution.it;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.subgarden.it';
 
   return {
     title: `${content.title} - SUBGarden`,
@@ -510,7 +510,7 @@ export default async function SoluzionePage({
 
   const content = solution[locale] || solution.it;
   const icons = solution.icons;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.subgarden.it';
 
   const serviceSchema = {
     '@context': 'https://schema.org',

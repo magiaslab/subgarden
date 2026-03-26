@@ -22,7 +22,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await (getTranslations as any)('hero');
 
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.subgarden.it';
 
   return {
     title: t('title'),
@@ -60,16 +60,17 @@ export default async function HomePage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.subgarden.it';
 
   const organizationSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@type': 'LocalBusiness',
     name: 'SUBGarden',
     url: siteUrl,
     logo: `${siteUrl}/SUBGARDEN - LOGO COLORI.png`,
     description:
       'Sistema di subirrigazione professionale per il mercato toscano',
+    areaServed: ['Livorno', 'Pisa', 'Lucca', 'Massa-Carrara', 'Firenze', 'Siena', 'Arezzo', 'Prato', 'Pistoia', 'Grosseto', 'Toscana'],
     address: {
       '@type': 'PostalAddress',
       addressRegion: 'Toscana',

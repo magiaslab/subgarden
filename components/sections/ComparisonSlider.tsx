@@ -61,7 +61,7 @@ export function ComparisonSlider() {
                 alt="Comfort con subirrigazione SUBGarden"
                 fill
                 className="object-cover"
-                sizes="100vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1200px) 92vw, 1200px"
               />
               <div className="absolute inset-0 bg-black/10" />
               <div className="absolute inset-0 flex items-center justify-center">
@@ -82,7 +82,7 @@ export function ComparisonSlider() {
                 alt="Disagio con irrigazione tradizionale a pioggia"
                 fill
                 className="object-cover"
-                sizes="100vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1200px) 92vw, 1200px"
               />
               <div className="absolute inset-0 bg-black/30" />
               <div className="absolute inset-0 flex items-center justify-center">

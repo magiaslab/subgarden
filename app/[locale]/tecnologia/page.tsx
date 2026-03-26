@@ -17,7 +17,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.subgarden.it';
 
   const titles: Record<string, string> = {
     it: 'Tecnologia SUBGarden - Ingegneria Rain Bird® XSF',
@@ -35,11 +35,11 @@ export async function generateMetadata({
     title: titles[locale] || titles.it,
     description: descriptions[locale] || descriptions.it,
     alternates: {
-      canonical: `${siteUrl}/${locale}/tecnologia`,
+      canonical: `${siteUrl}/${locale}/${locale === 'en' ? 'technology' : locale === 'de' ? 'technologie' : 'tecnologia'}`,
       languages: {
         it: `${siteUrl}/it/tecnologia`,
-        en: `${siteUrl}/en/tecnologia`,
-        de: `${siteUrl}/de/tecnologia`,
+        en: `${siteUrl}/en/technology`,
+        de: `${siteUrl}/de/technologie`,
       },
     },
   };

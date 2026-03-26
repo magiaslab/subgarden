@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from '@/lib/i18n/routing';
 import { Button } from '@/components/ui/Button';
 
 export default function NotFound() {
@@ -14,7 +14,7 @@ export default function NotFound() {
         <p className="text-gray-600 mb-8 max-w-md mx-auto">
           La pagina che stai cercando non esiste o è stata spostata.
         </p>
-        <Link href="/it">
+        <Link href="/">
           <Button size="lg" variant="primary">
             Torna alla Home
           </Button>

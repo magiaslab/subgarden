@@ -17,6 +17,9 @@ export function HeroSection() {
           loop
           muted
           playsInline
+          preload="metadata"
+          poster="/rustic-patio-with-deck-furniture-vegetation.jpg"
+          aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export function getSiteUrl(): string {
-  return process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
+  return process.env.NEXT_PUBLIC_SITE_URL || 'https://www.subgarden.it';
 }
 
 export function generateCanonicalUrl(path: string, locale: string): string {

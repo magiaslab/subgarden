@@ -2,6 +2,30 @@ import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
 import { MotionDiv } from '@/components/ui/Motion';
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.subgarden.it';
+  const localizedPath =
+    locale === 'de' ? 'nutzungsbedingungen' : 'terms';
+
+  return {
+    title: 'Termini di Servizio | SUBGarden',
+    alternates: {
+      canonical: `${siteUrl}/${locale}/${localizedPath}`,
+      languages: {
+        it: `${siteUrl}/it/terms`,
+        en: `${siteUrl}/en/terms`,
+        de: `${siteUrl}/de/nutzungsbedingungen`,
+      },
+    },
+  };
+}
 
 export default function TermsPage() {
   return (

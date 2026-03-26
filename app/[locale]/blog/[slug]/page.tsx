@@ -22,7 +22,7 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return {};
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.subgarden.it';
 
   return {
     title: `${post.title} | Blog SUBGarden`,

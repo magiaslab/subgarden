@@ -9,10 +9,29 @@ import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { solutions } from '@/lib/solutions';
 
-export const metadata: Metadata = {
-  title: 'Soluzioni di Subirrigazione | SUBGarden',
-  description: 'Scopri tutte le soluzioni SUBGarden per l\'irrigazione di giardini residenziali, parchi e campi sportivi.',
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.subgarden.it';
+  const localizedPath =
+    locale === 'en' ? 'solutions' : locale === 'de' ? 'loesungen' : 'soluzioni';
+
+  return {
+    title: 'Soluzioni di Subirrigazione | SUBGarden',
+    description: 'Scopri tutte le soluzioni SUBGarden per l\'irrigazione di giardini residenziali, parchi e campi sportivi.',
+    alternates: {
+      canonical: `${siteUrl}/${locale}/${localizedPath}`,
+      languages: {
+        it: `${siteUrl}/it/soluzioni`,
+        en: `${siteUrl}/en/solutions`,
+        de: `${siteUrl}/de/loesungen`,
+      },
+    },
+  };
+}
 
 export default async function SoluzioniIndexPage({
   params,

@@ -12,7 +12,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.subgarden.it';
 
   const titles: Record<string, string> = {
     it: 'Chi Siamo - La Mia Storia e la Visione SUBGarden | Fausto Favilli',

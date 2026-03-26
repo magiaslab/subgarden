@@ -2,13 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useTranslations, useLocale } from 'next-intl';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/lib/i18n/routing';
 import { ShieldCheck, X } from 'lucide-react';
 
 export const CookieBanner = () => {
   const t = (useTranslations as any)('cookie');
-  const locale = useLocale();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -67,7 +66,7 @@ export const CookieBanner = () => {
                     <p className="max-w-3xl text-sm leading-relaxed text-gray-600">
                       {t('description')}{' '}
                       <Link
-                        href={`/${locale}/privacy`}
+                        href="/privacy"
                         className="font-medium text-copper underline decoration-copper/30 transition-colors hover:text-deep-teal hover:decoration-deep-teal"
                       >
                         {t('privacy_link')}

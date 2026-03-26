@@ -201,7 +201,7 @@ export async function generateMetadata({
   }
 
   const content = cityData[locale] || cityData.it;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.subgarden.it';
 
   return {
     title: `${content.title} - SUBGarden`,
@@ -232,7 +232,7 @@ export default async function TerritorioPage({
   const content = cityData[locale] || cityData.it;
   const image = cityData.image;
   const icons = cityData.icons;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.subgarden.it';
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',

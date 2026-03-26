@@ -20,7 +20,7 @@ const paths: Record<string, Record<string, string>> = {
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.subgarden.it';
   const baseDate = new Date();
   const routes: MetadataRoute.Sitemap = [];
 

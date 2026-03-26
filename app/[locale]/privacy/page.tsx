@@ -2,6 +2,30 @@ import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
 import { MotionDiv } from '@/components/ui/Motion';
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.subgarden.it';
+  const localizedPath =
+    locale === 'de' ? 'datenschutz' : 'privacy';
+
+  return {
+    title: 'Privacy Policy | SUBGarden',
+    alternates: {
+      canonical: `${siteUrl}/${locale}/${localizedPath}`,
+      languages: {
+        it: `${siteUrl}/it/privacy`,
+        en: `${siteUrl}/en/privacy`,
+        de: `${siteUrl}/de/datenschutz`,
+      },
+    },
+  };
+}
 
 export default function PrivacyPage() {
   return (

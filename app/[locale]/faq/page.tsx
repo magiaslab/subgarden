@@ -13,7 +13,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await (getTranslations as any)('faq');
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.subgarden.it';
 
   return {
     title: t('meta_title'),
@@ -36,13 +36,32 @@ export default async function FAQPage({
 }) {
   const { locale } = await params;
   const t = await (getTranslations as any)('faq');
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.subgarden.it';
 
   const items = [
     'q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8',
   ] as const;
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((key) => ({
+      '@type': 'Question',
+      name: t(`${key}_q`),
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: t(`${key}_a`),
+      },
+    })),
+    inLanguage: locale,
+    url: `${siteUrl}/${locale}/faq`,
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
       <main className="pt-20">
         <section className="relative h-[40vh] flex items-center justify-center overflow-hidden">
