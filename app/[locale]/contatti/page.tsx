@@ -50,7 +50,7 @@ export default async function ContactPage({
       icon: MapPin,
       label: t('address_label'),
       value: t('address_value'),
-      link: 'https://www.google.com/maps/search/?api=1&query=Corso+Italia+45+San+Vincenzo+LI',
+      link: 'https://www.google.com/maps/search/?api=1&query=Via%20Pitagora%203%2C%2057027%20San%20Vincenzo%20(LI)',
     },
     {
       icon: Phone,
@@ -181,7 +181,7 @@ export default async function ContactPage({
               className="rounded-3xl overflow-hidden shadow-2xl border-8 border-[#F2F4F7] h-[500px] relative"
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2912.421444123456!2d10.538123456789!3d43.09123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d619abcdefghij%3A0x1234567890abcdef!2sCorso%20Italia%2C%2045%2C%2057027%20San%20Vincenzo%20LI!5e0!3m2!1sit!2sit!4v1234567890123!5m2!1sit!2sit"
+                src="https://www.google.com/maps?q=Via%20Pitagora%203%2C%2057027%20San%20Vincenzo%20(LI)&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

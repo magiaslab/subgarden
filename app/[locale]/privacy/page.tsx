@@ -37,7 +37,7 @@ export default function PrivacyPage() {
               <section>
                 <h2 className="text-2xl font-bold text-deep-teal mb-4">1. Titolare del Trattamento</h2>
                 <p>
-                  SUBGarden di Fausto Favilli, con sede legale in Corso Italia, 45 - 57027 San Vincenzo (LI), 
+                  SUBGarden di Fausto Favilli, con sede legale in Via Pitagora 3, 57027 San Vincenzo (LI), 
                   &egrave; il titolare del trattamento dei dati personali raccolti attraverso questo sito web.
                 </p>
               </section>
