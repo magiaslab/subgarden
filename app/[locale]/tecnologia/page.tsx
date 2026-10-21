@@ -1,3 +1,4 @@
+import type { Locale } from 'next-intl';
 import { Metadata } from 'next';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
@@ -7,7 +8,7 @@ import { InfographicSection } from '@/components/sections/InfographicSection';
 import { ContactCTA } from '@/components/sections/ContactCTA';
 import { TechnologyVideoSection } from '@/components/sections/TechnologyVideoSection';
 import Image from 'next/image';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Search, PencilRuler, FileText, Zap, ShieldCheck } from 'lucide-react';
 import { cn } from '@/lib/utils/cn';
 
@@ -51,6 +52,7 @@ export default async function TecnologiaPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  setRequestLocale(locale as Locale);
   const t = await (getTranslations as any)('process');
   const tTech = await (getTranslations as any)('technologyPage');
 
@@ -283,7 +285,7 @@ export default async function TecnologiaPage({
                           className="object-cover transition-transform duration-700 group-hover:scale-110"
                           sizes="(max-width: 768px) 100vw, 50vw"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-deep-teal/90 via-deep-teal/20 to-transparent" />
+                        <div className="absolute inset-0 bg-linear-to-t from-deep-teal/90 via-deep-teal/20 to-transparent" />
                         <div className="absolute bottom-6 left-6 right-6">
                           <h3 className="text-2xl font-serif font-bold text-white mb-1 group-hover:text-copper transition-colors duration-300">
                             {section.title}
@@ -333,12 +335,12 @@ export default async function TecnologiaPage({
                     className="flex flex-col md:flex-row items-center md:items-start gap-8 bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-white relative overflow-hidden group hover:shadow-2xl transition-all duration-500"
                   >
                     {/* Step Number Background Decor */}
-                    <div className="absolute -right-4 -bottom-4 text-9xl font-serif font-bold text-gray-50 group-hover:text-gray-100 transition-colors duration-500 select-none -z-0">
+                    <div className="absolute -right-4 -bottom-4 text-9xl font-serif font-bold text-gray-50 group-hover:text-gray-100 transition-colors duration-500 select-none z-0">
                       {item.step}
                     </div>
 
                     <div className={cn(
-                      "flex-shrink-0 w-20 h-20 rounded-2xl flex items-center justify-center transition-transform duration-500 group-hover:scale-110 relative z-10 shadow-sm",
+                      "shrink-0 w-20 h-20 rounded-2xl flex items-center justify-center transition-transform duration-500 group-hover:scale-110 relative z-10 shadow-xs",
                       item.bgColor
                     )}>
                       <Icon className={cn("w-10 h-10", item.color)} />

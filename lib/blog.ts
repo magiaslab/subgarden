@@ -40,22 +40,20 @@ export function getPosts(): PostMeta[] {
 }
 
 export function getPostBySlug(slug: string): Post | null {
-  const possibleFiles = [path.join(BLOG_DIR, `${slug}.md`)];
-  for (const fullPath of possibleFiles) {
-    if (fs.existsSync(fullPath)) {
-      const raw = fs.readFileSync(fullPath, 'utf-8');
-      const { data, content } = matter(raw);
-      return {
-        slug,
-        title: (data.title as string) || slug,
-        description: (data.description as string) || '',
-        date: (data.date as string) || '',
-        image: (data.image as string) || undefined,
-        content,
-      };
-    }
-  }
-  return null;
+  // percorso diretto (senza array + ciclo): così Turbopack traccia solo
+  // content/blog e non tutto il progetto (public compreso) nella funzione server
+  const fullPath = path.join(BLOG_DIR, `${slug}.md`);
+  if (!fs.existsSync(fullPath)) return null;
+  const raw = fs.readFileSync(fullPath, 'utf-8');
+  const { data, content } = matter(raw);
+  return {
+    slug,
+    title: (data.title as string) || slug,
+    description: (data.description as string) || '',
+    date: (data.date as string) || '',
+    image: (data.image as string) || undefined,
+    content,
+  };
 }
 
 export function getAllSlugs(): string[] {

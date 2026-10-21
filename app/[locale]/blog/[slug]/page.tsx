@@ -1,3 +1,5 @@
+import type { Locale } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Navbar } from '@/components/navigation/Navbar';
@@ -47,7 +49,8 @@ export default async function BlogPostPage({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { locale, slug } = await params;
+  setRequestLocale(locale as Locale);
   const post = getPostBySlug(slug);
   if (!post) notFound();
 

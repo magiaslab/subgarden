@@ -1,10 +1,11 @@
+import type { Locale } from 'next-intl';
 import { Metadata } from 'next';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
 import { ContactForm } from '@/components/sections/ContactForm';
 import { Card, CardContent } from '@/components/ui/Card';
 import { MotionDiv } from '@/components/ui/Motion';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/lib/i18n/routing';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import Image from 'next/image';
@@ -43,6 +44,7 @@ export default async function ContactPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  setRequestLocale(locale as Locale);
   const t = await (getTranslations as any)('contact');
 
   const contactInfo = [
@@ -119,7 +121,7 @@ export default async function ContactPage({
                   >
                     <Card className="border-white shadow-lg hover:shadow-2xl transition-all duration-300">
                       <CardContent className="p-6 flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-2xl bg-deep-teal/5 flex items-center justify-center flex-shrink-0">
+                        <div className="w-12 h-12 rounded-2xl bg-deep-teal/5 flex items-center justify-center shrink-0">
                           <info.icon className="w-6 h-6 text-copper" />
                         </div>
                         <div>

@@ -38,7 +38,7 @@ export function BenefitsSection() {
             <div className="h-full rounded-3xl bg-white p-8 md:p-10 shadow-xl border border-gray-100 overflow-hidden">
               <div className="absolute top-0 right-0 w-48 h-48 bg-deep-teal/5 rounded-full -mr-24 -mt-24 blur-3xl" />
               <div className="relative flex items-start gap-4 mb-6">
-                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-deep-teal/10 flex items-center justify-center text-deep-teal">
+                <div className="shrink-0 w-14 h-14 rounded-2xl bg-deep-teal/10 flex items-center justify-center text-deep-teal">
                   <Droplets className="w-7 h-7" />
                 </div>
                 <div>
@@ -53,7 +53,7 @@ export function BenefitsSection() {
               <ul className="space-y-4">
                 {['water_1', 'water_2', 'water_3'].map((key) => (
                   <li key={key} className="flex items-start gap-3">
-                    <Leaf className="w-5 h-5 text-deep-teal flex-shrink-0 mt-0.5" />
+                    <Leaf className="w-5 h-5 text-deep-teal shrink-0 mt-0.5" />
                     <span className="text-gray-700">{t(key)}</span>
                   </li>
                 ))}
@@ -79,7 +79,7 @@ export function BenefitsSection() {
             <div className="h-full rounded-3xl bg-white p-8 md:p-10 shadow-xl border border-gray-100 overflow-hidden">
               <div className="absolute bottom-0 left-0 w-48 h-48 bg-copper/10 rounded-full -ml-24 -mb-24 blur-3xl" />
               <div className="relative flex items-start gap-4 mb-6">
-                <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-copper/10 flex items-center justify-center text-copper">
+                <div className="shrink-0 w-14 h-14 rounded-2xl bg-copper/10 flex items-center justify-center text-copper">
                   <Wrench className="w-7 h-7" />
                 </div>
                 <div>
@@ -94,7 +94,7 @@ export function BenefitsSection() {
               <ul className="space-y-4">
                 {['install_1', 'install_2', 'install_3'].map((key) => (
                   <li key={key} className="flex items-start gap-3">
-                    <Zap className="w-5 h-5 text-copper flex-shrink-0 mt-0.5" />
+                    <Zap className="w-5 h-5 text-copper shrink-0 mt-0.5" />
                     <span className="text-gray-700">{t(key)}</span>
                   </li>
                 ))}

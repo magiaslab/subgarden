@@ -1,5 +1,6 @@
+import type { Locale } from 'next-intl';
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
@@ -502,6 +503,7 @@ export default async function SoluzionePage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale, slug } = await params;
+  setRequestLocale(locale as Locale);
   const solution = (solutions as any)[slug];
 
   if (!solution) {
@@ -611,7 +613,7 @@ export default async function SoluzionePage({
                       <Card className="h-full border-white/80 shadow-xl hover:shadow-2xl hover:border-copper/30 transition-all duration-300 overflow-hidden rounded-3xl p-8 md:p-10">
                         <div className="absolute top-0 right-0 w-40 h-40 bg-deep-teal/5 rounded-full -mr-20 -mt-20 blur-2xl pointer-events-none" />
                         <CardHeader className="relative flex flex-row items-start gap-4 mb-2">
-                          <div className={`flex-shrink-0 w-12 h-12 rounded-2xl flex items-center justify-center ${accent}`}>
+                          <div className={`shrink-0 w-12 h-12 rounded-2xl flex items-center justify-center ${accent}`}>
                             <Icon className="w-6 h-6" />
                           </div>
                           <CardTitle className="text-xl md:text-2xl font-serif font-bold text-deep-teal mt-0">

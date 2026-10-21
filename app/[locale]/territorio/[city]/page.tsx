@@ -1,3 +1,5 @@
+import type { Locale } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Navbar } from '@/components/navigation/Navbar';
@@ -223,6 +225,7 @@ export default async function TerritorioPage({
   params: Promise<{ locale: string; city: string }>;
 }) {
   const { locale, city } = await params;
+  setRequestLocale(locale as Locale);
   const cityData = (cities as any)[city];
 
   if (!cityData) {
@@ -312,7 +315,7 @@ export default async function TerritorioPage({
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Card className="mb-16 bg-white/50 backdrop-blur-sm border-white">
+              <Card className="mb-16 bg-white/50 backdrop-blur-xs border-white">
                 <CardHeader>
                   <CardTitle className="text-3xl font-serif font-bold text-deep-teal">
                     Contesto Locale e Normative

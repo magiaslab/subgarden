@@ -30,7 +30,7 @@ export function VillaMussioGallery({ caption }: GalleryCaptionProps) {
           <button
             key={img.src}
             type="button"
-            className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg group text-left focus:outline-none focus:ring-2 focus:ring-copper focus:ring-offset-2"
+            className="relative aspect-4/3 rounded-xl overflow-hidden shadow-lg group text-left focus:outline-hidden focus:ring-2 focus:ring-copper focus:ring-offset-2"
             onClick={() => setLightbox({ src: img.src, alt: img.alt })}
             aria-label={img.alt}
           >

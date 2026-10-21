@@ -36,13 +36,13 @@ export function ImageLightbox({ isOpen, onClose, src, alt }: ImageLightboxProps)
 
   return (
     <div
-      className="fixed inset-0 z-[200] flex flex-col items-center justify-center bg-black/95 p-4"
+      className="fixed inset-0 z-200 flex flex-col items-center justify-center bg-black/95 p-4"
       onClick={handleClose}
       role="dialog"
       aria-modal="true"
       aria-label="Ingrandisci immagine"
     >
-      <div className="absolute top-4 left-1/2 flex -translate-x-1/2 gap-2 rounded-xl bg-white/10 px-3 py-2 backdrop-blur-sm">
+      <div className="absolute top-4 left-1/2 flex -translate-x-1/2 gap-2 rounded-xl bg-white/10 px-3 py-2 backdrop-blur-xs">
         <button
           type="button"
           onClick={(e) => { e.stopPropagation(); setScale((s) => Math.max(0.5, s - 0.25)); }}
@@ -51,7 +51,7 @@ export function ImageLightbox({ isOpen, onClose, src, alt }: ImageLightboxProps)
         >
           <ZoomOut className="h-5 w-5" />
         </button>
-        <span className="min-w-[4rem] text-center text-sm text-white">
+        <span className="min-w-16 text-center text-sm text-white">
           {Math.round(scale * 100)}%
         </span>
         <button

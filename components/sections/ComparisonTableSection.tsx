@@ -54,13 +54,13 @@ export function ComparisonTableSection() {
                   </td>
                   <td className="p-4 text-gray-500 text-sm align-top">
                     <span className="inline-flex items-center gap-2">
-                      <X className="w-4 h-4 text-red-400 flex-shrink-0" />
+                      <X className="w-4 h-4 text-red-400 shrink-0" />
                       {t(`rain_${row.key}`)}
                     </span>
                   </td>
                   <td className="p-4 text-deep-teal text-sm align-top">
                     <span className="inline-flex items-center gap-2">
-                      <Check className="w-5 h-5 text-deep-teal flex-shrink-0" />
+                      <Check className="w-5 h-5 text-deep-teal shrink-0" />
                       {t(`subgarden_${row.key}`)}
                     </span>
                   </td>

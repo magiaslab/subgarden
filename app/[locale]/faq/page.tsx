@@ -1,5 +1,6 @@
+import type { Locale } from 'next-intl';
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
 import { MotionDiv } from '@/components/ui/Motion';
@@ -12,7 +13,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await (getTranslations as any)('faq');
+  const t = await (getTranslations as any)({ locale, namespace: 'faq' });
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
 
   return {
@@ -35,6 +36,7 @@ export default async function FAQPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  setRequestLocale(locale as Locale);
   const t = await (getTranslations as any)('faq');
 
   const items = [
@@ -80,10 +82,10 @@ export default async function FAQPage({
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                 >
-                  <details className="group rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden">
+                  <details className="group rounded-2xl bg-white border border-gray-100 shadow-xs overflow-hidden">
                     <summary className="flex items-center justify-between gap-4 list-none cursor-pointer px-6 py-5 font-serif font-semibold text-deep-teal text-lg hover:bg-gray-50/80 transition-colors">
                       <span className="pr-4">{t(`${key}_q`)}</span>
-                      <span className="flex-shrink-0 w-8 h-8 rounded-full bg-deep-teal/10 flex items-center justify-center text-deep-teal group-open:rotate-180 transition-transform">
+                      <span className="shrink-0 w-8 h-8 rounded-full bg-deep-teal/10 flex items-center justify-center text-deep-teal group-open:rotate-180 transition-transform">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>

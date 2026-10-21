@@ -88,7 +88,7 @@ export function ComparisonSlider() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-white px-4">
                   <h3 className="text-3xl md:text-5xl font-serif font-bold mb-4 uppercase tracking-tighter">Subirrigazione SUBGarden</h3>
-                  <p className="text-lg md:text-xl font-bold tracking-wide text-green-50 shadow-sm">Superficie sempre asciutta, comfort totale, 70% risparmio idrico</p>
+                  <p className="text-lg md:text-xl font-bold tracking-wide text-green-50 shadow-xs">Superficie sempre asciutta, comfort totale, 70% risparmio idrico</p>
                 </div>
               </div>
             </div>
@@ -100,8 +100,8 @@ export function ComparisonSlider() {
             >
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center">
                 <div className="flex gap-1">
-                  <div className="w-1 h-4 bg-gray-400 rounded" />
-                  <div className="w-1 h-4 bg-gray-400 rounded" />
+                  <div className="w-1 h-4 bg-gray-400 rounded-sm" />
+                  <div className="w-1 h-4 bg-gray-400 rounded-sm" />
                 </div>
               </div>
             </div>
@@ -137,13 +137,13 @@ export function ComparisonSlider() {
                   <td className="p-3 text-gray-700 font-medium">{tComp(`${row.key}_label`)}</td>
                   <td className="p-3 text-gray-500">
                     <span className="inline-flex items-center gap-1.5">
-                      <X className="w-3.5 h-3.5 text-red-400 flex-shrink-0" />
+                      <X className="w-3.5 h-3.5 text-red-400 shrink-0" />
                       {tComp(`rain_${row.key}`)}
                     </span>
                   </td>
                   <td className="p-3 text-deep-teal">
                     <span className="inline-flex items-center gap-1.5">
-                      <Check className="w-4 h-4 text-deep-teal flex-shrink-0" />
+                      <Check className="w-4 h-4 text-deep-teal shrink-0" />
                       {tComp(`subgarden_${row.key}`)}
                     </span>
                   </td>

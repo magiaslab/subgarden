@@ -1,5 +1,6 @@
+import type { Locale } from 'next-intl';
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
 import { ContactCTA } from '@/components/sections/ContactCTA';
@@ -47,6 +48,7 @@ export default async function PortfolioPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  setRequestLocale(locale as Locale);
   const t = await (getTranslations as any)('portfolio');
 
   return (

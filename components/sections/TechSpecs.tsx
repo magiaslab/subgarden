@@ -85,7 +85,7 @@ export function TechSpecs() {
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-deep-teal/90 via-deep-teal/20 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-deep-teal/90 via-deep-teal/20 to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">
                     <h3 className="text-2xl font-serif font-bold text-white mb-1 group-hover:text-copper transition-colors duration-300">
                       {spec.category}
@@ -97,7 +97,7 @@ export function TechSpecs() {
                   <ul className="space-y-4">
                     {spec.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start gap-4 group/item">
-                        <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-copper/10 flex items-center justify-center group-hover/item:bg-copper transition-colors duration-300">
+                        <div className="mt-1 shrink-0 w-5 h-5 rounded-full bg-copper/10 flex items-center justify-center group-hover/item:bg-copper transition-colors duration-300">
                           <CheckCircle2 className="w-3 h-3 text-copper group-hover/item:text-white transition-colors duration-300" />
                         </div>
                         <span className="text-gray-700 leading-relaxed font-medium group-hover/item:text-deep-teal transition-colors duration-300">

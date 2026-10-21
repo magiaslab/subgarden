@@ -95,7 +95,7 @@ export function AboutUs() {
               <div className="pt-4">
                 <Link 
                   href="/chi-siamo"
-                  className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 border-2 border-deep-teal text-deep-teal hover:bg-deep-teal hover:text-white px-8 py-4 text-lg shadow-sm hover:shadow-md"
+                  className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-hidden focus:ring-2 focus:ring-offset-2 border-2 border-deep-teal text-deep-teal hover:bg-deep-teal hover:text-white px-8 py-4 text-lg shadow-xs hover:shadow-md"
                 >
                   {t('discover_more')}
                   <ArrowRight className="ml-2 w-5 h-5" />

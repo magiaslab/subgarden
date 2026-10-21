@@ -47,7 +47,7 @@ export const CookieBanner = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-          className="fixed bottom-0 left-0 right-0 z-[100] p-4 md:p-6"
+          className="fixed bottom-0 left-0 right-0 z-100 p-4 md:p-6"
         >
           <div className="mx-auto max-w-7xl">
             <div className="relative overflow-hidden rounded-3xl bg-white p-6 shadow-[0_-20px_50px_rgba(0,0,0,0.1)] border border-gray-100 md:p-8">
@@ -57,7 +57,7 @@ export const CookieBanner = () => {
 
               <div className="relative flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
                 <div className="flex flex-1 gap-4">
-                  <div className="hidden h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl bg-deep-teal/10 text-deep-teal md:flex">
+                  <div className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-deep-teal/10 text-deep-teal md:flex">
                     <ShieldCheck className="h-6 w-6" />
                   </div>
                   <div className="space-y-2">

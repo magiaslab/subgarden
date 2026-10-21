@@ -1,3 +1,5 @@
+import type { Locale } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
 import { Metadata } from 'next';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
@@ -20,6 +22,7 @@ export default async function SoluzioniIndexPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  setRequestLocale(locale as Locale);
 
   return (
     <>
@@ -74,7 +77,7 @@ export default async function SoluzioniIndexPage({
                       />
                       
                       {/* Gradient Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent group-hover:from-deep-teal/90 transition-colors duration-500" />
+                      <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent group-hover:from-deep-teal/90 transition-colors duration-500" />
 
                       {/* Content Overlay */}
                       <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">

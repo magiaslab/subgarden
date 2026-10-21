@@ -69,7 +69,7 @@ export function InfographicSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               onClick={() => openLightbox(img.src, img.altKey)}
-              className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-8 border-[#F2F4F7] bg-[#F2F4F7] text-left hover:shadow-deep-teal/20 hover:border-deep-teal/30 transition-all duration-300 group focus:outline-none focus:ring-4 focus:ring-deep-teal/30"
+              className="relative w-full aspect-4/3 rounded-3xl overflow-hidden shadow-2xl border-8 border-[#F2F4F7] bg-[#F2F4F7] text-left hover:shadow-deep-teal/20 hover:border-deep-teal/30 transition-all duration-300 group focus:outline-hidden focus:ring-4 focus:ring-deep-teal/30"
             >
               <Image
                 src={img.src}

@@ -47,7 +47,7 @@ export function ContactCTA() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link 
                 href="/contatti"
-                className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-copper text-white hover:bg-copper/90 px-8 py-4 text-lg shadow-md hover:shadow-lg min-w-[240px] group"
+                className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-hidden focus:ring-2 focus:ring-offset-2 bg-copper text-white hover:bg-copper/90 px-8 py-4 text-lg shadow-md hover:shadow-lg min-w-[240px] group"
               >
                 {t('button')}
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

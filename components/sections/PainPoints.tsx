@@ -74,7 +74,7 @@ export function PainPoints() {
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-deep-teal/80 via-transparent to-transparent opacity-60" />
+                    <div className="absolute inset-0 bg-linear-to-t from-deep-teal/80 via-transparent to-transparent opacity-60" />
                     <div className={`absolute top-6 right-6 w-12 h-12 rounded-2xl bg-white shadow-lg flex items-center justify-center ${point.color} transform -rotate-3 group-hover:rotate-0 transition-transform duration-500`}>
                       <Icon className="w-6 h-6" />
                     </div>

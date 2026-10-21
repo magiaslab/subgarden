@@ -1,10 +1,11 @@
+import type { Locale } from 'next-intl';
 import { Metadata } from 'next';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
 import { MotionDiv } from '@/components/ui/Motion';
 import { VillaMussioGallery } from '@/components/sections/VillaMussioGallery';
 import Image from 'next/image';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 export async function generateMetadata({
   params,
@@ -39,6 +40,7 @@ export default async function AboutPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  setRequestLocale(locale as Locale);
   const t = await (getTranslations as any)('aboutPage');
 
   return (

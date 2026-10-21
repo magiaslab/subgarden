@@ -1,3 +1,5 @@
+import type { Locale } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
 import { Metadata } from 'next';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
@@ -29,7 +31,13 @@ export async function generateMetadata({
   };
 }
 
-export default async function BlogPage() {
+export default async function BlogPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale as Locale);
   const posts = getPosts();
 
   return (
@@ -77,9 +85,9 @@ export default async function BlogPage() {
                     <li className="h-full">
                       <Link
                         href={`/blog/${post.slug}` as any}
-                        className="block h-full rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-xl hover:border-copper/20 transition-all duration-300 overflow-hidden text-left group"
+                        className="block h-full rounded-2xl bg-white border border-gray-100 shadow-xs hover:shadow-xl hover:border-copper/20 transition-all duration-300 overflow-hidden text-left group"
                       >
-                        <div className="relative w-full aspect-[16/10] bg-gray-100 overflow-hidden">
+                        <div className="relative w-full aspect-16/10 bg-gray-100 overflow-hidden">
                           <Image
                             src={post.image || '/stunning-spring-collage.jpg'}
                             alt=""
@@ -90,7 +98,7 @@ export default async function BlogPage() {
                         </div>
                         <div className="p-6 md:p-8">
                           <div className="flex items-center gap-3 text-sm text-gray-500 mb-2">
-                            <Calendar className="w-4 h-4 text-copper flex-shrink-0" />
+                            <Calendar className="w-4 h-4 text-copper shrink-0" />
                             <time dateTime={post.date}>
                               {new Date(post.date).toLocaleDateString('it-IT', {
                                 day: 'numeric',
