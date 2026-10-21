@@ -9,6 +9,7 @@ import { MotionDiv } from '@/components/ui/Motion';
 import { ContactCTA } from '@/components/sections/ContactCTA';
 import Image from 'next/image';
 import { ArrowRight, MapPin } from 'lucide-react';
+import { alternates, pick } from '@/lib/utils/metadata';
 
 const cities = [
   {
@@ -55,10 +56,29 @@ const cities = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: 'SUBGarden in Toscana | Territorio',
-  description: 'Scopri dove operiamo in Toscana: Isola d\'Elba, Maremma, Livorno e altre località.',
+const TITLE: Record<string, string> = {
+  it: 'Dove lavoriamo in Toscana: Elba, Maremma, Livorno',
+  en: 'Where we work in Tuscany: Elba, Maremma, Livorno',
+  de: 'Wo wir in der Toskana arbeiten: Elba, Maremma, Livorno',
 };
+const DESCRIPTION: Record<string, string> = {
+  it: 'Subirrigazione sulla costa toscana: Isola d’Elba, Maremma, Livorno e San Vincenzo, dove l’estate è lunga e l’acqua va risparmiata.',
+  en: 'Subsurface irrigation on the Tuscan coast: Elba, Maremma, Livorno and San Vincenzo, where summers are long and water must be saved.',
+  de: 'Unterflurbewässerung an der toskanischen Küste: Elba, Maremma, Livorno und San Vincenzo, wo die Sommer lang sind und Wasser gespart werden muss.',
+};
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = (await params) as { locale: Locale };
+  return {
+    title: pick(TITLE, locale),
+    description: pick(DESCRIPTION, locale),
+    alternates: alternates('/territorio', locale),
+  };
+}
 
 export default async function TerritorioIndexPage({
   params,

@@ -38,6 +38,9 @@ export function HeroSection() {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 leading-tight tracking-tight"
         >
+          <span className="block font-sans font-medium text-lg md:text-2xl tracking-wide mb-4">
+            {t('kicker')}
+          </span>
           {t('title')}
         </motion.h1>
 

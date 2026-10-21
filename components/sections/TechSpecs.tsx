@@ -17,7 +17,7 @@ const specifications = [
     image: '/installazione%20brevettata.jpg',
   },
   {
-    category: 'Tecnologia Rain Bird XSF®',
+    category: 'Tecnologia Rain Bird XFS®',
     items: [
       'Ala gocciolante auto-compensante da 0.4 a 3.6 atm',
       'Sistema brevettato auto-pulente ad ogni ciclo',

@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { useLocale, useTranslations, type Locale } from 'next-intl';
+import { useParams } from 'next/navigation';
 import { usePathname, useRouter } from '@/lib/i18n/routing';
 import { Globe } from 'lucide-react';
 import { cn } from '@/lib/utils/cn';
@@ -16,6 +17,7 @@ export function LanguageSwitcher({ isTransparent }: { isTransparent?: boolean })
   const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
+  const params = useParams();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -36,7 +38,9 @@ export function LanguageSwitcher({ isTransparent }: { isTransparent?: boolean })
   const currentLocale = locales.find((l) => l.code === locale);
 
   const handleLocaleChange = (newLocale: Locale) => {
-    router.replace(pathname as any, { locale: newLocale });
+    // Con i params lo slug resta lo stesso e cambia solo il segmento tradotto
+    // (/it/soluzioni/x → /en/solutions/x); senza, le pagine con slug si rompono.
+    router.replace({ pathname, params } as any, { locale: newLocale });
     setIsOpen(false);
   };
 

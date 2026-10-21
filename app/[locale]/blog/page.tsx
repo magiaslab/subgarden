@@ -7,27 +7,41 @@ import { MotionDiv } from '@/components/ui/Motion';
 import Image from 'next/image';
 import { Link } from '@/lib/i18n/routing';
 import { getPosts } from '@/lib/blog';
+import { alternates, pick } from '@/lib/utils/metadata';
 import { Calendar } from 'lucide-react';
+
+const TEXT: Record<string, { title: string; description: string; lead: string; empty: string }> = {
+  it: {
+    title: 'Blog: subirrigazione, acqua e giardini',
+    description: 'Come funziona la subirrigazione, quanta acqua si risparmia e come si cura un prato in Toscana: articoli di SUBGarden.',
+    lead: 'Subirrigazione, risparmio idrico e cura del giardino',
+    empty: 'Nessun articolo al momento.',
+  },
+  en: {
+    title: 'Blog: subsurface irrigation, water and gardens',
+    description: 'How subsurface irrigation works, how much water it saves and how to care for a lawn in Tuscany: articles by SUBGarden (in Italian).',
+    lead: 'Subsurface irrigation, water saving and garden care. Articles are in Italian.',
+    empty: 'No articles yet.',
+  },
+  de: {
+    title: 'Blog: Unterflurbewässerung, Wasser und Gärten',
+    description: 'Wie Unterflurbewässerung funktioniert, wie viel Wasser sie spart und wie man in der Toskana einen Rasen pflegt: Artikel von SUBGarden (auf Italienisch).',
+    lead: 'Unterflurbewässerung, Wassersparen und Gartenpflege. Die Artikel sind auf Italienisch.',
+    empty: 'Noch keine Artikel.',
+  },
+};
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const { locale } = await params;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
-
+  const { locale } = (await params) as { locale: Locale };
+  const t = pick(TEXT, locale);
   return {
-    title: 'Blog | SUBGarden',
-    description: 'Articoli su subirrigazione, risparmio idrico e giardini. Guide e consigli per un giardino perfetto.',
-    alternates: {
-      canonical: `${siteUrl}/${locale}/blog`,
-      languages: {
-        it: `${siteUrl}/it/blog`,
-        en: `${siteUrl}/en/blog`,
-        de: `${siteUrl}/de/blog`,
-      },
-    },
+    title: t.title,
+    description: t.description,
+    alternates: alternates('/blog', locale),
   };
 }
 
@@ -38,7 +52,8 @@ export default async function BlogPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale as Locale);
-  const posts = getPosts();
+  const posts = getPosts(locale);
+  const t = pick(TEXT, locale);
 
   return (
     <>
@@ -63,7 +78,7 @@ export default async function BlogPage({
                 Blog
               </h1>
               <p className="text-lg md:text-xl text-white/90 font-light italic max-w-2xl mx-auto">
-                Subirrigazione, risparmio idrico e cura del giardino
+                {t.lead}
               </p>
             </MotionDiv>
           </div>
@@ -72,7 +87,7 @@ export default async function BlogPage({
         <div className="py-16 md:py-24 bg-[#F2F4F7]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {posts.length === 0 ? (
-              <p className="text-center text-gray-600">Nessun articolo al momento.</p>
+              <p className="text-center text-gray-600">{t.empty}</p>
             ) : (
               <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {posts.map((post, index) => (
@@ -82,7 +97,7 @@ export default async function BlogPage({
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.06 }}
                   >
-                    <li className="h-full">
+                    <li className="h-full" lang={post.lang}>
                       <Link
                         href={`/blog/${post.slug}` as any}
                         className="block h-full rounded-2xl bg-white border border-gray-100 shadow-xs hover:shadow-xl hover:border-copper/20 transition-all duration-300 overflow-hidden text-left group"
@@ -100,7 +115,7 @@ export default async function BlogPage({
                           <div className="flex items-center gap-3 text-sm text-gray-500 mb-2">
                             <Calendar className="w-4 h-4 text-copper shrink-0" />
                             <time dateTime={post.date}>
-                              {new Date(post.date).toLocaleDateString('it-IT', {
+                              {new Date(post.date).toLocaleDateString(post.lang, {
                                 day: 'numeric',
                                 month: 'long',
                                 year: 'numeric',

@@ -35,9 +35,9 @@
     "water_title": "Water savings and efficiency",
     "water_lead": "Water goes only where it's needed, deep down. No evaporation, no runoff: up to 60-70% savings compared to sprinkler irrigation.",
     "water_1": "Distribution by capillarity in the soil: even and slow, for the benefit of the roots.",
-    "water_2": "Low pressure and low flow (1.6 l/min per emitter): no heavy pumping, maximum efficiency.",
+    "water_2": "Low pressure and low flow (1.6 l/h per emitter): no heavy pumping, maximum efficiency.",
     "water_3": "Fertigation possible without contact with chemical synthesis products on the surface.",
-    "water_4": "Distribution uniformity >90%: no dry or stagnant areas (Rain Bird XSF drip line, Copper Shield™).",
+    "water_4": "Distribution uniformity >90%: no dry or stagnant areas (Rain Bird XFS drip line, Copper Shield™).",
     "install_title": "Simple, non-invasive installation",
     "install_lead": "Our patented system installs in existing gardens without tearing up the lawn: fast, clean intervention that respects existing greenery.",
     "install_1": "Patented installation: no invasive digging, the turf stays intact.",
@@ -140,6 +140,7 @@
     }
   },
   "hero": {
+    "kicker": "Subsurface irrigation for existing gardens",
     "cta": "Discover the Solution",
     "description": "Innovative underground irrigation system for a perfect garden all year round, with up to 70% water saving and minimal maintenance. Especially suited to existing gardens: installation does not damage the lawn.",
     "subtitle": "Innovative underground irrigation system for a perfect garden all year round, with up to 70% water saving and minimal maintenance. Especially suited to existing gardens: installation does not damage the lawn.",
@@ -254,7 +255,7 @@
     "aria_label": "Chat on WhatsApp"
   },
   "faq": {
-    "meta_title": "Frequently asked questions about sub-irrigation | SUBGarden",
+    "meta_title": "Frequently asked questions about sub-irrigation",
     "meta_description": "Answers on sub-irrigation, existing gardens, water saving, non-invasive installation and costs. SUBGarden in Tuscany and Italy.",
     "title": "Frequently asked questions",
     "subtitle": "Everything you need to know about sub-irrigation and the SUBGarden system.",

@@ -10,11 +10,31 @@ import { ContactCTA } from '@/components/sections/ContactCTA';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { solutions } from '@/lib/solutions';
+import { alternates, pick } from '@/lib/utils/metadata';
 
-export const metadata: Metadata = {
-  title: 'Soluzioni di Subirrigazione | SUBGarden',
-  description: 'Scopri tutte le soluzioni SUBGarden per l\'irrigazione di giardini residenziali, parchi e campi sportivi.',
+const TITLE: Record<string, string> = {
+  it: 'Subirrigazione per giardini, parchi, campi sportivi e hotel',
+  en: 'Subsurface irrigation for gardens, parks, sports fields and hotels',
+  de: 'Unterflurbewässerung für Gärten, Parks, Sportplätze und Hotels',
 };
+const DESCRIPTION: Record<string, string> = {
+  it: 'Giardini privati, parchi pubblici, campi sportivi e strutture turistiche: come cambia la subirrigazione SUBGarden in ciascun caso e quanto si risparmia.',
+  en: 'Private gardens, public parks, sports fields and hospitality: how SUBGarden subsurface irrigation adapts to each case and how much it saves.',
+  de: 'Privatgärten, öffentliche Parks, Sportplätze und Hotels: Wie sich die SUBGarden Unterflurbewässerung jeweils anpasst und wie viel sie spart.',
+};
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = (await params) as { locale: Locale };
+  return {
+    title: pick(TITLE, locale),
+    description: pick(DESCRIPTION, locale),
+    alternates: alternates('/soluzioni', locale),
+  };
+}
 
 export default async function SoluzioniIndexPage({
   params,

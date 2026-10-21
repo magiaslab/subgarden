@@ -7,7 +7,9 @@ import { Footer } from '@/components/navigation/Footer';
 import { MotionDiv } from '@/components/ui/Motion';
 import Image from 'next/image';
 import { Link } from '@/lib/i18n/routing';
-import { getPostBySlug, getAllSlugs } from '@/lib/blog';
+import { getPostBySlug, getAllSlugs, getPostLocales } from '@/lib/blog';
+import { routing } from '@/lib/i18n/routing';
+import { SITE_URL, absoluteUrl, alternates, NOINDEX } from '@/lib/utils/metadata';
 import { ContactCTA } from '@/components/sections/ContactCTA';
 import ReactMarkdown from 'react-markdown';
 
@@ -21,25 +23,24 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { locale, slug } = await params;
-  const post = getPostBySlug(slug);
+  const { locale, slug } = (await params) as { locale: Locale; slug: string };
+  const post = getPostBySlug(slug, locale);
   if (!post) return {};
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
-
+  const href = { pathname: '/blog/[slug]' as const, params: { slug } };
+  const locales = getPostLocales(slug, routing.locales) as Locale[];
+  const translated = post.lang === locale;
   return {
-    title: `${post.title} | Blog SUBGarden`,
+    title: post.title,
     description: post.description,
-    alternates: {
-      canonical: `${siteUrl}/${locale}/blog/${slug}`,
-      languages: {
-        it: `${siteUrl}/it/blog/${slug}`,
-        en: `${siteUrl}/en/blog/${slug}`,
-        de: `${siteUrl}/de/blog/${slug}`,
-      },
-    },
+    // Senza traduzione la pagina è una copia dell'italiano: canonical e hreflang
+    // indicano solo le versioni vere, e questa non si indicizza.
+    alternates: alternates(href, translated ? locale : (post.lang as Locale), locales),
+    ...(!translated && { robots: NOINDEX }),
     openGraph: {
+      type: 'article',
       title: post.title,
       description: post.description,
+      publishedTime: post.date,
     },
   };
 }
@@ -51,13 +52,29 @@ export default async function BlogPostPage({
 }) {
   const { locale, slug } = await params;
   setRequestLocale(locale as Locale);
-  const post = getPostBySlug(slug);
+  const post = getPostBySlug(slug, locale);
   if (!post) notFound();
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    inLanguage: post.lang,
+    url: absoluteUrl({ pathname: '/blog/[slug]', params: { slug } }, post.lang as Locale),
+    author: { '@id': `${SITE_URL}/#organization` },
+    publisher: { '@id': `${SITE_URL}/#organization` },
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <Navbar />
-      <main className="pt-20">
+      <main className="pt-20" lang={post.lang}>
         <section className="relative h-[35vh] flex items-center justify-center overflow-hidden">
           <Image
             src="/stunning-spring-collage.jpg"
@@ -77,7 +94,7 @@ export default async function BlogPostPage({
                 dateTime={post.date}
                 className="block text-sm text-white/80 mb-2"
               >
-                {new Date(post.date).toLocaleDateString('it-IT', {
+                {new Date(post.date).toLocaleDateString(post.lang, {
                   day: 'numeric',
                   month: 'long',
                   year: 'numeric',

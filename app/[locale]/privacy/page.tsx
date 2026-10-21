@@ -1,9 +1,31 @@
 import type { Locale } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
+import type { Metadata } from 'next';
+import { alternates, pick, NOINDEX } from '@/lib/utils/metadata';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
 import { MotionDiv } from '@/components/ui/Motion';
 import Image from 'next/image';
+
+const TITLE: Record<string, string> = {
+  it: 'Privacy policy',
+  en: 'Privacy policy',
+  de: 'Datenschutzerklärung',
+};
+
+// Pagine legali: raggiungibili e seguite, ma fuori dall'indice e dalla sitemap.
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = (await params) as { locale: Locale };
+  return {
+    title: pick(TITLE, locale),
+    alternates: alternates('/privacy', locale),
+    robots: NOINDEX,
+  };
+}
 
 export default async function PrivacyPage({
   params,

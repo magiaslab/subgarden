@@ -6,31 +6,23 @@ import { MotionDiv } from '@/components/ui/Motion';
 import { VillaMussioGallery } from '@/components/sections/VillaMussioGallery';
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { alternates, pick } from '@/lib/utils/metadata';
+
+const TITLE: Record<string, string> = {
+  it: 'Chi siamo: la storia di Fausto Favilli',
+  en: 'About us: the story of Fausto Favilli',
+  de: 'Über uns: die Geschichte von Fausto Favilli',
+};
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const { locale } = await params;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
-
-  const titles: Record<string, string> = {
-    it: 'Chi Siamo - La Mia Storia e la Visione SUBGarden | Fausto Favilli',
-    en: 'About Us - My Story and the SUBGarden Vision | Fausto Favilli',
-    de: 'Über Uns - Meine Geschichte und die SUBGarden Vision | Fausto Favilli',
-  };
-
+  const { locale } = (await params) as { locale: Locale };
   return {
-    title: titles[locale] || titles.it,
-    alternates: {
-      canonical: `${siteUrl}/${locale}/chi-siamo`,
-      languages: {
-        it: `${siteUrl}/it/chi-siamo`,
-        en: `${siteUrl}/en/about-us`,
-        de: `${siteUrl}/de/ueber-uns`,
-      },
-    },
+    title: pick(TITLE, locale),
+    alternates: alternates('/chi-siamo', locale),
   };
 }
 

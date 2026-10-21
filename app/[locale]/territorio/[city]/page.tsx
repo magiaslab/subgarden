@@ -29,6 +29,7 @@ import {
   Headphones,
   CheckCircle2
 } from 'lucide-react';
+import { SITE_URL, absoluteUrl, alternates } from '@/lib/utils/metadata';
 
 // Dati statici per le città (in futuro verranno dal CMS)
 const cities = {
@@ -195,27 +196,17 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; city: string }>;
 }): Promise<Metadata> {
-  const { locale, city } = await params;
+  const { locale, city } = (await params) as { locale: Locale; city: string };
   const cityData = (cities as any)[city];
-
   if (!cityData) {
     return {};
   }
-
   const content = cityData[locale] || cityData.it;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
-
   return {
-    title: `${content.title} - SUBGarden`,
+    // Il titolo della pagina contiene già il marchio: nel <title> lo aggiunge il layout.
+    title: content.title.replace('SUBGarden ', ''),
     description: content.description,
-    alternates: {
-      canonical: `${siteUrl}/${locale}/territorio/${city}`,
-      languages: {
-        it: `${siteUrl}/it/territorio/${city}`,
-        en: `${siteUrl}/en/territory/${city}`,
-        de: `${siteUrl}/de/gebiet/${city}`,
-      },
-    },
+    alternates: alternates({ pathname: '/territorio/[city]', params: { city } }, locale),
   };
 }
 
@@ -235,32 +226,24 @@ export default async function TerritorioPage({
   const content = cityData[locale] || cityData.it;
   const image = cityData.image;
   const icons = cityData.icons;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
-
-  const localBusinessSchema = {
+  // Un servizio nella zona, fornito dall'impresa di San Vincenzo (nodo del layout):
+  // niente LocalBusiness con un indirizzo che non esiste.
+  const serviceSchema = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: `SUBGarden - ${content.name}`,
+    '@type': 'Service',
+    name: content.title,
     description: content.description,
-    url: `${siteUrl}/${locale}/territorio/${city}`,
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: content.name,
-      addressRegion: 'Toscana',
-      addressCountry: 'IT',
-    },
-    areaServed: {
-      '@type': 'City',
-      name: content.name,
-    },
-    serviceType: 'Sub-irrigation System Installation',
+    url: absoluteUrl({ pathname: '/territorio/[city]', params: { city } }, locale as Locale),
+    serviceType: 'Subirrigazione',
+    provider: { '@id': `${SITE_URL}/#organization` },
+    areaServed: { '@type': 'Place', name: content.name },
   };
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <Navbar />
       <main className="pt-20">

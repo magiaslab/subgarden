@@ -35,9 +35,9 @@
     "water_title": "Risparmio idrico ed efficienza",
     "water_lead": "L'acqua arriva solo dove serve, in profondità. Niente evaporazione, niente ruscellamento: fino al 60-70% di risparmio rispetto all'irrigazione a pioggia.",
     "water_1": "Distribuzione per capillarità nel terreno: uniforme e lenta, a beneficio delle radici.",
-    "water_2": "Bassa pressione e bassa portata (1,6 l/min per gocciolatore): niente pompaggi pesanti, massima efficienza.",
+    "water_2": "Bassa pressione e bassa portata (1,6 l/h per gocciolatore): niente pompaggi pesanti, massima efficienza.",
     "water_3": "Fertirrigazione possibile senza contatto con prodotti di sintesi chimica in superficie.",
-    "water_4": "Uniformità di distribuzione >90%: nessuna zona secca o ristagno (ala gocciolante Rain Bird XSF, Copper Shield™).",
+    "water_4": "Uniformità di distribuzione >90%: nessuna zona secca o ristagno (ala gocciolante Rain Bird XFS, Copper Shield™).",
     "install_title": "Montaggio semplice e non invasivo",
     "install_lead": "Il nostro sistema brevettato si installa in giardini già realizzati senza sventrare il prato: intervento rapido, pulito e rispettoso del verde esistente.",
     "install_1": "Installazione brevettata: nessuno scavo invasivo, il manto erboso resta intatto.",
@@ -165,6 +165,7 @@
     }
   },
   "hero": {
+    "kicker": "Subirrigazione per giardini esistenti",
     "cta": "Scopri la Soluzione",
     "description": "Sistema innovativo di irrigazione sotterranea che garantisce un giardino perfetto tutto l'anno, con risparmio idrico fino al 70% e manutenzione minima. Ideale per giardini già esistenti: l'installazione non danneggia il manto erboso.",
     "subtitle": "Sistema innovativo di irrigazione sotterranea che garantisce un giardino perfetto tutto l'anno, con risparmio idrico fino al 70% e manutenzione minima. Ideale per giardini già esistenti: l'installazione non danneggia il manto erboso.",
@@ -254,7 +255,7 @@
     "aria_label": "Chatta su WhatsApp"
   },
   "faq": {
-    "meta_title": "Domande frequenti sulla subirrigazione | SUBGarden",
+    "meta_title": "Domande frequenti sulla subirrigazione",
     "meta_description": "Risposte su subirrigazione, giardini esistenti, risparmio idrico, installazione non invasiva e costi. SUBGarden in Toscana e in Italia.",
     "title": "Domande frequenti",
     "subtitle": "Tutto quello che vuoi sapere sulla subirrigazione e sul sistema SUBGarden.",

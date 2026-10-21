@@ -11,38 +11,29 @@ import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Search, PencilRuler, FileText, Zap, ShieldCheck } from 'lucide-react';
 import { cn } from '@/lib/utils/cn';
+import { alternates, pick } from '@/lib/utils/metadata';
+
+const TITLE: Record<string, string> = {
+  it: 'Tecnologia Rain Bird XFS: come funziona la subirrigazione',
+  en: 'Rain Bird XFS technology: how subsurface irrigation works',
+  de: 'Rain Bird XFS Technik: So funktioniert Unterflurbewässerung',
+};
+const DESCRIPTION: Record<string, string> = {
+  it: 'Ala gocciolante Rain Bird XFS posata sotto il prato a griglia 300 × 330 mm: l’acqua va alle radici per capillarità, senza evaporazione e senza ruscellamento.',
+  en: 'Rain Bird XFS dripline laid under the lawn in a 300 × 330 mm grid: water reaches the roots by capillarity, with no evaporation and no runoff.',
+  de: 'Rain Bird XFS Tropfleitung im Raster 300 × 330 mm unter dem Rasen verlegt: Das Wasser erreicht die Wurzeln durch Kapillarwirkung, ohne Verdunstung und ohne Abfluss.',
+};
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const { locale } = await params;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
-
-  const titles: Record<string, string> = {
-    it: 'Tecnologia SUBGarden - Ingegneria Rain Bird® XSF',
-    en: 'SUBGarden Technology - Rain Bird® XSF Engineering',
-    de: 'SUBGarden Technologie - Rain Bird® XSF Technik',
-  };
-
-  const descriptions: Record<string, string> = {
-    it: 'Scopri l\'ingegneria avanzata Rain Bird® alla base di SUBGarden. Ala gocciolante XSF, schema a griglia 300x330mm e zero sprechi idrici.',
-    en: 'Discover the advanced Rain Bird® engineering behind SUBGarden. XSF drip line, 300x330mm grid pattern, and zero water waste.',
-    de: 'Entdecken Sie die fortschrittliche Rain Bird®-Technik hinter SUBGarden. XSF-Tropfleitung, 300x330mm Gittermuster und keine Wasserverschwendung.',
-  };
-
+  const { locale } = (await params) as { locale: Locale };
   return {
-    title: titles[locale] || titles.it,
-    description: descriptions[locale] || descriptions.it,
-    alternates: {
-      canonical: `${siteUrl}/${locale}/tecnologia`,
-      languages: {
-        it: `${siteUrl}/it/tecnologia`,
-        en: `${siteUrl}/en/tecnologia`,
-        de: `${siteUrl}/de/tecnologia`,
-      },
-    },
+    title: pick(TITLE, locale),
+    description: pick(DESCRIPTION, locale),
+    alternates: alternates('/tecnologia', locale),
   };
 }
 
@@ -68,9 +59,9 @@ export default async function TecnologiaPage({
           image: '/grassland-landscape-greening-environment-park-background.jpg',
         },
         {
-          title: 'Ala Gocciolante Rain Bird XSF®',
+          title: 'Ala Gocciolante Rain Bird XFS®',
           description:
-            'Il cuore di ogni impianto è l\'ala gocciolante Rain Bird XSF, l\'unica auto-compensante da 0.4 a 3.6 atm. Grazie alla bassa portata (1,6 l/h per gocciolatore), il sistema lavora a bassa pressione, eliminando la necessità di grandi e costosi sistemi di pompaggio o accumulo.',
+            'Il cuore di ogni impianto è l\'ala gocciolante Rain Bird XFS, l\'unica auto-compensante da 0.4 a 3.6 atm. Grazie alla bassa portata (1,6 l/h per gocciolatore), il sistema lavora a bassa pressione, eliminando la necessità di grandi e costosi sistemi di pompaggio o accumulo.',
           image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
         },
         {
@@ -98,9 +89,9 @@ export default async function TecnologiaPage({
           image: '/grassland-landscape-greening-environment-park-background.jpg',
         },
         {
-          title: 'Rain Bird XSF® Drip Line',
+          title: 'Rain Bird XFS® Drip Line',
           description:
-            'The heart of every system is the Rain Bird XSF drip line, the only one self-compensating from 0.4 to 3.6 atm. Thanks to the low flow (1.6 l/h per emitter), the system works at low pressure, eliminating the need for large pumping or storage systems.',
+            'The heart of every system is the Rain Bird XFS drip line, the only one self-compensating from 0.4 to 3.6 atm. Thanks to the low flow (1.6 l/h per emitter), the system works at low pressure, eliminating the need for large pumping or storage systems.',
           image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
         },
         {
@@ -128,9 +119,9 @@ export default async function TecnologiaPage({
           image: '/grassland-landscape-greening-environment-park-background.jpg',
         },
         {
-          title: 'Rain Bird XSF® Tropfleitung',
+          title: 'Rain Bird XFS® Tropfleitung',
           description:
-            'Das Herzstück jedes Systems ist die Rain Bird XSF Tropfleitung, die einzige selbstkompensierende von 0,4 bis 3,6 atm. Dank der geringen Durchflussmenge (1,6 l/h pro Tropfer) arbeitet das System mit niedrigem Druck, was große Pump- oder Speichersysteme überflüssig macht.',
+            'Das Herzstück jedes Systems ist die Rain Bird XFS Tropfleitung, die einzige selbstkompensierende von 0,4 bis 3,6 atm. Dank der geringen Durchflussmenge (1,6 l/h pro Tropfer) arbeitet das System mit niedrigem Druck, was große Pump- oder Speichersysteme überflüssig macht.',
           image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
         },
         {
@@ -193,7 +184,7 @@ export default async function TecnologiaPage({
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <Image
                   src="/Gemini_Generated_Image_reiwdqreiwdqreiw (3).png"
-                  alt="Storie di Acqua e di Terra: dal loto blu e le ollas antiche alle Ville Medicee e Rain Bird XSF®"
+                  alt="Storie di Acqua e di Terra: dal loto blu e le ollas antiche alle Ville Medicee e Rain Bird XFS®"
                   width={800}
                   height={600}
                   className="w-full h-auto object-contain"

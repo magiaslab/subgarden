@@ -7,38 +7,25 @@ import { ContactCTA } from '@/components/sections/ContactCTA';
 import { PortfolioGallery } from '@/components/sections/PortfolioGallery';
 import { MotionDiv } from '@/components/ui/Motion';
 import Image from 'next/image';
+import { alternates, pick, NOINDEX } from '@/lib/utils/metadata';
 
+const TITLE: Record<string, string> = {
+  it: 'I nostri lavori',
+  en: 'Our projects',
+  de: 'Unsere Projekte',
+};
+
+// Portfolio nascosto in attesa dei contenuti: fuori dalla sitemap e non indicizzato.
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const { locale } = await params;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
-
-  const titles: Record<string, string> = {
-    it: 'Portfolio - I Nostri Progetti SUBGarden',
-    en: 'Portfolio - Our SUBGarden Projects',
-    de: 'Portfolio - Unsere SUBGarden Projekte',
-  };
-
-  const descriptions: Record<string, string> = {
-    it: 'Esplora i lavori d\'eccellenza realizzati da SUBGarden: dalla subirrigazione per ville storiche a parchi pubblici e giardini residenziali di lusso.',
-    en: 'Explore the works of excellence carried out by SUBGarden: from sub-irrigation for historical villas to public parks and luxury residential gardens.',
-    de: 'Entdecken Sie die exzellenten Arbeiten von SUBGarden: von der Unterflurbewässerung für historische Villen bis hin zu öffentlichen Parks und luxuriösen Wohngärten.',
-  };
-
+  const { locale } = (await params) as { locale: Locale };
   return {
-    title: titles[locale] || titles.it,
-    description: descriptions[locale] || descriptions.it,
-    alternates: {
-      canonical: `${siteUrl}/${locale}/portfolio`,
-      languages: {
-        it: `${siteUrl}/it/portfolio`,
-        en: `${siteUrl}/en/portfolio`,
-        de: `${siteUrl}/de/portfolio`,
-      },
-    },
+    title: pick(TITLE, locale),
+    alternates: alternates('/portfolio', locale),
+    robots: NOINDEX,
   };
 }
 

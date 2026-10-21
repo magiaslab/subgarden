@@ -9,32 +9,29 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/lib/i18n/routing';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import Image from 'next/image';
+import { alternates, pick } from '@/lib/utils/metadata';
+
+const TITLE: Record<string, string> = {
+  it: 'Contatti e sopralluogo a San Vincenzo e in Toscana',
+  en: 'Contact and site visit in San Vincenzo and Tuscany',
+  de: 'Kontakt und Besichtigung in San Vincenzo und der Toskana',
+};
+const DESCRIPTION: Record<string, string> = {
+  it: 'Chiedi un sopralluogo gratuito per la subirrigazione del tuo giardino: veniamo a vedere il prato, l’acqua disponibile e ti diciamo se conviene. San Vincenzo e tutta la Toscana.',
+  en: 'Ask for a free site visit for your garden’s subsurface irrigation: we look at the lawn and the water supply and tell you whether it is worth it. San Vincenzo and all of Tuscany.',
+  de: 'Fordern Sie eine kostenlose Besichtigung für die Unterflurbewässerung Ihres Gartens an: Wir prüfen Rasen und Wasserversorgung und sagen Ihnen, ob es sich lohnt. San Vincenzo und die ganze Toskana.',
+};
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const { locale } = await params;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
-
-  const titles: Record<string, string> = {
-    it: 'Contatti - Richiedi un Progetto SUBGarden | San Vincenzo',
-    en: 'Contact Us - Request a SUBGarden Project | San Vincenzo',
-    de: 'Kontakt - SUBGarden Projekt anfragen | San Vincenzo',
-  };
-
+  const { locale } = (await params) as { locale: Locale };
   return {
-    title: titles[locale] || titles.it,
-    description: 'Richiedi un sopralluogo gratuito per subirrigazione a San Vincenzo e in tutta la Toscana. Sistema che non danneggia il giardino esistente, con risparmio idrico fino al 70%.',
-    alternates: {
-      canonical: `${siteUrl}/${locale}/contatti`,
-      languages: {
-        it: `${siteUrl}/it/contatti`,
-        en: `${siteUrl}/en/contact`,
-        de: `${siteUrl}/de/kontakt`,
-      },
-    },
+    title: pick(TITLE, locale),
+    description: pick(DESCRIPTION, locale),
+    alternates: alternates('/contatti', locale),
   };
 }
 

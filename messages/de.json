@@ -35,9 +35,9 @@
     "water_title": "Wassereinsparung und Effizienz",
     "water_lead": "Wasser kommt nur dorthin, wo es gebraucht wird – in die Tiefe. Keine Verdunstung, kein Oberflächenabfluss: bis zu 60–70 % Ersparnis gegenüber Sprinklerbewässerung.",
     "water_1": "Verteilung durch Kapillarität im Boden: gleichmäßig und langsam, zum Wohl der Wurzeln.",
-    "water_2": "Niederdruck und geringer Durchfluss (1,6 l/min pro Tropfer): keine schweren Pumpen, maximale Effizienz.",
+    "water_2": "Niederdruck und geringer Durchfluss (1,6 l/h pro Tropfer): keine schweren Pumpen, maximale Effizienz.",
     "water_3": "Fertigation möglich ohne Kontakt mit chemischen Syntheseprodukten an der Oberfläche.",
-    "water_4": "Verteilungsgleichmäßigkeit >90 %: keine trockenen oder Staunässe-Bereiche (Rain Bird XSF Tropfleitung, Copper Shield™).",
+    "water_4": "Verteilungsgleichmäßigkeit >90 %: keine trockenen oder Staunässe-Bereiche (Rain Bird XFS Tropfleitung, Copper Shield™).",
     "install_title": "Einfache, nicht-invasive Installation",
     "install_lead": "Unser patentiertes System wird in bestehenden Gärten verlegt, ohne den Rasen aufzureißen: schneller, sauberer Eingriff, der die bestehende Begrünung respektiert.",
     "install_1": "Patentierte Installation: kein invasives Graben, der Rasen bleibt intakt.",
@@ -140,6 +140,7 @@
     }
   },
   "hero": {
+    "kicker": "Unterflurbewässerung für bestehende Gärten",
     "cta": "Lösung Entdecken",
     "description": "Innovatives Unterflurbewässerungssystem für einen perfekten Garten bei minimalem Pflegeaufwand und bis zu 70% Wassereinsparung. Besonders geeignet für bestehende Gärten: die Installation schädigt den Rasen nicht.",
     "subtitle": "Innovatives Unterflurbewässerungssystem für einen perfekten Garten bei minimalem Pflegeaufwand und bis zu 70% Wassereinsparung. Besonders geeignet für bestehende Gärten: die Installation schädigt den Rasen nicht.",
@@ -254,7 +255,7 @@
     "aria_label": "Chat auf WhatsApp"
   },
   "faq": {
-    "meta_title": "Häufige Fragen zur Unterflurbewässerung | SUBGarden",
+    "meta_title": "Häufige Fragen zur Unterflurbewässerung",
     "meta_description": "Antworten zu Unterflurbewässerung, bestehenden Gärten, Wassersparen, nicht-invasiver Installation und Kosten. SUBGarden in der Toskana und in Italien.",
     "title": "Häufig gestellte Fragen",
     "subtitle": "Alles, was Sie über Unterflurbewässerung und das SUBGarden-System wissen müssen.",

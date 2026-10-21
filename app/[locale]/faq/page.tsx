@@ -6,27 +6,19 @@ import { Footer } from '@/components/navigation/Footer';
 import { MotionDiv } from '@/components/ui/Motion';
 import Image from 'next/image';
 import { Link } from '@/lib/i18n/routing';
+import { absoluteUrl, alternates } from '@/lib/utils/metadata';
 
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const { locale } = await params;
+  const { locale } = (await params) as { locale: Locale };
   const t = await (getTranslations as any)({ locale, namespace: 'faq' });
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
-
   return {
     title: t('meta_title'),
     description: t('meta_description'),
-    alternates: {
-      canonical: `${siteUrl}/${locale}/faq`,
-      languages: {
-        it: `${siteUrl}/it/faq`,
-        en: `${siteUrl}/en/faq`,
-        de: `${siteUrl}/de/faq`,
-      },
-    },
+    alternates: alternates('/faq', locale),
   };
 }
 
@@ -43,8 +35,24 @@ export default async function FAQPage({
     'q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8',
   ] as const;
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: locale,
+    url: absoluteUrl('/faq', locale as Locale),
+    mainEntity: items.map((key) => ({
+      '@type': 'Question',
+      name: t(`${key}_q`),
+      acceptedAnswer: { '@type': 'Answer', text: t(`${key}_a`) },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Navbar />
       <main className="pt-20">
         <section className="relative h-[40vh] flex items-center justify-center overflow-hidden">

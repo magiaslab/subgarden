@@ -13,6 +13,7 @@ export const WhatsAppWidget = () => {
   return (
     <motion.a
       href={whatsappUrl}
+      data-track-location="whatsapp-widget"
       target="_blank"
       rel="noopener noreferrer"
       initial={{ scale: 0, opacity: 0 }}

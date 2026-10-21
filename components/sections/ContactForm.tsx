@@ -11,6 +11,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle, XCircle, Loader2 } from 'lucide-react';
 import { Card } from '@/components/ui/Card';
 import { cn } from '@/lib/utils/cn';
+import { track } from '@/lib/analytics';
 
 interface ContactFormProps {
   hideHeader?: boolean;
@@ -43,6 +44,7 @@ export function ContactForm({ hideHeader = false, className, isSection = true }:
       const result = await submitContactForm(data);
 
       if (result.success) {
+        track({ name: 'generate_lead', params: { form: 'contatti' } });
         setSubmitStatus({
           type: 'success',
           message: t('success'),

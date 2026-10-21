@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { Button } from '@/components/ui/Button';
+import { useRouter } from '@/lib/i18n/routing';
 
 export default function Error({
   error,
@@ -10,6 +11,8 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  const router = useRouter();
+
   useEffect(() => {
     console.error(error);
   }, [error]);
@@ -28,7 +31,7 @@ export default function Error({
             Riprova
           </Button>
           <Button
-            onClick={() => (window.location.href = '/')}
+            onClick={() => router.push('/')}
             variant="outline"
           >
             Torna alla Home

@@ -2,6 +2,7 @@
 
 import Script from 'next/script';
 import { useEffect } from 'react';
+import { track, updateConsent } from '@/lib/analytics';
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-90W053H7SQ';
 // Solo se impostato: se non c’è GTM, viene caricato il tag GA diretto (così Google lo rileva).
@@ -10,27 +11,41 @@ const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || '';
 // Tag gtag (GA4) sempre caricato se c'è GA_ID, così Google lo rileva. Se usi GTM, non aggiungere GA4 nel container per evitare doppio invio.
 const useGADirect = !!GA_ID;
 
-// Il tag è sempre presente in pagina (così Google lo rileva), ma con Consent Mode
+// Dove sta il link cliccato, per distinguere header, footer, pagina contatti e widget.
+function locationOf(el: Element): string {
+  const zone = el.closest('[data-track-location], header, footer, main');
+  if (!zone) return 'page';
+  return zone.getAttribute('data-track-location') || zone.tagName.toLowerCase();
+}
+
+// Il tag è sempre presente in pagina (così Google lo rileva), ma con Consent Mode v2
 // i dati non vengono inviati finché l'utente non accetta i cookie.
 export function AnalyticsScript() {
   useEffect(() => {
-    const grantConsent = () => {
-      const payload = { analytics_storage: 'granted', ad_storage: 'granted' };
-      if (typeof (window as any).gtag === 'function') {
-        (window as any).gtag('consent', 'update', payload);
-      } else {
-        (window as any).dataLayer = (window as any).dataLayer || [];
-        (window as any).dataLayer.push(['consent', 'update', payload]);
-      }
-    };
-    const onConsentUpdate = (e: Event) => {
-      if ((e as CustomEvent).detail === 'accepted') grantConsent();
-    };
     if (localStorage.getItem('cookie-consent') === 'accepted') {
-      grantConsent();
+      updateConsent(true);
     }
+    const onConsentUpdate = (e: Event) => {
+      updateConsent((e as CustomEvent).detail === 'accepted');
+    };
     window.addEventListener('cookie-consent-update', onConsentUpdate);
-    return () => window.removeEventListener('cookie-consent-update', onConsentUpdate);
+
+    // Un solo ascoltatore per tutti i link di contatto del sito: telefono, WhatsApp, email.
+    const onClick = (e: MouseEvent) => {
+      const link = (e.target as Element | null)?.closest?.('a[href]');
+      if (!link) return;
+      const href = link.getAttribute('href') || '';
+      const location = locationOf(link);
+      if (href.startsWith('tel:')) track({ name: 'click_phone', params: { location } });
+      else if (/^https:\/\/(wa\.me|api\.whatsapp\.com)\//.test(href)) track({ name: 'click_whatsapp', params: { location } });
+      else if (href.startsWith('mailto:')) track({ name: 'click_email', params: { location } });
+    };
+    document.addEventListener('click', onClick, { capture: true });
+
+    return () => {
+      window.removeEventListener('cookie-consent-update', onConsentUpdate);
+      document.removeEventListener('click', onClick, { capture: true });
+    };
   }, []);
 
   return (
@@ -45,13 +60,15 @@ export function AnalyticsScript() {
             {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
               gtag('consent', 'default', {
                 analytics_storage: 'denied',
                 ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
                 wait_for_update: 500
               });
-              gtag('config', '${GA_ID}', { anonymize_ip: true });
+              gtag('js', new Date());
+              gtag('config', '${GA_ID}');
             `}
           </Script>
         </>

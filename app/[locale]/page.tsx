@@ -1,6 +1,7 @@
 import type { Locale } from 'next-intl';
 import { Metadata } from 'next';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
+import { SITE_URL, absoluteUrl, alternates, pick } from '@/lib/utils/metadata';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { PainPoints } from '@/components/sections/PainPoints';
 import { ComparisonSlider } from '@/components/sections/LazyComparisonSlider';
@@ -15,42 +16,35 @@ import { SolutionsPreviewSection } from '@/components/sections/SolutionsPreviewS
 import { ExplanatoryVideoSection } from '@/components/sections/ExplanatoryVideoSection';
 import { OperationalMethodStrip } from '@/components/sections/OperationalMethodStrip';
 
+const TITLE: Record<string, string> = {
+  it: 'Subirrigazione per giardini esistenti in Toscana',
+  en: 'Subsurface irrigation for existing gardens in Tuscany',
+  de: 'Unterflurbewässerung für bestehende Gärten in der Toskana',
+};
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await (getTranslations as any)({ locale, namespace: 'hero' });
-
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
+  const { locale } = (await params) as { locale: Locale };
+  const title = pick(TITLE, locale);
 
   return {
-    title: t('title'),
-    description: t('subtitle'),
-    alternates: {
-      canonical: `${siteUrl}/${locale}`,
-      languages: {
-        it: `${siteUrl}/it`,
-        en: `${siteUrl}/en`,
-        de: `${siteUrl}/de`,
-      },
-    },
+    // Stesso segmento del layout: il template non si applica, il marchio va scritto qui.
+    title: { absolute: `${title} | SUBGarden` },
+    alternates: alternates('/', locale),
     openGraph: {
-      title: t('title'),
-      description: t('subtitle'),
-      url: `${siteUrl}/${locale}`,
-      siteName: 'SUBGarden',
+      title,
+      url: absoluteUrl('/', locale),
       images: [
         {
-          url: `${siteUrl}/rustic-patio-with-deck-furniture-vegetation.jpg`,
+          url: `${SITE_URL}/rustic-patio-with-deck-furniture-vegetation.jpg`,
           width: 1200,
           height: 630,
-          alt: 'SUBGarden - Sistema di Subirrigazione di Lusso',
+          alt: title,
         },
       ],
-      locale: locale,
-      type: 'website',
     },
   };
 }
@@ -62,30 +56,8 @@ export default async function HomePage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale as Locale);
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
-
-  const organizationSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'SUBGarden',
-    url: siteUrl,
-    logo: `${siteUrl}/SUBGARDEN - LOGO COLORI.png`,
-    description:
-      'Sistema di subirrigazione professionale per il mercato toscano',
-    address: {
-      '@type': 'PostalAddress',
-      addressRegion: 'Toscana',
-      addressCountry: 'IT',
-    },
-    sameAs: [],
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
       <Navbar />
       <main>
         <HeroSection />

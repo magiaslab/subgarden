@@ -27,6 +27,7 @@ import {
   Clock,
   Settings2,
 } from 'lucide-react';
+import { SITE_URL, absoluteUrl, alternates, pick } from '@/lib/utils/metadata';
 
 // Tipi per card estese (giardini residenziali)
 type CardItem = { iconIndex: number; title: string; body: string };
@@ -468,32 +469,28 @@ export async function generateStaticParams() {
   }));
 }
 
+const TITLE_PREFIX: Record<string, string> = {
+  it: 'Subirrigazione per ',
+  en: 'Subsurface irrigation for ',
+  de: 'Unterflurbewässerung: ',
+};
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { locale, slug } = await params;
+  const { locale, slug } = (await params) as { locale: Locale; slug: string };
   const solution = (solutions as any)[slug];
-
   if (!solution) {
     return {};
   }
-
   const content = solution[locale] || solution.it;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
-
+  const name: string = locale === 'de' ? content.title : content.title.toLowerCase();
   return {
-    title: `${content.title} - SUBGarden`,
+    title: pick(TITLE_PREFIX, locale) + name,
     description: content.description,
-    alternates: {
-      canonical: `${siteUrl}/${locale}/soluzioni/${slug}`,
-      languages: {
-        it: `${siteUrl}/it/soluzioni/${slug}`,
-        en: `${siteUrl}/en/solutions/${slug}`,
-        de: `${siteUrl}/de/loesungen/${slug}`,
-      },
-    },
+    alternates: alternates({ pathname: '/soluzioni/[slug]', params: { slug } }, locale),
   };
 }
 
@@ -512,22 +509,15 @@ export default async function SoluzionePage({
 
   const content = solution[locale] || solution.it;
   const icons = solution.icons;
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
-
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: content.title,
     description: content.description,
-    provider: {
-      '@type': 'Organization',
-      name: 'SUBGarden',
-      url: siteUrl,
-    },
-    areaServed: {
-      '@type': 'State',
-      name: 'Toscana',
-    },
+    url: absoluteUrl({ pathname: '/soluzioni/[slug]', params: { slug } }, locale as Locale),
+    serviceType: 'Subirrigazione',
+    provider: { '@id': `${SITE_URL}/#organization` },
+    areaServed: { '@type': 'AdministrativeArea', name: 'Toscana' },
   };
 
   return (

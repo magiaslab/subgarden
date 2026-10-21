@@ -1,136 +1,60 @@
 import { MetadataRoute } from 'next';
+import type { Locale } from 'next-intl';
 import { routing } from '@/lib/i18n/routing';
-import { getAllSlugs } from '@/lib/blog';
+import { getAllSlugs, getPostLocales } from '@/lib/blog';
+import { solutions } from '@/lib/solutions';
+import { absoluteUrl, alternates } from '@/lib/utils/metadata';
 
-const solutions = ['giardini-residenziali', 'parchi-pubblici', 'campi-sportivi', 'strutture-turistiche'];
 const cities = ['elba', 'maremma', 'livorno'];
 
-// Path per locale (allineati a lib/i18n/routing.ts)
-const paths: Record<string, Record<string, string>> = {
-  tecnologia: { it: 'tecnologia', en: 'technology', de: 'technologie' },
-  chiSiamo: { it: 'chi-siamo', en: 'about-us', de: 'ueber-uns' },
-  soluzioni: { it: 'soluzioni', en: 'solutions', de: 'loesungen' },
-  territorio: { it: 'territorio', en: 'territory', de: 'gebiet' },
-  contatti: { it: 'contatti', en: 'contact', de: 'kontakt' },
-  // portfolio: nascosto in attesa contenuti
-  privacy: { it: 'privacy', en: 'privacy', de: 'datenschutz' },
-  terms: { it: 'terms', en: 'terms', de: 'nutzungsbedingungen' },
-  faq: { it: 'faq', en: 'faq', de: 'faq' },
-  blog: { it: 'blog', en: 'blog', de: 'blog' },
+type Href = Parameters<typeof absoluteUrl>[0];
+type Entry = {
+  href: Href;
+  priority: number;
+  changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency'];
+  locales?: readonly Locale[];
 };
 
+// Solo pagine indicizzabili: privacy, termini e portfolio sono noindex e restano fuori.
+// Gli indirizzi vengono dal routing di next-intl, così gli slug tradotti non divergono.
+const pages: Entry[] = [
+  { href: '/', priority: 1, changeFrequency: 'weekly' },
+  { href: '/tecnologia', priority: 0.8, changeFrequency: 'monthly' },
+  { href: '/chi-siamo', priority: 0.8, changeFrequency: 'monthly' },
+  { href: '/soluzioni', priority: 0.8, changeFrequency: 'monthly' },
+  ...solutions.map((s): Entry => ({
+    href: { pathname: '/soluzioni/[slug]', params: { slug: s.slug } },
+    priority: 0.7,
+    changeFrequency: 'monthly',
+  })),
+  { href: '/territorio', priority: 0.7, changeFrequency: 'monthly' },
+  ...cities.map((city): Entry => ({
+    href: { pathname: '/territorio/[city]', params: { city } },
+    priority: 0.6,
+    changeFrequency: 'monthly',
+  })),
+  { href: '/contatti', priority: 0.8, changeFrequency: 'monthly' },
+  { href: '/faq', priority: 0.6, changeFrequency: 'monthly' },
+  { href: '/blog', priority: 0.7, changeFrequency: 'weekly' },
+  // Articoli: solo nelle lingue in cui esistono davvero.
+  ...getAllSlugs().map((slug): Entry => ({
+    href: { pathname: '/blog/[slug]', params: { slug } },
+    priority: 0.6,
+    changeFrequency: 'monthly',
+    locales: getPostLocales(slug, routing.locales) as Locale[],
+  })),
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://subgarden.it';
-  const baseDate = new Date();
-  const routes: MetadataRoute.Sitemap = [];
-
-  routing.locales.forEach((locale) => {
-    const loc = locale as 'it' | 'en' | 'de';
-
-    routes.push({
-      url: `${siteUrl}/${locale}`,
-      lastModified: baseDate,
-      changeFrequency: 'weekly',
-      priority: 1,
-    });
-
-    routes.push({
-      url: `${siteUrl}/${locale}/${paths.tecnologia[loc]}`,
-      lastModified: baseDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    });
-
-    routes.push({
-      url: `${siteUrl}/${locale}/${paths.chiSiamo[loc]}`,
-      lastModified: baseDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    });
-
-    routes.push({
-      url: `${siteUrl}/${locale}/${paths.soluzioni[loc]}`,
-      lastModified: baseDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    });
-
-    solutions.forEach((slug) => {
-      routes.push({
-        url: `${siteUrl}/${locale}/${paths.soluzioni[loc]}/${slug}`,
-        lastModified: baseDate,
-        changeFrequency: 'monthly',
-        priority: 0.7,
-      });
-    });
-
-    routes.push({
-      url: `${siteUrl}/${locale}/${paths.territorio[loc]}`,
-      lastModified: baseDate,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    });
-
-    cities.forEach((city) => {
-      routes.push({
-        url: `${siteUrl}/${locale}/${paths.territorio[loc]}/${city}`,
-        lastModified: baseDate,
-        changeFrequency: 'monthly',
-        priority: 0.6,
-      });
-    });
-
-    routes.push({
-      url: `${siteUrl}/${locale}/${paths.contatti[loc]}`,
-      lastModified: baseDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    });
-
-    // Portfolio nascosto in attesa contenuti
-    // routes.push({ url: `${siteUrl}/${locale}/portfolio`, ... });
-
-    routes.push({
-      url: `${siteUrl}/${locale}/${paths.privacy[loc]}`,
-      lastModified: baseDate,
-      changeFrequency: 'yearly',
-      priority: 0.4,
-    });
-
-    routes.push({
-      url: `${siteUrl}/${locale}/${paths.terms[loc]}`,
-      lastModified: baseDate,
-      changeFrequency: 'yearly',
-      priority: 0.4,
-    });
-
-    routes.push({
-      url: `${siteUrl}/${locale}/${paths.faq[loc]}`,
-      lastModified: baseDate,
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    });
-
-    routes.push({
-      url: `${siteUrl}/${locale}/${paths.blog[loc]}`,
-      lastModified: baseDate,
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    });
+  const lastModified = new Date();
+  return pages.flatMap(({ href, priority, changeFrequency, locales = routing.locales }) => {
+    const languages = alternates(href, locales[0], locales)?.languages as Record<string, string>;
+    return locales.map((locale) => ({
+      url: absoluteUrl(href, locale),
+      lastModified,
+      changeFrequency,
+      priority,
+      alternates: { languages },
+    }));
   });
-
-  // Blog posts (slug from files)
-  const postSlugs = getAllSlugs();
-  routing.locales.forEach((locale) => {
-    postSlugs.forEach((slug) => {
-      routes.push({
-        url: `${siteUrl}/${locale}/blog/${slug}`,
-        lastModified: baseDate,
-        changeFrequency: 'monthly',
-        priority: 0.6,
-      });
-    });
-  });
-
-  return routes;
 }
