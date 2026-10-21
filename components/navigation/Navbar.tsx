@@ -1,164 +1,183 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Link, usePathname } from '@/lib/i18n/routing';
-import { LanguageSwitcher } from './LanguageSwitcher';
-import { Menu, X } from 'lucide-react';
-import { cn } from '@/lib/utils/cn';
-import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
+import { Link, usePathname } from '@/lib/i18n/routing';
+import { ButtonLink } from '@/components/ui/Button';
+import { LanguageSwitcher } from './LanguageSwitcher';
+import { cn } from '@/lib/utils/cn';
 
+const LOGO_COLOR = '/SUBGARDEN - LOGO COLORI.png';
+const LOGO_WHITE = '/SUBGARDEN - LOGO BIANCO.png';
+
+/*
+ * Header fisso. Trasparente con il logo bianco solo sopra l'hero video della home;
+ * appena si scorre (o su ogni altra pagina) diventa carta con il logo a colori.
+ * Il menu mobile è un pannello a tutto schermo: blocca la pagina (data-scroll-locked,
+ * che ferma anche Lenis), si chiude con Esc e riporta il focus sul pulsante.
+ */
 export function Navbar() {
-  const t = (useTranslations as any)('nav');
+  const t = useTranslations('nav');
   const pathname = usePathname();
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
 
-  const navLinks = [
-    { href: '/', label: t('home') },
-    { href: '/chi-siamo', label: t('about') },
+  const links = [
     { href: '/tecnologia', label: t('technology') },
     { href: '/soluzioni', label: t('solutions') },
-    // { href: '/portfolio', label: t('portfolio') }, // nascosto in attesa contenuti
     { href: '/territorio', label: t('local') },
+    { href: '/chi-siamo', label: t('about') },
+  ] as const;
+  const mobileExtra = [
+    { href: '/faq', label: t('faq') },
+    { href: '/blog', label: t('blog') },
     { href: '/contatti', label: t('contact') },
-  ];
+  ] as const;
 
-  const isActive = (href: string) => {
-    if (href === '/') return pathname === '/';
-    if (typeof href === 'string' && href.startsWith('/#')) return false;
-    return pathname.startsWith(href);
-  };
-
-  // Determina se la pagina corrente richiede una navbar inizialmente trasparente (solo la Home)
-  const isHomePage = pathname === '/';
+  const isHome = pathname === '/';
+  const solid = scrolled || open || !isHome;
+  const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // La navbar è opaca se: abbiamo scrollato, il menu mobile è aperto, o NON siamo in home page
-  const shouldBeOpaque = isScrolled || isMobileMenuOpen || !isHomePage;
+  const close = useCallback(() => {
+    setOpen(false);
+    toggleRef.current?.focus();
+  }, []);
+
+  useEffect(() => {
+    if (!open) return;
+    document.body.setAttribute('data-scroll-locked', '');
+    document.body.style.overflow = 'hidden';
+    panelRef.current?.querySelector<HTMLElement>('a, button')?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') close();
+      // Il focus resta nel pannello
+      if (e.key === 'Tab' && panelRef.current) {
+        const items = [...panelRef.current.querySelectorAll<HTMLElement>('a, button')];
+        const first = items[0];
+        const last = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    };
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.body.removeAttribute('data-scroll-locked');
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [open, close]);
 
   return (
-    <motion.nav
-      initial={false}
-      animate={{
-        backgroundColor: shouldBeOpaque ? 'rgba(255, 255, 255, 0.95)' : 'transparent',
-        backdropFilter: shouldBeOpaque ? 'blur(10px)' : 'none',
-      }}
+    <header
+      data-site-header
+      data-no-motion
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        shouldBeOpaque && 'shadow-md'
+        'fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,color] duration-300',
+        solid ? 'bg-surface/95 text-ink shadow-[0_1px_0_var(--color-line)] backdrop-blur-md' : 'bg-transparent text-ink-inverse',
       )}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="relative w-40 h-12">
-              <Image
-                src={shouldBeOpaque ? "/SUBGARDEN - LOGO COLORI.png" : "/SUBGARDEN - LOGO BIANCO.png"}
-                alt="SUBGarden Logo"
-                fill
-                className="object-contain transition-all duration-300"
-                priority
-              />
-            </div>
-          </Link>
+      <a
+        href="#contenuto"
+        className="type-ui sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-10 focus:bg-surface focus:px-4 focus:py-3 focus:text-brand"
+      >
+        {t('skip')}
+      </a>
+      <div className="container-site flex h-18 items-center justify-between gap-6 lg:h-20">
+        <Link href="/" className="relative block h-9 w-[136px] shrink-0 lg:h-10 lg:w-[151px]" aria-label="SUBGarden, home">
+          <Image src={solid ? LOGO_COLOR : LOGO_WHITE} alt="" fill sizes="160px" priority className="object-contain object-left" />
+        </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => {
-              const active = isActive(link.href);
-              return (
+        <nav aria-label={t('menu')} className="hidden lg:block">
+          <ul className="flex items-center gap-8">
+            {links.map((l) => (
+              <li key={l.href}>
                 <Link
-                  key={link.href}
-                  href={link.href as any}
+                  href={l.href}
+                  aria-current={isActive(l.href) ? 'page' : undefined}
                   className={cn(
-                    "relative transition-colors duration-300 font-medium py-2 group",
-                    shouldBeOpaque
-                      ? active ? "text-deep-teal" : "text-gray-700 hover:text-deep-teal"
-                      : active ? "text-white" : "text-white/80 hover:text-white"
+                    'type-ui relative inline-flex min-h-11 items-center transition-colors',
+                    'after:absolute after:inset-x-0 after:bottom-2 after:h-px after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:scale-x-100',
+                    'aria-[current=page]:after:scale-x-100',
+                    solid ? 'text-ink hover:text-brand aria-[current=page]:text-brand' : 'text-ink-inverse/90 hover:text-ink-inverse',
                   )}
                 >
-                  {link.label}
-                  <span className={cn(
-                    "absolute bottom-0 left-0 w-full h-0.5 transition-transform duration-300 origin-left",
-                    shouldBeOpaque ? "bg-deep-teal" : "bg-white",
-                    active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
-                  )} />
+                  {l.label}
                 </Link>
-              );
-            })}
-            <div className="flex items-center pl-4 border-l border-gray-200 ml-4 h-8">
-              <LanguageSwitcher isTransparent={!shouldBeOpaque} />
-            </div>
-          </div>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={cn(
-              "md:hidden p-2 rounded-lg transition-colors",
-              shouldBeOpaque ? "hover:bg-gray-100" : "hover:bg-white/10"
-            )}
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6 text-deep-teal" />
-            ) : (
-              <Menu className={cn(
-                "w-6 h-6 transition-colors",
-                shouldBeOpaque ? "text-deep-teal" : "text-white"
-              )} />
-            )}
-          </button>
+        <div className="hidden items-center gap-4 lg:flex">
+          <LanguageSwitcher inverse={!solid} />
+          <ButtonLink href="/contatti" size="sm">
+            {t('cta')}
+          </ButtonLink>
         </div>
+
+        <button
+          ref={toggleRef}
+          type="button"
+          onClick={() => (open ? close() : setOpen(true))}
+          aria-expanded={open}
+          aria-controls="menu-mobile"
+          aria-label={open ? t('close') : t('menu')}
+          className="inline-flex size-11 items-center justify-center rounded-[var(--radius-control)] lg:hidden"
+        >
+          {open ? <X className="size-6" /> : <Menu className="size-6" />}
+        </button>
       </div>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-gray-100"
-          >
-            <div className="px-4 py-4 space-y-2">
-              {navLinks.map((link) => {
-                const active = isActive(link.href);
-                return (
+      {open && (
+        <div
+          ref={panelRef}
+          id="menu-mobile"
+          role="dialog"
+          aria-modal="true"
+          aria-label={t('menu')}
+          className="fixed inset-x-0 bottom-0 top-18 overflow-y-auto bg-surface text-ink lg:hidden"
+          data-lenis-prevent
+        >
+          <nav aria-label={t('menu')} className="container-site flex min-h-full flex-col py-8">
+            <ul className="divide-y divide-line/50 border-y border-line/50">
+              {[...links, ...mobileExtra].map((l) => (
+                <li key={l.href}>
                   <Link
-                    key={link.href}
-                    href={link.href as any}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className={cn(
-                      "block transition-colors font-medium py-3 px-4 rounded-lg",
-                      active 
-                        ? "bg-deep-teal/10 text-deep-teal" 
-                        : "text-gray-700 hover:bg-gray-50 hover:text-deep-teal"
-                    )}
+                    href={l.href}
+                    aria-current={isActive(l.href) ? 'page' : undefined}
+                    onClick={() => setOpen(false)}
+                    className="type-h3 flex min-h-14 items-center py-3 aria-[current=page]:text-brand"
                   >
-                    {link.label}
+                    {l.label}
                   </Link>
-                );
-              })}
-              <div className="pt-4 border-t border-gray-100 px-4">
-                <LanguageSwitcher />
-              </div>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-auto flex flex-col gap-6 pt-10">
+              <ButtonLink href="/contatti" size="lg" className="w-full" onClick={() => setOpen(false)}>
+                {t('cta')}
+              </ButtonLink>
+              <LanguageSwitcher />
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.nav>
+          </nav>
+        </div>
+      )}
+    </header>
   );
 }
-

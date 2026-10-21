@@ -2,19 +2,17 @@ import type { Locale } from 'next-intl';
 import { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import { SITE_URL, absoluteUrl, alternates, pick } from '@/lib/utils/metadata';
-import { HeroSection } from '@/components/sections/HeroSection';
-import { PainPoints } from '@/components/sections/PainPoints';
-import { ComparisonSlider } from '@/components/sections/LazyComparisonSlider';
-import { TechSpecs } from '@/components/sections/TechSpecs';
-import { ContactCTA } from '@/components/sections/ContactCTA';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
-import { PartnerBanner } from '@/components/sections/PartnerBanner';
-import { InfographicSection } from '@/components/sections/InfographicSection';
-import { BenefitsSection } from '@/components/sections/BenefitsSection';
-import { SolutionsPreviewSection } from '@/components/sections/SolutionsPreviewSection';
-import { ExplanatoryVideoSection } from '@/components/sections/ExplanatoryVideoSection';
-import { OperationalMethodStrip } from '@/components/sections/OperationalMethodStrip';
+import { Hero } from '@/components/home/Hero';
+import { Facts } from '@/components/home/Facts';
+import { HowItWorks } from '@/components/home/HowItWorks';
+import { Install } from '@/components/home/Install';
+import { Why } from '@/components/home/Why';
+import { BeforeAfter } from '@/components/home/BeforeAfter';
+import { CaseStudy } from '@/components/home/CaseStudy';
+import { SolutionsList } from '@/components/home/SolutionsList';
+import { Synthesis } from '@/components/home/Synthesis';
 
 const TITLE: Record<string, string> = {
   it: 'Subirrigazione per giardini esistenti in Toscana',
@@ -59,18 +57,16 @@ export default async function HomePage({
   return (
     <>
       <Navbar />
-      <main>
-        <HeroSection />
-        <PartnerBanner />
-        <BenefitsSection />
-        <PainPoints />
-        <ComparisonSlider />
-        <TechSpecs />
-        <OperationalMethodStrip />
-        <ExplanatoryVideoSection />
-        <InfographicSection />
-        <SolutionsPreviewSection />
-        <ContactCTA />
+      <main id="contenuto">
+        <Hero />
+        <Facts />
+        <HowItWorks />
+        <Install />
+        <Why />
+        <BeforeAfter />
+        <CaseStudy />
+        <SolutionsList />
+        <Synthesis />
       </main>
       <Footer />
     </>

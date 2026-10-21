@@ -69,7 +69,16 @@
     "subgarden_aesthetic": "Invisibile (tutto interrato)",
     "maintenance_label": "Manutenzione",
     "rain_maintenance": "Alta (testine rotte/ostruite)",
-    "subgarden_maintenance": "Minima (sistema autopulente)"
+    "subgarden_maintenance": "Minima (sistema autopulente)",
+    "before_label": "Prima",
+    "after_label": "Dopo",
+    "before_title": "Irrigazione a pioggia",
+    "before_text": "Prato e arredi bagnati, acqua che evapora",
+    "after_title": "Subirrigazione SUBGarden",
+    "after_text": "Superficie asciutta, fino al 70% di acqua in meno",
+    "slider_label": "Sposta per confrontare prima e dopo",
+    "before_alt": "Illustrazione: famiglia a tavola in giardino con gli irrigatori a pioggia accesi e il prato bagnato",
+    "after_alt": "Illustrazione: la stessa famiglia in giardino con il prato asciutto grazie alla subirrigazione"
   },
   "technologyPage": {
     "evolution_title": "L'Evoluzione dell'Invisibile",
@@ -135,7 +144,7 @@
     "button": "Parla con un esperto",
     "call_us": "Oppure chiamaci:",
     "description": "Contattaci oggi stesso per un sopralluogo tecnico gratuito e scopri come il sistema SUBGarden può valorizzare la tua proprietà.",
-    "title": "Pronto a trasformare il tuo giardino?",
+    "title": "Vuoi sapere se il tuo giardino è adatto?",
     "faq_intro": "Hai domande sulla subirrigazione?",
     "faq_link": "Consulta le domande frequenti"
   },
@@ -162,7 +171,8 @@
       "portfolio": "Portfolio",
       "solutions": "Soluzioni",
       "technology": "Tecnologia"
-    }
+    },
+    "contacts": "Recapiti"
   },
   "hero": {
     "kicker": "Subirrigazione per giardini esistenti",
@@ -190,34 +200,40 @@
     "local": "Territorio",
     "portfolio": "Portfolio",
     "solutions": "Soluzioni",
-    "technology": "Tecnologia"
+    "technology": "Tecnologia",
+    "cta": "Richiedi un sopralluogo",
+    "menu": "Menu",
+    "close": "Chiudi il menu",
+    "faq": "Domande frequenti",
+    "blog": "Blog",
+    "skip": "Vai al contenuto"
   },
   "painPoints": {
     "description": "I sistemi tradizionali a pioggia sono superati. Scopri l'efficienza del sistema brevettato SUBGarden.",
     "furniture": {
       "description": "Lascia pure poltrone, lettini e cuscini sul prato. Non dovrai più spostarli per irrigare.",
-      "title": "Arredi Sempre Protetti"
+      "title": "Arredi sempre fuori"
     },
     "installation": {
       "description": "Il nostro sistema brevettato permette l'installazione in giardini esistenti senza distruggerli. Veloce, pulito e invisibile.",
-      "title": "Installazione Non Invasiva"
+      "title": "Posa senza distruggere il prato"
     },
     "mosquitoes": {
       "description": "Riduci del 90% i trattamenti anti-zanzare mantenendo la superficie del prato sempre asciutta.",
-      "title": "Zero Zanzare"
+      "title": "Meno zanzare"
     },
     "noise": {
       "description": "Elimina il fastidioso rumore notturno degli spruzzatori. L'irrigazione è interrata e silenziosa.",
-      "title": "Silenzio Totale"
+      "title": "Nessun rumore di notte"
     },
     "puddles": {
       "description": "Elimina i ristagni d'acqua su vialetti e avvallamenti. Cammina sul prato subito dopo l'irrigazione.",
-      "title": "Mai più Ristagni"
+      "title": "Niente ristagni"
     },
     "title": "Perché scegliere la subirrigazione?",
     "water": {
       "description": "Risparmia dal 50% al 70% di acqua ed energia grazie alla distribuzione mirata alle radici.",
-      "title": "Risparmio Idrico ed Energetico"
+      "title": "Meno acqua e meno energia"
     }
   },
   "solutionsPreview": {
@@ -284,5 +300,52 @@
     "accept": "Accetta tutto",
     "decline": "Solo necessari",
     "privacy_link": "Privacy Policy"
+  },
+  "home": {
+    "eyebrow": "Subirrigazione in Toscana",
+    "lead": "Portiamo l’acqua sotto il prato, dritta alle radici. Il giardino resta com’è: niente scavi che lo rovinano, niente irrigatori in vista e fino al 70% di acqua in meno.",
+    "cta_how": "Come funziona",
+    "partner": "Con tecnologia Rain Bird®",
+    "facts_label": "SUBGarden in quattro numeri",
+    "fact1_value": "70%",
+    "fact1_text": "Fino al 70% di acqua in meno rispetto agli irrigatori a pioggia.",
+    "fact2_value": "90%",
+    "fact2_text": "Oltre il 90% di uniformità: niente zone secche e niente ristagni.",
+    "fact3_value": "1,6 l/h",
+    "fact3_text": "Per gocciolatore: bassa pressione, niente pompe pesanti.",
+    "fact4_value": "1 anno",
+    "fact4_text": "Di assistenza gratuita dopo la posa.",
+    "how_eyebrow": "Come funziona",
+    "how_title": "L’acqua va alle radici, non sul prato",
+    "how_lead": "Le ali gocciolanti stanno sotto il manto erboso, in parallelo. Ogni gocciolatore rilascia poca acqua, piano: il terreno la distribuisce per capillarità e le radici la prendono dove serve.",
+    "how_figure": "Spaccato del terreno: prato in superficie, radici, ali gocciolanti interrate e acqua che sale verso le radici",
+    "how_1_label": "Prato",
+    "how_1_text": "Resta asciutto in superficie: ci cammini subito, lasci fuori i cuscini e le zanzare trovano meno acqua.",
+    "how_2_label": "Radici",
+    "how_2_text": "Ricevono l’acqua in profondità e crescono verso il basso, più forti contro il caldo.",
+    "how_3_label": "Ala gocciolante Rain Bird XFS",
+    "how_3_text": "Gocciolatori autocompensanti da 1,6 l/h, protetti dall’intrusione delle radici dal Copper Shield.",
+    "how_4_label": "Acqua",
+    "how_4_text": "Si allarga nel terreno per capillarità: niente evaporazione, niente ruscellamento sui vialetti.",
+    "install_eyebrow": "La posa",
+    "install_title": "Si posa in un giardino già fatto",
+    "method_title": "Come lavoriamo",
+    "why_eyebrow": "In giardino",
+    "why_title": "Cosa cambia quando l’acqua sta sotto",
+    "compare_eyebrow": "Prima e dopo",
+    "compare_title": "Irrigatori a pioggia o subirrigazione",
+    "case_eyebrow": "Un lavoro fatto",
+    "case_title": "Villa Mussio, dal cantiere al prato",
+    "case_lead": "Un parco di ulivi in collina: prima il terreno lavorato e le linee posate, poi il prato. Le foto sono quelle del cantiere.",
+    "case_1": "Il terreno lavorato prima della posa, visto dal drone",
+    "case_2": "I mezzi in cantiere tra gli ulivi",
+    "case_3": "Le aiuole disegnate e il prato che cresce sopra le linee",
+    "case_4": "Il prato finito lungo la staccionata",
+    "case_5": "Il giardino a lavoro concluso",
+    "case_6": "Il verde attorno alla villa",
+    "solutions_eyebrow": "Soluzioni",
+    "synthesis_eyebrow": "Il sistema in sintesi",
+    "video_pause": "Metti in pausa il video",
+    "video_play": "Riproduci il video"
   }
 }

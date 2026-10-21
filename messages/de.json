@@ -69,7 +69,16 @@
     "subgarden_aesthetic": "Unsichtbar (alles unterirdisch)",
     "maintenance_label": "Wartung",
     "rain_maintenance": "Hoch (kaputte/verstopfte Köpfe)",
-    "subgarden_maintenance": "Minimal (selbstreinigendes System)"
+    "subgarden_maintenance": "Minimal (selbstreinigendes System)",
+    "before_label": "Vorher",
+    "after_label": "Nachher",
+    "before_title": "Beregnung mit Regnern",
+    "before_text": "Nasser Rasen und nasse Möbel, verdunstendes Wasser",
+    "after_title": "SUBGarden Unterflurbewässerung",
+    "after_text": "Trockene Oberfläche, bis zu 70 % weniger Wasser",
+    "slider_label": "Verschieben, um vorher und nachher zu vergleichen",
+    "before_alt": "Illustration: Familie beim Essen im Garten mit laufenden Regnern und nassem Rasen",
+    "after_alt": "Illustration: dieselbe Familie im Garten mit trockenem Rasen dank Unterflurbewässerung"
   },
   "operationalStrip": {
     "title": "Unser Betriebsverfahren",
@@ -110,7 +119,7 @@
     "button": "Mit einem Experten sprechen",
     "call_us": "Oder rufen Sie uns an:",
     "description": "Kontaktieren Sie uns noch heute für eine kostenlose technische Besichtigung und entdecken Sie, wie das SUBGarden-System Ihre Immobilie aufwerten kann.",
-    "title": "Bereit, Ihren Garten zu verwandeln?",
+    "title": "Möchten Sie wissen, ob Ihr Garten geeignet ist?",
     "faq_intro": "Fragen zur Unterflurbewässerung?",
     "faq_link": "Häufige Fragen ansehen"
   },
@@ -137,7 +146,8 @@
       "portfolio": "Portfolio",
       "solutions": "Lösungen",
       "technology": "Tecnologia"
-    }
+    },
+    "contacts": "Kontakt"
   },
   "hero": {
     "kicker": "Unterflurbewässerung für bestehende Gärten",
@@ -165,7 +175,13 @@
     "local": "Territorio",
     "portfolio": "Portfolio",
     "solutions": "Lösungen",
-    "technology": "Tecnologia"
+    "technology": "Tecnologia",
+    "cta": "Besichtigung anfragen",
+    "menu": "Menü",
+    "close": "Menü schließen",
+    "faq": "Häufige Fragen",
+    "blog": "Blog",
+    "skip": "Zum Inhalt springen"
   },
   "painPoints": {
     "description": "Traditionelle Sprinklersysteme sind veraltet. Entdecken Sie die Effizienz des patentierten SUBGarden-Systems.",
@@ -284,5 +300,52 @@
     "accept": "Alle akzeptieren",
     "decline": "Nur notwendige",
     "privacy_link": "Datenschutzerklärung"
+  },
+  "home": {
+    "eyebrow": "Unterflurbewässerung in der Toskana",
+    "lead": "Wir bringen das Wasser unter den Rasen, direkt an die Wurzeln. Ihr Garten bleibt, wie er ist: keine Grabungen, die ihn zerstören, keine sichtbaren Regner und bis zu 70 % weniger Wasser.",
+    "cta_how": "So funktioniert es",
+    "partner": "Mit Rain Bird® Technik",
+    "facts_label": "SUBGarden in vier Zahlen",
+    "fact1_value": "70 %",
+    "fact1_text": "Bis zu 70 % weniger Wasser als mit Regnern.",
+    "fact2_value": "90 %",
+    "fact2_text": "Über 90 % Gleichmäßigkeit: keine trockenen Stellen, keine Staunässe.",
+    "fact3_value": "1,6 l/h",
+    "fact3_text": "Pro Tropfer: niedriger Druck, keine schweren Pumpen.",
+    "fact4_value": "1 Jahr",
+    "fact4_text": "Kostenloser Service nach der Verlegung.",
+    "how_eyebrow": "So funktioniert es",
+    "how_title": "Das Wasser geht an die Wurzeln, nicht auf den Rasen",
+    "how_lead": "Die Tropfleitungen liegen parallel unter der Grasnarbe. Jeder Tropfer gibt langsam wenig Wasser ab: Der Boden verteilt es durch Kapillarwirkung, und die Wurzeln nehmen es dort auf, wo sie es brauchen.",
+    "how_figure": "Bodenschnitt: Rasen an der Oberfläche, Wurzeln, verlegte Tropfleitungen und Wasser, das zu den Wurzeln aufsteigt",
+    "how_1_label": "Rasen",
+    "how_1_text": "Bleibt an der Oberfläche trocken: sofort begehbar, die Kissen bleiben draußen, und Mücken finden weniger Wasser.",
+    "how_2_label": "Wurzeln",
+    "how_2_text": "Bekommen das Wasser in der Tiefe und wachsen nach unten, widerstandsfähiger gegen Hitze.",
+    "how_3_label": "Rain Bird XFS Tropfleitung",
+    "how_3_text": "Druckkompensierende Tropfer mit 1,6 l/h, durch Copper Shield vor einwachsenden Wurzeln geschützt.",
+    "how_4_label": "Wasser",
+    "how_4_text": "Verteilt sich durch Kapillarwirkung im Boden: keine Verdunstung, kein Abfluss auf die Wege.",
+    "install_eyebrow": "Verlegung",
+    "install_title": "Verlegt in einem bestehenden Garten",
+    "method_title": "So arbeiten wir",
+    "why_eyebrow": "Im Garten",
+    "why_title": "Was sich ändert, wenn das Wasser unter der Erde ist",
+    "compare_eyebrow": "Vorher und nachher",
+    "compare_title": "Regner oder Unterflurbewässerung",
+    "case_eyebrow": "Ein fertiges Projekt",
+    "case_title": "Villa Mussio, von der Baustelle zum Rasen",
+    "case_lead": "Ein Olivenhain am Hang: zuerst der bearbeitete Boden und die verlegten Leitungen, dann der Rasen. Die Fotos stammen von der Baustelle.",
+    "case_1": "Der bearbeitete Boden vor der Verlegung, von der Drohne aus",
+    "case_2": "Maschinen auf der Baustelle zwischen den Olivenbäumen",
+    "case_3": "Die angelegten Beete und der Rasen, der über den Leitungen wächst",
+    "case_4": "Der fertige Rasen entlang des Zauns",
+    "case_5": "Der Garten nach Abschluss der Arbeiten",
+    "case_6": "Das Grün rund um die Villa",
+    "solutions_eyebrow": "Lösungen",
+    "synthesis_eyebrow": "Das System im Überblick",
+    "video_pause": "Video anhalten",
+    "video_play": "Video abspielen"
   }
 }

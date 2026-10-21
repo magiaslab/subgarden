@@ -1,61 +1,63 @@
 import * as React from 'react';
+import { Link } from '@/lib/i18n/routing';
 import { cn } from '@/lib/utils/cn';
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
-  size?: 'sm' | 'md' | 'lg';
-  children: React.ReactNode;
+/*
+ * Pulsanti (docs/DESIGN-SYSTEM.md § 3). Due ruoli fissi: il rame invita (un solo
+ * `primary` per vista, «Richiedi un sopralluogo»), il verde orienta (`secondary`).
+ * `inverse` è il secondario sopra i fondi scuri e le foto. Altezza minima 44 px.
+ */
+export type ButtonVariant = 'primary' | 'secondary' | 'inverse' | 'ghost' | 'outline';
+export type ButtonSize = 'sm' | 'md' | 'lg';
+
+const base =
+  'type-ui inline-flex items-center justify-center gap-2 rounded-[var(--radius-control)] min-h-11 transition-[background-color,color,border-color,transform] duration-200 ease-[var(--ease-out-soft)] disabled:opacity-50 disabled:pointer-events-none active:translate-y-px';
+
+const variants: Record<ButtonVariant, string> = {
+  primary: 'bg-cta text-ink hover:bg-cta-hover hover:text-ink-inverse',
+  secondary: 'border border-brand text-brand hover:bg-brand hover:text-ink-inverse',
+  // Alias del sito precedente
+  outline: 'border border-brand text-brand hover:bg-brand hover:text-ink-inverse',
+  inverse: 'border border-ink-inverse/70 text-ink-inverse hover:bg-ink-inverse hover:text-brand-strong',
+  ghost: 'text-brand underline decoration-1 underline-offset-[0.3em] hover:decoration-2 px-0 min-h-0',
+};
+
+const sizes: Record<ButtonSize, string> = {
+  sm: 'px-4 py-2',
+  md: 'px-6 py-3',
+  lg: 'px-7 py-3.5 text-base',
+};
+
+export function buttonStyles({
+  variant = 'primary',
+  size = 'md',
+  className,
+}: { variant?: ButtonVariant; size?: ButtonSize; className?: string } = {}) {
+  return cn(base, variants[variant], variant !== 'ghost' && sizes[size], className);
+}
+
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ButtonVariant;
+  size?: ButtonSize;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    {
-      className,
-      variant = 'primary',
-      size = 'md',
-      children,
-      ...props
-    },
-    ref
-  ) => {
-    const baseStyles =
-      'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-hidden focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none';
-
-    const variants = {
-      primary:
-        'bg-deep-teal text-white hover:bg-deep-teal/90 focus:ring-deep-teal shadow-md hover:shadow-lg',
-      secondary:
-        'bg-copper text-white hover:bg-copper/90 focus:ring-copper shadow-md hover:shadow-lg',
-      outline:
-        'border-2 border-deep-teal text-deep-teal hover:bg-deep-teal hover:text-white focus:ring-deep-teal',
-      ghost:
-        'text-deep-teal hover:bg-deep-teal/10 focus:ring-deep-teal',
-    };
-
-    const sizes = {
-      sm: 'px-4 py-2 text-sm',
-      md: 'px-6 py-3 text-base',
-      lg: 'px-8 py-4 text-lg',
-    };
-
-    return (
-      <button
-        className={cn(
-          baseStyles,
-          variants[variant],
-          sizes[size],
-          className
-        )}
-        ref={ref}
-        {...props}
-      >
-        {children}
-      </button>
-    );
-  }
+  ({ className, variant, size, ...props }, ref) => (
+    <button ref={ref} className={buttonStyles({ variant, size, className })} {...props} />
+  ),
 );
-
 Button.displayName = 'Button';
 
-export { Button };
+type LinkProps = React.ComponentProps<typeof Link>;
+
+/** Link con l'aspetto di un pulsante (mai un <button> dentro un <a>). */
+function ButtonLink({
+  variant,
+  size,
+  className,
+  ...props
+}: LinkProps & { variant?: ButtonVariant; size?: ButtonSize }) {
+  return <Link className={buttonStyles({ variant, size, className })} {...props} />;
+}
+
+export { Button, ButtonLink };
