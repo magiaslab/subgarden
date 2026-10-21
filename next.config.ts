@@ -5,17 +5,13 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   images: {
-    formats: ['image/avif', 'image/webp'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'videos.pexels.com',
-      },
-    ],
+    // Niente ottimizzazione di Vercel (si paga a trasformazione): le varianti WebP sono
+    // preparate una volta da scripts/prepara-immagini.mjs e scelte da questo loader.
+    loader: 'custom',
+    loaderFile: './lib/images/loader.ts',
+    // Stesse larghezze delle varianti (lib/images/variant.ts → WIDTHS).
+    deviceSizes: [480, 960, 1440, 1920],
+    imageSizes: [240, 320],
   },
   compress: true,
   poweredByHeader: false,

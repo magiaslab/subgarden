@@ -1,52 +1,65 @@
 @import 'tailwindcss';
+@import 'lenis/dist/lenis.css';
 
+/*
+  Token del design system: valori e motivi in docs/DESIGN-SYSTEM.md § 2.
+  Nei componenti si usano solo i semantici (surface, ink, brand, cta, line…);
+  i primitivi (carta, prato, rame…) stanno qui per costruirli.
+*/
 @theme {
-  --color-deep-teal: #2f5848;
-  --color-copper: #b87333;
-  --color-stone-grey: #a39384;
+  /* Primitivi */
+  --color-carta-50: #f6f3ec;
+  --color-carta-100: #ece6da;
+  --color-bianco: #ffffff;
+  --color-inchiostro-900: #1c2420;
+  --color-inchiostro-600: #4a534e;
+  --color-pietra-400: #a39384;
+  --color-prato-700: #2f5848;
+  --color-prato-900: #1f3d32;
+  --color-rame-500: #b87333;
+  --color-rame-700: #8a5220;
+  --color-acqua-500: #2090b0;
+  --color-acqua-700: #176f8a;
+  --color-erba-500: #587828;
+
+  /* Semantici */
+  --color-surface: var(--color-carta-50);
+  --color-surface-alt: var(--color-carta-100);
+  --color-surface-raised: var(--color-bianco);
+  --color-surface-inverse: var(--color-prato-900);
+  --color-ink: var(--color-inchiostro-900);
+  --color-ink-muted: var(--color-inchiostro-600);
+  --color-ink-inverse: var(--color-carta-50);
+  --color-brand: var(--color-prato-700);
+  --color-brand-strong: var(--color-prato-900);
+  --color-cta: var(--color-rame-500);
+  --color-cta-hover: var(--color-rame-700);
+  --color-line: var(--color-pietra-400);
+  --color-line-strong: var(--color-inchiostro-600);
+  --color-focus: var(--color-acqua-700);
+  --color-water: var(--color-acqua-500);
+  --color-grass: var(--color-erba-500);
+  --color-danger: #a3261b;
+
+  /* Alias dei nomi del sito precedente, finché tutti i componenti non sono rifatti */
+  --color-deep-teal: var(--color-prato-700);
+  --color-copper: var(--color-rame-500);
+  --color-stone-grey: var(--color-pietra-400);
 
   --font-sans: var(--font-inter), system-ui, sans-serif;
-  --font-serif: var(--font-heading), sans-serif;
+  --font-display: var(--font-archivo), var(--font-inter), system-ui, sans-serif;
+  /* `font-serif` nei componenti vecchi = i titoli: ora Archivo */
+  --font-serif: var(--font-display);
 
-  --animate-fade-in: fadeIn 0.6s ease-in-out;
-  --animate-slide-up: slideUp 0.6s ease-out;
-  --animate-slide-down: slideDown 0.6s ease-out;
+  --radius-control: 2px;
+  --radius-media: 6px;
 
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes slideUp {
-    0% {
-      transform: translateY(20px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  @keyframes slideDown {
-    0% {
-      transform: translateY(-20px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /*
   Compatibilità con Tailwind 3 (dalla guida di aggiornamento ufficiale):
-  in Tailwind 4 il bordo predefinito è currentcolor, i placeholder usano il
-  colore del testo al 50% e i pulsanti hanno cursor: default. Queste regole
-  mantengono l'aspetto che il sito aveva con Tailwind 3.
+  in Tailwind 4 il bordo predefinito è currentcolor e i pulsanti hanno cursor: default.
 */
 @layer base {
   *,
@@ -54,17 +67,178 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
+    border-color: var(--color-line, currentcolor);
   }
 
   input::placeholder,
   textarea::placeholder {
-    color: var(--color-gray-400);
+    color: var(--color-ink-muted);
+    opacity: 0.8;
   }
 
   button:not(:disabled),
   [role='button']:not(:disabled) {
     cursor: pointer;
+  }
+
+  html {
+    /* Le àncore si fermano sotto l'header fisso (anche con Lenis, che legge questo valore). */
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--color-surface);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-brand) 22%, transparent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/*
+  Ruoli tipografici (docs/DESIGN-SYSTEM.md § 2 → Tipografia). Scala fluida tra 360 e
+  1440 px. Titoli in Archivo semi-condensato, testo in Inter.
+*/
+@layer components {
+  .type-display,
+  .type-h1,
+  .type-h2,
+  .type-h3,
+  .type-data {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-stretch: 87%;
+    text-wrap: balance;
+  }
+
+  .type-display {
+    font-size: clamp(2.75rem, 1.6rem + 5.1vw, 6.25rem);
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+  }
+
+  .type-h1 {
+    font-size: clamp(2.25rem, 1.5rem + 3.3vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .type-h2 {
+    font-size: clamp(1.875rem, 1.35rem + 2.3vw, 3.25rem);
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+  }
+
+  .type-h3 {
+    font-size: clamp(1.25rem, 1.1rem + 0.65vw, 1.625rem);
+    line-height: 1.2;
+    letter-spacing: -0.005em;
+  }
+
+  .type-lead {
+    font-size: clamp(1.125rem, 1.03rem + 0.4vw, 1.375rem);
+    line-height: 1.5;
+    text-wrap: pretty;
+  }
+
+  .type-body {
+    font-size: clamp(1rem, 0.97rem + 0.12vw, 1.0625rem);
+    line-height: 1.6;
+    text-wrap: pretty;
+  }
+
+  .type-small {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .type-ui {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.005em;
+  }
+
+  .type-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .type-data {
+    font-size: clamp(2.5rem, 1.9rem + 2.6vw, 4.25rem);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+  }
+
+  /* Testo lungo (articoli, pagine legali) */
+  .prose-site {
+    max-width: 68ch;
+  }
+  .prose-site > * + * {
+    margin-top: 1.1em;
+  }
+  .prose-site h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-stretch: 87%;
+    font-size: 1.75rem;
+    line-height: 1.15;
+    margin-top: 2.2em;
+    color: var(--color-brand);
+  }
+  .prose-site h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-top: 1.8em;
+  }
+  .prose-site ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+  }
+  .prose-site ol {
+    list-style: decimal;
+    padding-left: 1.25rem;
+  }
+  .prose-site li + li {
+    margin-top: 0.4em;
+  }
+  .prose-site a {
+    color: var(--color-brand);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  /* Riquadro per foto: angoli e ritaglio; ScrollMotion lo apre come un sipario */
+  .rounded-media {
+    border-radius: var(--radius-media);
+    overflow: hidden;
   }
 }
 
@@ -72,13 +246,15 @@
   text-wrap: balance;
 }
 
-@layer base {
-  :root {
-    --font-inter: 'Inter', system-ui, sans-serif;
-    --font-playfair: 'Playfair Display', serif;
+@utility container-site {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (width >= 40rem) {
+    padding-inline: 1.5rem;
   }
-
-  body {
-    @apply bg-white text-gray-900 antialiased;
+  @media (width >= 64rem) {
+    padding-inline: 2.5rem;
   }
 }

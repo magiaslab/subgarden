@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useState } from 'react';
+import imageLoader from '@/lib/images/loader';
 import { X, ZoomIn, ZoomOut, Maximize2 } from 'lucide-react';
 
 type ImageLightboxProps = {
@@ -89,7 +90,7 @@ export function ImageLightbox({ isOpen, onClose, src, alt }: ImageLightboxProps)
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={src}
+            src={imageLoader({ src, width: 1920 })}
             alt={alt}
             className="max-w-none rounded-lg shadow-2xl"
             style={{ maxHeight: '80vh', width: 'auto' }}

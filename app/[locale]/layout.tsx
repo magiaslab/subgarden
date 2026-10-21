@@ -1,13 +1,16 @@
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { Inter, Montserrat } from 'next/font/google';
+import { Archivo, Inter } from 'next/font/google';
 import { routing } from '@/lib/i18n/routing';
 import type { Metadata } from 'next';
 import { WhatsAppWidget } from '@/components/ui/WhatsAppWidget';
 import { CookieBanner } from '@/components/ui/CookieBanner';
 import { AnalyticsScript } from '@/components/analytics/AnalyticsScript';
+import { ScrollMotion } from '@/components/motion/ScrollMotion';
+import { SmoothScroll } from '@/components/motion/SmoothScroll';
 import { SITE_URL, alternates, pick } from '@/lib/utils/metadata';
+import { variantPath } from '@/lib/images/variant';
 import '../globals.css';
 
 const inter = Inter({
@@ -17,11 +20,12 @@ const inter = Inter({
   preload: true,
 });
 
-const montserrat = Montserrat({
+// Titoli: Archivo con l'asse di larghezza, usato semi-condensato (docs/DESIGN-SYSTEM.md).
+const archivo = Archivo({
   subsets: ['latin'],
-  variable: '--font-heading',
+  axes: ['wdth'],
+  variable: '--font-archivo',
   display: 'swap',
-  preload: true,
 });
 
 export function generateStaticParams() {
@@ -59,6 +63,7 @@ export async function generateMetadata({
     openGraph: {
       type: 'website',
       locale,
+      images: [{ url: '/og.jpg', width: 1200, height: 630 }],
       siteName: 'SUBGarden',
       description,
     },
@@ -109,7 +114,8 @@ export default async function LocaleLayout({
         legalName: 'CLOROPHYLLA SRL',
         taxID: '02088950494',
         url: SITE_URL,
-        logo: `${SITE_URL}/SUBGARDEN%20-%20LOGO%20COLORI.png`,
+        logo: `${SITE_URL}${variantPath('/SUBGARDEN - LOGO COLORI.png', 960)}`,
+        image: `${SITE_URL}/og.jpg`,
         description: pick(DESCRIPTION, locale),
         email: 'info@subgarden.it',
         telephone: '+39 347 6299935',
@@ -147,7 +153,7 @@ export default async function LocaleLayout({
   };
 
   return (
-    <html lang={locale} className={`${inter.variable} ${montserrat.variable}`}>
+    <html lang={locale} className={`${inter.variable} ${archivo.variable}`}>
       <body>
         {process.env.NEXT_PUBLIC_GTM_ID && (
           <noscript>
@@ -169,6 +175,8 @@ export default async function LocaleLayout({
           <WhatsAppWidget />
           <CookieBanner />
           <AnalyticsScript />
+          <SmoothScroll />
+          <ScrollMotion />
         </NextIntlClientProvider>
       </body>
     </html>

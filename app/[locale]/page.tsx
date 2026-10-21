@@ -39,7 +39,7 @@ export async function generateMetadata({
       url: absoluteUrl('/', locale),
       images: [
         {
-          url: `${SITE_URL}/rustic-patio-with-deck-furniture-vegetation.jpg`,
+          url: `${SITE_URL}/og.jpg`,
           width: 1200,
           height: 630,
           alt: title,
