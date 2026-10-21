@@ -106,39 +106,43 @@ export function SottoIlPrato({
     <div ref={storia} className={cn('relative', viva && 'mt-10')} style={viva ? { height: `${passi.length * 100 + 40}svh` } : undefined}>
       {!viva && children}
       {viva && (
-        <div data-no-motion className="sticky top-0 flex h-[100svh] flex-col overflow-hidden lg:flex-row lg:items-center">
-          <div
-            ref={tela}
-            role="img"
-            aria-label={etichetta}
-            className="relative order-1 min-h-0 flex-1 lg:order-2 lg:h-full [&>canvas]:absolute [&>canvas]:inset-0 [&>canvas]:size-full"
-          />
-          <div className="relative order-2 shrink-0 pb-8 pt-2 lg:order-1 lg:w-[34%] lg:py-0">
+        // Una colonna: in alto il passo, sotto la scena a tutta larghezza. La fascia resta
+        // sotto l'header fisso (h-18 / lg:h-20), non dietro.
+        <div data-no-motion className="sticky top-18 flex h-[calc(100svh-4.5rem)] flex-col lg:top-20 lg:h-[calc(100svh-5rem)]">
+          <div className="relative shrink-0 pt-5 lg:pt-8">
             <ol className="grid">
               {passi.map((p, i) => (
                 <li
                   key={p.label}
                   aria-current={i === attivo ? 'step' : undefined}
                   className={cn(
-                    '[grid-area:1/1] transition-[opacity,transform] duration-500 ease-[var(--ease-out-soft)]',
+                    '[grid-area:1/1] grid gap-x-10 gap-y-2 transition-[opacity,transform] duration-500 ease-[var(--ease-out-soft)] lg:grid-cols-[minmax(0,20rem)_minmax(0,36rem)] lg:items-end',
                     i === attivo ? 'opacity-100' : 'pointer-events-none translate-y-3 opacity-0',
                   )}
                 >
-                  <p className="type-eyebrow flex items-center gap-3 text-brand">
-                    <span aria-hidden className="inline-block h-px w-8 bg-cta" />
-                    {String(i + 1).padStart(2, '0')} / {String(passi.length).padStart(2, '0')}
-                  </p>
-                  <p className="type-h3 mt-4 max-w-md text-ink">{p.label}</p>
-                  <p className="type-body mt-3 max-w-md text-ink-muted">{p.text}</p>
+                  <div>
+                    <p className="type-eyebrow flex items-center gap-3 text-brand">
+                      <span aria-hidden className="inline-block h-px w-8 bg-cta" />
+                      {String(i + 1).padStart(2, '0')} / {String(passi.length).padStart(2, '0')}
+                    </p>
+                    <p className="type-h3 mt-3 text-ink">{p.label}</p>
+                  </div>
+                  <p className="type-body text-ink-muted">{p.text}</p>
                 </li>
               ))}
             </ol>
-            <div aria-hidden className="mt-8 flex max-w-md gap-2">
+            <div aria-hidden className="mt-5 flex gap-2 lg:mt-6">
               {passi.map((p, i) => (
                 <span key={p.label} className={cn('h-1 flex-1 rounded-full transition-colors duration-500', i <= attivo ? 'bg-water' : 'bg-line/50')} />
               ))}
             </div>
           </div>
+          <div
+            ref={tela}
+            role="img"
+            aria-label={etichetta}
+            className="relative min-h-0 flex-1 [&>canvas]:absolute [&>canvas]:inset-0 [&>canvas]:size-full"
+          />
         </div>
       )}
     </div>

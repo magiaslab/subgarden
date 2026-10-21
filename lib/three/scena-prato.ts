@@ -355,6 +355,8 @@ export function creaPrato(contenitore: HTMLElement, leggera: boolean): ApiPrato 
   window.addEventListener('pointermove', punta, { passive: true });
 
   const p = new Vector3();
+  // distanza della camera: calcolata in ridimensiona() perché la zolla stia tutta nella tela
+  let distanza = 10.8;
   const disegna = (t: number) => {
     const raggi = fase(prog, 0.15, 0.36) * (1 - fase(prog, 0.88, 0.99));
     const a = fase(prog, 0.44, 0.72);
@@ -424,10 +426,13 @@ export function creaPrato(contenitore: HTMLElement, leggera: boolean): ApiPrato 
     att.x += (mira.x - att.x) * 0.05;
     att.y += (mira.y - att.y) * 0.05;
     const gira = -0.5 + att.x + prog * 0.45;
-    const alto = 6 - 2.2 * fase(prog, 0.12, 0.4) - 1.6 * fase(prog, 0.42, 0.6) + 2.8 * fase(prog, 0.86, 1) - att.y * 2;
-    const d = leggera ? 12.5 : 10.8;
+    // altezza in proporzione alla distanza: dall'alto sul prato, più bassa per vedere sotto,
+    // di nuovo sul prato alla fine
+    const quota = (6 - 2.2 * fase(prog, 0.12, 0.4) - 1.6 * fase(prog, 0.42, 0.6) + 2.8 * fase(prog, 0.86, 1)) / 10.8;
+    const alto = distanza * quota - att.y * 2;
+    const d = distanza;
     camera.position.set(Math.sin(gira) * d, alto, Math.cos(gira) * d);
-    camera.lookAt(0, -0.7, 0);
+    camera.lookAt(0, -1.05, 0);
     renderer.render(scena, camera);
   };
   const ciclo = cicloVisibile(contenitore, disegna);
@@ -439,7 +444,14 @@ export function creaPrato(contenitore: HTMLElement, leggera: boolean): ApiPrato 
     renderer.setSize(w, h, false);
     camera.aspect = w / h;
     // il blocco deve stare tutto nella tela, anche quando è stretta e alta
-    camera.fov = w / h < 0.9 ? 46 : w / h < 1.4 ? 38 : 31;
+    camera.fov = w / h < 0.9 ? 40 : 30;
+    // la zolla (6 × 3,6 m più lo spessore) sta in una sfera di raggio ~3,7 attorno al centro:
+    // la distanza si sceglie perché quella sfera entri nell'angolo di vista più stretto, che
+    // sia il verticale (tela larga) o l'orizzontale (tela stretta). Vista dall'alto la zolla
+    // occupa meno della sfera: il fattore 0.8 la avvicina senza tagliarla.
+    const verticale = (camera.fov * Math.PI) / 180;
+    const orizzontale = 2 * Math.atan(Math.tan(verticale / 2) * (w / h));
+    distanza = (3.7 / Math.sin(Math.min(verticale, orizzontale) / 2)) * 0.8;
     camera.updateProjectionMatrix();
     ciclo.una();
   };
