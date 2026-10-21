@@ -1,12 +1,12 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { useLocale, useTranslations } from 'next-intl';
+import { useLocale, useTranslations, type Locale } from 'next-intl';
 import { usePathname, useRouter } from '@/lib/i18n/routing';
 import { Globe } from 'lucide-react';
 import { cn } from '@/lib/utils/cn';
 
-const locales = [
+const locales: { code: Locale; label: string }[] = [
   { code: 'it', label: 'Italiano' },
   { code: 'en', label: 'English' },
   { code: 'de', label: 'Deutsch' },
@@ -35,7 +35,7 @@ export function LanguageSwitcher({ isTransparent }: { isTransparent?: boolean })
 
   const currentLocale = locales.find((l) => l.code === locale);
 
-  const handleLocaleChange = (newLocale: string) => {
+  const handleLocaleChange = (newLocale: Locale) => {
     router.replace(pathname as any, { locale: newLocale });
     setIsOpen(false);
   };

@@ -1,10 +1,8 @@
 import { routing } from './lib/i18n/routing';
 
-type Locale = (typeof routing.locales)[number];
-
-declare global {
-  // Use type safe message keys with `next-intl`
-  interface IntlMessages {}
+// next-intl 4: i tipi si estendono con AppConfig (sostituisce il vecchio IntlMessages globale)
+declare module 'next-intl' {
+  interface AppConfig {
+    Locale: (typeof routing.locales)[number];
+  }
 }
-
-export {};
