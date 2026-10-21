@@ -1,64 +1,78 @@
 'use server';
 
+import nodemailer from 'nodemailer';
 import { contactFormSchema, type ContactFormData } from '@/lib/validations/contact';
-import { Resend } from 'resend';
 
-const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
-const contactEmailTo = process.env.CONTACT_EMAIL_TO ?? '';
+/*
+ * Invio del form contatti con la casella del dominio (Zoho Mail EU): il sito si
+ * autentica come info@subgarden.it e scrive a info@ stesso, con «Rispondi a» sul
+ * cliente. Mittente del dominio e SPF di Zoho già a posto: niente spam, niente
+ * servizi terzi.
+ *
+ * Variabili su Vercel:
+ *   SMTP_USER         info@subgarden.it
+ *   SMTP_PASS         password per applicazione creata in Zoho (solo su Vercel)
+ *   CONTACT_EMAIL_TO  info@subgarden.it (se manca, si usa SMTP_USER)
+ *   SMTP_HOST / SMTP_PORT  facoltative: smtp.zoho.eu / 465
+ *
+ * Se l'invio non è configurato o fallisce, il form lo dice (e propone telefono e
+ * WhatsApp): mai un «inviato» finto, che farebbe perdere la richiesta.
+ */
+const user = process.env.SMTP_USER;
+const pass = process.env.SMTP_PASS;
+const to = process.env.CONTACT_EMAIL_TO || user;
+const port = Number(process.env.SMTP_PORT || 465);
 
-export async function submitContactForm(data: ContactFormData) {
+const transport =
+  user && pass
+    ? nodemailer.createTransport({
+        host: process.env.SMTP_HOST || 'smtp.zoho.eu',
+        port,
+        secure: port === 465,
+        auth: { user, pass },
+      })
+    : null;
+
+// Una riga d'intestazione non deve poter contenere a capo (header injection)
+const oneLine = (s: string) => s.replace(/[\r\n]+/g, ' ').trim();
+
+export async function submitContactForm(data: ContactFormData): Promise<{ success: boolean }> {
+  const parsed = contactFormSchema.safeParse(data);
+  if (!parsed.success) return { success: false };
+  const { name, email, phone, message } = parsed.data;
+
+  if (!transport || !to) {
+    if (process.env.NODE_ENV !== 'production') {
+      // In sviluppo, senza credenziali, il messaggio finisce nel terminale.
+      console.log('Form contatti (SMTP non configurato):', parsed.data);
+      return { success: true };
+    }
+    console.error('Form contatti: SMTP_USER/SMTP_PASS mancanti, messaggio NON inviato');
+    return { success: false };
+  }
+
   try {
-    const validatedData = contactFormSchema.parse(data);
-
-    if (resend && contactEmailTo) {
-      const from = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
-      const { error } = await resend.emails.send({
-        from: from.includes('<') ? from : `SUBGarden <${from}>`,
-        to: [contactEmailTo],
-        replyTo: validatedData.email,
-        subject: `[SUBGarden Contatti] Richiesta da ${validatedData.name}`,
-        text: [
-          `Nome: ${validatedData.name}`,
-          `Email: ${validatedData.email}`,
-          validatedData.phone ? `Telefono: ${validatedData.phone}` : '',
-          '',
-          'Messaggio:',
-          validatedData.message,
-        ]
-          .filter(Boolean)
-          .join('\n'),
-      });
-
-      if (error) {
-        console.error('Resend error:', error);
-        return {
-          success: false,
-          message: 'Errore nell\'invio del messaggio. Riprova più tardi.',
-        };
-      }
-      return {
-        success: true,
-        message: 'Messaggio inviato con successo!',
-      };
-    }
-
-    // Nessun Resend configurato: simulazione per sviluppo
-    console.log('Contact form (no Resend):', validatedData);
-    await new Promise((resolve) => setTimeout(resolve, 800));
-    return {
-      success: true,
-      message: 'Messaggio inviato con successo!',
-    };
+    await transport.sendMail({
+      from: { name: 'Sito SUBGarden', address: user! },
+      to,
+      replyTo: { name: oneLine(name), address: email },
+      subject: oneLine(`[Sito] Richiesta da ${name}`),
+      text: [
+        `Nome: ${name}`,
+        `Email: ${email}`,
+        phone ? `Telefono: ${phone}` : '',
+        '',
+        'Messaggio:',
+        message,
+        '',
+        '— Inviato dal form contatti di www.subgarden.it',
+      ]
+        .filter((line, i, all) => line !== '' || all[i - 1] !== '')
+        .join('\n'),
+    });
+    return { success: true };
   } catch (error) {
-    if (error instanceof Error) {
-      return {
-        success: false,
-        message: error.message || 'Errore nell\'invio del messaggio',
-      };
-    }
-    return {
-      success: false,
-      message: 'Errore nell\'invio del messaggio. Riprova.',
-    };
+    console.error('Form contatti: invio SMTP fallito', error);
+    return { success: false };
   }
 }
