@@ -3,10 +3,9 @@ import { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
-import { ContactCTA } from '@/components/sections/ContactCTA';
+import { PageHero } from '@/components/site/PageHero';
+import { Section } from '@/components/site/Section';
 import { PortfolioGallery } from '@/components/sections/PortfolioGallery';
-import { MotionDiv } from '@/components/ui/Motion';
-import Image from 'next/image';
 import { alternates, pick, NOINDEX } from '@/lib/utils/metadata';
 
 const TITLE: Record<string, string> = {
@@ -36,41 +35,21 @@ export default async function PortfolioPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale as Locale);
-  const t = await (getTranslations as any)('portfolio');
+  const t = await getTranslations('portfolio');
 
   return (
     <>
       <Navbar />
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-          <Image
-            src="/green-park-view.jpg"
-            alt="Portfolio SUBGarden"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="relative z-10 text-center text-white px-4 max-w-4xl">
-            <MotionDiv
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6">
-                {t('title')}
-              </h1>
-              <p className="text-xl md:text-2xl opacity-90 font-light italic">
-                {t('description')}
-              </p>
-            </MotionDiv>
-          </div>
-        </section>
-
-        <PortfolioGallery />
-
-        <ContactCTA />
+      <main id="contenuto">
+        <PageHero
+          eyebrow={t('eyebrow')}
+          title={t('title')}
+          lead={t('description')}
+          image={{ src: '/green-park-view.jpg' }}
+        />
+        <Section tone="surface">
+          <PortfolioGallery />
+        </Section>
       </main>
       <Footer />
     </>

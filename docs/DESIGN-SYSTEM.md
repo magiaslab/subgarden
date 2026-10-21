@@ -55,7 +55,7 @@ Due livelli: i **primitivi** (`prato-700`, `rame-500`) non si usano nei componen
 | `pietra-400` | `#a39384` | filetti, bordi, mai testo |
 | `prato-700` | `#2f5848` | marca |
 | `prato-900` | `#1f3d32` | fondo scuro, hover del verde |
-| `rame-500` | `#b87333` | pulsante principale, marcatori |
+| `rame-500` | `#c47a36` | pulsante principale, marcatori (il `#b87333` di prima, appena schiarito: con il testo inchiostro passa da 4,19:1 a 4,68:1, verificato con axe il 2026-10-21) |
 | `rame-700` | `#8a5220` | testo in rame, hover del pulsante |
 | `acqua-500` | `#2090b0` | solo diagrammi e logo |
 | `acqua-700` | `#176f8a` | stato informativo |

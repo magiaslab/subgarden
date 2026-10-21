@@ -1,9 +1,10 @@
 'use client';
 
 import { useEffect } from 'react';
-import { Button } from '@/components/ui/Button';
-import { useRouter } from '@/lib/i18n/routing';
+import { useTranslations } from 'next-intl';
+import { Button, ButtonLink } from '@/components/ui/Button';
 
+/* Errore inatteso: frase chiara, riprova e ritorno alla home. */
 export default function Error({
   error,
   reset,
@@ -11,33 +12,26 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
-  const router = useRouter();
+  const t = useTranslations('errorPage');
 
   useEffect(() => {
     console.error(error);
   }, [error]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white px-4">
-      <div className="text-center max-w-md">
-        <h2 className="text-3xl font-serif font-bold text-deep-teal mb-4">
-          Qualcosa è andato storto
-        </h2>
-        <p className="text-gray-600 mb-8">
-          Si è verificato un errore. Riprova o contattaci se il problema persiste.
-        </p>
-        <div className="flex gap-4 justify-center">
-          <Button onClick={reset} variant="primary">
-            Riprova
+    <main id="contenuto" data-no-motion className="bg-surface-alt">
+      <div className="container-site flex min-h-[80svh] flex-col justify-center py-24">
+        <h1 className="type-h1 max-w-[16ch] text-ink">{t('err_title')}</h1>
+        <p className="type-lead mt-6 max-w-2xl text-ink-muted">{t('err_body')}</p>
+        <div className="mt-10 flex flex-wrap items-center gap-6">
+          <Button onClick={reset} variant="secondary" size="lg">
+            {t('err_retry')}
           </Button>
-          <Button
-            onClick={() => router.push('/')}
-            variant="outline"
-          >
-            Torna alla Home
-          </Button>
+          <ButtonLink href="/" variant="ghost">
+            {t('err_home')}
+          </ButtonLink>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

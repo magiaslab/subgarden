@@ -2,31 +2,17 @@ import type { Locale } from 'next-intl';
 import { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
+import { ArrowUpRight } from 'lucide-react';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
-import { MotionDiv } from '@/components/ui/Motion';
-import { ContactCTA } from '@/components/sections/ContactCTA';
-import { OperationalMethodStrip } from '@/components/sections/OperationalMethodStrip';
+import { PageHero } from '@/components/site/PageHero';
+import { Section, SectionIntro } from '@/components/site/Section';
+import { DripLine } from '@/components/site/DripLine';
+import { ButtonLink } from '@/components/ui/Button';
 import { ComparisonTableSection } from '@/components/sections/ComparisonTableSection';
-import Image from 'next/image';
-import {
-  Droplets,
-  Zap,
-  Smartphone,
-  Layers,
-  BadgeCheck,
-  Leaf,
-  Maximize,
-  LayoutDashboard,
-  TrendingDown,
-  Footprints,
-  Grid,
-  Target,
-  Clock,
-  Settings2,
-} from 'lucide-react';
+import { Link } from '@/lib/i18n/routing';
+import { solutions as solutionList } from '@/lib/solutions';
 import { SITE_URL, absoluteUrl, alternates, pick } from '@/lib/utils/metadata';
 
 // Tipi per card estese (giardini residenziali)
@@ -35,7 +21,6 @@ type CardItem = { iconIndex: number; title: string; body: string };
 // Dati statici per le soluzioni (in futuro verranno dal CMS)
 const solutions = {
   'giardini-residenziali': {
-    icons: [Droplets, Layers, Zap, Smartphone, Leaf],
     it: {
       title: 'Giardini Residenziali',
       description:
@@ -143,7 +128,6 @@ const solutions = {
     },
   },
   'parchi-pubblici': {
-    icons: [Maximize, LayoutDashboard, TrendingDown, Leaf, Footprints],
     it: {
       title: 'Parchi Pubblici e Spazi Verdi',
       description: 'Soluzione professionale e scalabile per spazi verdi pubblici, parchi urbani e aree ricreative. Risparmio idrico e riduzione costi con controllo centralizzato.',
@@ -248,7 +232,6 @@ const solutions = {
     },
   },
   'campi-sportivi': {
-    icons: [Grid, Footprints, Target, Clock, Settings2],
     it: {
       title: 'Campi Sportivi e Strutture Ricreative',
       description:
@@ -354,7 +337,6 @@ const solutions = {
     },
   },
   'strutture-turistiche': {
-    icons: [Leaf, Droplets, Zap, LayoutDashboard, BadgeCheck],
     it: {
       title: 'Strutture Turistiche',
       description:
@@ -494,6 +476,87 @@ export async function generateMetadata({
   };
 }
 
+/*
+ * Titolo mostrato nella pagina (h1): in italiano senza le maiuscole a ogni parola.
+ * Il nome nei dati strutturati e nei metadati resta `content.title`.
+ */
+const HEADING: Record<string, Record<string, string>> = {
+  'giardini-residenziali': { it: 'Giardini residenziali' },
+  'parchi-pubblici': { it: 'Parchi pubblici e spazi verdi' },
+  'campi-sportivi': { it: 'Campi sportivi e strutture ricreative' },
+  'strutture-turistiche': { it: 'Strutture turistiche' },
+};
+
+/*
+ * I numeri della soluzione, presi dai testi qui sopra (nessun dato nuovo). Il valore
+ * grande è per l'occhio; la frase, con il numero dentro, è quella che leggono tutti.
+ */
+type Fact = { value: string; count?: string; text: string };
+const FACTS: Record<string, Record<string, Fact[]>> = {
+  'giardini-residenziali': {
+    it: [
+      { value: '70%', count: '70', text: 'Fino al 70% di acqua in meno rispetto all’irrigazione a pioggia.' },
+      { value: '>90%', count: '90', text: 'Efficienza della distribuzione oltre il 90%, per capillarità.' },
+    ],
+    en: [
+      { value: '70%', count: '70', text: 'Up to 70% less water than sprinkler irrigation.' },
+      { value: '>90%', count: '90', text: 'Distribution efficiency above 90%, by capillarity.' },
+    ],
+    de: [
+      { value: '70 %', count: '70', text: 'Bis zu 70 % weniger Wasser als mit Sprinklerbewässerung.' },
+      { value: '>90 %', count: '90', text: 'Verteilungseffizienz über 90 %, durch Kapillarität.' },
+    ],
+  },
+  'parchi-pubblici': {
+    it: [
+      { value: '50+ ha', count: '50', text: 'Da 500 m² a oltre 50 ettari con un unico sistema.' },
+      { value: '40–50%', text: 'Dal 40 al 50% di costi annui in meno rispetto all’irrigazione a pioggia.' },
+    ],
+    en: [
+      { value: '50+ ha', count: '50', text: 'From 500 m² to over 50 hectares with a single system.' },
+      { value: '40–50%', text: '40 to 50% lower annual costs than sprinkler irrigation.' },
+    ],
+    de: [
+      { value: '50+ ha', count: '50', text: 'Von 500 m² bis über 50 Hektar mit einem einzigen System.' },
+      { value: '40–50 %', text: '40 bis 50 % geringere jährliche Kosten als mit Sprinklerbewässerung.' },
+    ],
+  },
+  'campi-sportivi': {
+    it: [
+      { value: '>90%', count: '90', text: 'Efficienza idrica oltre il 90%, senza zone secche né allagate.' },
+      { value: '70%', count: '70', text: 'Fino al 70% di tempo di manutenzione in meno rispetto ai sistemi tradizionali.' },
+    ],
+    en: [
+      { value: '>90%', count: '90', text: 'Water efficiency above 90%, with no dry or flooded patches.' },
+      { value: '70%', count: '70', text: 'Up to 70% less maintenance time than traditional systems.' },
+    ],
+    de: [
+      { value: '>90 %', count: '90', text: 'Wassereffizienz über 90 %, ohne trockene oder überflutete Stellen.' },
+      { value: '70 %', count: '70', text: 'Bis zu 70 % weniger Wartungszeit als bei herkömmlichen Systemen.' },
+    ],
+  },
+  'strutture-turistiche': {
+    it: [
+      { value: '70%', count: '70', text: 'Fino al 70% di acqua in meno rispetto all’irrigazione a pioggia.' },
+    ],
+    en: [{ value: '70%', count: '70', text: 'Up to 70% less water than sprinkler irrigation.' }],
+    de: [{ value: '70 %', count: '70', text: 'Bis zu 70 % weniger Wasser als mit Sprinklerbewässerung.' }],
+  },
+};
+
+/** "70%" con count "70" → prima, numero che conta, dopo. */
+function FactValue({ value, count }: { value: string; count?: string }) {
+  const at = count ? value.indexOf(count) : -1;
+  if (!count || at < 0) return <>{value}</>;
+  return (
+    <>
+      {value.slice(0, at)}
+      <span data-count={count}>{count}</span>
+      {value.slice(at + count.length)}
+    </>
+  );
+}
+
 export default async function SoluzionePage({
   params,
 }: {
@@ -508,7 +571,6 @@ export default async function SoluzionePage({
   }
 
   const content = solution[locale] || solution.it;
-  const icons = solution.icons;
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -520,6 +582,15 @@ export default async function SoluzionePage({
     areaServed: { '@type': 'AdministrativeArea', name: 'Toscana' },
   };
 
+  const t = await getTranslations('solutionsPage');
+  const tn = await getTranslations('nav');
+  const ts = await getTranslations('operationalStrip');
+  const lang = locale as 'it' | 'en' | 'de';
+  const heading = HEADING[slug]?.[locale] ?? content.title;
+  const facts = FACTS[slug]?.[locale] ?? FACTS[slug]?.it ?? [];
+  const cards = content.cards as CardItem[];
+  const others = solutionList.filter((s) => s.slug !== slug);
+
   return (
     <>
       <script
@@ -527,131 +598,112 @@ export default async function SoluzionePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <Navbar />
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-          <Image
-            src={content.image || "/rustic-patio-with-deck-furniture-vegetation.jpg"}
-            alt={content.title}
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="relative z-10 text-center text-white px-4 max-w-4xl">
-            <MotionDiv
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <Badge variant="outline" className="mb-4 bg-white/10 border-white/30 text-white">
-                Soluzione
-              </Badge>
-              <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6">
-                {content.title}
-              </h1>
-              <p className="text-xl md:text-2xl opacity-90 font-light italic">
-                {(content as any).heroSubtitle ?? content.description}
-              </p>
-            </MotionDiv>
-          </div>
-        </section>
+      <main id="contenuto">
+        <PageHero
+          eyebrow={t('detail_eyebrow')}
+          title={heading}
+          lead={content.heroSubtitle ?? content.description}
+          image={{ src: content.image }}
+          breadcrumb={[
+            { label: tn('home'), href: '/' },
+            { label: tn('solutions'), href: '/soluzioni' },
+            { label: heading },
+          ]}
+        >
+          <ButtonLink href="/contatti" size="lg">
+            {tn('cta')}
+          </ButtonLink>
+        </PageHero>
 
-        <section className="py-20 bg-[#F2F4F7]">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            {content.image && (
-              <MotionDiv
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="mb-12 rounded-xl overflow-hidden shadow-2xl relative h-[400px] w-full"
-              >
-                <Image
-                  src={content.image}
-                  alt={content.title}
-                  fill
-                  className="object-cover"
-                  sizes="100vw"
-                />
-              </MotionDiv>
-            )}
-            <h2 className="text-3xl font-serif font-bold text-deep-teal mb-10">
-              Caratteristiche Principali
-            </h2>
+        {/* I numeri sulla linea gocciolante, come nella home */}
+        {facts.length > 0 && (
+          <section aria-label={t('facts_label')} className="bg-surface py-14 lg:py-20">
+            <div className="container-site">
+              <DripLine drops={20} />
+              <ul className="mt-10 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+                {facts.map((f) => (
+                  <li key={f.text} className="border-l border-line pl-5">
+                    <p aria-hidden className="type-data mb-3 text-brand">
+                      <FactValue value={f.value} count={f.count} />
+                    </p>
+                    <p className="type-body text-ink-muted">{f.text}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
 
-            {'cards' in content && Array.isArray((content as any).cards) ? (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
-                {((content as any).cards as CardItem[]).map((card, index) => {
-                  const Icon = icons[card.iconIndex] ?? BadgeCheck;
-                  const accentStyles = [
-                    'bg-sky-500/15 text-sky-700',
-                    'bg-copper/20 text-copper',
-                    'bg-amber-500/15 text-amber-700',
-                    'bg-violet-500/15 text-violet-700',
-                    'bg-emerald-600/15 text-emerald-700',
-                  ];
-                  const accent = accentStyles[card.iconIndex % accentStyles.length];
-                  return (
-                    <MotionDiv
-                      key={card.title}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: index * 0.08 }}
-                    >
-                      <Card className="h-full border-white/80 shadow-xl hover:shadow-2xl hover:border-copper/30 transition-all duration-300 overflow-hidden rounded-3xl p-8 md:p-10">
-                        <div className="absolute top-0 right-0 w-40 h-40 bg-deep-teal/5 rounded-full -mr-20 -mt-20 blur-2xl pointer-events-none" />
-                        <CardHeader className="relative flex flex-row items-start gap-4 mb-2">
-                          <div className={`shrink-0 w-12 h-12 rounded-2xl flex items-center justify-center ${accent}`}>
-                            <Icon className="w-6 h-6" />
-                          </div>
-                          <CardTitle className="text-xl md:text-2xl font-serif font-bold text-deep-teal mt-0">
-                            {card.title}
-                          </CardTitle>
-                        </CardHeader>
-                        <CardContent className="relative pt-2 pb-6">
-                          <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-                            {card.body}
-                          </p>
-                        </CardContent>
-                      </Card>
-                    </MotionDiv>
-                  );
-                })}
+        {/* Cosa cambia: intestazione ferma a sinistra, voci numerate con filetti a destra */}
+        <Section tone="surface" className="pt-4 md:pt-6 lg:pt-8">
+          <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-5">
+              <div className="lg:sticky lg:top-28">
+                <SectionIntro eyebrow={t('features_eyebrow')} title={t('features_title')} lead={content.description} />
               </div>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {content.features.map((feature: string, index: number) => {
-                  const Icon = icons[index] || BadgeCheck;
-                  return (
-                    <MotionDiv
-                      key={feature}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                    >
-                      <Card className="group hover:border-copper/50 transition-all duration-300 shadow-xl hover:shadow-2xl h-full border-white/50 p-0 overflow-hidden">
-                        <CardContent className="p-8 flex flex-col items-center md:items-start text-center md:text-left h-full">
-                          <div className="mb-8 p-4 rounded-2xl bg-[#F2F4F7] group-hover:bg-copper group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-inner">
-                            <Icon className="w-8 h-8 text-deep-teal group-hover:text-white" />
-                          </div>
-                          <p className="text-lg text-gray-700 leading-relaxed font-medium group-hover:text-deep-teal transition-colors duration-300">{feature}</p>
-                        </CardContent>
-                      </Card>
-                    </MotionDiv>
-                  );
-                })}
-              </div>
-            )}
+            </div>
+            <ol className="border-t border-line lg:col-span-7">
+              {cards.map((card, i) => (
+                <li key={card.title} className="grid gap-3 border-b border-line py-8 sm:grid-cols-[3.5rem_1fr] sm:gap-6 lg:py-10">
+                  <span aria-hidden className="type-eyebrow pt-1.5 text-brand">
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <div>
+                    <h3 className="type-h3 text-ink">{card.title}</h3>
+                    <p className="type-body mt-3 max-w-prose text-ink-muted">{card.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
           </div>
-        </section>
+        </Section>
 
-        <OperationalMethodStrip />
-        <ComparisonTableSection />
+        {/* La foto grande, che si allarga ai bordi */}
+        <figure data-expand className="relative aspect-4/3 overflow-hidden bg-surface-inverse sm:aspect-16/9 lg:aspect-[21/9]">
+          <Image src={content.image} alt="" fill sizes="100vw" className="object-cover" data-parallax="0.1" />
+        </figure>
 
-        <ContactCTA />
+        {/* I tre passi del lavoro */}
+        <Section tone="inverse">
+          <SectionIntro inverse eyebrow={t('method_eyebrow')} title={ts('title')} />
+          <DripLine inverse drops={18} className="mt-12 lg:mt-16" />
+          <ol className="mt-10 grid gap-10 md:grid-cols-3 md:gap-8">
+            {[1, 2, 3].map((i) => (
+              <li key={i}>
+                <p className="type-eyebrow text-ink-inverse/80">0{i}</p>
+                <h3 className="type-h3 mt-2 text-ink-inverse">{ts(`step${i}_title`)}</h3>
+                <p className="type-body mt-2 text-ink-inverse/85">{ts(`step${i}_desc`)}</p>
+              </li>
+            ))}
+          </ol>
+          <ButtonLink href="/tecnologia" variant="inverse" className="mt-12">
+            {t('tech_link')}
+          </ButtonLink>
+        </Section>
+
+        <ComparisonTableSection eyebrow={t('compare_eyebrow')} />
+
+        {/* Le altre soluzioni, come righe */}
+        <Section tone="surface">
+          <h2 className="type-h2 text-ink">{t('other_title')}</h2>
+          <ul className="mt-10 border-t border-line">
+            {others.map((s) => (
+              <li key={s.slug} className="border-b border-line">
+                <Link
+                  href={{ pathname: '/soluzioni/[slug]', params: { slug: s.slug } }}
+                  className="group grid grid-cols-[5.5rem_1fr_auto] items-center gap-5 py-5 sm:grid-cols-[9rem_1fr_auto] lg:grid-cols-[12rem_1fr_1.2fr_auto] lg:gap-10 lg:py-7"
+                >
+                  <span className="rounded-media relative block aspect-4/3 bg-surface-alt">
+                    <Image src={s.image} alt="" fill sizes="(min-width: 64rem) 12rem, 9rem" className="object-cover transition-transform duration-700 ease-[var(--ease-out-soft)] group-hover:scale-105" />
+                  </span>
+                  <span className="type-h3 text-ink transition-colors group-hover:text-brand">{s.title[lang] ?? s.title.it}</span>
+                  <span className="type-body hidden text-ink-muted lg:block">{s.description[lang] ?? s.description.it}</span>
+                  <ArrowUpRight aria-hidden className="size-6 text-brand transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Section>
       </main>
       <Footer />
     </>

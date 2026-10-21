@@ -1,17 +1,20 @@
 import type { Locale } from 'next-intl';
 import { Metadata } from 'next';
-import { Navbar } from '@/components/navigation/Navbar';
-import { Footer } from '@/components/navigation/Footer';
-import { MotionDiv } from '@/components/ui/Motion';
-import { VillaMussioGallery } from '@/components/sections/VillaMussioGallery';
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Navbar } from '@/components/navigation/Navbar';
+import { Footer } from '@/components/navigation/Footer';
+import { PageHero } from '@/components/site/PageHero';
+import { Section, SectionIntro } from '@/components/site/Section';
+import { DripLine } from '@/components/site/DripLine';
+import { ButtonLink } from '@/components/ui/Button';
+import { VillaMussioGallery } from '@/components/sections/VillaMussioGallery';
 import { alternates, pick } from '@/lib/utils/metadata';
 
 const TITLE: Record<string, string> = {
-  it: 'Chi siamo: la storia di Fausto Favilli',
-  en: 'About us: the story of Fausto Favilli',
-  de: 'Über uns: die Geschichte von Fausto Favilli',
+  it: 'Chi siamo: dal 1990 tra piante e giardini',
+  en: 'About us: plants and gardens since 1990',
+  de: 'Über uns: seit 1990 bei Pflanzen und Gärten',
 };
 
 export async function generateMetadata({
@@ -26,6 +29,20 @@ export async function generateMetadata({
   };
 }
 
+const MILESTONES = [
+  { when: 'milestone_1_when', text: 'milestone_1990' },
+  { when: 'milestone_2_when', text: 'milestone_patent' },
+  { when: 'milestone_3_when', text: 'milestone_villa' },
+] as const;
+
+const PHILOSOPHY_PHOTOS = [
+  { src: '/villa-mussio/20210914_090312.jpg', alt: 'philosophy_photo_1' },
+  { src: '/villa-mussio/20210703_092804.jpg', alt: 'philosophy_photo_2' },
+  { src: '/villa-mussio/DJI_0203.JPG', alt: 'philosophy_photo_3' },
+] as const;
+
+const FACTS = ['years', 'invasive', 'patent'] as const;
+
 export default async function AboutPage({
   params,
 }: {
@@ -33,179 +50,111 @@ export default async function AboutPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale as Locale);
-  const t = await (getTranslations as any)('aboutPage');
+  const t = await getTranslations('aboutPage');
+  const ta = await getTranslations('about');
+  const tn = await getTranslations('nav');
 
   return (
     <>
       <Navbar />
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-          <Image
-            src="/villa-mussio/DJI_0001.JPG"
-            alt="About SUBGarden"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="relative z-10 text-center text-white px-4 max-w-4xl">
-            <MotionDiv
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6">
-                {t('hero_title')}
-              </h1>
-              <p className="text-xl md:text-2xl opacity-90 font-light italic">
-                {t('hero_subtitle')}
-              </p>
-            </MotionDiv>
-          </div>
-        </section>
+      <main id="contenuto">
+        <PageHero
+          eyebrow={t('hero_eyebrow')}
+          title={t('hero_title')}
+          lead={t('hero_lead')}
+          image={{ src: '/villa-mussio/20210914_090508.jpg', alt: t('hero_image_alt') }}
+          breadcrumb={[{ label: tn('home'), href: '/' }, { label: tn('about') }]}
+        >
+          <ButtonLink href="/contatti" size="lg">
+            {tn('cta')}
+          </ButtonLink>
+        </PageHero>
 
-        {/* Roots Section */}
-        <section className="py-24 bg-[#F2F4F7]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <MotionDiv
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl"
-              >
+        {/* Le radici: 1990, la storia in prima persona */}
+        <Section>
+          <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
+            <figure className="lg:sticky lg:top-28 lg:self-start">
+              <div className="rounded-media relative aspect-4/5 bg-surface-alt">
                 <Image
                   src="/villa-mussio/20210703_085226.jpg"
-                  alt="Le radici - Fausto Favilli e la natura"
+                  alt={t('roots_image_alt')}
                   fill
+                  sizes="(min-width: 64rem) 45vw, 100vw"
                   className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
-              </MotionDiv>
-              <MotionDiv
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-              >
-                <h2 className="text-sm font-bold uppercase tracking-widest text-copper mb-4">
-                  1990 — L&apos;Inizio
-                </h2>
-                <h3 className="text-4xl font-serif font-bold text-deep-teal mb-8">
-                  {t('roots_title')}
-                </h3>
-                <p className="text-xl text-gray-700 leading-relaxed mb-8">
-                  {t('roots_text')}
-                </p>
-                <div className="bg-gray-50 p-8 rounded-xl border-l-4 border-copper italic text-gray-600 text-lg mb-8">
-                  &quot;Mi sono innamorato della purezza delle piante e della loro resiliente capacità di esistere, semplicemente.&quot;
-                </div>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  {t('roots_ancient_text')}
-                </p>
-              </MotionDiv>
+              </div>
+            </figure>
+            <div>
+              <SectionIntro eyebrow={t('roots_eyebrow')} title={t('roots_title')} />
+              <p className="type-lead mt-6 max-w-prose text-ink">{t('roots_text')}</p>
+              <blockquote className="mt-10 border-l-2 border-cta pl-6">
+                <p className="type-h3 max-w-prose text-brand">«{t('roots_quote')}»</p>
+              </blockquote>
+              <p className="type-body mt-10 max-w-prose text-ink-muted">{t('roots_ancient_text')}</p>
+
+              <h3 className="type-eyebrow mt-14 text-brand">{t('milestones_label')}</h3>
+              <DripLine drops={12} className="mt-5" />
+              <ol className="mt-6 grid gap-6 sm:grid-cols-3">
+                {MILESTONES.map((m) => (
+                  <li key={m.when} className="border-l border-line pl-4">
+                    <p className="type-h3 text-ink">{t(m.when)}</p>
+                    <p className="type-small mt-2 text-ink-muted">{ta(m.text)}</p>
+                  </li>
+                ))}
+              </ol>
             </div>
           </div>
-        </section>
+        </Section>
 
-        {/* Philosophy Expanded Section */}
-        <section className="py-24 bg-deep-teal text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-                {t('philosophy_expanded_title')}
-              </h2>
-              <div className="w-24 h-1 bg-copper mx-auto"></div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-lg opacity-90 leading-relaxed">
-              <p>{t('philosophy_expanded_text1')}</p>
-              <p>{t('philosophy_expanded_text2')}</p>
-            </div>
+        {/* Il metodo: paesaggio prestato e giardino empatico */}
+        <Section tone="inverse">
+          <SectionIntro inverse eyebrow={t('philosophy_eyebrow')} title={t('philosophy_expanded_title')} />
+          <div className="mt-10 grid gap-8 md:grid-cols-2 lg:mt-12 lg:gap-16">
+            <p className="type-body max-w-prose text-ink-inverse/85">{t('philosophy_expanded_text1')}</p>
+            <p className="type-body max-w-prose text-ink-inverse/85">{t('philosophy_expanded_text2')}</p>
+          </div>
+          <ul className="mt-12 grid gap-6 md:grid-cols-3 lg:mt-16">
+            {PHILOSOPHY_PHOTOS.map((p) => (
+              <li key={p.src}>
+                <figure>
+                  <div className="rounded-media relative aspect-4/3 bg-brand">
+                    <Image src={p.src} alt={t(p.alt)} fill sizes="(min-width: 48rem) 33vw, 100vw" className="object-cover" />
+                  </div>
+                  <figcaption className="type-small mt-3 text-ink-inverse/85">{t(p.alt)}</figcaption>
+                </figure>
+              </li>
+            ))}
+          </ul>
+        </Section>
 
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="relative h-80 rounded-2xl overflow-hidden group">
-                <Image src="/villa-mussio/20210914_090312.jpg" alt="Paesaggio prestato - Villa Mussio" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
-              </div>
-              <div className="relative h-80 rounded-2xl overflow-hidden group">
-                <Image src="/villa-mussio/20210703_092804.jpg" alt="Giardino empatico" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
-              </div>
-              <div className="relative h-80 rounded-2xl overflow-hidden group">
-                <Image src="/villa-mussio/DJI_0203.JPG" alt="Orizzonte Toscana" fill className="object-cover transition-transform duration-700 group-hover:scale-110" sizes="(max-width: 768px) 100vw, 33vw" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors" />
-              </div>
+        {/* Un lavoro: il parco del Settecento e la galleria di Villa Mussio */}
+        <Section tone="alt">
+          <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
+            <SectionIntro eyebrow={t('case_eyebrow')} title={t('case_history_title')} />
+            <div>
+              <p className="type-lead max-w-prose text-ink">{t('case_history_text')}</p>
+              <p className="type-body mt-6 max-w-prose border-l-2 border-cta pl-6 text-ink-muted">{t('case_history_focus')}</p>
             </div>
           </div>
-        </section>
+          <VillaMussioGallery className="mt-16 lg:mt-24" />
+        </Section>
 
-        {/* Case History Section */}
-        <section className="py-24 bg-[#F2F4F7]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <MotionDiv
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="lg:order-2"
-              >
-                <VillaMussioGallery caption={t('gallery_villa_mussio')} />
-              </MotionDiv>
-              <MotionDiv
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="lg:order-1"
-              >
-                <h3 className="text-4xl font-serif font-bold text-deep-teal mb-8">
-                  {t('case_history_title')}
-                </h3>
-                <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                  {t('case_history_text')}
-                </p>
-                <p className="text-lg text-gray-600 leading-relaxed italic border-l-4 border-copper pl-6">
-                  {t('case_history_focus')}
-                </p>
-              </MotionDiv>
-            </div>
+        {/* SUBGarden: l'impianto che non si vede, tre fatti */}
+        <Section>
+          <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
+            <SectionIntro eyebrow={t('innovation_eyebrow')} title={t('innovation_title')} />
+            <p className="type-lead max-w-prose text-ink-muted">{t('innovation_text')}</p>
           </div>
-        </section>
-
-        {/* Innovation Section */}
-        <section className="py-24 bg-gray-50">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <MotionDiv
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="bg-white p-12 md:p-20 rounded-3xl shadow-xl border border-gray-100"
-            >
-              <h3 className="text-4xl font-serif font-bold text-deep-teal mb-8">
-                {t('innovation_title')}
-              </h3>
-              <p className="text-xl text-gray-700 leading-relaxed mb-12 max-w-3xl mx-auto">
-                {t('innovation_text')}
-              </p>
-              <div className="flex flex-wrap justify-center gap-8">
-                <div className="flex flex-col items-center">
-                  <span className="text-4xl font-serif font-bold text-copper">30+</span>
-                  <span className="text-gray-500 uppercase tracking-widest text-sm">Anni di Esperienza</span>
-                </div>
-                <div className="w-px h-12 bg-gray-200 hidden md:block"></div>
-                <div className="flex flex-col items-center">
-                  <span className="text-4xl font-serif font-bold text-copper">100%</span>
-                  <span className="text-gray-500 uppercase tracking-widest text-sm">Non Invasivo</span>
-                </div>
-                <div className="w-px h-12 bg-gray-200 hidden md:block"></div>
-                <div className="flex flex-col items-center">
-                  <span className="text-4xl font-serif font-bold text-copper">Brevettato</span>
-                  <span className="text-gray-500 uppercase tracking-widest text-sm">Sistema SUBGarden</span>
-                </div>
+          <DripLine drops={20} className="mt-14 lg:mt-20" />
+          <dl className="mt-10 grid gap-x-8 gap-y-10 sm:grid-cols-3">
+            {FACTS.map((f) => (
+              <div key={f} className="flex flex-col border-l border-line pl-5">
+                <dt className="type-body order-2 mt-3 text-ink-muted">{t(`fact_${f}_label`)}</dt>
+                <dd className="type-data order-1 text-brand">{t(`fact_${f}_value`)}</dd>
               </div>
-            </MotionDiv>
-          </div>
-        </section>
+            ))}
+          </dl>
+        </Section>
       </main>
       <Footer />
     </>

@@ -2,7 +2,7 @@ export const solutions = [
   {
     slug: 'giardini-residenziali',
     title: {
-      it: 'Giardini Residenziali',
+      it: 'Giardini residenziali',
       en: 'Residential Gardens',
       de: 'Wohngebiete',
     },
@@ -16,7 +16,7 @@ export const solutions = [
   {
     slug: 'parchi-pubblici',
     title: {
-      it: 'Parchi Pubblici',
+      it: 'Parchi pubblici',
       en: 'Public Parks',
       de: 'Öffentliche Parks',
     },
@@ -30,7 +30,7 @@ export const solutions = [
   {
     slug: 'campi-sportivi',
     title: {
-      it: 'Campi Sportivi',
+      it: 'Campi sportivi',
       en: 'Sports Fields',
       de: 'Sportplätze',
     },
@@ -44,7 +44,7 @@ export const solutions = [
   {
     slug: 'strutture-turistiche',
     title: {
-      it: 'Strutture Turistiche',
+      it: 'Strutture turistiche',
       en: 'Tourism & Hospitality',
       de: 'Tourismus & Beherbergung',
     },

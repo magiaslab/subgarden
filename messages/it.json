@@ -1,8 +1,6 @@
 {
   "about": {
     "discover_more": "Scopri la nostra storia",
-    "founder": "Fausto Favilli",
-    "founder_role": "Fondatore & Visionario",
     "milestone_1990": "L'inizio di una passione trentennale",
     "milestone_patent": "Innovazione e brevetto SUBGarden",
     "milestone_villa": "Restauro storico di parchi monumentali",
@@ -15,19 +13,52 @@
   },
   "aboutPage": {
     "case_history_text": "Uno dei miei progetti più significativi è stato il recupero del parco di una villa del 1700 in semi-abbandono. Ho ascoltato ciò che il parco voleva tornare a essere, ripristinando le simmetrie storiche e le essenze secolari, trasformandolo in una cornice d'eccellenza per eventi VIP e relax assoluto, senza mai spezzare il dialogo con il paesaggio circostante.",
-    "case_history_title": "Il Restauro dell'Anima: Villa del XVIII Secolo",
-    "gallery_villa_mussio": "Villa Mussio — Alcuni scatti del progetto",
+    "case_history_title": "Il restauro di un parco del Settecento",
+    "gallery_villa_mussio": "Villa Mussio, alcuni scatti del lavoro",
     "hero_subtitle": "La mia storia e la visione di SUBGarden",
-    "hero_title": "L'Arte di Ascoltare la Terra",
+    "hero_title": "Dal 1990 tra piante e giardini",
     "innovation_text": "La mia passione per la natura mi ha portato a creare SUBGarden: un sistema brevettato di subirrigazione non invasivo. Proteggo il valore dei giardini storici e moderni con una tecnologia che non si vede, non distrugge il prato esistente durante l'installazione e garantisce una bellezza eterna, sostenuta dalla precisione digitale e dal rispetto assoluto della risorsa idrica.",
-    "innovation_title": "L'Invisibile Rivoluzione Sostenibile",
+    "innovation_title": "Un impianto che non si vede",
     "philosophy_expanded_text1": "Un giardino non finisce dove termina la proprietà. La mia tecnica si ispira al concetto del 'Borrowed Scenery': liberare lo sguardo anziché delimitarlo. Utilizzo quinte naturali e cannocchiali prospettici per fondere il giardino privato con l'orizzonte infinito della Toscana.",
     "philosophy_expanded_text2": "Definisco il mio approccio 'Giardino Empatico' perché entra in risonanza con chi lo abita e con il luogo stesso. Non impongo una forma, ma assecondo la voce della terra, utilizzando la tecnologia più avanzata per servire la massima semplicità.",
-    "philosophy_expanded_title": "Il Paesaggio Prestato e il Giardino Empatico",
+    "philosophy_expanded_title": "Il paesaggio prestato e il giardino empatico",
     "roots_text": "Nel 1990 non cercavo una carriera, ma risposte. Quello che era iniziato come un supporto all'attività familiare è diventato rapidamente un dialogo intimo con il mondo vegetale. Mi ha conquistato la capacità delle piante di 'esistere semplicemente', la loro resilienza silenziosa ma invincibile. Da allora, ogni giardino che creo è un tributo a questa forza.",
     "roots_ancient_text": "La nostra storia non inizia trent'anni fa, ma quattromila. Ci ispiriamo ai maestri del Nilo e ai saggi della dinastia Han, che compresero prima di noi come l'acqua debba essere un dialogo segreto tra la terra e la radice. SUBGarden non fa altro che dare a questa antica sapienza la precisione dell'ingegneria moderna.",
-    "roots_title": "Radici: Dal Dovere allo Stupore",
-    "case_history_focus": "Nelle dimore che hanno visto passare la storia, non possiamo permetterci di rompere l'incanto con la tecnica moderna visibile. Il nostro metodo di installazione non invasivo è l'unico che permette di preservare essenze secolari e simmetrie rinascimentali, portando l'acqua alle radici esattamente come avrebbero voluto i giardinieri dei Medici."
+    "roots_title": "Radici: dal dovere allo stupore",
+    "case_history_focus": "Nelle dimore che hanno visto passare la storia, non possiamo permetterci di rompere l'incanto con la tecnica moderna visibile. Il nostro metodo di installazione non invasivo è l'unico che permette di preservare essenze secolari e simmetrie rinascimentali, portando l'acqua alle radici esattamente come avrebbero voluto i giardinieri dei Medici.",
+    "hero_eyebrow": "Chi siamo",
+    "hero_lead": "La storia di chi ha creato SUBGarden, e perché l'acqua deve restare sotto il prato.",
+    "hero_image_alt": "Prato finito a Villa Mussio, con staccionata in legno, muretti in pietra e cipressi",
+    "roots_eyebrow": "1990, l'inizio",
+    "roots_quote": "Mi sono innamorato della purezza delle piante e della loro resiliente capacità di esistere, semplicemente.",
+    "roots_image_alt": "Cantiere tra gli ulivi a Villa Mussio: terreno appena lavorato, segni dei mezzi e cipressi sullo sfondo",
+    "milestones_label": "Le tappe",
+    "milestone_1_when": "1990",
+    "milestone_2_when": "Il brevetto",
+    "milestone_3_when": "I parchi storici",
+    "philosophy_eyebrow": "Il metodo",
+    "philosophy_photo_1": "Prato nuovo a Villa Mussio lungo la staccionata, con gli ulivi e la collina sullo sfondo",
+    "philosophy_photo_2": "Il piazzale della villa con l'aiuola fiorita, i lampioni e la vista sulla costa",
+    "philosophy_photo_3": "Il parco di ulivi di Villa Mussio visto dal drone durante i lavori",
+    "case_eyebrow": "Un lavoro",
+    "gallery_lead": "Dal terreno lavorato al prato finito. Tocca una foto per vederla grande.",
+    "gallery_open": "Apri la foto: {alt}",
+    "gallery_1": "Il terreno lavorato tra gli ulivi, visto dal drone",
+    "gallery_2": "I mezzi in cantiere tra i filari di ulivi",
+    "gallery_3": "Il cantiere davanti all'edificio, con il sollevatore e i cipressi appena piantati",
+    "gallery_4": "Le aiuole disegnate e il prato che cresce sopra le linee",
+    "gallery_5": "Il parco dall'alto a lavoro finito: prati curvi tra gli ulivi",
+    "gallery_6": "Il prato finito tra gli ulivi, con la staccionata e i fiori",
+    "gallery_7": "La terrazza con ombrellone, sedute e agapanti in fiore",
+    "gallery_8": "Agapanti bianchi al bordo del prato",
+    "gallery_9": "Il piazzale con l'orcio in terracotta e il prato verso il mare",
+    "innovation_eyebrow": "SUBGarden",
+    "fact_years_value": "30+",
+    "fact_years_label": "anni di lavoro nel verde",
+    "fact_invasive_value": "100%",
+    "fact_invasive_label": "posa non invasiva",
+    "fact_patent_value": "Brevettato",
+    "fact_patent_label": "il metodo di posa SUBGarden"
   },
   "benefits": {
     "title": "Risparmio idrico e installazione senza stress",
@@ -81,7 +112,7 @@
     "after_alt": "Illustrazione: la stessa famiglia in giardino con il prato asciutto grazie alla subirrigazione"
   },
   "technologyPage": {
-    "evolution_title": "L'Evoluzione dell'Invisibile",
+    "evolution_title": "L'acqua sotto terra, da sempre",
     "evolution_text": "Dalla terracotta al polimero: il principio è lo stesso, la tecnologia è cambiata. Dove gli antichi egizi usavano la porosità dell'argilla, noi utilizziamo emettitori auto-compensanti brevettati per garantire che ogni radice riceva la giusta quantità di umidità, goccia dopo goccia, senza evaporazione e senza sprechi.",
     "comparison_table_title": "Subirrigazione a confronto",
     "method_subgarden": "SUBGarden",
@@ -103,7 +134,63 @@
     "sprinkler_maintenance": "Alta (testine rotte, ostruzioni)",
     "sprinkler_uniformity": "Media-bassa (vento, evaporazione)",
     "sprinkler_efficiency": "60-75%",
-    "sprinkler_surface": "Irrigatori e tubi visibili"
+    "sprinkler_surface": "Irrigatori e tubi visibili",
+    "hero_eyebrow": "Tecnologia",
+    "hero_title": "L'acqua va alle radici, il prato resta asciutto",
+    "hero_lead": "Sotto il prato posiamo l'ala gocciolante Rain Bird XFS, a griglia. Qui trovi come funziona, i dati della scheda e come lavoriamo in cantiere.",
+    "soil_eyebrow": "Sotto il prato",
+    "soil_title": "Cosa succede sotto il prato",
+    "soil_lead": "Le ali gocciolanti stanno a qualche centimetro di profondità, in linee parallele. Ogni gocciolatore lascia uscire poca acqua alla volta e il terreno la distribuisce da solo, per capillarità.",
+    "soil_figure": "Sezione del terreno: il prato in superficie, le radici, le ali gocciolanti Rain Bird XFS a 30 cm l'una dall'altra e l'acqua che sale verso le radici",
+    "soil_spacing": "30 cm",
+    "soil_1_label": "Il prato",
+    "soil_1_text": "In superficie resta asciutto: niente pozzanghere, niente schizzi sugli arredi, ci si cammina subito.",
+    "soil_2_label": "Le radici",
+    "soil_2_text": "Ricevono l'acqua direttamente, senza evaporazione e senza ruscellamento.",
+    "soil_3_label": "L'ala gocciolante",
+    "soil_3_text": "Rain Bird XFS, autocompensante da 0,4 a 3,6 atm: ogni gocciolatore dà 1,6 l/h, all'inizio della linea come in fondo.",
+    "soil_4_label": "L'acqua",
+    "soil_4_text": "Si allarga lenta e uniforme per capillarità e sale verso le radici. L'efficienza supera il 90%.",
+    "specs_eyebrow": "Scheda tecnica",
+    "specs_title": "I dati dell'ala Rain Bird XFS",
+    "specs_lead": "I numeri che contano, dalla scheda del materiale e dal nostro schema di posa.",
+    "spec_flow_value": "1,6 l/h",
+    "spec_flow_label": "Portata di ogni gocciolatore",
+    "spec_flow_note": "Bassa portata e bassa pressione: non servono grandi pompe né serbatoi.",
+    "spec_pressure_value": "0,4–3,6 atm",
+    "spec_pressure_label": "Campo di autocompensazione",
+    "spec_pressure_note": "In tutto questo campo ogni gocciolatore dà la stessa acqua.",
+    "spec_grid_value": "300 × 330 mm",
+    "spec_grid_label": "Griglia di posa",
+    "spec_grid_note": "Ali parallele, 300 mm tra una linea e l'altra.",
+    "spec_efficiency_value": ">90%",
+    "spec_efficiency_label": "Efficienza idrica",
+    "spec_efficiency_note": "L'acqua non evapora e non scorre via in superficie.",
+    "spec_saving_value": "50–70%",
+    "spec_saving_label": "Risparmio d'acqua",
+    "spec_saving_note": "Rispetto all'irrigazione a pioggia.",
+    "features_title": "Cosa c'è nell'impianto",
+    "feature_1": "Gocciolatori autopulenti a ogni ciclo",
+    "feature_2": "Protezione dei gocciolatori dalle radici (Copper Shield)",
+    "feature_3": "Valvole di spurgo aria su ogni zona",
+    "feature_4": "Filtro e riduttore di pressione dopo la valvola",
+    "feature_5": "Lavaggio delle tubazioni senza attivare i gocciolatori",
+    "feature_6": "Fertirrigazione direttamente alle radici",
+    "install_eyebrow": "La posa",
+    "install_title": "Pensato per i giardini già fatti",
+    "install_text": "Il metodo di posa è brevettato: le ali entrano sotto il prato senza scavi invasivi. Il manto erboso non si toglie, le radici e gli arredi fissi restano dove sono, e a lavoro finito l'impianto non si vede.",
+    "install_text_2": "Con la stessa rete si può fare la fertirrigazione: il concime arriva alle radici e non resta sul prato dove si cammina. La manutenzione si fa dalle valvole di zona, senza toccare il giardino.",
+    "install_image_alt": "Illustrazione creata per SUBGarden: giardino all'italiana con l'ala gocciolante XFS interrata e il gocciolatore autocompensante da 1,6 l/h",
+    "evolution_eyebrow": "Un principio antico",
+    "evolution_image_alt": "Illustrazione creata per SUBGarden: dalle ollas in terracotta e il loto blu dell'antico Egitto alle Ville Medicee, fino all'ala Rain Bird XFS",
+    "infographics_eyebrow": "In sintesi",
+    "infographics_title": "Il sistema in tre tavole",
+    "infographics_lead": "Le tavole create per SUBGarden: tocca una tavola per vederla grande e leggerla.",
+    "infographics_open": "Apri la tavola: {alt}",
+    "video_title": "SUBGarden in un minuto",
+    "method_eyebrow": "Come lavoriamo",
+    "method_title": "Dal sopralluogo alla consegna, in cinque passi",
+    "step_label": "Fase"
   },
   "operationalStrip": {
     "title": "Il nostro metodo operativo",
@@ -122,7 +209,7 @@
     "email_label": "Email",
     "email_value": "info@subgarden.it",
     "error": "Errore nell'invio del messaggio. Riprova.",
-    "form_title": "Inviaci un messaggio",
+    "form_title": "Scrivici",
     "hours_label": "Orari",
     "hours_value": "Lun - Ven: 09:00 - 18:00",
     "info_title": "Recapiti",
@@ -133,11 +220,24 @@
     "phone": "Telefono",
     "phone_label": "Telefono",
     "phone_value": "+39 347 6299935",
-    "sending": "Invio in corso...",
-    "submit": "Invia Messaggio",
+    "sending": "Invio in corso…",
+    "submit": "Invia il messaggio",
     "subtitle": "Siamo pronti a trasformare il tuo spazio verde",
-    "success": "Messaggio inviato con successo!",
-    "title": "Contattaci"
+    "success": "Grazie, il messaggio è arrivato.",
+    "title": "Contattaci",
+    "hero_eyebrow": "Contatti",
+    "hero_title": "Parliamo del tuo giardino",
+    "hero_lead": "Scrivici o chiamaci. Veniamo a vedere il prato e l'acqua disponibile e ti diciamo se conviene. Il sopralluogo è gratuito.",
+    "form_lead": "Dicci dove si trova il giardino e com'è fatto: quanto è grande, se c'è già un impianto.",
+    "optional": "facoltativo",
+    "error_name": "Scrivi almeno 2 caratteri.",
+    "error_email": "Controlla l'indirizzo email.",
+    "error_message": "Scrivi almeno 10 caratteri.",
+    "map_title": "Dove siamo",
+    "map_lead": "La sede è a San Vincenzo, sulla costa livornese.",
+    "map_iframe_title": "Mappa: Via Pitagora 3, San Vincenzo (LI)",
+    "map_link": "Apri in Google Maps",
+    "new_tab": "(si apre in una nuova scheda)"
   },
   "cta": {
     "badge": "Richiedi Informazioni",
@@ -163,7 +263,7 @@
       "terms": "Termini di Servizio"
     },
     "links": {
-      "about": "Chi Siamo",
+      "about": "Chi siamo",
       "blog": "Blog",
       "contact": "Contatti",
       "faq": "Domande frequenti",
@@ -186,15 +286,15 @@
     "subtitle": "Visione d'Insieme",
     "title": "Il Sistema SUBGarden in Sintesi",
     "click_to_enlarge": "Clicca sull'immagine per ingrandirla e leggerla correttamente.",
-    "alt_1": "SUBGarden: innovazione nella subirrigazione sostenibile - Problema vs Soluzione e tecnologia",
-    "alt_2": "SUBGarden: innovazione invisibile per un giardino perfetto - Benefici e metodo operativo",
+    "alt_1": "SUBGarden: innovazione invisibile per un giardino perfetto - Benefici e metodo operativo",
+    "alt_2": "SUBGarden: innovazione nella subirrigazione sostenibile - Problema vs Soluzione e tecnologia",
     "alt_3": "SUBGarden: l'irrigazione intelligente che rivoluziona il tuo outdoor - Risparmio idrico e comfort"
   },
   "homeVideo": {
     "title": "Guarda il video"
   },
   "nav": {
-    "about": "Chi Siamo",
+    "about": "Chi siamo",
     "contact": "Contatti",
     "home": "Home",
     "local": "Territorio",
@@ -249,32 +349,35 @@
       "historical": "Storico",
       "residential": "Residenziale"
     },
-    "description": "Esplora una selezione dei nostri progetti di subirrigazione e landscape design realizzati in tutta la Toscana.",
+    "description": "Alcuni lavori di subirrigazione e sistemazione del verde in Toscana.",
     "subtitle": "I nostri lavori d'eccellenza",
     "title": "Portfolio",
-    "view_project": "Vedi Progetto"
+    "view_project": "Vedi Progetto",
+    "filter_label": "Filtra per tipo di lavoro",
+    "eyebrow": "Lavori"
   },
   "process": {
-    "step1": "Sopralluogo Tecnico",
+    "step1": "Sopralluogo tecnico",
     "step1_desc": "Analisi accurata dello stato del giardino e dell'eventuale impianto esistente per identificare le migliori opportunità di riconversione.",
-    "step2": "Progettazione su Misura",
+    "step2": "Progetto su misura",
     "step2_desc": "Sviluppo di uno schema a griglia di precisione e analisi dei costi dettagliata, ottimizzando ogni linea di adduzione.",
-    "step3": "Formalizzazione Trasparente",
+    "step3": "Preventivo e tempi chiari",
     "step3_desc": "Presentazione del progetto tecnico, preventivo chiaro e definizione del cronoprogramma dei lavori.",
-    "step4": "Installazione Brevettata",
+    "step4": "Posa con il metodo brevettato",
     "step4_desc": "Esecuzione rapida, pulita e assolutamente non invasiva. Il prato e le radici non subiscono danni, l'impianto è invisibile dal primo giorno.",
-    "step5": "Assistenza & Garanzia",
+    "step5": "Assistenza e garanzia",
     "step5_desc": "Consegna certificata con un anno di assistenza gratuita e possibilità di garanzia illimitata tramite manutenzione stagionale.",
-    "title": "Il Nostro Metodo Operativo"
+    "title": "Il nostro metodo di lavoro"
   },
   "whatsapp": {
-    "aria_label": "Chatta su WhatsApp"
+    "aria_label": "Chatta su WhatsApp",
+    "message": "Buongiorno, vorrei informazioni sulla subirrigazione SUBGarden."
   },
   "faq": {
     "meta_title": "Domande frequenti sulla subirrigazione",
     "meta_description": "Risposte su subirrigazione, giardini esistenti, risparmio idrico, installazione non invasiva e costi. SUBGarden in Toscana e in Italia.",
     "title": "Domande frequenti",
-    "subtitle": "Tutto quello che vuoi sapere sulla subirrigazione e sul sistema SUBGarden.",
+    "subtitle": "Le domande che ci fanno più spesso su subirrigazione, posa, consumi e costi.",
     "q1_q": "Si può installare la subirrigazione in un giardino già esistente?",
     "q1_a": "Sì. Il sistema SUBGarden è pensato proprio per giardini già realizzati. L'installazione è non invasiva e non richiede di scavare o distruggere il manto erboso: il prato resta intatto e il giardino è utilizzabile subito dopo l'intervento.",
     "q2_q": "L'installazione rovina il prato o il giardino?",
@@ -291,15 +394,19 @@
     "q7_a": "L'irrigazione a pioggia bagna la superficie: parte dell'acqua evapora o scorre via, e il prato resta bagnato (con possibili problemi di zanzare e uso del giardino). La subirrigazione porta l'acqua in profondità alle radici: superficie asciutta, meno sprechi, risparmio idrico e maggiore comfort.",
     "q8_q": "Quanto tempo richiede l'installazione?",
     "q8_a": "I tempi variano in base alla grandezza e alla complessità del giardino. Grazie all'assenza di scavi invasivi, il cantiere è ordinato e il giardino è subito utilizzabile dopo la posa.",
-    "cta_text": "Non hai trovato la risposta che cercavi?",
-    "cta_button": "Contattaci per un sopralluogo gratuito"
+    "cta_text": "Non hai trovato la risposta?",
+    "cta_button": "Scrivici",
+    "hero_eyebrow": "Subirrigazione",
+    "cta_lead": "Scrivici o chiamaci: il sopralluogo è gratuito.",
+    "cta_call": "Chiama il {phone}"
   },
   "cookie": {
     "title": "Cookie e privacy",
     "description": "Utilizziamo cookie tecnici necessari al funzionamento del sito e, con il tuo consenso, cookie per statistiche di accesso (Google Analytics) per migliorare l'esperienza. Puoi accettare tutti i cookie o solo quelli necessari.",
     "accept": "Accetta tutto",
     "decline": "Solo necessari",
-    "privacy_link": "Privacy Policy"
+    "privacy_link": "informativa privacy",
+    "close": "Chiudi"
   },
   "home": {
     "eyebrow": "Subirrigazione in Toscana",
@@ -347,5 +454,119 @@
     "synthesis_eyebrow": "Il sistema in sintesi",
     "video_pause": "Metti in pausa il video",
     "video_play": "Riproduci il video"
+  },
+  "lightbox": {
+    "close": "Chiudi",
+    "zoom_in": "Ingrandisci",
+    "zoom_out": "Riduci",
+    "reset": "Dimensione originale"
+  },
+  "solutionsPage": {
+    "eyebrow": "Soluzioni",
+    "title": "Un sistema, quattro tipi di verde",
+    "lead": "Giardini privati, parchi pubblici, campi sportivi e strutture turistiche. L'impianto è lo stesso: cambia il progetto, che si fa dopo il sopralluogo.",
+    "list_eyebrow": "Quattro casi",
+    "list_title": "Scegli il tuo caso",
+    "method_eyebrow": "Come si lavora",
+    "tech_link": "Come funziona la tecnologia",
+    "detail_eyebrow": "Soluzione",
+    "facts_label": "In cifre",
+    "features_eyebrow": "Cosa cambia",
+    "features_title": "Cosa ottieni con la subirrigazione",
+    "compare_eyebrow": "Il confronto",
+    "other_title": "Le altre soluzioni"
+  },
+  "localPage": {
+    "eyebrow": "Territorio",
+    "index_title": "Dove lavoriamo in Toscana",
+    "index_lead": "Sulla costa toscana: Isola d'Elba, Maremma, Livorno e San Vincenzo, dove l'estate è lunga e l'acqua va risparmiata.",
+    "list_eyebrow": "Le zone",
+    "list_title": "Tre zone, tre situazioni diverse",
+    "context_eyebrow": "Il contesto",
+    "context_title": "Clima, terreno e regole sull'acqua",
+    "features_eyebrow": "In pratica",
+    "features_title": "Cosa conta in questa zona",
+    "other_title": "Le altre zone"
+  },
+  "blogPage": {
+    "eyebrow": "Blog",
+    "list_label": "Articoli",
+    "read": "Leggi l'articolo",
+    "back": "Tutti gli articoli",
+    "only_italian": "Questo articolo per ora è solo in italiano."
+  },
+  "legal": {
+    "eyebrow": "Note legali",
+    "privacy": {
+      "title": "Privacy policy",
+      "lead": "Quali dati raccoglie questo sito, perché e come puoi chiederne la modifica o la cancellazione.",
+      "sections": [
+        {
+          "title": "1. Titolare del trattamento",
+          "text": "CLOROPHYLLA SRL, titolare del marchio SUBGarden, con sede legale in Via Pitagora 3, 57027 San Vincenzo (LI), è il titolare del trattamento dei dati personali raccolti attraverso questo sito."
+        },
+        {
+          "title": "2. Dati raccolti",
+          "text": "Raccogliamo questi dati:",
+          "items": [
+            "Dati che ci dai tu: nome, email e numero di telefono, tramite il modulo di contatto.",
+            "Dati di navigazione: indirizzo IP, tipo di browser, pagine visitate (tramite cookie tecnici)."
+          ]
+        },
+        {
+          "title": "3. Perché li usiamo",
+          "text": "Usiamo i dati solo per:",
+          "items": [
+            "rispondere alle richieste di informazioni e di preventivo;",
+            "migliorare la navigazione sul sito;",
+            "adempiere agli obblighi di legge."
+          ]
+        },
+        {
+          "title": "4. Base giuridica",
+          "text": "Il trattamento si fonda sul consenso dell'interessato (per il modulo di contatto) e sul legittimo interesse del titolare (per i dati tecnici di navigazione)."
+        },
+        {
+          "title": "5. Diritti dell'interessato",
+          "text": "Ai sensi del GDPR (Regolamento UE 2016/679) hai il diritto di accedere ai tuoi dati e di chiederne la rettifica, la cancellazione o la limitazione del trattamento. Per esercitare questi diritti scrivi a info@subgarden.it."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Termini di servizio",
+      "lead": "Le condizioni per usare questo sito.",
+      "sections": [
+        {
+          "title": "1. Accettazione dei termini",
+          "text": "L'accesso e l'uso del sito SUBGarden sono soggetti a questi termini e condizioni. Usando il sito, l'utente li accetta per intero."
+        },
+        {
+          "title": "2. Proprietà intellettuale",
+          "text": "Tutti i contenuti del sito (testi, immagini, loghi, video) sono di proprietà esclusiva di SUBGarden o dei suoi licenziatari e sono protetti dalle leggi sul diritto d'autore. È vietata la riproduzione senza autorizzazione scritta."
+        },
+        {
+          "title": "3. Limitazione di responsabilità",
+          "text": "SUBGarden si impegna a fornire informazioni corrette e aggiornate, ma non garantisce l'assenza di errori o omissioni. SUBGarden non è responsabile di eventuali danni derivanti dall'uso del sito o dall'impossibilità di usarlo."
+        },
+        {
+          "title": "4. Servizi e preventivi",
+          "text": "Le informazioni sul sito hanno scopo solo informativo. I preventivi fatti dopo il sopralluogo sono soggetti a condizioni contrattuali specifiche, definite quando il progetto viene formalizzato."
+        },
+        {
+          "title": "5. Legge applicabile",
+          "text": "Questi termini sono regolati dalla legge italiana. Per qualsiasi controversia è competente il Foro di Livorno."
+        }
+      ]
+    }
+  },
+  "errorPage": {
+    "nf_title": "Questa pagina non c’è",
+    "nf_body": "La pagina che cerchi non esiste o è stata spostata.",
+    "nf_home": "Torna alla home",
+    "nf_more": "Oppure guarda",
+    "err_title": "Qualcosa è andato storto",
+    "err_body": "Si è verificato un errore. Riprova, e se il problema resta scrivici.",
+    "err_retry": "Riprova",
+    "err_home": "Torna alla home"
   }
 }

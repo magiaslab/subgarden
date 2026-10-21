@@ -1,8 +1,6 @@
 {
   "about": {
     "discover_more": "Entdecken Sie meine Geschichte",
-    "founder": "Fausto Favilli",
-    "founder_role": "Gründer & Visionär",
     "milestone_1990": "Der Beginn einer dreißigjährigen Leidenschaft",
     "milestone_patent": "Innovation und SUBGarden-Patent",
     "milestone_villa": "Historische Restaurierung monumentaler Parks",
@@ -15,19 +13,52 @@
   },
   "aboutPage": {
     "case_history_text": "Eines meiner bedeutendsten Projekte war die Wiederherstellung des Parks einer Villa aus dem 1700er Jahren, der sich in einem halbverfallenen Zustand befand. Ich hörte darauf, was der Park wieder werden wollte, stellte historische Symmetrien und säkulare Essenzen wieder her und verwandelte ihn in einen exzellenten Rahmen für VIP-Events und absolute Entspannung, ohne jemals den Dialog mit der umgebenden Landschaft zu unterbrechen.",
-    "case_history_title": "Restaurierung der Seele: Villa aus dem 18. Jahrhundert",
-    "gallery_villa_mussio": "Villa Mussio — Einige Aufnahmen des Projekts",
+    "case_history_title": "Die Restaurierung eines Parks aus dem 18. Jahrhundert",
+    "gallery_villa_mussio": "Villa Mussio, einige Aufnahmen der Arbeit",
     "hero_subtitle": "Meine Geschichte und die Vision für SUBGarden",
-    "hero_title": "Die Kunst, der Erde zuzuhören",
+    "hero_title": "Seit 1990 bei Pflanzen und Gärten",
     "innovation_text": "Meine Leidenschaft für die Natur hat mich dazu bewogen, SUBGarden zu entwickeln: ein patentiertes, nicht-invasives Unterflurbewässerungssystem. Ich schütze den Wert historischer und moderner Gärten mit einer Technologie, die man nicht sieht, die den vorhandenen Rasen während der Installation nicht zerstört und eine ewige Schönheit garantiert, unterstützt durch digitale Präzision und absoluten Respekt vor der Wasserressource.",
-    "innovation_title": "Die unsichtbare nachhaltige Revolution",
+    "innovation_title": "Eine Anlage, die man nicht sieht",
     "philosophy_expanded_text1": "Ein Garten endet nicht dort, wo die Grundstücksgrenze aufhört. Meine Technik ist vom Konzept der 'Borrowed Scenery' inspiriert: den Blick befreien, anstatt ihn zu begrenzen. Ich nutze natürliche Kulissen und Perspektivteleskope, um den privaten Garten mit dem unendlichen Horizont der Toskana verschmelzen zu lassen.",
     "philosophy_expanded_text2": "Ich bezeichne meinen Ansatz als 'Empathischen Garten', weil er mit den Bewohnern und dem Ort selbst in Resonanz tritt. Ich erzwinge keine Form, sondern folge der Stimme der Erde und nutze modernste Technologie, um höchste Einfachheit zu erreichen.",
-    "philosophy_expanded_title": "Geliehene Kulisse und der empathische Garten",
+    "philosophy_expanded_title": "Geliehene Landschaft und der empathische Garten",
     "roots_text": "1990 suchte ich keine Karriere, sondern Antworten. Was als Unterstützung für das Familienunternehmen begann, entwickelte sich schnell zu einem intimen Dialog mit der Pflanzenwelt. Die Fähigkeit der Pflanzen, 'einfach zu existieren', ihre stille, aber unbesiegbare Widerstandsfähigkeit, hat mich überzeugt. Seitdem ist jeder Garten, den ich erschaffe, ein Tribut an diese Kraft.",
     "roots_ancient_text": "Unsere Geschichte beginnt nicht vor dreißig Jahren, sondern vor viertausend. Wir lassen uns von den Meistern am Nil und den Weisen der Han-Dynastie inspirieren, die vor uns verstanden haben, dass Wasser ein heimlicher Dialog zwischen Erde und Wurzel sein muss. SUBGarden verleiht dieser uralten Weisheit die Präzision der modernen Technik.",
-    "roots_title": "Wurzeln: Von der Pflicht zum Staunen",
-    "case_history_focus": "In Residenzen, die die Geschichte miterlebt haben, dürfen wir den Zauber nicht durch sichtbare moderne Technik brechen. Unsere nicht-invasive Installationsmethode ist die einzige, die es erlaubt, jahrhundertealte Essenzen und Renaissance-Symmetrien zu bewahren und das Wasser zu den Wurzeln zu bringen – genau so, wie es die Gärtner der Medici gewollt hätten."
+    "roots_title": "Wurzeln: von der Pflicht zum Staunen",
+    "case_history_focus": "In Residenzen, die die Geschichte miterlebt haben, dürfen wir den Zauber nicht durch sichtbare moderne Technik brechen. Unsere nicht-invasive Installationsmethode ist die einzige, die es erlaubt, jahrhundertealte Essenzen und Renaissance-Symmetrien zu bewahren und das Wasser zu den Wurzeln zu bringen – genau so, wie es die Gärtner der Medici gewollt hätten.",
+    "hero_eyebrow": "Über uns",
+    "hero_lead": "Die Geschichte des Mannes, der SUBGarden geschaffen hat, und warum das Wasser unter den Rasen gehört.",
+    "hero_image_alt": "Fertiger Rasen in der Villa Mussio mit Holzzaun, Steinmauern und Zypressen",
+    "roots_eyebrow": "1990, der Anfang",
+    "roots_quote": "Ich verliebte mich in die Reinheit der Pflanzen und ihre widerstandsfähige Fähigkeit, einfach zu existieren.",
+    "roots_image_alt": "Baustelle zwischen den Olivenbäumen der Villa Mussio: frisch bearbeiteter Boden, Fahrspuren und Zypressen im Hintergrund",
+    "milestones_label": "Stationen",
+    "milestone_1_when": "1990",
+    "milestone_2_when": "Das Patent",
+    "milestone_3_when": "Historische Parks",
+    "philosophy_eyebrow": "Der Ansatz",
+    "philosophy_photo_1": "Neuer Rasen in der Villa Mussio am Zaun entlang, mit Olivenbäumen und Hügeln im Hintergrund",
+    "philosophy_photo_2": "Der Vorplatz der Villa mit dem Blumenbeet, den Laternen und dem Blick auf die Küste",
+    "philosophy_photo_3": "Der Olivenpark der Villa Mussio aus der Drohne während der Arbeiten",
+    "case_eyebrow": "Ein Projekt",
+    "gallery_lead": "Vom bearbeiteten Boden zum fertigen Rasen. Tippen Sie auf ein Foto, um es groß zu sehen.",
+    "gallery_open": "Foto öffnen: {alt}",
+    "gallery_1": "Der bearbeitete Boden zwischen den Olivenbäumen, aus der Drohne gesehen",
+    "gallery_2": "Maschinen auf der Baustelle zwischen den Olivenreihen",
+    "gallery_3": "Die Baustelle vor dem Gebäude mit dem Teleskoplader und frisch gepflanzten Zypressen",
+    "gallery_4": "Die angelegten Beete und der Rasen, der über den Leitungen wächst",
+    "gallery_5": "Der fertige Park von oben: geschwungene Rasenflächen zwischen den Olivenbäumen",
+    "gallery_6": "Der fertige Rasen zwischen den Olivenbäumen, mit Zaun und Blumen",
+    "gallery_7": "Die Terrasse mit Sonnenschirm, Sitzplätzen und blühenden Agapanthus",
+    "gallery_8": "Weiße Agapanthus am Rasenrand",
+    "gallery_9": "Der Vorplatz mit dem Terrakottagefäß und dem Rasen zum Meer hin",
+    "innovation_eyebrow": "SUBGarden",
+    "fact_years_value": "30+",
+    "fact_years_label": "Jahre Arbeit im Grünen",
+    "fact_invasive_value": "100 %",
+    "fact_invasive_label": "nicht-invasive Verlegung",
+    "fact_patent_value": "Patentiert",
+    "fact_patent_label": "die SUBGarden Verlegemethode"
   },
   "benefits": {
     "title": "Wassereinsparung und stressfreie Installation",
@@ -108,11 +139,24 @@
     "phone": "Telefon",
     "phone_label": "Telefon",
     "phone_value": "+39 347 6299935",
-    "sending": "Wird gesendet...",
-    "submit": "Nachricht Senden",
+    "sending": "Wird gesendet…",
+    "submit": "Nachricht senden",
     "subtitle": "Wir sind bereit, Ihre Grünfläche zu transformieren",
-    "success": "Nachricht erfolgreich gesendet!",
-    "title": "Kontakt"
+    "success": "Danke, Ihre Nachricht ist angekommen.",
+    "title": "Kontakt",
+    "hero_eyebrow": "Kontakt",
+    "hero_title": "Sprechen wir über Ihren Garten",
+    "hero_lead": "Schreiben Sie uns oder rufen Sie an. Wir sehen uns Rasen und Wasserversorgung an und sagen Ihnen, ob es sich lohnt. Die Besichtigung ist kostenlos.",
+    "form_lead": "Sagen Sie uns, wo der Garten liegt und wie er ist: wie groß, ob es schon eine Anlage gibt.",
+    "optional": "optional",
+    "error_name": "Bitte mindestens 2 Zeichen eingeben.",
+    "error_email": "Bitte prüfen Sie die E-Mail-Adresse.",
+    "error_message": "Bitte mindestens 10 Zeichen schreiben.",
+    "map_title": "Wo wir sind",
+    "map_lead": "Unser Sitz ist in San Vincenzo, an der Küste bei Livorno.",
+    "map_iframe_title": "Karte: Via Pitagora 3, San Vincenzo (LI)",
+    "map_link": "In Google Maps öffnen",
+    "new_tab": "(öffnet in einem neuen Tab)"
   },
   "cta": {
     "badge": "Informationen anfordern",
@@ -161,8 +205,8 @@
     "subtitle": "Überblick",
     "title": "Das SUBGarden-System auf einen Blick",
     "click_to_enlarge": "Klicken Sie auf das Bild, um es zu vergrößern und richtig zu lesen.",
-    "alt_1": "SUBGarden: Innovation in nachhaltiger Unterflurbewässerung – Problem vs Lösung und Technologie",
-    "alt_2": "SUBGarden: Unsichtbare Innovation für einen perfekten Garten – Vorteile und Betriebsverfahren",
+    "alt_1": "SUBGarden: Unsichtbare Innovation für einen perfekten Garten – Vorteile und Betriebsverfahren",
+    "alt_2": "SUBGarden: Innovation in nachhaltiger Unterflurbewässerung – Problem vs Lösung und Technologie",
     "alt_3": "SUBGarden: Intelligente Bewässerung, die Ihren Außenbereich revolutioniert – Wassereinsparung und Komfort"
   },
   "homeVideo": {
@@ -172,10 +216,10 @@
     "about": "Über Uns",
     "contact": "Kontakt",
     "home": "Startseite",
-    "local": "Territorio",
+    "local": "Gebiet",
     "portfolio": "Portfolio",
     "solutions": "Lösungen",
-    "technology": "Tecnologia",
+    "technology": "Technologie",
     "cta": "Besichtigung anfragen",
     "menu": "Menü",
     "close": "Menü schließen",
@@ -224,15 +268,17 @@
       "historical": "Historisch",
       "residential": "Wohngebäude"
     },
-    "description": "Entdecken Sie eine Auswahl unserer Projekte für Unterflurbewässerung und Landschaftsgestaltung in der ganzen Toskana.",
+    "description": "Einige unserer Projekte für Unterflurbewässerung und Gartengestaltung in der Toskana.",
     "subtitle": "Unsere exzellenten Arbeiten",
     "title": "Portfolio",
-    "view_project": "Projekt ansehen"
+    "view_project": "Projekt ansehen",
+    "filter_label": "Nach Art des Projekts filtern",
+    "eyebrow": "Projekte"
   },
   "technologyPage": {
-    "evolution_title": "Die Evolution des Unsichtbaren",
+    "evolution_title": "Wasser unter der Erde, wie schon immer",
     "evolution_text": "Von der Terrakotta zum Polymer: Das Prinzip ist dasselbe, die Technik hat sich geändert. Wo die alten Ägypter die Porosität des Tons nutzten, setzen wir patentierte selbstkompensierende Emitter ein, damit jede Wurzel die richtige Feuchtigkeit erhält – Tropfen für Tropfen, ohne Verdunstung und ohne Verschwendung.",
-    "comparison_table_title": "Subirrigation im Vergleich",
+    "comparison_table_title": "Unterflurbewässerung im Vergleich",
     "method_subgarden": "SUBGarden",
     "method_ollas": "Antike Ollas",
     "method_sprinkler": "Sprinklerbewässerung",
@@ -252,29 +298,86 @@
     "sprinkler_maintenance": "Hoch (defekte Köpfe, Verstopfung)",
     "sprinkler_uniformity": "Mittel-niedrig (Wind, Verdunstung)",
     "sprinkler_efficiency": "60-75%",
-    "sprinkler_surface": "Sichtbare Sprinkler und Rohre"
+    "sprinkler_surface": "Sichtbare Sprinkler und Rohre",
+    "hero_eyebrow": "Technik",
+    "hero_title": "Das Wasser geht zu den Wurzeln, der Rasen bleibt trocken",
+    "hero_lead": "Unter dem Rasen verlegen wir die Rain Bird XFS Tropfleitung im Raster. Hier lesen Sie, wie sie funktioniert, die Daten aus dem Datenblatt und wie wir auf der Baustelle arbeiten.",
+    "soil_eyebrow": "Unter dem Rasen",
+    "soil_title": "Was unter dem Rasen passiert",
+    "soil_lead": "Die Tropfleitungen liegen wenige Zentimeter tief in parallelen Reihen. Jeder Tropfer gibt wenig Wasser auf einmal ab, und der Boden verteilt es von selbst durch Kapillarwirkung.",
+    "soil_figure": "Bodenschnitt: oben der Rasen, die Wurzeln, Rain Bird XFS Tropfleitungen im Abstand von 30 cm und das Wasser, das zu den Wurzeln aufsteigt",
+    "soil_spacing": "30 cm",
+    "soil_1_label": "Der Rasen",
+    "soil_1_text": "Die Oberfläche bleibt trocken: keine Pfützen, kein Sprühnebel auf den Möbeln, man kann sofort darüber gehen.",
+    "soil_2_label": "Die Wurzeln",
+    "soil_2_text": "Sie bekommen das Wasser direkt, ohne Verdunstung und ohne Abfluss.",
+    "soil_3_label": "Die Tropfleitung",
+    "soil_3_text": "Rain Bird XFS, druckkompensierend von 0,4 bis 3,6 atm: Jeder Tropfer gibt 1,6 l/h ab, am Anfang der Leitung wie am Ende.",
+    "soil_4_label": "Das Wasser",
+    "soil_4_text": "Es verteilt sich langsam und gleichmäßig durch Kapillarwirkung und steigt zu den Wurzeln auf. Der Wirkungsgrad liegt über 90 %.",
+    "specs_eyebrow": "Datenblatt",
+    "specs_title": "Die Rain Bird XFS Tropfleitung in Zahlen",
+    "specs_lead": "Die Zahlen, auf die es ankommt, aus dem Datenblatt und aus unserem Verlegeschema.",
+    "spec_flow_value": "1,6 l/h",
+    "spec_flow_label": "Durchfluss pro Tropfer",
+    "spec_flow_note": "Geringer Durchfluss und niedriger Druck: keine großen Pumpen oder Speicher nötig.",
+    "spec_pressure_value": "0,4–3,6 atm",
+    "spec_pressure_label": "Kompensationsbereich",
+    "spec_pressure_note": "Im gesamten Bereich gibt jeder Tropfer dieselbe Wassermenge ab.",
+    "spec_grid_value": "300 × 330 mm",
+    "spec_grid_label": "Verlegeraster",
+    "spec_grid_note": "Parallele Leitungen, 300 mm von einer Leitung zur nächsten.",
+    "spec_efficiency_value": ">90 %",
+    "spec_efficiency_label": "Wassereffizienz",
+    "spec_efficiency_note": "Das Wasser verdunstet nicht und fließt nicht an der Oberfläche ab.",
+    "spec_saving_value": "50–70 %",
+    "spec_saving_label": "Wassereinsparung",
+    "spec_saving_note": "Im Vergleich zur Beregnung.",
+    "features_title": "Was zur Anlage gehört",
+    "feature_1": "Tropfer, die sich bei jedem Zyklus selbst spülen",
+    "feature_2": "Schutz der Tropfer vor Wurzeleinwuchs (Copper Shield)",
+    "feature_3": "Entlüftungsventile in jeder Zone",
+    "feature_4": "Filter und Druckminderer nach dem Ventil",
+    "feature_5": "Spülen der Leitungen, ohne die Tropfer zu aktivieren",
+    "feature_6": "Düngung direkt an den Wurzeln",
+    "install_eyebrow": "Verlegung",
+    "install_title": "Gedacht für bestehende Gärten",
+    "install_text": "Die Verlegemethode ist patentiert: Die Leitungen kommen ohne invasive Grabungen unter den Rasen. Die Grasnarbe wird nicht abgetragen, Wurzeln und feste Möbel bleiben, wo sie sind, und nach der Arbeit sieht man die Anlage nicht.",
+    "install_text_2": "Über dasselbe Netz ist auch Düngung möglich: Der Dünger erreicht die Wurzeln und bleibt nicht auf dem Rasen, auf dem man geht. Die Wartung erfolgt über die Zonenventile, ohne den Garten anzufassen.",
+    "install_image_alt": "Für SUBGarden erstellte Illustration: italienischer Garten mit vergrabener XFS Tropfleitung und druckkompensierendem Tropfer mit 1,6 l/h",
+    "evolution_eyebrow": "Ein altes Prinzip",
+    "evolution_image_alt": "Für SUBGarden erstellte Illustration: von Terrakotta-Ollas und dem blauen Lotus im alten Ägypten über die Medici-Villen bis zur Rain Bird XFS Tropfleitung",
+    "infographics_eyebrow": "Kurz gefasst",
+    "infographics_title": "Das System auf drei Tafeln",
+    "infographics_lead": "Die für SUBGarden erstellten Tafeln: Tippen Sie auf eine Tafel, um sie groß zu sehen und zu lesen.",
+    "infographics_open": "Tafel öffnen: {alt}",
+    "video_title": "SUBGarden in einer Minute",
+    "method_eyebrow": "So arbeiten wir",
+    "method_title": "Von der Besichtigung bis zur Übergabe, in fünf Schritten",
+    "step_label": "Schritt"
   },
   "process": {
     "step1": "Technische Besichtigung",
     "step1_desc": "Genaue Analyse des Zustands des Gartens und eines eventuell vorhandenen Systems, um die besten Umstellungsmöglichkeiten zu identifizieren.",
-    "step2": "Individuelles Design",
+    "step2": "Planung nach Maß",
     "step2_desc": "Entwicklung eines Präzisionsgittermusters und detaillierte Kostenanalyse zur Optimierung jeder Versorgungsleitung.",
-    "step3": "Transparente Formalisierung",
+    "step3": "Klares Angebot und klarer Zeitplan",
     "step3_desc": "Präsentation des technischen Projekts, klares Angebot und Festlegung des Zeitplans für alle Arbeiten.",
-    "step4": "Patentierte Installation",
+    "step4": "Verlegung mit der patentierten Methode",
     "step4_desc": "Schnelle, saubere und absolut nicht-invasive Ausführung. Rasen und Wurzeln nehmen keinen Schaden, das sistema ist vom ersten Tag an unsichtbar.",
-    "step5": "Support & Garantie",
+    "step5": "Service und Garantie",
     "step5_desc": "Zertifizierte Übergabe mit einem Jahr kostenlosem Support und Möglichkeit einer unbegrenzten Garantie durch saisonale Wartung.",
-    "title": "Unser Betriebsverfahren"
+    "title": "Unsere Arbeitsweise"
   },
   "whatsapp": {
-    "aria_label": "Chat auf WhatsApp"
+    "aria_label": "Chat auf WhatsApp",
+    "message": "Guten Tag, ich hätte gern Informationen zur SUBGarden Unterflurbewässerung."
   },
   "faq": {
     "meta_title": "Häufige Fragen zur Unterflurbewässerung",
     "meta_description": "Antworten zu Unterflurbewässerung, bestehenden Gärten, Wassersparen, nicht-invasiver Installation und Kosten. SUBGarden in der Toskana und in Italien.",
     "title": "Häufig gestellte Fragen",
-    "subtitle": "Alles, was Sie über Unterflurbewässerung und das SUBGarden-System wissen müssen.",
+    "subtitle": "Die Fragen, die uns am häufigsten zu Unterflurbewässerung, Verlegung, Verbrauch und Kosten gestellt werden.",
     "q1_q": "Kann Unterflurbewässerung in einem bestehenden Garten installiert werden?",
     "q1_a": "Ja. Das SUBGarden-System ist für bereits angelegte Gärten konzipiert. Die Installation ist nicht invasiv und erfordert kein Umgraben oder Zerstören des Rasens: Der Rasen bleibt intakt und der Garten kann direkt nach der Arbeit genutzt werden.",
     "q2_q": "Schädigt die Installation den Rasen oder den Garten?",
@@ -291,15 +394,19 @@
     "q7_a": "Die Sprinklerbewässerung benetzt die Oberfläche: Ein Teil des Wassers verdunstet oder läuft ab, der Rasen bleibt nass (mit möglichen Nachteilen wie Mücken und eingeschränkter Gartennutzung). Die Unterflurbewässerung bringt das Wasser in die Tiefe zu den Wurzeln: trockene Oberfläche, weniger Verschwendung, Wassersparen und mehr Komfort.",
     "q8_q": "Wie lange dauert die Installation?",
     "q8_a": "Das hängt von Größe und Komplexität des Gartens ab. Dank des Verzichts auf invasives Graben bleibt die Baustelle ordentlich und der Garten ist direkt nach der Verlegung nutzbar.",
-    "cta_text": "Keine passende Antwort gefunden?",
-    "cta_button": "Kontaktieren Sie uns für einen kostenlosen Vor-Ort-Termin"
+    "cta_text": "Antwort nicht gefunden?",
+    "cta_button": "Schreiben Sie uns",
+    "hero_eyebrow": "Unterflurbewässerung",
+    "cta_lead": "Schreiben Sie uns oder rufen Sie an: Die Besichtigung ist kostenlos.",
+    "cta_call": "Anrufen: {phone}"
   },
   "cookie": {
     "title": "Cookies und Datenschutz",
     "description": "Wir verwenden technisch notwendige Cookies für den Betrieb der Website und mit Ihrer Einwilligung Cookies für Zugriffsstatistiken (Google Analytics). Sie können alle Cookies oder nur die notwendigen akzeptieren.",
     "accept": "Alle akzeptieren",
     "decline": "Nur notwendige",
-    "privacy_link": "Datenschutzerklärung"
+    "privacy_link": "Datenschutzerklärung",
+    "close": "Schließen"
   },
   "home": {
     "eyebrow": "Unterflurbewässerung in der Toskana",
@@ -347,5 +454,119 @@
     "synthesis_eyebrow": "Das System im Überblick",
     "video_pause": "Video anhalten",
     "video_play": "Video abspielen"
+  },
+  "lightbox": {
+    "close": "Schließen",
+    "zoom_in": "Vergrößern",
+    "zoom_out": "Verkleinern",
+    "reset": "Originalgröße"
+  },
+  "solutionsPage": {
+    "eyebrow": "Lösungen",
+    "title": "Ein System, vier Arten von Grünflächen",
+    "lead": "Privatgärten, öffentliche Parks, Sportplätze und Hotels. Das System ist dasselbe: Was sich ändert, ist die Planung, die nach der Besichtigung entsteht.",
+    "list_eyebrow": "Vier Fälle",
+    "list_title": "Wählen Sie Ihren Fall",
+    "method_eyebrow": "So arbeiten wir",
+    "tech_link": "So funktioniert die Technik",
+    "detail_eyebrow": "Lösung",
+    "facts_label": "In Zahlen",
+    "features_eyebrow": "Was sich ändert",
+    "features_title": "Was Ihnen die Unterflurbewässerung bringt",
+    "compare_eyebrow": "Der Vergleich",
+    "other_title": "Weitere Lösungen"
+  },
+  "localPage": {
+    "eyebrow": "Gebiet",
+    "index_title": "Wo wir in der Toskana arbeiten",
+    "index_lead": "An der toskanischen Küste: Elba, Maremma, Livorno und San Vincenzo, wo die Sommer lang sind und Wasser gespart werden muss.",
+    "list_eyebrow": "Gebiete",
+    "list_title": "Drei Gebiete, drei verschiedene Ausgangslagen",
+    "context_eyebrow": "Hintergrund",
+    "context_title": "Klima, Boden und Wasserregeln",
+    "features_eyebrow": "In der Praxis",
+    "features_title": "Worauf es hier ankommt",
+    "other_title": "Weitere Gebiete"
+  },
+  "blogPage": {
+    "eyebrow": "Blog",
+    "list_label": "Artikel",
+    "read": "Artikel lesen",
+    "back": "Alle Artikel",
+    "only_italian": "Dieser Artikel ist vorerst nur auf Italienisch verfügbar."
+  },
+  "legal": {
+    "eyebrow": "Rechtliches",
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "lead": "Welche Daten diese Website erhebt, warum, und wie Sie deren Änderung oder Löschung verlangen können.",
+      "sections": [
+        {
+          "title": "1. Verantwortlicher",
+          "text": "Verantwortlich für die über diese Website erhobenen personenbezogenen Daten ist die CLOROPHYLLA SRL, Inhaberin der Marke SUBGarden, mit Sitz in Via Pitagora 3, 57027 San Vincenzo (LI), Italien."
+        },
+        {
+          "title": "2. Erhobene Daten",
+          "text": "Wir erheben folgende Daten:",
+          "items": [
+            "Daten, die Sie uns geben: Name, E-Mail und Telefonnummer über das Kontaktformular.",
+            "Nutzungsdaten: IP-Adresse, Browsertyp, besuchte Seiten (über technische Cookies)."
+          ]
+        },
+        {
+          "title": "3. Wofür wir sie nutzen",
+          "text": "Wir nutzen die Daten ausschließlich, um:",
+          "items": [
+            "Anfragen nach Informationen und Angeboten zu beantworten;",
+            "die Nutzung der Website zu verbessern;",
+            "gesetzliche Pflichten zu erfüllen."
+          ]
+        },
+        {
+          "title": "4. Rechtsgrundlage",
+          "text": "Die Verarbeitung beruht auf der Einwilligung der betroffenen Person (für das Kontaktformular) und auf dem berechtigten Interesse des Verantwortlichen (für die technischen Nutzungsdaten)."
+        },
+        {
+          "title": "5. Ihre Rechte",
+          "text": "Nach der DSGVO (Verordnung (EU) 2016/679) haben Sie das Recht auf Auskunft über Ihre Daten sowie auf Berichtigung, Löschung oder Einschränkung der Verarbeitung. Um diese Rechte auszuüben, schreiben Sie an info@subgarden.it."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Nutzungsbedingungen",
+      "lead": "Die Bedingungen für die Nutzung dieser Website.",
+      "sections": [
+        {
+          "title": "1. Annahme der Bedingungen",
+          "text": "Zugang und Nutzung der SUBGarden-Website unterliegen diesen Nutzungsbedingungen. Mit der Nutzung der Website akzeptiert der Nutzer sie vollständig."
+        },
+        {
+          "title": "2. Geistiges Eigentum",
+          "text": "Alle Inhalte der Website (Texte, Bilder, Logos, Videos) sind ausschließliches Eigentum von SUBGarden oder seiner Lizenzgeber und urheberrechtlich geschützt. Die Vervielfältigung ohne schriftliche Genehmigung ist untersagt."
+        },
+        {
+          "title": "3. Haftungsbeschränkung",
+          "text": "SUBGarden bemüht sich um richtige und aktuelle Informationen, garantiert aber nicht, dass sie frei von Fehlern oder Auslassungen sind. SUBGarden haftet nicht für Schäden, die aus der Nutzung der Website oder der Unmöglichkeit ihrer Nutzung entstehen."
+        },
+        {
+          "title": "4. Leistungen und Angebote",
+          "text": "Die Informationen auf der Website dienen nur der Information. Angebote nach der Besichtigung unterliegen eigenen Vertragsbedingungen, die bei der Beauftragung des Projekts festgelegt werden."
+        },
+        {
+          "title": "5. Anwendbares Recht",
+          "text": "Diese Bedingungen unterliegen italienischem Recht. Gerichtsstand für alle Streitigkeiten ist Livorno."
+        }
+      ]
+    }
+  },
+  "errorPage": {
+    "nf_title": "Diese Seite gibt es nicht",
+    "nf_body": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "nf_home": "Zur Startseite",
+    "nf_more": "Oder sehen Sie sich an",
+    "err_title": "Etwas ist schiefgelaufen",
+    "err_body": "Es ist ein Fehler aufgetreten. Versuchen Sie es erneut, und wenn das Problem bleibt, schreiben Sie uns.",
+    "err_retry": "Erneut versuchen",
+    "err_home": "Zur Startseite"
   }
 }

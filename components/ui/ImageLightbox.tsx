@@ -1,8 +1,9 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { useTranslations } from 'next-intl';
+import { Maximize2, X, ZoomIn, ZoomOut } from 'lucide-react';
 import imageLoader from '@/lib/images/loader';
-import { X, ZoomIn, ZoomOut, Maximize2 } from 'lucide-react';
 
 type ImageLightboxProps = {
   isOpen: boolean;
@@ -11,89 +12,80 @@ type ImageLightboxProps = {
   alt: string;
 };
 
+/*
+ * Immagine ingrandita (le infografiche si leggono solo così). Dialog modale: blocca la
+ * pagina e Lenis (data-scroll-locked), focus sul pulsante Chiudi, Esc chiude e il
+ * focus torna dove era. Lo zoom serve a leggere i testi piccoli.
+ */
 export function ImageLightbox({ isOpen, onClose, src, alt }: ImageLightboxProps) {
+  const t = useTranslations('lightbox');
   const [scale, setScale] = useState(1);
+  const closeRef = useRef<HTMLButtonElement>(null);
 
-  const handleClose = useCallback(() => {
+  const close = useCallback(() => {
     setScale(1);
     onClose();
   }, [onClose]);
 
   useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') handleClose();
+    if (!isOpen) return;
+    const previous = document.activeElement as HTMLElement | null;
+    document.body.setAttribute('data-scroll-locked', '');
+    document.body.style.overflow = 'hidden';
+    closeRef.current?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') close();
     };
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-      window.addEventListener('keydown', handleEscape);
-    }
+    window.addEventListener('keydown', onKey);
     return () => {
+      document.body.removeAttribute('data-scroll-locked');
       document.body.style.overflow = '';
-      window.removeEventListener('keydown', handleEscape);
+      window.removeEventListener('keydown', onKey);
+      previous?.focus();
     };
-  }, [isOpen, handleClose]);
+  }, [isOpen, close]);
 
   if (!isOpen) return null;
 
+  const control =
+    'inline-flex size-11 items-center justify-center text-ink-inverse transition-colors hover:bg-ink-inverse/15';
+
   return (
     <div
-      className="fixed inset-0 z-200 flex flex-col items-center justify-center bg-black/95 p-4"
-      onClick={handleClose}
       role="dialog"
       aria-modal="true"
-      aria-label="Ingrandisci immagine"
+      aria-label={alt}
+      data-lenis-prevent
+      className="fixed inset-0 z-[200] flex flex-col bg-[rgb(20_30_26/0.96)]"
+      onClick={close}
     >
-      <div className="absolute top-4 left-1/2 flex -translate-x-1/2 gap-2 rounded-xl bg-white/10 px-3 py-2 backdrop-blur-xs">
-        <button
-          type="button"
-          onClick={(e) => { e.stopPropagation(); setScale((s) => Math.max(0.5, s - 0.25)); }}
-          className="rounded-lg p-1.5 text-white hover:bg-white/20"
-          aria-label="Riduci"
-        >
-          <ZoomOut className="h-5 w-5" />
-        </button>
-        <span className="min-w-16 text-center text-sm text-white">
-          {Math.round(scale * 100)}%
-        </span>
-        <button
-          type="button"
-          onClick={(e) => { e.stopPropagation(); setScale((s) => Math.min(3, s + 0.25)); }}
-          className="rounded-lg p-1.5 text-white hover:bg-white/20"
-          aria-label="Ingrandisci"
-        >
-          <ZoomIn className="h-5 w-5" />
-        </button>
-        <button
-          type="button"
-          onClick={(e) => { e.stopPropagation(); setScale(1); }}
-          className="rounded-lg p-1.5 text-white hover:bg-white/20"
-          aria-label="Dimensione normale"
-        >
-          <Maximize2 className="h-5 w-5" />
+      <div className="flex items-center justify-between gap-4 p-3" onClick={(e) => e.stopPropagation()}>
+        <div className="flex items-center border border-ink-inverse/25">
+          <button type="button" className={control} onClick={() => setScale((s) => Math.max(0.5, s - 0.25))} aria-label={t('zoom_out')}>
+            <ZoomOut className="size-5" />
+          </button>
+          <span className="type-small min-w-14 text-center text-ink-inverse" aria-live="polite">
+            {Math.round(scale * 100)}%
+          </span>
+          <button type="button" className={control} onClick={() => setScale((s) => Math.min(3, s + 0.25))} aria-label={t('zoom_in')}>
+            <ZoomIn className="size-5" />
+          </button>
+          <button type="button" className={control} onClick={() => setScale(1)} aria-label={t('reset')}>
+            <Maximize2 className="size-5" />
+          </button>
+        </div>
+        <button ref={closeRef} type="button" className={control} onClick={close} aria-label={t('close')}>
+          <X className="size-6" />
         </button>
       </div>
 
-      <button
-        type="button"
-        onClick={handleClose}
-        className="absolute top-4 right-4 rounded-lg p-2 text-white hover:bg-white/20 z-10"
-        aria-label="Chiudi"
-      >
-        <X className="h-8 w-8" />
-      </button>
-
-      <div className="mt-16 flex-1 w-full overflow-auto flex items-start justify-center min-h-0">
-        <div
-          className="inline-block origin-top"
-          style={{ transform: `scale(${scale})` }}
-          onClick={(e) => e.stopPropagation()}
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
+      <div className="flex min-h-0 flex-1 items-start justify-center overflow-auto p-4">
+        <div className="origin-top" style={{ transform: `scale(${scale})` }} onClick={(e) => e.stopPropagation()}>
+          {/* eslint-disable-next-line @next/next/no-img-element -- variante già preparata, dimensione libera per lo zoom */}
           <img
             src={imageLoader({ src, width: 1920 })}
             alt={alt}
-            className="max-w-none rounded-lg shadow-2xl"
-            style={{ maxHeight: '80vh', width: 'auto' }}
+            className="max-h-[82vh] w-auto max-w-none"
             draggable={false}
           />
         </div>

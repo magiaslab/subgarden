@@ -1,17 +1,16 @@
 import type { Locale } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
+import ReactMarkdown from 'react-markdown';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
-import { MotionDiv } from '@/components/ui/Motion';
-import Image from 'next/image';
+import { PageHero } from '@/components/site/PageHero';
 import { Link } from '@/lib/i18n/routing';
 import { getPostBySlug, getAllSlugs, getPostLocales } from '@/lib/blog';
 import { routing } from '@/lib/i18n/routing';
 import { SITE_URL, absoluteUrl, alternates, NOINDEX } from '@/lib/utils/metadata';
-import { ContactCTA } from '@/components/sections/ContactCTA';
-import ReactMarkdown from 'react-markdown';
 
 export async function generateStaticParams() {
   const slugs = getAllSlugs();
@@ -67,6 +66,19 @@ export default async function BlogPostPage({
     publisher: { '@id': `${SITE_URL}/#organization` },
   };
 
+  const tb = await getTranslations('blogPage');
+  const tn = await getTranslations('nav');
+  const date = new Date(post.date).toLocaleDateString(post.lang, {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+
+  /*
+   * Articolo: apertura senza foto (titolo e attacco), copertina grande se c'è, poi il
+   * testo in .prose-site. Le voci dell'interfaccia (briciole, avviso, ritorno) restano
+   * nella lingua del sito; il testo dell'articolo è nella sua (lang={post.lang}).
+   */
   return (
     <>
       <script
@@ -74,117 +86,62 @@ export default async function BlogPostPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
       <Navbar />
-      <main className="pt-20" lang={post.lang}>
-        <section className="relative h-[35vh] flex items-center justify-center overflow-hidden">
-          <Image
-            src="/stunning-spring-collage.jpg"
-            alt=""
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="relative z-10 text-center text-white px-4 max-w-4xl">
-            <MotionDiv
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <time
-                dateTime={post.date}
-                className="block text-sm text-white/80 mb-2"
-              >
-                {new Date(post.date).toLocaleDateString(post.lang, {
-                  day: 'numeric',
-                  month: 'long',
-                  year: 'numeric',
-                })}
-              </time>
-              <h1 className="text-3xl md:text-5xl font-serif font-bold leading-tight">
-                {post.title}
-              </h1>
-            </MotionDiv>
-          </div>
-        </section>
+      <main id="contenuto" lang={post.lang}>
+        <PageHero
+          eyebrow={tb('eyebrow')}
+          title={post.title}
+          lead={post.description}
+          breadcrumb={[
+            { label: tn('home'), href: '/' },
+            { label: 'Blog', href: '/blog' },
+            { label: post.title },
+          ]}
+        >
+          <p className="type-small text-ink-muted">
+            <time dateTime={post.date}>{date}</time>
+          </p>
+          {post.lang !== locale && (
+            <p lang={locale} className="type-small mt-4 border-l-2 border-cta pl-4 text-ink-muted">
+              {tb('only_italian')}
+            </p>
+          )}
+        </PageHero>
 
-        <article className="py-16 md:py-24 bg-white">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <MotionDiv
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="prose-blog"
-            >
+        <article className="bg-surface pb-20 pt-12 lg:pb-28 lg:pt-16">
+          {post.image && (
+            <figure className="container-site">
+              <div className="rounded-media relative aspect-16/9 bg-surface-alt">
+                <Image src={post.image} alt="" fill sizes="(min-width: 80rem) 75rem, 100vw" className="object-cover" />
+              </div>
+            </figure>
+          )}
+          <div className="container-site mt-12 lg:mt-16">
+            <div className="prose-site type-body mx-auto text-ink lg:ml-[16.666%]">
               <ReactMarkdown
                 components={{
                   a: ({ href, children }) =>
                     href?.startsWith('/') ? (
-                      <Link
-                        href={href as any}
-                        className="text-deep-teal font-medium hover:text-copper underline decoration-deep-teal/30 underline-offset-2 transition-colors"
-                      >
-                        {children}
-                      </Link>
+                      <Link href={href as any}>{children}</Link>
                     ) : (
-                      <a
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-deep-teal font-medium hover:text-copper underline decoration-deep-teal/30 underline-offset-2 transition-colors"
-                      >
+                      <a href={href} target="_blank" rel="noopener noreferrer">
                         {children}
                       </a>
                     ),
-                  h2: ({ children }) => (
-                    <h2 className="text-2xl font-serif font-bold text-deep-teal mt-10 mb-4">
-                      {children}
-                    </h2>
-                  ),
-                  h3: ({ children }) => (
-                    <h3 className="text-xl font-serif font-bold text-deep-teal mt-8 mb-3">
-                      {children}
-                    </h3>
-                  ),
-                  p: ({ children }) => (
-                    <p className="text-gray-700 leading-relaxed mb-5">{children}</p>
-                  ),
-                  ul: ({ children }) => (
-                    <ul className="list-disc pl-6 mb-5 space-y-2 text-gray-700">
-                      {children}
-                    </ul>
-                  ),
-                  ol: ({ children }) => (
-                    <ol className="list-decimal pl-6 mb-5 space-y-2 text-gray-700">
-                      {children}
-                    </ol>
-                  ),
-                  strong: ({ children }) => (
-                    <strong className="font-semibold text-deep-teal">
-                      {children}
-                    </strong>
-                  ),
                 }}
               >
                 {post.content}
               </ReactMarkdown>
-            </MotionDiv>
-
-            <MotionDiv
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-              className="mt-14 pt-8 border-t border-gray-100"
-            >
+            </div>
+            <div lang={locale} className="mx-auto mt-16 max-w-[68ch] border-t border-line pt-8 lg:ml-[16.666%]">
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-2 text-deep-teal font-medium hover:text-copper transition-colors"
+                className="type-ui inline-flex min-h-11 items-center gap-2 text-brand underline decoration-1 underline-offset-[0.3em] hover:decoration-2"
               >
-                ← Tutti gli articoli
+                <span aria-hidden>←</span> {tb('back')}
               </Link>
-            </MotionDiv>
+            </div>
           </div>
         </article>
-        <ContactCTA />
       </main>
       <Footer />
     </>

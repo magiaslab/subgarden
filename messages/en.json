@@ -1,8 +1,6 @@
 {
   "about": {
     "discover_more": "Discover my story",
-    "founder": "Fausto Favilli",
-    "founder_role": "Founder & Visionary",
     "milestone_1990": "The beginning of a thirty-year passion",
     "milestone_patent": "Innovation and SUBGarden patent",
     "milestone_villa": "Historical restoration of monumental parks",
@@ -15,19 +13,52 @@
   },
   "aboutPage": {
     "case_history_text": "One of my most significant projects was the recovery of the park of a villa from the 1700s in semi-abandonment. I listened to what the park wanted to become again, restoring historical symmetries and secular essences, transforming it into an excellent setting for VIP events and absolute relaxation, without ever breaking the dialogue with the surrounding landscape.",
-    "case_history_title": "Restoration of the Soul: 18th Century Villa",
-    "gallery_villa_mussio": "Villa Mussio — A few shots from the project",
+    "case_history_title": "Restoring an 18th-century park",
+    "gallery_villa_mussio": "Villa Mussio, a few shots of the work",
     "hero_subtitle": "My story and the vision for SUBGarden",
-    "hero_title": "The Art of Listening to the Earth",
+    "hero_title": "Working with plants and gardens since 1990",
     "innovation_text": "My passion for nature led me to create SUBGarden: a patented non-invasive sub-irrigation system. I protect the value of historical and modern gardens with a technology that is not seen, does not destroy the existing lawn during installation, and guarantees eternal beauty, supported by digital precision and absolute respect for the water resource.",
-    "innovation_title": "The Invisible Sustainable Revolution",
+    "innovation_title": "A system you cannot see",
     "philosophy_expanded_text1": "A garden doesn't end where the property line stops. My technique is inspired by the concept of 'Borrowed Scenery': freeing the gaze rather than delimiting it. I use natural wings and perspective telescopes to merge the private garden with the infinite horizon of Tuscany.",
     "philosophy_expanded_text2": "I define my approach as 'Empathetic Garden' because it resonates with the inhabitants and the place itself. I don't impose a form, but follow the voice of the earth, using the most advanced technology to serve the greatest simplicity.",
-    "philosophy_expanded_title": "Borrowed Scenery and the Empathetic Garden",
+    "philosophy_expanded_title": "Borrowed scenery and the empathetic garden",
     "roots_text": "In 1990 I wasn't looking for a career, but for answers. What started as support for the family business quickly became an intimate dialogue with the plant world. I was won over by the ability of plants to 'simply exist', their silent but invincible resilience. Since then, every garden I create is a tribute to this strength.",
     "roots_ancient_text": "Our story does not begin thirty years ago, but four thousand. We draw inspiration from the masters of the Nile and the sages of the Han dynasty, who understood before us how water must be a secret dialogue between earth and root. SUBGarden does nothing but give this ancient wisdom the precision of modern engineering.",
-    "roots_title": "Roots: From Duty to Wonder",
-    "case_history_focus": "In residences that have witnessed history, we cannot afford to break the spell with visible modern technology. Our non-invasive installation method is the only one that allows us to preserve secular essences and Renaissance symmetries, bringing water to the roots exactly as the Medici gardeners would have wished."
+    "roots_title": "Roots: from duty to wonder",
+    "case_history_focus": "In residences that have witnessed history, we cannot afford to break the spell with visible modern technology. Our non-invasive installation method is the only one that allows us to preserve secular essences and Renaissance symmetries, bringing water to the roots exactly as the Medici gardeners would have wished.",
+    "hero_eyebrow": "About us",
+    "hero_lead": "The story of the man who created SUBGarden, and why the water belongs under the lawn.",
+    "hero_image_alt": "Finished lawn at Villa Mussio, with a wooden fence, stone walls and cypress trees",
+    "roots_eyebrow": "1990, the beginning",
+    "roots_quote": "I fell in love with the purity of plants and their resilient ability to exist, simply.",
+    "roots_image_alt": "Work site among the olive trees at Villa Mussio: freshly worked soil, machine tracks and cypresses in the background",
+    "milestones_label": "Milestones",
+    "milestone_1_when": "1990",
+    "milestone_2_when": "The patent",
+    "milestone_3_when": "Historic parks",
+    "philosophy_eyebrow": "The approach",
+    "philosophy_photo_1": "New lawn at Villa Mussio along the fence, with olive trees and the hills behind",
+    "philosophy_photo_2": "The villa forecourt with the flower bed, the lamp posts and the view of the coast",
+    "philosophy_photo_3": "The olive park of Villa Mussio seen from the drone during the works",
+    "case_eyebrow": "A project",
+    "gallery_lead": "From worked soil to finished lawn. Tap a photo to see it large.",
+    "gallery_open": "Open the photo: {alt}",
+    "gallery_1": "The worked soil among the olive trees, seen from the drone",
+    "gallery_2": "Machines on site between the rows of olive trees",
+    "gallery_3": "The site in front of the building, with the telehandler and newly planted cypresses",
+    "gallery_4": "The shaped beds and the lawn growing over the lines",
+    "gallery_5": "The park from above when finished: curved lawns among the olive trees",
+    "gallery_6": "The finished lawn among the olive trees, with the fence and flowers",
+    "gallery_7": "The terrace with a parasol, seating and flowering agapanthus",
+    "gallery_8": "White agapanthus at the edge of the lawn",
+    "gallery_9": "The forecourt with the terracotta jar and the lawn towards the sea",
+    "innovation_eyebrow": "SUBGarden",
+    "fact_years_value": "30+",
+    "fact_years_label": "years working with gardens",
+    "fact_invasive_value": "100%",
+    "fact_invasive_label": "non-invasive installation",
+    "fact_patent_value": "Patented",
+    "fact_patent_label": "the SUBGarden installation method"
   },
   "benefits": {
     "title": "Water savings and stress-free installation",
@@ -97,10 +128,10 @@
     "email_label": "Email",
     "email_value": "info@subgarden.it",
     "error": "Error sending message. Please try again.",
-    "form_title": "Send us a message",
+    "form_title": "Write to us",
     "hours_label": "Hours",
     "hours_value": "Mon - Fri: 09:00 - 18:00",
-    "info_title": "Contact Info",
+    "info_title": "Contact details",
     "faq_before_form": "Have doubts? Check our FAQ before sending your message.",
     "faq_link_text": "Go to FAQ",
     "message": "Message",
@@ -108,11 +139,24 @@
     "phone": "Phone",
     "phone_label": "Phone",
     "phone_value": "+39 347 6299935",
-    "sending": "Sending...",
-    "submit": "Send Message",
+    "sending": "Sending…",
+    "submit": "Send the message",
     "subtitle": "We are ready to transform your green space",
-    "success": "Message sent successfully!",
-    "title": "Contact Us"
+    "success": "Thank you, your message has arrived.",
+    "title": "Contact Us",
+    "hero_eyebrow": "Contact",
+    "hero_title": "Let's talk about your garden",
+    "hero_lead": "Write or call us. We come and look at the lawn and the water supply and tell you whether it is worth it. The site visit is free.",
+    "form_lead": "Tell us where the garden is and what it is like: how big it is, whether there is already a system.",
+    "optional": "optional",
+    "error_name": "Please enter at least 2 characters.",
+    "error_email": "Please check the email address.",
+    "error_message": "Please write at least 10 characters.",
+    "map_title": "Where we are",
+    "map_lead": "Our office is in San Vincenzo, on the coast near Livorno.",
+    "map_iframe_title": "Map: Via Pitagora 3, San Vincenzo (LI)",
+    "map_link": "Open in Google Maps",
+    "new_tab": "(opens in a new tab)"
   },
   "cta": {
     "badge": "Request Information",
@@ -161,8 +205,8 @@
     "subtitle": "Overview",
     "title": "The SUBGarden System at a Glance",
     "click_to_enlarge": "Click on the image to enlarge and read it properly.",
-    "alt_1": "SUBGarden: innovation in sustainable sub-irrigation - Problem vs Solution and technology",
-    "alt_2": "SUBGarden: invisible innovation for a perfect garden - Benefits and operational method",
+    "alt_1": "SUBGarden: invisible innovation for a perfect garden - Benefits and operational method",
+    "alt_2": "SUBGarden: innovation in sustainable sub-irrigation - Problem vs Solution and technology",
     "alt_3": "SUBGarden: intelligent irrigation that revolutionizes your outdoor - Water saving and comfort"
   },
   "homeVideo": {
@@ -224,15 +268,17 @@
       "historical": "Historical",
       "residential": "Residential"
     },
-    "description": "Explore a selection of our sub-irrigation and landscape design projects carried out throughout Tuscany.",
+    "description": "Some of our subsurface irrigation and landscaping projects in Tuscany.",
     "subtitle": "Our works of excellence",
     "title": "Portfolio",
-    "view_project": "View Project"
+    "view_project": "View Project",
+    "filter_label": "Filter by type of project",
+    "eyebrow": "Projects"
   },
   "technologyPage": {
-    "evolution_title": "The Evolution of the Invisible",
+    "evolution_title": "Water underground, as it has always been",
     "evolution_text": "From terracotta to polymer: the principle is the same, the technology has changed. Where the ancient Egyptians used the porosity of clay, we use patented self-compensating emitters to ensure every root receives the right amount of moisture, drop by drop, with no evaporation and no waste.",
-    "comparison_table_title": "Sub-irrigation compared",
+    "comparison_table_title": "Subsurface irrigation compared",
     "method_subgarden": "SUBGarden",
     "method_ollas": "Ancient ollas",
     "method_sprinkler": "Sprinkler irrigation",
@@ -252,29 +298,86 @@
     "sprinkler_maintenance": "High (broken heads, clogging)",
     "sprinkler_uniformity": "Medium-low (wind, evaporation)",
     "sprinkler_efficiency": "60-75%",
-    "sprinkler_surface": "Visible sprinklers and pipes"
+    "sprinkler_surface": "Visible sprinklers and pipes",
+    "hero_eyebrow": "Technology",
+    "hero_title": "Water goes to the roots, the lawn stays dry",
+    "hero_lead": "Under the lawn we lay Rain Bird XFS dripline in a grid. Here you will find how it works, the data sheet figures and how we work on site.",
+    "soil_eyebrow": "Under the lawn",
+    "soil_title": "What happens under the lawn",
+    "soil_lead": "The driplines sit a few centimetres deep, in parallel rows. Each emitter releases a little water at a time and the soil spreads it by itself, through capillary action.",
+    "soil_figure": "Cross-section of the soil: the lawn on top, the roots, Rain Bird XFS driplines 30 cm apart and the water rising towards the roots",
+    "soil_spacing": "30 cm",
+    "soil_1_label": "The lawn",
+    "soil_1_text": "The surface stays dry: no puddles, no spray on the furniture, you can walk on it straight away.",
+    "soil_2_label": "The roots",
+    "soil_2_text": "They get the water directly, with no evaporation and no runoff.",
+    "soil_3_label": "The dripline",
+    "soil_3_text": "Rain Bird XFS, pressure-compensating from 0.4 to 3.6 atm: every emitter delivers 1.6 l/h, at the start of the line as at the end.",
+    "soil_4_label": "The water",
+    "soil_4_text": "It spreads slowly and evenly by capillary action and rises towards the roots. Efficiency is above 90%.",
+    "specs_eyebrow": "Data sheet",
+    "specs_title": "The Rain Bird XFS dripline in figures",
+    "specs_lead": "The figures that matter, from the product data sheet and our installation layout.",
+    "spec_flow_value": "1.6 l/h",
+    "spec_flow_label": "Flow per emitter",
+    "spec_flow_note": "Low flow and low pressure: no large pumps or storage tanks needed.",
+    "spec_pressure_value": "0.4–3.6 atm",
+    "spec_pressure_label": "Pressure-compensating range",
+    "spec_pressure_note": "Across this whole range every emitter delivers the same amount of water.",
+    "spec_grid_value": "300 × 330 mm",
+    "spec_grid_label": "Installation grid",
+    "spec_grid_note": "Parallel lines, 300 mm from one line to the next.",
+    "spec_efficiency_value": ">90%",
+    "spec_efficiency_label": "Water efficiency",
+    "spec_efficiency_note": "Water does not evaporate or run off the surface.",
+    "spec_saving_value": "50–70%",
+    "spec_saving_label": "Water saving",
+    "spec_saving_note": "Compared with sprinkler irrigation.",
+    "features_title": "What the system includes",
+    "feature_1": "Emitters that self-flush at every cycle",
+    "feature_2": "Root intrusion protection for the emitters (Copper Shield)",
+    "feature_3": "Air relief valves on every zone",
+    "feature_4": "Filter and pressure regulator after the valve",
+    "feature_5": "Pipe flushing without activating the emitters",
+    "feature_6": "Fertigation straight to the roots",
+    "install_eyebrow": "Installation",
+    "install_title": "Designed for existing gardens",
+    "install_text": "The installation method is patented: the lines go under the lawn without invasive digging. The turf is not removed, roots and fixed furniture stay where they are, and once the job is done the system cannot be seen.",
+    "install_text_2": "The same network can be used for fertigation: fertiliser reaches the roots and does not sit on the lawn where people walk. Maintenance is done from the zone valves, without touching the garden.",
+    "install_image_alt": "Illustration made for SUBGarden: an Italian garden with the buried XFS dripline and the 1.6 l/h pressure-compensating emitter",
+    "evolution_eyebrow": "An ancient principle",
+    "evolution_image_alt": "Illustration made for SUBGarden: from terracotta ollas and the blue lotus of ancient Egypt to the Medici villas and the Rain Bird XFS dripline",
+    "infographics_eyebrow": "In short",
+    "infographics_title": "The system in three panels",
+    "infographics_lead": "The panels made for SUBGarden: tap one to see it large and read it.",
+    "infographics_open": "Open the panel: {alt}",
+    "video_title": "SUBGarden in one minute",
+    "method_eyebrow": "How we work",
+    "method_title": "From site visit to handover, in five steps",
+    "step_label": "Step"
   },
   "process": {
-    "step1": "Technical Site Visit",
+    "step1": "Technical site visit",
     "step1_desc": "Accurate analysis of the garden's status and any existing system to identify the best conversion opportunities.",
-    "step2": "Custom Design",
+    "step2": "Tailored design",
     "step2_desc": "Development of a precision grid pattern and detailed cost analysis, optimizing every supply line.",
-    "step3": "Transparent Formalization",
+    "step3": "Clear quote and timeline",
     "step3_desc": "Presentation of the technical project, clear quote, and definition of the works schedule.",
-    "step4": "Patented Installation",
+    "step4": "Installation with the patented method",
     "step4_desc": "Fast, clean, and absolutely non-invasive execution. The lawn and roots suffer no damage, the system is invisible from day one.",
-    "step5": "Support & Warranty",
+    "step5": "Support and warranty",
     "step5_desc": "Certified handover with one year of free support and possibility of unlimited warranty through seasonal maintenance.",
-    "title": "Our Operational Method"
+    "title": "Our way of working"
   },
   "whatsapp": {
-    "aria_label": "Chat on WhatsApp"
+    "aria_label": "Chat on WhatsApp",
+    "message": "Hello, I would like some information about SUBGarden subsurface irrigation."
   },
   "faq": {
     "meta_title": "Frequently asked questions about sub-irrigation",
     "meta_description": "Answers on sub-irrigation, existing gardens, water saving, non-invasive installation and costs. SUBGarden in Tuscany and Italy.",
     "title": "Frequently asked questions",
-    "subtitle": "Everything you need to know about sub-irrigation and the SUBGarden system.",
+    "subtitle": "The questions we are asked most about subsurface irrigation, installation, water use and costs.",
     "q1_q": "Can sub-irrigation be installed in an existing garden?",
     "q1_a": "Yes. The SUBGarden system is designed for gardens that are already in place. Installation is non-invasive and does not require digging up or destroying the lawn: the turf stays intact and the garden can be used immediately after the work.",
     "q2_q": "Does installation damage the lawn or garden?",
@@ -291,15 +394,19 @@
     "q7_a": "Sprinkler irrigation wets the surface: some water evaporates or runs off, and the lawn stays wet (with possible issues like mosquitoes and limited use of the garden). Sub-irrigation delivers water deep to the roots: dry surface, less waste, water saving and more comfort.",
     "q8_q": "How long does installation take?",
     "q8_a": "It varies according to the size and complexity of the garden. Thanks to the absence of invasive digging, the site stays tidy and the garden can be used right after installation.",
-    "cta_text": "Didn't find the answer you were looking for?",
-    "cta_button": "Contact us for a free site visit"
+    "cta_text": "Didn't find the answer?",
+    "cta_button": "Write to us",
+    "hero_eyebrow": "Subsurface irrigation",
+    "cta_lead": "Write or call us: the site visit is free.",
+    "cta_call": "Call {phone}"
   },
   "cookie": {
     "title": "Cookies and privacy",
     "description": "We use necessary technical cookies for the site to work and, with your consent, cookies for access statistics (Google Analytics) to improve your experience. You can accept all cookies or only necessary ones.",
     "accept": "Accept all",
     "decline": "Necessary only",
-    "privacy_link": "Privacy Policy"
+    "privacy_link": "Privacy Policy",
+    "close": "Close"
   },
   "home": {
     "eyebrow": "Subsurface irrigation in Tuscany",
@@ -347,5 +454,119 @@
     "synthesis_eyebrow": "The system at a glance",
     "video_pause": "Pause the video",
     "video_play": "Play the video"
+  },
+  "lightbox": {
+    "close": "Close",
+    "zoom_in": "Zoom in",
+    "zoom_out": "Zoom out",
+    "reset": "Original size"
+  },
+  "solutionsPage": {
+    "eyebrow": "Solutions",
+    "title": "One system, four kinds of green space",
+    "lead": "Private gardens, public parks, sports fields and hospitality. The system is the same: what changes is the design, which we draw up after the site visit.",
+    "list_eyebrow": "Four cases",
+    "list_title": "Pick your case",
+    "method_eyebrow": "How we work",
+    "tech_link": "How the technology works",
+    "detail_eyebrow": "Solution",
+    "facts_label": "In numbers",
+    "features_eyebrow": "What changes",
+    "features_title": "What subsurface irrigation gives you",
+    "compare_eyebrow": "The comparison",
+    "other_title": "Other solutions"
+  },
+  "localPage": {
+    "eyebrow": "Area",
+    "index_title": "Where we work in Tuscany",
+    "index_lead": "On the Tuscan coast: Elba, Maremma, Livorno and San Vincenzo, where summers are long and water must be saved.",
+    "list_eyebrow": "Areas",
+    "list_title": "Three areas, three different situations",
+    "context_eyebrow": "Context",
+    "context_title": "Climate, soil and water rules",
+    "features_eyebrow": "In practice",
+    "features_title": "What matters in this area",
+    "other_title": "Other areas"
+  },
+  "blogPage": {
+    "eyebrow": "Blog",
+    "list_label": "Articles",
+    "read": "Read the article",
+    "back": "All articles",
+    "only_italian": "For now this article is only available in Italian."
+  },
+  "legal": {
+    "eyebrow": "Legal",
+    "privacy": {
+      "title": "Privacy policy",
+      "lead": "What data this website collects, why, and how you can ask for it to be changed or deleted.",
+      "sections": [
+        {
+          "title": "1. Data controller",
+          "text": "CLOROPHYLLA SRL, owner of the SUBGarden brand, registered office at Via Pitagora 3, 57027 San Vincenzo (LI), Italy, is the controller of the personal data collected through this website."
+        },
+        {
+          "title": "2. Data collected",
+          "text": "We collect the following data:",
+          "items": [
+            "Data you give us: name, email and phone number, through the contact form.",
+            "Browsing data: IP address, browser type, pages visited (through technical cookies)."
+          ]
+        },
+        {
+          "title": "3. Why we use it",
+          "text": "We use the data only to:",
+          "items": [
+            "reply to requests for information and quotes;",
+            "improve browsing on the website;",
+            "meet our legal obligations."
+          ]
+        },
+        {
+          "title": "4. Legal basis",
+          "text": "Processing is based on the data subject's consent (for the contact form) and on the controller's legitimate interest (for technical browsing data)."
+        },
+        {
+          "title": "5. Your rights",
+          "text": "Under the GDPR (EU Regulation 2016/679) you have the right to access your data and to ask for it to be corrected, deleted or for its processing to be restricted. To exercise these rights, write to info@subgarden.it."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of service",
+      "lead": "The conditions for using this website.",
+      "sections": [
+        {
+          "title": "1. Acceptance of the terms",
+          "text": "Access to and use of the SUBGarden website are subject to these terms and conditions. By using the website, the user accepts them in full."
+        },
+        {
+          "title": "2. Intellectual property",
+          "text": "All content on the website (texts, images, logos, videos) is the exclusive property of SUBGarden or its licensors and is protected by copyright law. Reproduction without written permission is prohibited."
+        },
+        {
+          "title": "3. Limitation of liability",
+          "text": "SUBGarden strives to provide accurate and up-to-date information but does not guarantee the absence of errors or omissions. SUBGarden is not liable for any damage arising from the use of, or inability to use, the website."
+        },
+        {
+          "title": "4. Services and quotes",
+          "text": "The information on the website is for information only. Quotes made after the site visit are subject to specific contractual terms, defined when the project is formalised."
+        },
+        {
+          "title": "5. Applicable law",
+          "text": "These terms are governed by Italian law. The Court of Livorno has jurisdiction over any dispute."
+        }
+      ]
+    }
+  },
+  "errorPage": {
+    "nf_title": "This page is not here",
+    "nf_body": "The page you are looking for does not exist or has been moved.",
+    "nf_home": "Back to home",
+    "nf_more": "Or have a look at",
+    "err_title": "Something went wrong",
+    "err_body": "An error occurred. Try again, and if the problem persists, write to us.",
+    "err_retry": "Try again",
+    "err_home": "Back to home"
   }
 }

@@ -1,14 +1,14 @@
 import type { Locale } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Metadata } from 'next';
+import Image from 'next/image';
+import { ArrowUpRight } from 'lucide-react';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
-import { Card } from '@/components/ui/Card';
+import { PageHero } from '@/components/site/PageHero';
+import { Section, SectionIntro } from '@/components/site/Section';
+import { ButtonLink } from '@/components/ui/Button';
 import { Link } from '@/lib/i18n/routing';
-import { MotionDiv } from '@/components/ui/Motion';
-import { ContactCTA } from '@/components/sections/ContactCTA';
-import Image from 'next/image';
-import { ArrowRight, MapPin } from 'lucide-react';
 import { alternates, pick } from '@/lib/utils/metadata';
 
 const cities = [
@@ -80,6 +80,10 @@ export async function generateMetadata({
   };
 }
 
+/*
+ * Indice delle zone: le tre pagine locali come blocchi con foto grande, numero, nome e
+ * una frase. Tutto il blocco è il link.
+ */
 export default async function TerritorioIndexPage({
   params,
 }: {
@@ -87,91 +91,55 @@ export default async function TerritorioIndexPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale as Locale);
+  const t = await getTranslations('localPage');
+  const tn = await getTranslations('nav');
+  const lang = locale as 'it' | 'en' | 'de';
 
   return (
     <>
       <Navbar />
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-          <Image
-            src="/stunning-spring-collage.jpg"
-            alt="SUBGarden in Toscana"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="relative z-10 text-center text-white px-4 max-w-4xl">
-            <MotionDiv
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6">
-                SUBGarden in Toscana
-              </h1>
-              <p className="text-xl md:text-2xl opacity-90 font-light italic">
-                Eccellenza nell&apos;irrigazione per il territorio toscano
-              </p>
-            </MotionDiv>
-          </div>
-        </section>
+      <main id="contenuto">
+        <PageHero
+          eyebrow={t('eyebrow')}
+          title={t('index_title')}
+          lead={t('index_lead')}
+          image={{ src: '/stunning-spring-collage.jpg' }}
+        >
+          <ButtonLink href="/contatti" size="lg">
+            {tn('cta')}
+          </ButtonLink>
+        </PageHero>
 
-        <section className="py-24 bg-[#F2F4F7]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-              {cities.map((city, index) => (
-                <MotionDiv
-                  key={city.slug}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                >
-                  <Link href={{ pathname: '/territorio/[city]', params: { city: city.slug } }}>
-                    <Card className="h-[500px] overflow-hidden cursor-pointer group p-0 relative border-none shadow-2xl">
-                      {/* Full Background Image */}
-                      <Image
-                        src={city.image}
-                        alt={city.name[locale as keyof typeof city.name] || city.name.it}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-110"
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                      />
-                      
-                      {/* Gradient Overlay */}
-                      <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent group-hover:from-copper/80 transition-colors duration-500" />
-
-                      {/* Content Overlay */}
-                      <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
-                        <div className="flex items-center gap-2 mb-2 text-copper opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <MapPin className="w-4 h-4" />
-                          <span className="text-xs font-bold uppercase tracking-widest">Toscana</span>
-                        </div>
-                        
-                        <h3 className="text-3xl font-serif font-bold mb-3">
-                          {city.name[locale as keyof typeof city.name] || city.name.it}
-                        </h3>
-                        
-                        <p className="text-white/80 text-lg leading-relaxed mb-6 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                          {city.description[locale as keyof typeof city.description] || city.description.it}
-                        </p>
-
-                        <div className="flex items-center gap-2 text-white font-bold uppercase tracking-widest text-sm border-b border-white/30 w-fit pb-1 group-hover:border-white transition-colors">
-                          Esplora
-                          <ArrowRight className="w-5 h-5 transform group-hover:translate-x-2 transition-transform" />
-                        </div>
-                      </div>
-                    </Card>
-                  </Link>
-                </MotionDiv>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <ContactCTA />
+        <Section tone="surface">
+          <SectionIntro eyebrow={t('list_eyebrow')} title={t('list_title')} />
+          <ol className="mt-12 grid gap-x-8 gap-y-14 md:grid-cols-2 lg:mt-16 lg:grid-cols-3">
+            {cities.map((city, i) => (
+              <li key={city.slug}>
+                <Link href={{ pathname: '/territorio/[city]', params: { city: city.slug } }} className="group block">
+                  <figure className="rounded-media relative aspect-4/5 bg-surface-alt">
+                    <Image
+                      src={city.image}
+                      alt=""
+                      fill
+                      sizes="(min-width: 64rem) 33vw, (min-width: 48rem) 50vw, 100vw"
+                      className="object-cover transition-transform duration-700 ease-[var(--ease-out-soft)] group-hover:scale-[1.03]"
+                    />
+                  </figure>
+                  <div className="mt-6 border-t border-line pt-5">
+                    <p aria-hidden className="type-eyebrow text-brand">
+                      {String(i + 1).padStart(2, '0')}
+                    </p>
+                    <h3 className="type-h3 mt-2 flex items-start justify-between gap-4 text-ink transition-colors group-hover:text-brand">
+                      {city.name[lang] ?? city.name.it}
+                      <ArrowUpRight aria-hidden className="mt-1 size-6 shrink-0 text-brand transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                    </h3>
+                    <p className="type-body mt-3 text-ink-muted">{city.description[lang] ?? city.description.it}</p>
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ol>
+        </Section>
       </main>
       <Footer />
     </>

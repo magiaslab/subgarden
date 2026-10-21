@@ -16,7 +16,7 @@
   --color-pietra-400: #a39384;
   --color-prato-700: #2f5848;
   --color-prato-900: #1f3d32;
-  --color-rame-500: #b87333;
+  --color-rame-500: #c47a36; /* #b87333 del sito precedente, schiarito: testo inchiostro 4,68:1 (axe) */
   --color-rame-700: #8a5220;
   --color-acqua-500: #2090b0;
   --color-acqua-700: #176f8a;
@@ -41,15 +41,9 @@
   --color-grass: var(--color-erba-500);
   --color-danger: #a3261b;
 
-  /* Alias dei nomi del sito precedente, finché tutti i componenti non sono rifatti */
-  --color-deep-teal: var(--color-prato-700);
-  --color-copper: var(--color-rame-500);
-  --color-stone-grey: var(--color-pietra-400);
 
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-display: var(--font-archivo), var(--font-inter), system-ui, sans-serif;
-  /* `font-serif` nei componenti vecchi = i titoli: ora Archivo */
-  --font-serif: var(--font-display);
 
   --radius-control: 2px;
   --radius-media: 6px;

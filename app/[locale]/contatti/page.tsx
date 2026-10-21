@@ -1,14 +1,12 @@
 import type { Locale } from 'next-intl';
 import { Metadata } from 'next';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
+import { PageHero } from '@/components/site/PageHero';
+import { Section } from '@/components/site/Section';
 import { ContactForm } from '@/components/sections/ContactForm';
-import { Card, CardContent } from '@/components/ui/Card';
-import { MotionDiv } from '@/components/ui/Motion';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/lib/i18n/routing';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
-import Image from 'next/image';
 import { alternates, pick } from '@/lib/utils/metadata';
 
 const TITLE: Record<string, string> = {
@@ -35,6 +33,13 @@ export async function generateMetadata({
   };
 }
 
+const MAPS_URL =
+  'https://www.google.com/maps/search/?api=1&query=Via%20Pitagora%203%2C%2057027%20San%20Vincenzo%20(LI)';
+const MAPS_EMBED = 'https://www.google.com/maps?q=Via%20Pitagora%203%2C%2057027%20San%20Vincenzo%20(LI)&output=embed';
+
+const linkClass =
+  'inline-flex min-h-11 items-center text-brand underline decoration-1 underline-offset-[0.3em] hover:decoration-2';
+
 export default async function ContactPage({
   params,
 }: {
@@ -42,156 +47,93 @@ export default async function ContactPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale as Locale);
-  const t = await (getTranslations as any)('contact');
-
-  const contactInfo = [
-    {
-      icon: MapPin,
-      label: t('address_label'),
-      value: t('address_value'),
-      link: 'https://www.google.com/maps/search/?api=1&query=Via%20Pitagora%203%2C%2057027%20San%20Vincenzo%20(LI)',
-    },
-    {
-      icon: Phone,
-      label: t('phone_label'),
-      value: t('phone_value'),
-      link: `tel:${t('phone_value').replace(/\s/g, '')}`,
-    },
-    {
-      icon: Mail,
-      label: t('email_label'),
-      value: t('email_value'),
-      link: `mailto:${t('email_value')}`,
-    },
-    {
-      icon: Clock,
-      label: t('hours_label'),
-      value: t('hours_value'),
-    },
-  ];
+  const t = await getTranslations('contact');
+  const tn = await getTranslations('nav');
+  const phone = t('phone_value');
+  const email = t('email_value');
 
   return (
     <>
       <Navbar />
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-          <Image
-            src="/spring-nature-outdoors-backgrounds-fresh.jpg"
-            alt="Contatti SUBGarden"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="relative z-10 text-center text-white px-4 max-w-4xl">
-            <MotionDiv
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6">
-                {t('title')}
-              </h1>
-              <p className="text-xl md:text-2xl opacity-90 font-light italic">
-                {t('subtitle')}
+      <main id="contenuto">
+        <PageHero
+          eyebrow={t('hero_eyebrow')}
+          title={t('hero_title')}
+          lead={t('hero_lead')}
+          breadcrumb={[{ label: tn('home'), href: '/' }, { label: tn('contact') }]}
+        />
+
+        <Section>
+          <div className="grid gap-14 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
+            {/* Recapiti veri: telefono ed email cliccabili, sede, orari */}
+            <div>
+              <h2 className="type-h2 text-ink">{t('info_title')}</h2>
+              <dl className="mt-8 border-t border-line">
+                <div className="border-b border-line py-5">
+                  <dt className="type-eyebrow text-ink-muted">{t('phone_label')}</dt>
+                  <dd className="type-h3 mt-1">
+                    <a href={`tel:${phone.replace(/\s/g, '')}`} className={linkClass}>
+                      {phone}
+                    </a>
+                  </dd>
+                </div>
+                <div className="border-b border-line py-5">
+                  <dt className="type-eyebrow text-ink-muted">{t('email_label')}</dt>
+                  <dd className="type-h3 mt-1 break-words">
+                    <a href={`mailto:${email}`} className={linkClass}>
+                      {email}
+                    </a>
+                  </dd>
+                </div>
+                <div className="border-b border-line py-5">
+                  <dt className="type-eyebrow text-ink-muted">{t('address_label')}</dt>
+                  <dd className="type-body mt-2 text-ink">{t('address_value')}</dd>
+                </div>
+                <div className="border-b border-line py-5">
+                  <dt className="type-eyebrow text-ink-muted">{t('hours_label')}</dt>
+                  <dd className="type-body mt-2 text-ink">{t('hours_value')}</dd>
+                </div>
+              </dl>
+              <p className="type-body mt-8 text-ink-muted">
+                {t('faq_before_form')}{' '}
+                <Link href="/faq" className="text-brand underline decoration-1 underline-offset-[0.3em] hover:decoration-2">
+                  {t('faq_link_text')}
+                </Link>
               </p>
-            </MotionDiv>
-          </div>
-        </section>
-
-        <section className="py-24 bg-[#F2F4F7]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-              {/* Contact Info Cards */}
-              <div className="lg:col-span-1 space-y-6">
-                <h2 className="text-3xl font-serif font-bold text-deep-teal mb-8">
-                  {t('info_title')}
-                </h2>
-                {contactInfo.map((info, index) => (
-                  <MotionDiv
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    <Card className="border-white shadow-lg hover:shadow-2xl transition-all duration-300">
-                      <CardContent className="p-6 flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-2xl bg-deep-teal/5 flex items-center justify-center shrink-0">
-                          <info.icon className="w-6 h-6 text-copper" />
-                        </div>
-                        <div>
-                          <p className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-1">
-                            {info.label}
-                          </p>
-                          {info.link ? (
-                            <a
-                              href={info.link}
-                              className="text-lg font-medium text-deep-teal hover:text-copper transition-colors"
-                              target={info.icon === MapPin ? '_blank' : undefined}
-                              rel={info.icon === MapPin ? 'noopener noreferrer' : undefined}
-                            >
-                              {info.value}
-                            </a>
-                          ) : (
-                            <p className="text-lg font-medium text-deep-teal">
-                              {info.value}
-                            </p>
-                          )}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </MotionDiv>
-                ))}
-              </div>
-
-              {/* Contact Form */}
-              <div className="lg:col-span-2">
-                <p className="mb-6 text-gray-600 text-sm">
-                  {t('faq_before_form')}{' '}
-                  <Link
-                    href="/faq"
-                    className="font-medium text-deep-teal hover:text-copper underline decoration-deep-teal/30 underline-offset-2 transition-colors"
-                  >
-                    {t('faq_link_text')} →
-                  </Link>
-                </p>
-                <ContactForm isSection={false} hideHeader={true} />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Map Section */}
-        <section className="py-24 bg-white overflow-hidden">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-serif font-bold text-deep-teal mb-4">La Nostra Sede</h2>
-              <p className="text-xl text-gray-600">Vieni a trovarci a San Vincenzo, nel cuore della costa toscana</p>
-              <div className="w-24 h-1.5 bg-copper mx-auto mt-6"></div>
             </div>
 
-            <MotionDiv
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="rounded-3xl overflow-hidden shadow-2xl border-8 border-[#F2F4F7] h-[500px] relative"
-            >
-              <iframe
-                src="https://www.google.com/maps?q=Via%20Pitagora%203%2C%2057027%20San%20Vincenzo%20(LI)&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Google Maps - SUBGarden Office"
-              ></iframe>
-            </MotionDiv>
+            {/* Il form, su una superficie bianca */}
+            <div className="rounded-media bg-surface-raised p-6 sm:p-8 lg:p-12">
+              <h2 className="type-h2 text-ink">{t('form_title')}</h2>
+              <p className="type-body mt-3 max-w-prose text-ink-muted">{t('form_lead')}</p>
+              <ContactForm className="mt-8" />
+            </div>
           </div>
-        </section>
+        </Section>
+
+        {/* La sede sulla mappa */}
+        <Section tone="alt">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <h2 className="type-h2 text-ink">{t('map_title')}</h2>
+              <p className="type-lead mt-4 text-ink-muted">{t('map_lead')}</p>
+            </div>
+            <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className={`type-ui ${linkClass}`}>
+              {t('map_link')}
+              <span className="sr-only"> {t('new_tab')}</span>
+            </a>
+          </div>
+          <div className="relative mt-10 aspect-4/3 overflow-hidden rounded-[var(--radius-media)] bg-surface md:aspect-21/9">
+            <iframe
+              src={MAPS_EMBED}
+              title={t('map_iframe_title')}
+              className="absolute inset-0 size-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+        </Section>
       </main>
       <Footer />
     </>

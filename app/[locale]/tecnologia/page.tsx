@@ -1,16 +1,16 @@
 import type { Locale } from 'next-intl';
 import { Metadata } from 'next';
-import { Navbar } from '@/components/navigation/Navbar';
-import { Footer } from '@/components/navigation/Footer';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { MotionDiv } from '@/components/ui/Motion';
-import { InfographicSection } from '@/components/sections/InfographicSection';
-import { ContactCTA } from '@/components/sections/ContactCTA';
-import { TechnologyVideoSection } from '@/components/sections/TechnologyVideoSection';
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Search, PencilRuler, FileText, Zap, ShieldCheck } from 'lucide-react';
-import { cn } from '@/lib/utils/cn';
+import { Navbar } from '@/components/navigation/Navbar';
+import { Footer } from '@/components/navigation/Footer';
+import { PageHero } from '@/components/site/PageHero';
+import { Section, SectionIntro } from '@/components/site/Section';
+import { SoilSection, type SoilLegendItem } from '@/components/site/SoilSection';
+import { DripLine } from '@/components/site/DripLine';
+import { ButtonLink } from '@/components/ui/Button';
+import { InfographicSection } from '@/components/sections/InfographicSection';
+import { TechnologyVideoSection } from '@/components/sections/TechnologyVideoSection';
 import { alternates, pick } from '@/lib/utils/metadata';
 
 const TITLE: Record<string, string> = {
@@ -37,6 +37,12 @@ export async function generateMetadata({
   };
 }
 
+const SPECS = ['flow', 'pressure', 'grid', 'efficiency', 'saving'] as const;
+const FEATURES = [1, 2, 3, 4, 5, 6] as const;
+const STEPS = [1, 2, 3, 4, 5] as const;
+const TABLE_ROWS = ['maintenance', 'uniformity', 'efficiency', 'surface'] as const;
+const TABLE_COLS = ['subgarden', 'ollas', 'sprinkler'] as const;
+
 export default async function TecnologiaPage({
   params,
 }: {
@@ -44,318 +50,184 @@ export default async function TecnologiaPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale as Locale);
-  const t = await (getTranslations as any)('process');
-  const tTech = await (getTranslations as any)('technologyPage');
+  const t = await getTranslations('technologyPage');
+  const tp = await getTranslations('process');
+  const tn = await getTranslations('nav');
 
-  const content = {
-    it: {
-      title: 'Tecnologia SUBGarden',
-      subtitle: 'L\'ingegneria Rain Bird® al servizio del paesaggio',
-      sections: [
-        {
-          title: 'Sistema di Installazione Brevettato',
-          description:
-            'Il nostro metodo di installazione è unico e brevettato: progettato per giardini esistenti, permette di inserire il sistema senza scavi invasivi o distruttivi. L\'installazione è veloce, pulita e preserva immediatamente l\'estetica del tuo spazio verde.',
-          image: '/grassland-landscape-greening-environment-park-background.jpg',
-        },
-        {
-          title: 'Ala Gocciolante Rain Bird XFS®',
-          description:
-            'Il cuore di ogni impianto è l\'ala gocciolante Rain Bird XFS, l\'unica auto-compensante da 0.4 a 3.6 atm. Grazie alla bassa portata (1,6 l/h per gocciolatore), il sistema lavora a bassa pressione, eliminando la necessità di grandi e costosi sistemi di pompaggio o accumulo.',
-          image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
-        },
-        {
-          title: 'Distribuzione per Capillarità',
-          description:
-            'L\'acqua si distribuisce nel terreno lentamente e uniformemente per capillarità. Questo processo naturale garantisce che ogni radice riceva la giusta quantità di umidità senza sprechi, evitando il ruscellamento e l\'evaporazione tipica dei sistemi a pioggia.',
-          image: '/stunning-spring-collage.jpg',
-        },
-        {
-          title: 'Fertirrigazione e Zero Impatto',
-          description:
-            'Il sistema permette di effettuare la fertirrigazione direttamente alle radici, evitando il contatto con prodotti di sintesi chimica in superficie. Ogni zona è dotata di valvole di spurgo aria e flush dell\'acqua per una manutenzione semplice e invisibile.',
-          image: '/green-park-view.jpg',
-        },
-      ],
-    },
-    en: {
-      title: 'SUBGarden Technology',
-      subtitle: 'Rain Bird® engineering at the service of the landscape',
-      sections: [
-        {
-          title: 'Patented Installation System',
-          description:
-            'Our installation method is unique and patented: designed for existing gardens, it allows the system to be inserted without invasive or destructive excavations. Installation is fast, clean, and immediately preserves the aesthetics of your green space.',
-          image: '/grassland-landscape-greening-environment-park-background.jpg',
-        },
-        {
-          title: 'Rain Bird XFS® Drip Line',
-          description:
-            'The heart of every system is the Rain Bird XFS drip line, the only one self-compensating from 0.4 to 3.6 atm. Thanks to the low flow (1.6 l/h per emitter), the system works at low pressure, eliminating the need for large pumping or storage systems.',
-          image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
-        },
-        {
-          title: 'Capillary Distribution',
-          description:
-            'Water distributes in the soil slowly and uniformly by capillary action. This natural process ensures every root receives the right amount of moisture without waste, avoiding the runoff and evaporation typical of spray systems.',
-          image: '/stunning-spring-collage.jpg',
-        },
-        {
-          title: 'Fertigation and Zero Impact',
-          description:
-            'The system allows for fertigation directly to the roots, avoiding contact with chemical synthesis products on the surface. Each zone is equipped with air bleed and water flush valves for simple and invisible maintenance.',
-          image: '/green-park-view.jpg',
-        },
-      ],
-    },
-    de: {
-      title: 'SUBGarden Technologie',
-      subtitle: 'Rain Bird® Technik im Dienste der Landschaft',
-      sections: [
-        {
-          title: 'Patentiertes Installationssystem',
-          description:
-            'Unsere Installationsmethode ist einzigartig und patentiert: Sie wurde für bestehende Gärten entwickelt und ermöglicht die Installation des Systems ohne invasive oder zerstörerische Ausgrabungen. Die Installation ist schnell, sauber und bewahrt sofort die Ästhetik Ihrer Grünfläche.',
-          image: '/grassland-landscape-greening-environment-park-background.jpg',
-        },
-        {
-          title: 'Rain Bird XFS® Tropfleitung',
-          description:
-            'Das Herzstück jedes Systems ist die Rain Bird XFS Tropfleitung, die einzige selbstkompensierende von 0,4 bis 3,6 atm. Dank der geringen Durchflussmenge (1,6 l/h pro Tropfer) arbeitet das System mit niedrigem Druck, was große Pump- oder Speichersysteme überflüssig macht.',
-          image: '/spring-nature-outdoors-backgrounds-fresh.jpg',
-        },
-        {
-          title: 'Kapillare Verteilung',
-          description:
-            'Das Wasser verteilt sich im Boden langsam und gleichmäßig durch Kapillarwirkung. Dieser natürliche Prozess stellt sicher, dass jede Wurzel die richtige Menge an Feuchtigkeit ohne Verschwendung erhält, wodurch Abfluss und Verdunstung vermieden werden.',
-          image: '/stunning-spring-collage.jpg',
-        },
-        {
-          title: 'Fertigation und Zero Impact',
-          description:
-            'Das System ermöglicht die Fertigation direkt an den Wurzeln, wodurch der Kontakt mit chemischen Syntheseprodukten an der Oberfläche vermieden wird. Jede Zone ist mit Entlüftungs- und Spülventilen für eine einfache und unsichtbare Wartung ausgestattet.',
-          image: '/green-park-view.jpg',
-        },
-      ],
-    },
-  };
-
-  const pageContent = (content as any)[locale] || content.it;
+  const legend = [1, 2, 3, 4].map((i) => ({
+    label: t(`soil_${i}_label`),
+    text: t(`soil_${i}_text`),
+  })) as [SoilLegendItem, SoilLegendItem, SoilLegendItem, SoilLegendItem];
 
   return (
     <>
       <Navbar />
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
-          <Image
-            src="/grassland-landscape-greening-environment-park-background.jpg"
-            alt="SUBGarden Technology"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="relative z-10 text-center text-white px-4 max-w-4xl">
-            <MotionDiv
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6">
-                {pageContent.title}
-              </h1>
-              <p className="text-xl md:text-2xl opacity-90 font-light italic">
-                {pageContent.subtitle}
-              </p>
-            </MotionDiv>
-          </div>
-        </section>
+      <main id="contenuto">
+        <PageHero
+          eyebrow={t('hero_eyebrow')}
+          title={t('hero_title')}
+          lead={t('hero_lead')}
+          image={{ src: '/grassland-landscape-greening-environment-park-background.jpg' }}
+          breadcrumb={[{ label: tn('home'), href: '/' }, { label: tn('technology') }]}
+        >
+          <ButtonLink href="/contatti" size="lg">
+            {tn('cta')}
+          </ButtonLink>
+        </PageHero>
 
-        {/* Evoluzione dell'Invisibile: ancora storica egizia + testo */}
-        <section className="py-20 bg-white border-b border-gray-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <MotionDiv
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-            >
-              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+        {/* Lo spaccato del terreno, in versione approfondita */}
+        <Section tone="raised">
+          <SectionIntro eyebrow={t('soil_eyebrow')} title={t('soil_title')} lead={t('soil_lead')} />
+          <SoilSection
+            className="mt-12 lg:mt-16"
+            title={t('soil_figure')}
+            legend={legend}
+            spacingLabel={t('soil_spacing')}
+          />
+        </Section>
+
+        {/* Scheda tecnica Rain Bird XFS: numeri grandi sulla linea gocciolante */}
+        <Section>
+          <SectionIntro eyebrow={t('specs_eyebrow')} title={t('specs_title')} lead={t('specs_lead')} />
+          <DripLine drops={20} className="mt-12 lg:mt-16" />
+          <dl className="mt-10 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+            {SPECS.map((key) => (
+              <div key={key} className="flex flex-col border-l border-line pl-5">
+                <dt className="type-ui order-2 mt-3 text-ink">{t(`spec_${key}_label`)}</dt>
+                <dd className="type-data order-1 whitespace-nowrap text-[clamp(2.25rem,1.6rem+2vw,3.5rem)] text-brand">{t(`spec_${key}_value`)}</dd>
+                <dd className="type-body order-3 mt-1 text-ink-muted">{t(`spec_${key}_note`)}</dd>
+              </div>
+            ))}
+          </dl>
+          <div className="mt-16 border-t border-line pt-10 lg:mt-20">
+            <h3 className="type-h3 text-ink">{t('features_title')}</h3>
+            <ul className="mt-6 grid gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
+              {FEATURES.map((i) => (
+                <li key={i} className="type-body flex gap-3 text-ink">
+                  <span aria-hidden className="mt-[0.55em] block size-[7px] shrink-0 rounded-full bg-water" />
+                  {t(`feature_${i}`)}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Section>
+
+        {/* La posa: metodo brevettato, fertirrigazione, manutenzione */}
+        <Section tone="alt">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+            <div>
+              <SectionIntro eyebrow={t('install_eyebrow')} title={t('install_title')} />
+              <p className="type-body mt-6 max-w-prose text-ink-muted">{t('install_text')}</p>
+              <p className="type-body mt-4 max-w-prose text-ink-muted">{t('install_text_2')}</p>
+            </div>
+            <figure>
+              <div className="rounded-media relative aspect-[960/524] bg-surface">
                 <Image
-                  src="/Gemini_Generated_Image_reiwdqreiwdqreiw (3).png"
-                  alt="Storie di Acqua e di Terra: dal loto blu e le ollas antiche alle Ville Medicee e Rain Bird XFS®"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto object-contain"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  src="/Gemini_Generated_Image_reiwdqreiwdqreiw (1).png"
+                  alt={t('install_image_alt')}
+                  fill
+                  sizes="(min-width: 64rem) 50vw, 100vw"
+                  className="object-cover"
                 />
               </div>
-              <div>
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-deep-teal mb-6">
-                  {tTech('evolution_title')}
-                </h2>
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  {tTech('evolution_text')}
-                </p>
-              </div>
-            </MotionDiv>
+            </figure>
+          </div>
+        </Section>
 
-            {/* Tabella comparativa: SUBGarden vs Ollas vs Irrigazione a pioggia */}
-            <div className="mt-20">
-              <h3 className="text-2xl font-serif font-bold text-deep-teal mb-6 text-center">
-                {tTech('comparison_table_title')}
-              </h3>
-              <MotionDiv
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="overflow-x-auto rounded-2xl border border-gray-200 shadow-lg"
-              >
-                <table className="w-full min-w-[640px] text-left">
-                  <thead>
-                    <tr className="bg-deep-teal text-white">
-                      <th className="px-4 py-4 font-semibold">{tTech('table_method')}</th>
-                      <th className="px-4 py-4 font-semibold text-copper">{tTech('method_subgarden')}</th>
-                      <th className="px-4 py-4 font-semibold">{tTech('method_ollas')}</th>
-                      <th className="px-4 py-4 font-semibold">{tTech('method_sprinkler')}</th>
-                    </tr>
-                  </thead>
-                  <tbody className="bg-gray-50/50">
-                    <tr className="border-b border-gray-200">
-                      <td className="px-4 py-3 font-medium text-gray-700">{tTech('table_maintenance')}</td>
-                      <td className="px-4 py-3 text-gray-600">{tTech('subgarden_maintenance')}</td>
-                      <td className="px-4 py-3 text-gray-600">{tTech('ollas_maintenance')}</td>
-                      <td className="px-4 py-3 text-gray-600">{tTech('sprinkler_maintenance')}</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="px-4 py-3 font-medium text-gray-700">{tTech('table_uniformity')}</td>
-                      <td className="px-4 py-3 text-gray-600">{tTech('subgarden_uniformity')}</td>
-                      <td className="px-4 py-3 text-gray-600">{tTech('ollas_uniformity')}</td>
-                      <td className="px-4 py-3 text-gray-600">{tTech('sprinkler_uniformity')}</td>
-                    </tr>
-                    <tr className="border-b border-gray-200">
-                      <td className="px-4 py-3 font-medium text-gray-700">{tTech('table_efficiency')}</td>
-                      <td className="px-4 py-3 text-gray-600">{tTech('subgarden_efficiency')}</td>
-                      <td className="px-4 py-3 text-gray-600">{tTech('ollas_efficiency')}</td>
-                      <td className="px-4 py-3 text-gray-600">{tTech('sprinkler_efficiency')}</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-3 font-medium text-gray-700">{tTech('table_surface')}</td>
-                      <td className="px-4 py-3 text-gray-600">{tTech('subgarden_surface')}</td>
-                      <td className="px-4 py-3 text-gray-600">{tTech('ollas_surface')}</td>
-                      <td className="px-4 py-3 text-gray-600">{tTech('sprinkler_surface')}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </MotionDiv>
+        {/* Il principio antico e il confronto fra metodi */}
+        <Section>
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+            <figure className="lg:order-2">
+              <div className="rounded-media relative aspect-[960/524] bg-surface-alt">
+                <Image
+                  src="/Gemini_Generated_Image_reiwdqreiwdqreiw (3).png"
+                  alt={t('evolution_image_alt')}
+                  fill
+                  sizes="(min-width: 64rem) 50vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
+            </figure>
+            <div className="lg:order-1">
+              <SectionIntro eyebrow={t('evolution_eyebrow')} title={t('evolution_title')} />
+              <p className="type-body mt-6 max-w-prose text-ink-muted">{t('evolution_text')}</p>
             </div>
           </div>
-        </section>
+
+          <div className="mt-16 lg:mt-24">
+            <h3 id="confronto" className="type-h3 text-ink">
+              {t('comparison_table_title')}
+            </h3>
+            <div className="mt-6 overflow-x-auto" tabIndex={0} role="region" aria-labelledby="confronto">
+              <table className="w-full min-w-[40rem] border-collapse text-left">
+                <thead>
+                  <tr className="border-b-2 border-ink">
+                    <th scope="col" className="type-ui py-4 pr-6 text-ink-muted">
+                      {t('table_method')}
+                    </th>
+                    {TABLE_COLS.map((col) => (
+                      <th
+                        key={col}
+                        scope="col"
+                        className={col === 'subgarden' ? 'type-ui bg-surface-raised px-4 py-4 text-brand' : 'type-ui px-4 py-4 text-ink'}
+                      >
+                        {t(`method_${col}`)}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {TABLE_ROWS.map((row) => (
+                    <tr key={row} className="border-b border-line">
+                      <th scope="row" className="type-ui py-4 pr-6 align-top text-ink">
+                        {t(`table_${row}`)}
+                      </th>
+                      {TABLE_COLS.map((col) => (
+                        <td
+                          key={col}
+                          className={
+                            col === 'subgarden'
+                              ? 'type-body bg-surface-raised px-4 py-4 align-top font-semibold text-ink'
+                              : 'type-body px-4 py-4 align-top text-ink-muted'
+                          }
+                        >
+                          {t(`${col}_${row}`)}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </Section>
 
         <InfographicSection />
-
-        <section className="py-20 bg-[#F2F4F7]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {pageContent.sections.map((section: any, index: number) => (
-                <MotionDiv
-                  key={section.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                >
-                  <Card className="h-full p-0 overflow-hidden group">
-                    {section.image && (
-                      <div className="relative h-64 w-full overflow-hidden">
-                        <Image
-                          src={section.image}
-                          alt={section.title}
-                          fill
-                          className="object-cover transition-transform duration-700 group-hover:scale-110"
-                          sizes="(max-width: 768px) 100vw, 50vw"
-                        />
-                        <div className="absolute inset-0 bg-linear-to-t from-deep-teal/90 via-deep-teal/20 to-transparent" />
-                        <div className="absolute bottom-6 left-6 right-6">
-                          <h3 className="text-2xl font-serif font-bold text-white mb-1 group-hover:text-copper transition-colors duration-300">
-                            {section.title}
-                          </h3>
-                          <div className="w-12 h-1 bg-copper rounded-full transform origin-left group-hover:scale-x-150 transition-transform duration-500" />
-                        </div>
-                      </div>
-                    )}
-                    <CardContent className="p-8">
-                      <p className="text-lg text-gray-700 leading-relaxed font-medium group-hover:text-deep-teal transition-colors duration-300">
-                        {section.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </MotionDiv>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <TechnologyVideoSection />
 
-        {/* Operational Method Section */}
-        <section className="py-24 bg-[#F2F4F7] border-t border-gray-200/50">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-deep-teal mb-4">{t('title')}</h2>
-              <div className="w-24 h-1.5 bg-copper mx-auto"></div>
-            </div>
-            
-            <div className="space-y-12">
-              {[
-                { step: 1, icon: Search, color: "text-blue-600", bgColor: "bg-blue-50" },
-                { step: 2, icon: PencilRuler, color: "text-purple-600", bgColor: "bg-purple-50" },
-                { step: 3, icon: FileText, color: "text-amber-600", bgColor: "bg-amber-50" },
-                { step: 4, icon: Zap, color: "text-orange-600", bgColor: "bg-orange-50" },
-                { step: 5, icon: ShieldCheck, color: "text-green-600", bgColor: "bg-green-50" }
-              ].map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <MotionDiv 
-                    key={item.step}
-                    initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7, delay: index * 0.1 }}
-                    className="flex flex-col md:flex-row items-center md:items-start gap-8 bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-white relative overflow-hidden group hover:shadow-2xl transition-all duration-500"
-                  >
-                    {/* Step Number Background Decor */}
-                    <div className="absolute -right-4 -bottom-4 text-9xl font-serif font-bold text-gray-50 group-hover:text-gray-100 transition-colors duration-500 select-none z-0">
-                      {item.step}
-                    </div>
-
-                    <div className={cn(
-                      "shrink-0 w-20 h-20 rounded-2xl flex items-center justify-center transition-transform duration-500 group-hover:scale-110 relative z-10 shadow-xs",
-                      item.bgColor
-                    )}>
-                      <Icon className={cn("w-10 h-10", item.color)} />
-                    </div>
-
-                    <div className="relative z-10 text-center md:text-left">
-                      <div className="flex flex-col items-center md:items-start mb-4">
-                        <span className="text-copper font-bold uppercase tracking-widest text-sm mb-1">Fase {item.step}</span>
-                        <h3 className="text-2xl md:text-3xl font-serif font-bold text-deep-teal">
-                          {t(`step${item.step}`)}
-                        </h3>
-                      </div>
-                      <p className="text-xl text-gray-600 leading-relaxed max-w-3xl">
-                        {t(`step${item.step}_desc`)}
-                      </p>
-                    </div>
-                  </MotionDiv>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        <ContactCTA />
+        {/* Metodo di lavoro: cinque fasi numerate, allineate a sinistra */}
+        <Section>
+          <SectionIntro eyebrow={t('method_eyebrow')} title={t('method_title')} />
+          <ol className="mt-12 border-t border-line lg:mt-16">
+            {STEPS.map((step) => (
+              <li
+                key={step}
+                className="grid gap-x-8 gap-y-3 border-b border-line py-8 md:grid-cols-[8rem_1fr_1.4fr] md:items-baseline lg:py-10"
+              >
+                <p className="type-data text-brand" aria-hidden>
+                  {String(step).padStart(2, '0')}
+                </p>
+                <h3 className="type-h3 text-ink">
+                  <span className="sr-only">
+                    {t('step_label')} {step}:{' '}
+                  </span>
+                  {tp(`step${step}`)}
+                </h3>
+                <p className="type-body max-w-prose text-ink-muted">{tp(`step${step}_desc`)}</p>
+              </li>
+            ))}
+          </ol>
+        </Section>
       </main>
       <Footer />
     </>

@@ -3,9 +3,9 @@ import { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Navbar } from '@/components/navigation/Navbar';
 import { Footer } from '@/components/navigation/Footer';
-import { MotionDiv } from '@/components/ui/Motion';
-import Image from 'next/image';
-import { Link } from '@/lib/i18n/routing';
+import { PageHero } from '@/components/site/PageHero';
+import { Section } from '@/components/site/Section';
+import { ButtonLink } from '@/components/ui/Button';
 import { absoluteUrl, alternates } from '@/lib/utils/metadata';
 
 export async function generateMetadata({
@@ -30,6 +30,9 @@ export default async function FAQPage({
   const { locale } = await params;
   setRequestLocale(locale as Locale);
   const t = await (getTranslations as any)('faq');
+  const tn = await getTranslations('nav');
+  const tc = await getTranslations('contact');
+  const phone = tc('phone_value');
 
   const items = [
     'q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8',
@@ -54,75 +57,54 @@ export default async function FAQPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Navbar />
-      <main className="pt-20">
-        <section className="relative h-[40vh] flex items-center justify-center overflow-hidden">
-          <Image
-            src="/stunning-spring-collage.jpg"
-            alt=""
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="relative z-10 text-center text-white px-4 max-w-4xl">
-            <MotionDiv
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4">
-                {t('title')}
-              </h1>
-              <p className="text-lg md:text-xl text-white/90 font-light italic max-w-2xl mx-auto">
-                {t('subtitle')}
-              </p>
-            </MotionDiv>
-          </div>
-        </section>
+      <main id="contenuto">
+        <PageHero
+          eyebrow={t('hero_eyebrow')}
+          title={t('title')}
+          lead={t('subtitle')}
+          breadcrumb={[{ label: tn('home'), href: '/' }, { label: tn('faq') }]}
+        />
 
-        <div className="py-16 md:py-24 bg-[#F2F4F7]">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="space-y-4">
-              {items.map((key, index) => (
-                <MotionDiv
-                  key={key}
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                >
-                  <details className="group rounded-2xl bg-white border border-gray-100 shadow-xs overflow-hidden">
-                    <summary className="flex items-center justify-between gap-4 list-none cursor-pointer px-6 py-5 font-serif font-semibold text-deep-teal text-lg hover:bg-gray-50/80 transition-colors">
-                      <span className="pr-4">{t(`${key}_q`)}</span>
-                      <span className="shrink-0 w-8 h-8 rounded-full bg-deep-teal/10 flex items-center justify-center text-deep-teal group-open:rotate-180 transition-transform">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </span>
-                    </summary>
-                    <div className="px-6 pb-5 pt-0 text-gray-700 leading-relaxed border-t border-gray-50">
-                      <p className="pt-4">{t(`${key}_a`)}</p>
-                    </div>
-                  </details>
-                </MotionDiv>
-              ))}
+        <Section>
+          <div className="grid gap-14 lg:grid-cols-[1fr_2fr] lg:gap-20">
+            {/* Domande: <details> nativi, aperti e chiusi da tastiera senza JavaScript */}
+            <div className="lg:order-2">
+              <ul className="border-t border-line-strong">
+                {items.map((key) => (
+                  <li key={key} className="border-b border-line">
+                    <details className="group">
+                      <summary className="type-h3 flex [text-wrap:pretty] min-h-11 cursor-pointer list-none items-start justify-between gap-6 py-6 text-ink transition-colors hover:text-brand [&::-webkit-details-marker]:hidden">
+                        <span>{t(`${key}_q`)}</span>
+                        <span
+                          aria-hidden
+                          className="relative mt-1 block size-6 shrink-0 text-brand before:absolute before:left-1/2 before:top-1/2 before:h-0.5 before:w-4 before:-translate-x-1/2 before:-translate-y-1/2 before:bg-current after:absolute after:left-1/2 after:top-1/2 after:h-4 after:w-0.5 after:-translate-x-1/2 after:-translate-y-1/2 after:bg-current after:transition-transform group-open:after:scale-y-0"
+                        />
+                      </summary>
+                      <p className="type-body max-w-prose pb-8 pr-12 text-ink-muted">{t(`${key}_a`)}</p>
+                    </details>
+                  </li>
+                ))}
+              </ul>
             </div>
 
-            <MotionDiv
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-12 text-center"
-            >
-              <p className="text-gray-600 mb-6">{t('cta_text')}</p>
-              <Link
-                href="/contatti"
-                className="inline-flex items-center gap-2 rounded-xl bg-deep-teal px-8 py-4 text-white font-semibold hover:bg-deep-teal/90 transition-colors"
-              >
-                {t('cta_button')}
-              </Link>
-            </MotionDiv>
+            {/* Chi non trova la risposta: scrive o chiama */}
+            <aside className="lg:order-1 lg:sticky lg:top-28 lg:self-start">
+              <h2 className="type-h3 text-ink">{t('cta_text')}</h2>
+              <p className="type-body mt-3 text-ink-muted">{t('cta_lead')}</p>
+              <div className="mt-6 flex flex-col items-start gap-4">
+                <ButtonLink href="/contatti" variant="secondary">
+                  {t('cta_button')}
+                </ButtonLink>
+                <a
+                  href={`tel:${phone.replace(/\s/g, '')}`}
+                  className="type-ui inline-flex min-h-11 items-center text-brand underline decoration-1 underline-offset-[0.3em] hover:decoration-2"
+                >
+                  {t('cta_call', { phone })}
+                </a>
+              </div>
+            </aside>
           </div>
-        </div>
+        </Section>
       </main>
       <Footer />
     </>

@@ -2,30 +2,37 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { CheckCircle2, Loader2, XCircle } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { submitContactForm } from '@/app/actions/contact';
 import { contactFormSchema, type ContactFormData } from '@/lib/validations/contact';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { motion } from 'framer-motion';
-import { CheckCircle, XCircle, Loader2 } from 'lucide-react';
-import { Card } from '@/components/ui/Card';
 import { cn } from '@/lib/utils/cn';
 import { track } from '@/lib/analytics';
 
-interface ContactFormProps {
-  hideHeader?: boolean;
-  className?: string;
-  isSection?: boolean;
-}
+/*
+ * Form contatti (docs/DESIGN-SYSTEM.md § 3): solo campi di testo, niente controlli di
+ * sistema. Validazione con zod; gli errori sono tradotti qui (lo schema ha i messaggi
+ * solo in italiano) e legati al campo con aria-describedby/aria-invalid. L'esito
+ * dell'invio è in una regione aria-live sempre presente.
+ */
+const fieldClass =
+  'type-body block w-full rounded-[var(--radius-control)] border border-line-strong bg-surface-raised px-4 py-3 text-ink transition-colors focus:border-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus aria-[invalid=true]:border-danger';
+const labelClass = 'type-ui mb-2 block text-ink';
+const errorClass = 'type-small mt-2 text-danger';
 
-export function ContactForm({ hideHeader = false, className, isSection = true }: ContactFormProps) {
-  const t = (useTranslations as any)('contact');
+type Field = 'name' | 'email' | 'phone' | 'message';
+const ERROR_KEY: Partial<Record<Field, string>> = {
+  name: 'error_name',
+  email: 'error_email',
+  message: 'error_message',
+};
+
+export function ContactForm({ className }: { className?: string }) {
+  const t = useTranslations('contact');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{
-    type: 'success' | 'error' | null;
-    message: string;
-  }>({ type: null, message: '' });
+  const [status, setStatus] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
 
   const {
     register,
@@ -38,145 +45,79 @@ export function ContactForm({ hideHeader = false, className, isSection = true }:
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
-    setSubmitStatus({ type: null, message: '' });
-
+    setStatus(null);
     try {
       const result = await submitContactForm(data);
-
       if (result.success) {
         track({ name: 'generate_lead', params: { form: 'contatti' } });
-        setSubmitStatus({
-          type: 'success',
-          message: t('success'),
-        });
+        setStatus({ type: 'success', message: t('success') });
         reset();
       } else {
-        setSubmitStatus({
-          type: 'error',
-          message: result.message || t('error'),
-        });
+        setStatus({ type: 'error', message: t('error') });
       }
-    } catch (error) {
-      setSubmitStatus({
-        type: 'error',
-        message: t('error'),
-      });
+    } catch {
+      setStatus({ type: 'error', message: t('error') });
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  const formContent = (
-    <Card className={cn("p-8 md:p-12 border-white shadow-2xl", !isSection && "shadow-none border-none p-0")}>
-      {!hideHeader && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-deep-teal mb-4">
-            {t('title')}
-          </h2>
-          <div className="w-20 h-1 bg-copper mx-auto"></div>
-        </motion.div>
-      )}
+  const errorProps = (field: Field) =>
+    errors[field] ? { 'aria-invalid': true as const, 'aria-describedby': `${field}-error` } : {};
+  const errorText = (field: Field) =>
+    errors[field] && ERROR_KEY[field] ? (
+      <p id={`${field}-error`} className={errorClass}>
+        {t(ERROR_KEY[field]!)}
+      </p>
+    ) : null;
 
-      <motion.form
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        onSubmit={handleSubmit(onSubmit)}
-        className="space-y-6"
-      >
-        {/* Name */}
+  return (
+    <form onSubmit={handleSubmit(onSubmit)} noValidate className={cn('space-y-6', className)}>
+      <div className="grid gap-6 sm:grid-cols-2">
         <div>
-          <label
-            htmlFor="name"
-            className="block text-sm font-medium text-gray-700 mb-2"
-          >
+          <label htmlFor="name" className={labelClass}>
             {t('name')}
           </label>
-          <input
-            {...register('name')}
-            type="text"
-            id="name"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-deep-teal focus:border-transparent transition-all"
-          />
-          {errors.name && (
-            <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
-          )}
+          <input {...register('name')} {...errorProps('name')} type="text" id="name" autoComplete="name" className={fieldClass} />
+          {errorText('name')}
         </div>
-
-        {/* Email */}
         <div>
-          <label
-            htmlFor="email"
-            className="block text-sm font-medium text-gray-700 mb-2"
-          >
+          <label htmlFor="email" className={labelClass}>
             {t('email')}
           </label>
           <input
             {...register('email')}
+            {...errorProps('email')}
             type="email"
             id="email"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-deep-teal focus:border-transparent transition-all"
+            autoComplete="email"
+            inputMode="email"
+            className={fieldClass}
           />
-          {errors.email && (
-            <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
-          )}
+          {errorText('email')}
         </div>
+      </div>
 
-        {/* Phone */}
-        <div>
-          <label
-            htmlFor="phone"
-            className="block text-sm font-medium text-gray-700 mb-2"
-          >
-            {t('phone')} <span className="text-gray-400">(opzionale)</span>
-          </label>
-          <input
-            {...register('phone')}
-            type="tel"
-            id="phone"
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-deep-teal focus:border-transparent transition-all"
-          />
-        </div>
+      <div>
+        <label htmlFor="phone" className={labelClass}>
+          {t('phone')} <span className="font-normal text-ink-muted">({t('optional')})</span>
+        </label>
+        <input {...register('phone')} type="tel" id="phone" autoComplete="tel" className={cn(fieldClass, 'sm:max-w-sm')} />
+      </div>
 
-        {/* Message */}
-        <div>
-          <label
-            htmlFor="message"
-            className="block text-sm font-medium text-gray-700 mb-2"
-          >
-            {t('message')}
-          </label>
-          <textarea
-            {...register('message')}
-            id="message"
-            rows={6}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-deep-teal focus:border-transparent transition-all resize-none"
-          />
-          {errors.message && (
-            <p className="mt-1 text-sm text-red-600">
-              {errors.message.message}
-            </p>
-          )}
-        </div>
+      <div>
+        <label htmlFor="message" className={labelClass}>
+          {t('message')}
+        </label>
+        <textarea {...register('message')} {...errorProps('message')} id="message" rows={6} className={cn(fieldClass, 'min-h-40 resize-y')} />
+        {errorText('message')}
+      </div>
 
-        {/* Submit Button */}
-        <Button
-          type="submit"
-          size="lg"
-          variant="primary"
-          className="w-full"
-          disabled={isSubmitting}
-        >
+      <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
+        <Button type="submit" size="lg" variant="primary" disabled={isSubmitting} className="sm:min-w-56">
           {isSubmitting ? (
             <>
-              <Loader2 className="mr-2 w-5 h-5 animate-spin" />
+              <Loader2 aria-hidden className="size-5 animate-spin motion-reduce:animate-none" />
               {t('sending')}
             </>
           ) : (
@@ -184,36 +125,15 @@ export function ContactForm({ hideHeader = false, className, isSection = true }:
           )}
         </Button>
 
-        {/* Status Message */}
-        {submitStatus.type && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className={`flex items-center gap-2 p-4 rounded-lg ${
-              submitStatus.type === 'success'
-                ? 'bg-green-50 text-green-800'
-                : 'bg-red-50 text-red-800'
-            }`}
-          >
-            {submitStatus.type === 'success' ? (
-              <CheckCircle className="w-5 h-5" />
-            ) : (
-              <XCircle className="w-5 h-5" />
-            )}
-            <p className="text-sm font-medium">{submitStatus.message}</p>
-          </motion.div>
-        )}
-      </motion.form>
-    </Card>
-  );
-
-  if (!isSection) return formContent;
-
-  return (
-    <section id="contact" className={cn("py-24 bg-[#F2F4F7]", className)}>
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        {formContent}
+        <div role="status" aria-live="polite" className="min-h-6">
+          {status && (
+            <p className={cn('type-ui flex items-center gap-2', status.type === 'success' ? 'text-brand' : 'text-danger')}>
+              {status.type === 'success' ? <CheckCircle2 aria-hidden className="size-5 shrink-0" /> : <XCircle aria-hidden className="size-5 shrink-0" />}
+              {status.message}
+            </p>
+          )}
+        </div>
       </div>
-    </section>
+    </form>
   );
 }

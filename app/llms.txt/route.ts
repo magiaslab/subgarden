@@ -24,7 +24,7 @@ const body = `# SUBGarden
 - [Soluzioni](${SITE_URL}/it/soluzioni): giardini residenziali, parchi pubblici, campi sportivi, strutture turistiche
 - [Territorio](${SITE_URL}/it/territorio): Isola d'Elba, Maremma, Livorno
 - [Domande frequenti](${SITE_URL}/it/faq): costi, posa, manutenzione, risparmio
-- [Chi siamo](${SITE_URL}/it/chi-siamo): Fausto Favilli e la storia di SUBGarden
+- [Chi siamo](${SITE_URL}/it/chi-siamo): la storia di SUBGarden, dal 1990 tra piante e giardini
 - [Contatti](${SITE_URL}/it/contatti): richiesta di sopralluogo
 
 ## Approfondimenti
