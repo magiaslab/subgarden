@@ -4,7 +4,7 @@ import { Section, SectionIntro } from '@/components/site/Section';
 
 /*
  * La posa: perché si può fare in un giardino già fatto (a sinistra il testo, a destra
- * la foto vera del cantiere), poi i tre passi del metodo sulla linea gocciolante.
+ * il prato vero a lavoro finito), poi i tre passi del metodo sulla linea gocciolante.
  */
 export function Install() {
   const t = useTranslations('home');
@@ -26,8 +26,8 @@ export function Install() {
         </div>
         <figure className="rounded-media relative aspect-4/5 bg-surface-alt lg:aspect-auto lg:h-full lg:min-h-[32rem]">
           <Image
-            src="/villa-mussio/DJI_0205.JPG"
-            alt={t('case_2')}
+            src="/villa-mussio/20210914_090702.jpg"
+            alt={t('install_photo')}
             fill
             sizes="(min-width: 64rem) 50vw, 100vw"
             className="object-cover"
