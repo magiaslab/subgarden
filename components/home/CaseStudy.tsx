@@ -3,17 +3,16 @@ import Image from 'next/image';
 import { SectionIntro } from '@/components/site/Section';
 
 /*
- * Il caso Villa Mussio con le foto vere del cantiere, in ordine: dal terreno lavorato
- * al prato finito. Da lg la sezione si blocca e la striscia scorre di lato
+ * Il caso Villa Mussio con le foto vere: le linee sotto il prato visto dal drone, poi il
+ * giardino finito. Niente foto di scavi e mezzi: il punto è che il prato resta. Da lg la sezione si blocca e la striscia scorre di lato
  * (data-horizontal + data-track, ScrollMotion); sotto lg scorre col dito, nativa.
  */
 const PHOTOS = [
-  { src: '/villa-mussio/DJI_0204.JPG', key: 'case_1', ratio: 'aspect-3/2' },
-  { src: '/villa-mussio/DJI_0205.JPG', key: 'case_2', ratio: 'aspect-3/2' },
   { src: '/villa-mussio/DJI_0444.JPG', key: 'case_3', ratio: 'aspect-3/2' },
   { src: '/villa-mussio/20210914_090508.jpg', key: 'case_4', ratio: 'aspect-3/4' },
   { src: '/villa-mussio/20210914_090312.jpg', key: 'case_5', ratio: 'aspect-3/2' },
   { src: '/villa-mussio/20210703_092846.jpg', key: 'case_6', ratio: 'aspect-3/2' },
+  { src: '/villa-mussio/IMG_7024.JPG', key: 'case_7', ratio: 'aspect-3/4' },
 ] as const;
 
 export function CaseStudy() {
