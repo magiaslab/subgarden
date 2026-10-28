@@ -15,6 +15,7 @@ const body = `# SUBGarden
 - Il prato resta asciutto in superficie: niente arredi da spostare, meno zanzare, giardino usabile subito dopo l'irrigazione.
 - Per: giardini privati, parchi pubblici, campi sportivi, hotel e strutture turistiche.
 - Zona: Toscana, in particolare costa livornese, Isola d'Elba, Maremma e Livorno.
+- Formazione: corso per diventare installatori SUBGarden, aperto a giardinieri, ditte del verde e a chi parte da zero.
 - Contatti: info@subgarden.it, +39 347 6299935, Via Pitagora 3, 57027 San Vincenzo (LI). Sopralluogo gratuito su richiesta.
 
 ## Pagine principali
@@ -25,6 +26,7 @@ const body = `# SUBGarden
 - [Territorio](${SITE_URL}/it/territorio): Isola d'Elba, Maremma, Livorno
 - [Domande frequenti](${SITE_URL}/it/faq): costi, posa, manutenzione, risparmio
 - [Chi siamo](${SITE_URL}/it/chi-siamo): la storia di SUBGarden, dal 1990 tra piante e giardini
+- [Corso per installatori](${SITE_URL}/it/formazione-installatori): imparare a posare la subirrigazione, per chi lavora nel verde e per chi parte da zero
 - [Contatti](${SITE_URL}/it/contatti): richiesta di sopralluogo
 
 ## Approfondimenti

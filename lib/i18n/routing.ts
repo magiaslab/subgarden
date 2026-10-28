@@ -37,6 +37,11 @@ export const routing = defineRouting({
       en: '/territory/[city]',
       de: '/gebiet/[city]',
     },
+    '/formazione': {
+      it: '/formazione-installatori',
+      en: '/installer-training',
+      de: '/ausbildung-installateur',
+    },
     '/contatti': {
       it: '/contatti',
       en: '/contact',

@@ -33,6 +33,7 @@ export function Navbar() {
     { href: '/chi-siamo', label: t('about') },
   ] as const;
   const mobileExtra = [
+    { href: '/formazione', label: t('training') },
     { href: '/faq', label: t('faq') },
     { href: '/blog', label: t('blog') },
     { href: '/contatti', label: t('contact') },

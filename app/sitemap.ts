@@ -33,6 +33,7 @@ const pages: Entry[] = [
     priority: 0.6,
     changeFrequency: 'monthly',
   })),
+  { href: '/formazione', priority: 0.8, changeFrequency: 'monthly' },
   { href: '/contatti', priority: 0.8, changeFrequency: 'monthly' },
   { href: '/faq', priority: 0.6, changeFrequency: 'monthly' },
   { href: '/blog', priority: 0.7, changeFrequency: 'weekly' },

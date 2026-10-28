@@ -11,6 +11,7 @@ import { Install } from '@/components/home/Install';
 import { Why } from '@/components/home/Why';
 import { BeforeAfter } from '@/components/home/BeforeAfter';
 import { CaseStudy } from '@/components/home/CaseStudy';
+import { TrainingBanner } from '@/components/home/TrainingBanner';
 import { SolutionsList } from '@/components/home/SolutionsList';
 import { Synthesis } from '@/components/home/Synthesis';
 
@@ -65,6 +66,7 @@ export default async function HomePage({
         <Why />
         <BeforeAfter />
         <CaseStudy />
+        <TrainingBanner />
         <SolutionsList />
         <Synthesis />
       </main>

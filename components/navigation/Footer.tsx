@@ -23,6 +23,7 @@ export function Footer() {
     { href: '/soluzioni', label: t('links.solutions') },
     { href: '/territorio', label: t('links.local') },
     { href: '/chi-siamo', label: t('links.about') },
+    { href: '/formazione', label: t('links.training') },
     { href: '/faq', label: t('links.faq') },
     { href: '/blog', label: t('links.blog') },
     { href: '/contatti', label: t('links.contact') },

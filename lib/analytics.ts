@@ -32,7 +32,7 @@ export function updateConsent(granted: boolean) {
  * `click_phone` e `click_whatsapp`.
  */
 export type SiteEvent =
-  | { name: 'generate_lead'; params: { form: string; interest?: string } }
+  | { name: 'generate_lead'; params: { form: string; interest?: string; profile?: string } }
   | { name: 'click_phone'; params: { location: string } }
   | { name: 'click_whatsapp'; params: { location: string } }
   | { name: 'click_email'; params: { location: string } };
